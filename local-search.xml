@@ -45,6 +45,19 @@
   
   
   <entry>
+    <title>自述</title>
+    <link href="/posts/2/"/>
+    <url>/posts/2/</url>
+    
+    <content type="html"><![CDATA[<p>你好，这里是KEKKJ的个人博客！</p><p>作者正在逐步将自己在其他平台的文稿迁移到此处。</p><p>目前正在筹备，敬请期待！</p><p>自用颜色代码：</p><table><thead><tr><th align="center">红色</th><th align="center">e02525</th></tr></thead><tbody><tr><td align="center">黄色</td><td align="center">ead73d</td></tr><tr><td align="center">蓝色</td><td align="center">0083ff</td></tr><tr><td align="center">灰色</td><td align="center">gray</td></tr></tbody></table>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/posts/1/"/>
     <url>/posts/1/</url>
