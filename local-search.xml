@@ -22,6 +22,8 @@
     
     <tags>
       
+      <tag>教程</tag>
+      
       <tag>坎巴拉太空计划</tag>
       
       <tag>KSP</tag>
@@ -33,8 +35,6 @@
       <tag>RSS/RO/RP-1</tag>
       
       <tag>RP-1</tag>
-      
-      <tag>教程</tag>
       
       <tag>游戏</tag>
       
@@ -49,7 +49,7 @@
     <link href="/posts/2/"/>
     <url>/posts/2/</url>
     
-    <content type="html"><![CDATA[<p class="note note-danger"><font size="5"><b>本博客会持续更新！</b></font></p><p>你好，这里是KEKKJ的个人博客！</p><p>目前的主要作用是充当仓库<font color=gray><del>垃圾桶</del></font>，当然也会随时丢一些自己想到的奇怪东西。</p><p><strong>文章迁移目录清单</strong></p><ul><li><p><input checked="" disabled="" type="checkbox"> RP-1 Legacy Version 教程</p></li><li><p><input checked="" disabled="" type="checkbox"> OpenVINO 安装教程</p></li><li><p><input disabled="" type="checkbox"> 随缘手记</p></li></ul><h1 id="持续更新的碎碎念"><a href="#持续更新的碎碎念" class="headerlink" title="持续更新的碎碎念"></a>持续更新的碎碎念</h1><h3 id="博客的搭建和主题的选择"><a href="#博客的搭建和主题的选择" class="headerlink" title="博客的搭建和主题的选择"></a>博客的搭建和主题的选择</h3><p>本博客由 <a href="https://hexo.io/zh-cn/">Hexo</a> 驱动，主题为 <a href="https://hexo.fluid-dev.com/">Fluid</a>，可自行查阅官方文档部署。</p><h3 id="搜索引擎的选择和使用"><a href="#搜索引擎的选择和使用" class="headerlink" title="搜索引擎的选择和使用"></a>搜索引擎的选择和使用</h3><p>中国大陆环境首选 <font color=02a2ff><strong>Bing搜索引擎</strong></font>，在网络畅通的情况下请无脑选择 <font color=ee7109><strong>Google 搜索引擎</strong></font>。</p><p>对于一般性的检索，可使用空格将多个关键词分隔开，也便于搜索引擎识别。</p><p>注意搜索引擎不能正确识别全角符号（中文符号），需要手动删除或换为半角符号（英文符号）</p><p>e.g：中文逗号“，”<strong>→</strong>英文逗号“,”</p><h3 id="持续更新中……"><a href="#持续更新中……" class="headerlink" title="持续更新中……"></a>持续更新中……</h3><h1 id="自用"><a href="#自用" class="headerlink" title="自用"></a>自用</h1><h3 id="颜色代码"><a href="#颜色代码" class="headerlink" title="颜色代码"></a>颜色代码</h3><table><thead><tr><th align="center">颜色</th><th align="center">HTML</th></tr></thead><tbody><tr><td align="center"><strong><font color=e02525>红色</font></strong></td><td align="center">e02525</td></tr><tr><td align="center"><strong><font color=ffcd00>黄色</font></strong></td><td align="center">ffcd00</td></tr><tr><td align="center"><strong><font color=02a2ff>蓝色</font></strong></td><td align="center">02a2ff</td></tr><tr><td align="center"><strong><font color=gray>灰色</font></strong></td><td align="center">gray</td></tr><tr><td align="center"><strong><font color=ee7109>橙色</font></strong></td><td align="center">ee7109</td></tr><tr><td align="center"><strong><font color=33e33c>绿色</font></strong></td><td align="center">33e33c</td></tr><tr><td align="center"><strong><font color=c4c6c9>白色</font></strong></td><td align="center">c4c6c9</td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<p class="note note-danger"><font size="5"><b>本博客会持续更新！</b></font></p><p>你好，这里是KEKKJ的个人博客！</p><p>目前的主要作用是充当仓库<font color=gray><del>垃圾桶</del></font>，当然也会随时丢一些自己想到的奇怪东西。</p><h3 id="文章迁移和创作清单"><a href="#文章迁移和创作清单" class="headerlink" title="文章迁移和创作清单"></a><strong>文章迁移和创作清单</strong></h3><p><strong>迁移</strong></p><ul><li><p><input checked="" disabled="" type="checkbox"> RP-1 Legacy Version 教程</p></li><li><p><input checked="" disabled="" type="checkbox"> OpenVINO 安装教程</p></li><li><p><input disabled="" type="checkbox"> 随缘手记</p></li></ul><p><strong>创作</strong></p><ul><li><p><input disabled="" type="checkbox"> 自述</p></li><li><p><input checked="" disabled="" type="checkbox"> 待补全……</p></li></ul><h1 id="持续更新的碎碎念"><a href="#持续更新的碎碎念" class="headerlink" title="持续更新的碎碎念"></a>持续更新的碎碎念</h1><h3 id="博客的搭建和主题的选择"><a href="#博客的搭建和主题的选择" class="headerlink" title="博客的搭建和主题的选择"></a>博客的搭建和主题的选择</h3><p>本博客由 <a href="https://hexo.io/zh-cn/">Hexo</a> 驱动，主题为 <a href="https://hexo.fluid-dev.com/">Fluid</a>，可自行查阅官方文档部署。</p><h3 id="搜索引擎的选择和使用"><a href="#搜索引擎的选择和使用" class="headerlink" title="搜索引擎的选择和使用"></a>搜索引擎的选择和使用</h3><p>中国大陆环境首选 <font color=02a2ff><strong>Bing搜索引擎</strong></font>，在网络畅通的情况下请无脑选择 <font color=ee7109><strong>Google 搜索引擎</strong></font>。</p><p>对于一般性的检索，可使用空格将多个关键词分隔开，也便于搜索引擎识别。</p><p>注意搜索引擎不能正确识别全角符号（中文符号），需要手动删除或换为半角符号（英文符号）</p><p>e.g：中文逗号“，”<strong>→</strong>英文逗号“,”</p><h3 id="持续更新中……"><a href="#持续更新中……" class="headerlink" title="持续更新中……"></a>持续更新中……</h3><h1 id="自用"><a href="#自用" class="headerlink" title="自用"></a>自用</h1><h3 id="颜色代码"><a href="#颜色代码" class="headerlink" title="颜色代码"></a>颜色代码</h3><table><thead><tr><th align="center">颜色</th><th align="center">HTML</th></tr></thead><tbody><tr><td align="center"><strong><font color=e02525>红色</font></strong></td><td align="center">e02525</td></tr><tr><td align="center"><strong><font color=ffcd00>黄色</font></strong></td><td align="center">ffcd00</td></tr><tr><td align="center"><strong><font color=02a2ff>蓝色</font></strong></td><td align="center">02a2ff</td></tr><tr><td align="center"><strong><font color=gray>灰色</font></strong></td><td align="center">gray</td></tr><tr><td align="center"><strong><font color=ee7109>橙色</font></strong></td><td align="center">ee7109</td></tr><tr><td align="center"><strong><font color=33e33c>绿色</font></strong></td><td align="center">33e33c</td></tr><tr><td align="center"><strong><font color=c4c6c9>白色</font></strong></td><td align="center">c4c6c9</td></tr></tbody></table>]]></content>
     
     
     
@@ -185,6 +185,8 @@
     
     <tags>
       
+      <tag>教程</tag>
+      
       <tag>坎巴拉太空计划</tag>
       
       <tag>KSP</tag>
@@ -196,8 +198,6 @@
       <tag>RSS/RO/RP-1</tag>
       
       <tag>RP-1</tag>
-      
-      <tag>教程</tag>
       
       <tag>游戏</tag>
       
