@@ -21,29 +21,22 @@
   <meta name="author" content="KEKKJ">
   <meta name="keywords" content="KEKKJ">
   
-    <meta name="description" content="由于OpenVINO 2021.4 LTS 版本不被官方支持，官网下载界面没有对应版本的选项安装。经过大量尝试后，终于找到了相对稳定的安装方案，并且对大部分老版本同样适用。 本人尚是一枚新人，对各方面了解较浅，若有错误，欢迎各位指出。 感谢视觉救命群热心群友的帮助！  2024.4.2 一次修改：优化排版 2024.4.3 二次修改：调整“环境变量”文本提示 2024.7.6 三次修改：修改引用">
+    <meta name="description" content="随缘手记 - 随心而想，随缘而写 阅前提醒： 本手记不遵循初高中文体规范，阅读时请勿联系上下文及题目。手记内容仅代表个人不同时期的见解，跟不上只能说明你和作者不在同一频道，请勿上纲上线。(*╹▽╹*) 本手记最初发表于个人微信朋友圈，现正逐步搬运至个人博客。   “爸爸和妈妈掉水里，你先救谁？”想必大家从小到大都被问过这个问题。我小时候觉得这问题很搞笑，因为没有答案。其实我现在才真正意识到，不是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[Ubuntu]OpenVINO 2021.4 LTS 及旧版本编译安装方法">
-<meta property="og:url" content="https://kekkj123.github.io/posts/5/index.html">
+<meta property="og:title" content="随缘手记 - Part2">
+<meta property="og:url" content="https://kekkj123.github.io/posts/7/index.html">
 <meta property="og:site_name" content="KEKKJ的个人博客 - 小世界的一瞥">
-<meta property="og:description" content="由于OpenVINO 2021.4 LTS 版本不被官方支持，官网下载界面没有对应版本的选项安装。经过大量尝试后，终于找到了相对稳定的安装方案，并且对大部分老版本同样适用。 本人尚是一枚新人，对各方面了解较浅，若有错误，欢迎各位指出。 感谢视觉救命群热心群友的帮助！  2024.4.2 一次修改：优化排版 2024.4.3 二次修改：调整“环境变量”文本提示 2024.7.6 三次修改：修改引用">
+<meta property="og:description" content="随缘手记 - 随心而想，随缘而写 阅前提醒： 本手记不遵循初高中文体规范，阅读时请勿联系上下文及题目。手记内容仅代表个人不同时期的见解，跟不上只能说明你和作者不在同一频道，请勿上纲上线。(*╹▽╹*) 本手记最初发表于个人微信朋友圈，现正逐步搬运至个人博客。   “爸爸和妈妈掉水里，你先救谁？”想必大家从小到大都被问过这个问题。我小时候觉得这问题很搞笑，因为没有答案。其实我现在才真正意识到，不是">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.picui.cn/free/2024/08/26/66cc9c422af2f.png">
-<meta property="og:image" content="https://img.picui.cn/free/2024/08/26/66cc9c4224d44.png">
-<meta property="article:published_time" content="2024-04-02T11:20:14.000Z">
-<meta property="article:modified_time" content="2024-08-27T05:25:18.565Z">
+<meta property="article:published_time" content="2024-02-02T16:42:00.000Z">
+<meta property="article:modified_time" content="2024-08-27T06:16:55.581Z">
 <meta property="article:author" content="KEKKJ">
-<meta property="article:tag" content="教程">
-<meta property="article:tag" content="Linux">
-<meta property="article:tag" content="Ubuntu">
-<meta property="article:tag" content="OpenVINO">
-<meta property="article:tag" content="Github">
+<meta property="article:tag" content="KEKKJ">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://img.picui.cn/free/2024/08/26/66cc9c422af2f.png">
   
   
   
-  <title>[Ubuntu]OpenVINO 2021.4 LTS 及旧版本编译安装方法 - KEKKJ的个人博客 - 小世界的一瞥</title>
+  <title>随缘手记 - Part2 - KEKKJ的个人博客 - 小世界的一瞥</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,13 +196,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/5/OpenVINO.jpeg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/Top_photo.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">[Ubuntu]OpenVINO 2021.4 LTS 及旧版本编译安装方法</span>
+            <span id="subtitle">随缘手记 - Part2</span>
           
         </div>
 
@@ -225,8 +218,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-04-02 19:20" pubdate>
-          2024年4月2日 晚上
+        <time datetime="2024-02-03 00:42" pubdate>
+          2024年2月3日 凌晨
         </time>
       </span>
     
@@ -237,7 +230,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          775 字
+          708 字
         
       </span>
     
@@ -248,7 +241,7 @@
         
         
         
-          6 分钟
+          5 分钟
         
       </span>
     
@@ -293,17 +286,17 @@
     
     <div class="category row nomargin-x">
       <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="视觉学习笔记"
-        id="heading-137188889c5834eb78b2f0ca1c9df393" role="tab" data-toggle="collapse" href="#collapse-137188889c5834eb78b2f0ca1c9df393"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="随缘手记"
+        id="heading-eac7edd82122a589aa80de324c0b25e0" role="tab" data-toggle="collapse" href="#collapse-eac7edd82122a589aa80de324c0b25e0"
         aria-expanded="true"
       >
-        视觉学习笔记
-        <span class="list-group-count">(1)</span>
+        随缘手记
+        <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-137188889c5834eb78b2f0ca1c9df393"
-           role="tabpanel" aria-labelledby="heading-137188889c5834eb78b2f0ca1c9df393">
+      <div class="category-collapse collapse show" id="collapse-eac7edd82122a589aa80de324c0b25e0"
+           role="tabpanel" aria-labelledby="heading-eac7edd82122a589aa80de324c0b25e0">
         
         
           
@@ -312,10 +305,19 @@
     
       
       
-        <a href="/posts/5/" title="[Ubuntu]OpenVINO 2021.4 LTS 及旧版本编译安装方法"
+        <a href="/posts/6/" title="随缘手记 - Part1"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">随缘手记 - Part1</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/7/" title="随缘手记 - Part2"
            class="list-group-item list-group-item-action
            active">
-          <span class="category-post">[Ubuntu]OpenVINO 2021.4 LTS 及旧版本编译安装方法</span>
+          <span class="category-post">随缘手记 - Part2</span>
         </a>
       
     
@@ -337,12 +339,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">[Ubuntu]OpenVINO 2021.4 LTS 及旧版本编译安装方法</h1>
+            <h1 id="seo-header">随缘手记 - Part2</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-08-27T13:25:18+08:00
+                    本文最后更新于 2024-08-27T14:16:55+08:00
                   
                   
 
@@ -353,69 +355,20 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p><font color=gray>由于OpenVINO 2021.4 LTS 版本不被官方支持，官网下载界面没有对应版本的选项安装。经过大量尝试后，终于找到了相对稳定的安装方案，并且对大部分老版本同样适用。</font></p>
-<p><font color=gray>本人尚是一枚新人，对各方面了解较浅，若有错误，欢迎各位指出。</font></p>
-<p><font color=gray><strong>感谢视觉救命群热心群友的帮助！</strong></font></p>
+<p><font color=c4c6c9><strong>随缘手记 - 随心而想，随缘而写</strong></font></p>
+<p>阅前提醒：</p>
+<p>本手记不遵循初高中文体规范，阅读时请勿联系上下文及题目。手记内容仅代表个人不同时期的见解，跟不上只能说明你和作者不在同一频道，请勿上纲上线。(*╹▽╹*)</p>
+<p>本手记最初发表于个人微信朋友圈，现正逐步搬运至个人博客。</p>
 </blockquote>
-<p>2024.4.2 一次修改：优化排版</p>
-<p>2024.4.3 二次修改：调整“环境变量”文本提示</p>
-<p>2024.7.6 三次修改：修改引用链接</p>
-<p>2024.8.26 迁移文章至博客，并同步更新 CSDN</p>
 <hr>
-<p>在准备安装之前，我们需要明确 OpenVINO 的完整安装流程。</p>
-<p>根据官方安装文档，OpenVINO 可以大致分为三个部分：<font color=gray>（个人理解）</font></p>
-<ol>
-<li>OpenVINO™ Toolkit Core Components —— OpenVINO 工具包</li>
-<li>External Software Dependencies —— OpenVINO 依赖项</li>
-<li>The Model Optimizer —— 模型优化器（若安装dev版本可略过）</li>
-</ol>
-<h2 id="第零步：确保网络环境畅通，能稳定访问-Github"><a href="#第零步：确保网络环境畅通，能稳定访问-Github" class="headerlink" title="第零步：确保网络环境畅通，能稳定访问 Github"></a>第零步：确保网络环境畅通，能稳定访问 Github</h2><p><strong>本文默认您已安装 CMake, GCC, Python 等基本依赖项</strong></p>
-<h2 id="第一步：获取旧版本OpenVINO-工具包-3-4"><a href="#第一步：获取旧版本OpenVINO-工具包-3-4" class="headerlink" title="第一步：获取旧版本OpenVINO 工具包[3][4]"></a>第一步：获取旧版本OpenVINO 工具包<sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="[[2019_R1] Install Intel® Distribution of OpenVINO™ toolkit for Linux - OpenVINO Toolkit](https://docs.openvino.ai/archive/2019_R1/_docs_install_guides_installing_openvino_linux.html#set-the-environment-variables)">[3]</span></a></sup><sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="[[2021.4] Install and Configure Intel® Distribution of OpenVINO™ toolkit for Linux — OpenVINO™ documentation](https://docs.openvino.ai/archive/2021.4/openvino_docs_install_guides_installing_openvino_linux.html)">[4]</span></a></sup></h2><p>对于旧版本，我们需要从官方存档仓库<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[OpenVINO 官方仓库](https://storage.openvinotoolkit.org/repositories/openvino/packages/)">[2]</span></a></sup>中寻找。请依据你的 Ubuntu 版本下载对应的版本。</p>
-<figure>
-<img src="https://img.picui.cn/free/2024/08/26/66cc9c422af2f.png" srcset="/img/loading.gif" lazyload height=350/>
-<img src="https://img.picui.cn/free/2024/08/26/66cc9c4224d44.png" srcset="/img/loading.gif" lazyload height=350/>
-</figure>
+<p>“爸爸和妈妈掉水里，你先救谁？”想必大家从小到大都被问过这个问题。我小时候觉得这问题很搞笑，因为没有答案。其实我现在才真正意识到，不是每个人都拥有美满的原生家庭的。</p>
+<p>气氛太沉重，倒不如换个问题，“朋友和恋人，你选谁？”事实上，我至少被困扰了三年，因为没有答案。但是为什么？为什么朋友和恋人会是同样的地位？所以，这其实是偷换概念。</p>
+<p>了解我的朋友都知道，我以前很自卑、胆小，再加上错误的爱情观，导致我有许多问题却又无从开口。你不能指望当时的我会给出可靠的答案，因为无法认清自己的人的承诺都几乎不可信。</p>
+<p>这篇手记不怎么想把气氛搞的这样沉重，因为今天发生了一件坏事，悲伤却被两个人共同消弭了，结果是好的。我爸爸说他不看过程，只看结果。这句话在这里也一样有效。我很不幸，又很幸运，遭那么多罪却也得到了很多。这让我不断去思考，去感恩如今我拥有的一切，因为它本可以不属于我。</p>
+<p>每当我和别人谈起我的女朋友，我总是会以赞美的口气讲述。首先，我没有“被拯救”的想法；其次，我必须承认我的女朋友给我的强大的精神力量；最后，我不需要别人理解，毕竟只有自己了解自己，但正因如此，我会始终感恩她的有心或无心，不仅是爱情。</p>
+<p>害怕失去，所以不放手，反而伤了自己和别人。做法不正确，但这是当时的我唯一保护自己的办法，我不责备自己。但我必须反思错误，朋友为何是朋友，恋人又为何是恋人。她告诉我，朋友和恋人是不同的重要，但并不代表一定要选择恋人。因为要记得你的朋友为了你所付出的、承受的。</p>
+<p>那么我的答案很明显了，我和她都不会为了爱去放弃对自己很重要的友情。因为要求放弃友情的爱，想必也迟早会放弃对方。</p>
 
-
-<p>在本教程中，我们在 Ubuntu 20.04 环境安装 OpenVINO 2021.4.1</p>
-<p>即：l_openvino_toolkit_dev_ubuntu20_p_2021.4.689.tgz <font color=gray><del><strong>（作者犯懒就选择dev了）</strong></del></font></p>
-<p>下载后提取到此处即可</p>
-<p>提取后文件夹路径应为：~&#x2F;Downloads&#x2F;l_openvino_toolkit_dev_ubuntu20_p_2021.4.689</p>
-<p>将解压后的文件夹移动到 &#x2F;opt&#x2F;intel&#x2F;openvino（记得换成自己的路径）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> Downloads<br>tar -xvf l_openvino_toolkit_dev_ubuntu20_p_2021.4.689<br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">mv</span> /home/&lt;username&gt;/Downloads/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689 /opt/intel/openvino<br></code></pre></td></tr></table></figure>
-
-<p>进入 install_dependencies 文件夹，并运行 install_openvino_dependencies.sh</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /opt/intel/openvino/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689/install_dependencies<br><span class="hljs-built_in">sudo</span> -E ./install_openvino_dependencies.sh<br></code></pre></td></tr></table></figure>
-
-<p>配置临时环境变量以验证安装成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> /opt/intel/openvino/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689/bin/setupvars.sh<br></code></pre></td></tr></table></figure>
-
-<p>若显示</p>
-<p><strong>[setupvars.sh] OpenVINO environment initialized</strong></p>
-<p>则代表安装成功。</p>
-<p>配置永久环境变量：使用编辑器在 .bashrc 文件末尾输入刚才的source命令并保存。</p>
-<p>再次打开新终端，若出现相同信息则可进行下一步。</p>
-<h2 id="第二步：源代码构建并编译-5"><a href="#第二步：源代码构建并编译-5" class="headerlink" title="第二步：源代码构建并编译[5]"></a>第二步：源代码构建并编译<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Build OpenVINO™ Runtime for Linux systems - github.com](https://github.com/openvinotoolkit/openvino/blob/master/docs/dev/build_linux.md)">[5]</span></a></sup></h2><p>打开新终端，克隆 OpenVINO 存储库<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[GitHub下载克隆clone指定的分支tag代码 - Tse先生 - 博客园](https://www.cnblogs.com/Sungeek/p/10275903.html)">[1]</span></a></sup>和 init 子模块</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> -b releases/2021/4 https://github.com/openvinotoolkit/openvino.git	<span class="hljs-comment">#文件约500MB，注意流量</span><br><span class="hljs-built_in">cd</span> openvino<br>git submodule update --init --recursive<br></code></pre></td></tr></table></figure>
-
-<p>根据克隆库安装依赖</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> +x install_build_dependencies.sh	<span class="hljs-comment">#给予可执行权限</span><br><span class="hljs-built_in">sudo</span> ./install_build_dependencies.sh	<span class="hljs-comment">#执行脚本</span><br></code></pre></td></tr></table></figure>
-
-<p>创建文件夹并编译，到这里 OpenVINO 就安装完毕了</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> build &amp;&amp; <span class="hljs-built_in">cd</span> build<br>cmake -DCMAKE_BUILD_TYPE=Release ..<br>cmake --build . --parallel 8	<span class="hljs-comment">#数字代表并行线程数，根据处理器情况酌情修改</span><br></code></pre></td></tr></table></figure>
-
-
-
-<h2 id="第三步：安装模型优化器（WIP）"><a href="#第三步：安装模型优化器（WIP）" class="headerlink" title="第三步：安装模型优化器（WIP）"></a>第三步：安装模型优化器（WIP）</h2><p>（待补充）</p>
-<h2 id="一些碎碎念"><a href="#一些碎碎念" class="headerlink" title="一些碎碎念"></a>一些碎碎念</h2><p>若报错或显示“权限不够”，本文大部分命令都可以在开头添加 sudo 执行（理论上）</p>
-<p>善用搜索引擎，遇到报错，可复制关键文本查找解决方法。</p>
-<p><strong>很多情况下，直接阅读官方文档比搜索本身更加有效。</strong></p>
-<h2 id="参考文章（建议阅读）"><a href="#参考文章（建议阅读）" class="headerlink" title="参考文章（建议阅读）"></a>参考文章（建议阅读）</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Sungeek/p/10275903.html">GitHub下载克隆clone指定的分支tag代码 - Tse先生 - 博客园</a>
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://storage.openvinotoolkit.org/repositories/openvino/packages/">OpenVINO 官方仓库</a>
-<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.openvino.ai/archive/2019_R1/_docs_install_guides_installing_openvino_linux.html#set-the-environment-variables">[2019_R1] Install Intel® Distribution of OpenVINO™ toolkit for Linux - OpenVINO Toolkit</a>
-<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.openvino.ai/archive/2021.4/openvino_docs_install_guides_installing_openvino_linux.html">[2021.4] Install and Configure Intel® Distribution of OpenVINO™ toolkit for Linux — OpenVINO™ documentation</a>
-<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/openvinotoolkit/openvino/blob/master/docs/dev/build_linux.md">Build OpenVINO™ Runtime for Linux systems - github.com</a>
-<a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
             
@@ -433,7 +386,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%A7%86%E8%A7%89%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="category-chain-item">视觉学习笔记</a>
+  <a href="/categories/%E9%9A%8F%E7%BC%98%E6%89%8B%E8%AE%B0/" class="category-chain-item">随缘手记</a>
   
   
 
@@ -445,21 +398,6 @@
     </div>
   
   
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/%E6%95%99%E7%A8%8B/" class="print-no-link">#教程</a>
-      
-        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
-      
-        <a href="/tags/Ubuntu/" class="print-no-link">#Ubuntu</a>
-      
-        <a href="/tags/OpenVINO/" class="print-no-link">#OpenVINO</a>
-      
-        <a href="/tags/Github/" class="print-no-link">#Github</a>
-      
-    </div>
-  
 </div>
 
 
@@ -468,8 +406,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>[Ubuntu]OpenVINO 2021.4 LTS 及旧版本编译安装方法</div>
-      <div>https://kekkj123.github.io/posts/5/</div>
+      <div>随缘手记 - Part2</div>
+      <div>https://kekkj123.github.io/posts/7/</div>
     </div>
     <div class="license-meta">
       
@@ -481,7 +419,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年4月2日</div>
+          <div>2024年2月3日</div>
         </div>
       
       
@@ -530,9 +468,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/1/" title="Hello World">
+                      <a href="/posts/5/" title="[Ubuntu]OpenVINO 2021.4 LTS 及旧版本编译安装方法">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Hello World</span>
+                        <span class="hidden-mobile">[Ubuntu]OpenVINO 2021.4 LTS 及旧版本编译安装方法</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -540,8 +478,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/7/" title="随缘手记 - Part2">
-                        <span class="hidden-mobile">随缘手记 - Part2</span>
+                      <a href="/posts/6/" title="随缘手记 - Part1">
+                        <span class="hidden-mobile">随缘手记 - Part1</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
