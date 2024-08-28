@@ -31,7 +31,7 @@
 <meta property="og:description" content="随缘手记 —— 随心而想，随缘而写本手记最初发表于个人微信朋友圈，现正逐步搬运至个人博客。 阅前提醒：本手记不遵循初高中文体规范，阅读时请勿联系上下文及题目。手记内容仅代表个人不同时期的见解，跟不上只能说明你和作者不在同一频道，请勿上纲上线。(*╹▽╹*)   突然想写点什么，想起来很久以前答应袂姐的周记，更了一篇随后杳无音讯，真的很对不起她，一时又觉得自己做不到每周甚至每月一更。罢了，不如随心">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-14T21:28:00.000Z">
-<meta property="article:modified_time" content="2023-12-14T21:28:00.000Z">
+<meta property="article:modified_time" content="2023-12-14T21:28:01.000Z">
 <meta property="article:author" content="KEKKJ">
 <meta property="article:tag" content="KEKKJ">
 <meta name="twitter:card" content="summary_large_image">
@@ -385,6 +385,16 @@
           <article class="post-content mx-auto">
             <h1 id="seo-header">无题 - Part1</h1>
             
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2023-12-15T05:28:01+08:00
+                  
+                  
+
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
@@ -459,6 +469,11 @@
           <div>2023年12月15日</div>
         </div>
       
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年12月15日</div>
+        </div>
       
       
         <div class="license-meta-item">
@@ -721,6 +736,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   
