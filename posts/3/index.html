@@ -31,7 +31,7 @@
 <meta property="og:description" content="RSS&#x2F;RO&#x2F;RP-1几乎涵盖了所有的拟真类模组，其内容、玩法繁多复杂。我希望能帮助更多的玩家，于是有了这篇文章。 经过大量查找，作者发现B站有很多RSS&#x2F;RO&#x2F;RP-1介绍及安装教程，但其中的大部分已经过时。尽管官方的教程非常全面详细，但几乎都是只针对单一模组的介绍，新人几乎没有阅读的动力。[2][3][5][13][14][16] 所以，我们需要一篇系">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-10-27T06:27:00.000Z">
-<meta property="article:modified_time" content="2024-08-28T13:50:42.231Z">
+<meta property="article:modified_time" content="2024-08-28T13:59:13.880Z">
 <meta property="article:author" content="KEKKJ">
 <meta property="article:tag" content="教程">
 <meta property="article:tag" content="坎巴拉太空计划">
@@ -408,7 +408,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-08-28T21:50:42+08:00
+                    本文最后更新于 2024-08-28T21:59:13+08:00
                   
                   
 
@@ -459,7 +459,7 @@
 <p><strong>动量轮：</strong>原版动量轮扭力很大，而RO动量轮的性能被大幅削弱（无动量轮卸载，请自行查询）。尽管不能锐角转弯，但在许多情况仍然好用。例：空间站转向。</p>
 <p>当然，电力需求同样大幅降低了。Science-Core核心耗电非常慢；Deep-Space核心可以进入休眠模式降低耗电。</p>
 <h3 id="3-气动和再入（依靠Ferram-Aerospace-Research-5-6-和RealHeat实现）"><a href="#3-气动和再入（依靠Ferram-Aerospace-Research-5-6-和RealHeat实现）" class="headerlink" title="3.气动和再入（依靠Ferram Aerospace Research[5][6]和RealHeat实现）"></a>3.气动和再入（依靠Ferram Aerospace Research<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="**官方** FARwiki https://github.com/ferram4/Ferram-Aerospace-Research/wiki">[5]</span></a></sup><sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="**KerbCat** [坎喵站长的《FAR入门教程》](https://www.kerbcat.com/articles/4325)">[6]</span></a></sup>和RealHeat实现）</h3><p>原版气动比较魔法，可以通过某些方法规避阻力；再入返回产生的热量不太真实。而FAR和RH则修正了这些计算模型。<font color=gray><del>不过只是相对“真实”了一些，不要硬杠（）</del></font></p>
-<p><strong>这里信息比较复杂，仅描述了一小部分，详细信息请看引用文章。</strong></p>
+<p><strong>这里信息比较复杂，仅描述了一小部分，详细信息请阅读参考文章。</strong></p>
 <p><strong>气动：</strong>Ferram Aerospace Research，简称FAR。</p>
 <p>FAR会整体计算航天器的气动模型，并计算机翼的形状，而不仅仅是整体面积，所以超音速飞行器的设计变得更加困难。一些基于原版的设计在FAR会出现问题，力大砖飞不再可行。</p>
 <p>FAR还引入了“结构强度”设置。结构强度越大的机翼可以抵抗更强的气动过载，同时质量指数级增长。</p>
@@ -483,7 +483,7 @@
 <h3 id="3-TestFlight-9"><a href="#3-TestFlight-9" class="headerlink" title="3.TestFlight[9]"></a>3.TestFlight<sup id="fnref:9" class="footnote-ref"><a href="#fn:9" rel="footnote"><span class="hint--top hint--rounded" aria-label="**官方** TestFlight wiki https://github.com/KSP-RO/TestFlight/wiki">[9]</span></a></sup></h3><p>TestFlight 和 TestLite 都是可选的。但作者选择了前者，故以下文字仅针对TF。</p>
 <p>“这是更是重量级”，一切罪恶的源头——随机故障。（适度玩梗）</p>
 <p>在RP-1中，TestFlight 只应用于引擎，所有的引擎都有概率发生故障。</p>
-<p>TestFlight 引入了“飞行数据”这一概念，引擎正常燃烧或发生故障都会产生数据（有上限），可以提高工作可靠性。故障时的飞行数据更多（安慰奖？）。不同引擎的初始几率不同，早期引擎可靠性较低，现代引擎相对更加可靠。</p>
+<p>TestFlight 引入了“飞行数据”这一概念，引擎正常燃烧或发生故障都会产生数据（有上限），可以提高工作可靠性。故障时的飞行数据更多<font color=gray><del>（安慰奖？）</del></font>。不同引擎的初始几率不同，早期引擎可靠性较低，现代引擎相对更加可靠。</p>
 <p>实例：</p>
 <table>
 <thead>
