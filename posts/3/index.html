@@ -31,7 +31,7 @@
 <meta property="og:description" content="RSS&#x2F;RO&#x2F;RP-1几乎涵盖了所有的拟真类模组，其内容、玩法繁多复杂。我希望能帮助更多的玩家，于是有了这篇文章。 经过大量查找，作者发现B站有很多RSS&#x2F;RO&#x2F;RP-1介绍及安装教程，但其中的大部分已经过时。尽管官方的教程非常全面详细，但几乎都是只针对单一模组的介绍，新人几乎没有阅读的动力。[2][3][5][13][14][16] 所以，我们需要一篇系">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-10-27T06:27:00.000Z">
-<meta property="article:modified_time" content="2024-08-28T13:45:25.927Z">
+<meta property="article:modified_time" content="2024-08-28T13:50:42.231Z">
 <meta property="article:author" content="KEKKJ">
 <meta property="article:tag" content="教程">
 <meta property="article:tag" content="坎巴拉太空计划">
@@ -408,7 +408,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-08-28T21:45:25+08:00
+                    本文最后更新于 2024-08-28T21:50:42+08:00
                   
                   
 
@@ -447,28 +447,24 @@
 <p><strong>补充：</strong>RSS和RO互不依赖。如果只想玩原版的RSS，可以尝试模组 <strong>SMURFF</strong>，这个模组修改了原版组件以适应RSS，但<strong>仅支持KSP 1.7-1.9</strong>！</p>
 <p><strong>20240807二补：</strong>作者上网冲浪时，发现了新的原版RSS适配模组 <strong>RSS Adapter</strong>，原理和 <strong>SMURFF</strong> 相似，且支持<strong>1.8.1+</strong> ！（当然，它们都和 <strong>RealFuel</strong> 不兼容）</p>
 <h2 id="三、什么是RO？-1-13"><a href="#三、什么是RO？-1-13" class="headerlink" title="三、什么是RO？[1][13]"></a>三、什么是RO？<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="**官方** ROwiki首页 https://github.com/KSP-RO/RealismOverhaul/wiki">[1]</span></a></sup><sup id="fnref:13" class="footnote-ref"><a href="#fn:13" rel="footnote"><span class="hint--top hint--rounded" aria-label="**B站专栏** ReachStar的[《KSP1.7.3-RO介绍》](https://www.bilibili.com/read/cv1491245/)">[13]</span></a></sup></h2><p>RO，全称Realism Overhaul。与RP-1类似，RO也是一个模组集合，同样需要其他模组正常运行。RO对游戏的诸多机制做出了改动，下面我将简单描述一部分（仅整合描述一些依赖项模组，完整介绍请看<font color=0083ff><strong>官方wiki</strong></font>）。</p>
-<p><strong>1.燃料和引擎（由RealFuel提供此功能）</strong></p>
-<p><strong>RealFuel与RO互不依赖，但几乎都会安装</strong></p>
+<h3 id="1-燃料和引擎（由RealFuel提供此功能）"><a href="#1-燃料和引擎（由RealFuel提供此功能）" class="headerlink" title="1.燃料和引擎（由RealFuel提供此功能）"></a>1.燃料和引擎（由RealFuel提供此功能）</h3><p><strong>RealFuel与RO互不依赖，但几乎都会安装</strong></p>
 <p><strong>燃料：</strong>RF添加了许多现实中真实存在的燃料。从早期的乙醇液氧，到现代的液氢液氧，不同燃料特性各不相同，有的密度较大，有的需低温保存。燃料箱也有不同的干质比，如共底油箱、气球油箱等。</p>
 <p>ROtank自带了可自定义尺寸的燃料罐，最小支持0.01m，最大支持50m。（非RO依赖但建议安装）</p>
 <p><strong>引擎：</strong>RF也对引擎做出了一系列的改动。不同引擎使用不同的燃料，其比冲、推力等参数也不同。绝大多数引擎有点火次数限制，仅有少数可节流，以及推力延迟响应等。大部分引擎在点火之前，都需要燃料沉底。（就是给航天器一个正加速度）</p>
 <p>总而言之，其性能更贴近了现实。<font color=gray><del>懒得码字了</del></font></p>
-<p><strong>2.电力和动量轮</strong></p>
-<p>首先，在RO中，1EC&#x2F;s＝1kW，1EC＝1kJ。</p>
+<h3 id="2-电力和动量轮"><a href="#2-电力和动量轮" class="headerlink" title="2.电力和动量轮"></a>2.电力和动量轮</h3><p>首先，在RO中，1EC&#x2F;s＝1kW，1EC＝1kJ。</p>
 <p><strong>太阳能：</strong>原版太阳能堪称魔法，而RO下的太阳能板存在损耗，发电量会随时间流逝不断降低。不过它们比原版轻的多。</p>
 <p><font color=gray><del>然而RP-1的太阳能TL0技术垃圾的一批，发电少还沉。</del></font></p>
 <p><strong>RTG：</strong>原版的同位素发电机是如此的不合理，既不存在半衰期，发电量又高。RO中，这些发电机都有不同的半衰期（每经过一个半衰期发电量减半），初始发电量也大幅削弱。</p>
 <p><strong>动量轮：</strong>原版动量轮扭力很大，而RO动量轮的性能被大幅削弱（无动量轮卸载，请自行查询）。尽管不能锐角转弯，但在许多情况仍然好用。例：空间站转向。</p>
 <p>当然，电力需求同样大幅降低了。Science-Core核心耗电非常慢；Deep-Space核心可以进入休眠模式降低耗电。</p>
-<p><strong>3.气动和再入（依靠Ferram Aerospace Research<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="**官方** FARwiki https://github.com/ferram4/Ferram-Aerospace-Research/wiki">[5]</span></a></sup><sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="**KerbCat** [坎喵站长的《FAR入门教程》](https://www.kerbcat.com/articles/4325)">[6]</span></a></sup>和RealHeat实现）</strong></p>
-<p>原版气动比较魔法，可以通过某些方法规避阻力；再入返回产生的热量不太真实。而FAR和RH则修正了这些计算模型。<font color=gray><del>不过只是相对“真实”了一些，不要硬杠（）</del></font></p>
+<h3 id="3-气动和再入（依靠Ferram-Aerospace-Research-5-6-和RealHeat实现）"><a href="#3-气动和再入（依靠Ferram-Aerospace-Research-5-6-和RealHeat实现）" class="headerlink" title="3.气动和再入（依靠Ferram Aerospace Research[5][6]和RealHeat实现）"></a>3.气动和再入（依靠Ferram Aerospace Research<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="**官方** FARwiki https://github.com/ferram4/Ferram-Aerospace-Research/wiki">[5]</span></a></sup><sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="**KerbCat** [坎喵站长的《FAR入门教程》](https://www.kerbcat.com/articles/4325)">[6]</span></a></sup>和RealHeat实现）</h3><p>原版气动比较魔法，可以通过某些方法规避阻力；再入返回产生的热量不太真实。而FAR和RH则修正了这些计算模型。<font color=gray><del>不过只是相对“真实”了一些，不要硬杠（）</del></font></p>
 <p><strong>这里信息比较复杂，仅描述了一小部分，详细信息请看引用文章。</strong></p>
 <p><strong>气动：</strong>Ferram Aerospace Research，简称FAR。</p>
 <p>FAR会整体计算航天器的气动模型，并计算机翼的形状，而不仅仅是整体面积，所以超音速飞行器的设计变得更加困难。一些基于原版的设计在FAR会出现问题，力大砖飞不再可行。</p>
 <p>FAR还引入了“结构强度”设置。结构强度越大的机翼可以抵抗更强的气动过载，同时质量指数级增长。</p>
 <p><strong>再入：</strong>没什么可讲的所以直接略过</p>
-<h2 id="四、RP-1部分重要模组简述"><a href="#四、RP-1部分重要模组简述" class="headerlink" title="四、RP-1部分重要模组简述"></a>四、RP-1部分重要模组简述</h2><p><strong>1.KerbalConstructionTime（RP-1内置）</strong></p>
-<p><strong>本段由ZH_Vulcan撰写，作者改动了一部分。</strong></p>
+<h2 id="四、RP-1部分重要模组简述"><a href="#四、RP-1部分重要模组简述" class="headerlink" title="四、RP-1部分重要模组简述"></a>四、RP-1部分重要模组简述</h2><h3 id="1-KerbalConstructionTime（RP-1内置）"><a href="#1-KerbalConstructionTime（RP-1内置）" class="headerlink" title="1.KerbalConstructionTime（RP-1内置）"></a>1.KerbalConstructionTime（RP-1内置）</h3><p><strong>本段由ZH_Vulcan撰写，作者改动了一部分。</strong></p>
 <p>KCT使一切生产研究活动都与时间挂钩，玩家必须合理分配点数，使各部分发展配合。</p>
 <p>KCT有三个影响要素：</p>
 <p>①VAB Rate（SPH已经与VAB合并）</p>
@@ -479,14 +475,12 @@
 <p>另外，KCT加入了Tooling（流水线）。自定义Tank、Structure可加入到其中，大幅减少建造时间，但尺寸会相对固定。</p>
 <p>KCT还内置了模拟（Simulation）功能，以测试火箭及各种任务，可免费无限次运行。</p>
 <p>无论怎样规划，不要让资金白白搁置，只需留下必要的部分，然后执行你的计划。</p>
-<p><strong>2.Kerbalism</strong><sup id="fnref:7" class="footnote-ref"><a href="#fn:7" rel="footnote"><span class="hint--top hint--rounded" aria-label="**官方** ROKerbalism wiki https://github.com/KSP-RO/ROKerbalism/wiki">[7]</span></a></sup><sup id="fnref:8" class="footnote-ref"><a href="#fn:8" rel="footnote"><span class="hint--top hint--rounded" aria-label="**官方** Kerbalism wiki https://github.com/Kerbalism/Kerbalism">[8]</span></a></sup></p>
-<p><strong>模拟现实航天，生命支持必不可少。而Kerbalism就成为了RP-1的最佳选择。</strong>但RO玩家可以选择TAC。</p>
+<h3 id="2-Kerbalism-7-8"><a href="#2-Kerbalism-7-8" class="headerlink" title="2.Kerbalism[7][8]"></a>2.Kerbalism<sup id="fnref:7" class="footnote-ref"><a href="#fn:7" rel="footnote"><span class="hint--top hint--rounded" aria-label="**官方** ROKerbalism wiki https://github.com/KSP-RO/ROKerbalism/wiki">[7]</span></a></sup><sup id="fnref:8" class="footnote-ref"><a href="#fn:8" rel="footnote"><span class="hint--top hint--rounded" aria-label="**官方** Kerbalism wiki https://github.com/Kerbalism/Kerbalism">[8]</span></a></sup></h3><p><strong>模拟现实航天，生命支持必不可少。而Kerbalism就成为了RP-1的最佳选择。</strong>但RO玩家可以选择TAC。</p>
 <p>除了一般的物质支持（食物，水，氧气等），你必须考虑到航天员的心理状态。足够的生活空间，舒适度等都是必须的，否则航天员的压力值会不断上升，并可能犯错误乃至一些严重问题（如毁坏科研数据等）。</p>
 <p>不仅如此，对于一些长期任务（登陆火星，空间站驻留等），你需要考虑到宇宙射线的侵袭。太阳风暴会随机发生，部分行星具有辐射带，你需要针对这些做出防护措施。当然，宇航员受到的辐射会存留一生。</p>
 <p><strong>20240807补：</strong>正常游戏中会关闭太阳风暴的发生，因为它几乎是致命且无法被抵御的</p>
 <p>但Kerbalism不止有维生，还有全新的科研系统。实验会随着时间推移产生“数据”，数据会自动传输（可关闭）；有的实验会产生“样本”，必须回收到地球才能获得科技点（当然，“样本”具有质量）。不同实验所需时间不同，短的五分钟，长的八九年。收集科技点变成了后台程序。如果一次无法完成实验，可以重复多次，直到获得所有的科技点（包括样本）。</p>
-<p><strong>3.TestFlight</strong><sup id="fnref:9" class="footnote-ref"><a href="#fn:9" rel="footnote"><span class="hint--top hint--rounded" aria-label="**官方** TestFlight wiki https://github.com/KSP-RO/TestFlight/wiki">[9]</span></a></sup></p>
-<p>TestFlight 和 TestLite 都是可选的。但作者选择了前者，故以下文字仅针对TF。</p>
+<h3 id="3-TestFlight-9"><a href="#3-TestFlight-9" class="headerlink" title="3.TestFlight[9]"></a>3.TestFlight<sup id="fnref:9" class="footnote-ref"><a href="#fn:9" rel="footnote"><span class="hint--top hint--rounded" aria-label="**官方** TestFlight wiki https://github.com/KSP-RO/TestFlight/wiki">[9]</span></a></sup></h3><p>TestFlight 和 TestLite 都是可选的。但作者选择了前者，故以下文字仅针对TF。</p>
 <p>“这是更是重量级”，一切罪恶的源头——随机故障。（适度玩梗）</p>
 <p>在RP-1中，TestFlight 只应用于引擎，所有的引擎都有概率发生故障。</p>
 <p>TestFlight 引入了“飞行数据”这一概念，引擎正常燃烧或发生故障都会产生数据（有上限），可以提高工作可靠性。故障时的飞行数据更多（安慰奖？）。不同引擎的初始几率不同，早期引擎可靠性较低，现代引擎相对更加可靠。</p>
@@ -512,8 +506,7 @@
 </tbody></table>
 <p>RP-1的引擎故障事件：</p>
 <p>点火失败、推力减半、推力比冲减半、故障熄火、引擎爆炸（爆炸不会有冲击波，但你会损失故障引擎部件）</p>
-<p><strong>4.RealAntennas<sup id="fnref:10" class="footnote-ref"><a href="#fn:10" rel="footnote"><span class="hint--top hint--rounded" aria-label="**官方** RealAntennas wiki https://github.com/DRVeyl/RealAntennas/wiki">[10]</span></a></sup><sup id="fnref:15" class="footnote-ref"><a href="#fn:15" rel="footnote"><span class="hint--top hint--rounded" aria-label="**B站专栏** **链接失效** ~~AGKMA的《RealAntennas wiki翻译》（不止翻译）~~">[15]</span></a></sup>（非依赖）</strong></p>
-<p>原版通讯在RP-1的表现并不完美，所以RP-1推荐安装 RealAntennas 以提供更好的通讯系统。RA在通讯方面做出了许多改动，增加了一系列现实生活中的特性。为便于理解，这里仅概括描述一小部分。</p>
+<h3 id="4-RealAntennas-10-15-（非依赖）"><a href="#4-RealAntennas-10-15-（非依赖）" class="headerlink" title="4.RealAntennas[10][15]（非依赖）"></a>4.RealAntennas<sup id="fnref:10" class="footnote-ref"><a href="#fn:10" rel="footnote"><span class="hint--top hint--rounded" aria-label="**官方** RealAntennas wiki https://github.com/DRVeyl/RealAntennas/wiki">[10]</span></a></sup><sup id="fnref:15" class="footnote-ref"><a href="#fn:15" rel="footnote"><span class="hint--top hint--rounded" aria-label="**B站专栏** **链接失效** ~~AGKMA的《RealAntennas wiki翻译》（不止翻译）~~">[15]</span></a></sup>（非依赖）</h3><p>原版通讯在RP-1的表现并不完美，所以RP-1推荐安装 RealAntennas 以提供更好的通讯系统。RA在通讯方面做出了许多改动，增加了一系列现实生活中的特性。为便于理解，这里仅概括描述一小部分。</p>
 <p><strong>杂项</strong>：所有的天线都有闲置功率，即使不使用也会耗电，工作时消耗电量更多。堆叠单一天线不会有任何作用（除非有不同的连接目标），而应当使用不同类型的天线，使它们互为补充。</p>
 <p><strong>增益与功率</strong>：增益是天线的固定参数之一。一般来说，对于同配置的天线，增益越大，传输距离越远。技术的升级也可以增加天线增益。发射功率可在一定程度上增加通讯信号强度，同时也会增加天线的质量，以及指数级增加工作功率。</p>
 <p><strong>波段</strong>：也许你用过收音机。为了收到广播信号，你必须将接收频段调到某些特定值。对于航天器，也有不同的频段区间可以选择（但是和收音机有本质区别，这里只是类比，方便理解）。VHF、UHF 一般适合近地通讯，而 S-Band、X-Band 和 Ka-Band 则更适合远距离通讯。</p>
@@ -521,8 +514,7 @@
 <p><strong>传输与接收</strong>：传输速率与天线的增益、发射功率乃至通讯波段都有关系。接收速率主要和地面站的等级有关。只有当传输与接收速率都大于0，通讯连接才能成功建立。传输距离每增加一倍，传输速率大约减少一半（估算值）。</p>
 <p><strong>技术升级</strong>：RA生涯中，技术的升级非常重要。 解锁通讯科技节点可以解锁更好的天线部件、提高天线的技术等级、解锁测控站的建筑升级和新的通讯波段等等。这在RP-1中几乎是不可或缺的。</p>
 <p>补充：RP-1玩家可以选择 RemoteTech，但不建议；RO玩家二选一即可。</p>
-<p><strong>5.Principia<sup id="fnref:11" class="footnote-ref"><a href="#fn:11" rel="footnote"><span class="hint--top hint--rounded" aria-label="**官方** Principia wiki https://github.com/mockingbirdnest/Principia/wiki">[11]</span></a></sup><sup id="fnref:12" class="footnote-ref"><a href="#fn:12" rel="footnote"><span class="hint--top hint--rounded" aria-label="**KerbCat** ethanbeijing的[《Principia教程》]( https://www.kerbcat.com/articles/13601)">[12]</span></a></sup><font color=e02525>（非依赖，不建议新手加入）</font></strong></p>
-<p>作者尚未精通此模组，仅进行初步介绍。</p>
+<h3 id="5-Principia-11-12-（非依赖，不建议新手加入）"><a href="#5-Principia-11-12-（非依赖，不建议新手加入）" class="headerlink" title="5.Principia[11][12]（非依赖，不建议新手加入）"></a>5.Principia<sup id="fnref:11" class="footnote-ref"><a href="#fn:11" rel="footnote"><span class="hint--top hint--rounded" aria-label="**官方** Principia wiki https://github.com/mockingbirdnest/Principia/wiki">[11]</span></a></sup><sup id="fnref:12" class="footnote-ref"><a href="#fn:12" rel="footnote"><span class="hint--top hint--rounded" aria-label="**KerbCat** ethanbeijing的[《Principia教程》]( https://www.kerbcat.com/articles/13601)">[12]</span></a></sup><font color=e02525>（非依赖，不建议新手加入）</font></h3><p>作者尚未精通此模组，仅进行初步介绍。</p>
 <p><strong>建议阅读<a target="_blank" rel="noopener" href="https://www.kerbcat.com/articles/13601"><font color=33e33c>KerbCat教程</font></a></strong></p>
 <p>想发射太阳同步轨道卫星？想尝试鹊桥号的月背中继？想重现ISEE-3的传奇？想尝试自由返回轨道？在 Principia 中，你都可以做到！</p>
 <p>Principia提供了一个新的概念：<strong>参考系</strong>。不同的轨道在不同的参考系下的轨迹不同。例如，“地心地固参考系”与原版的“地面速度”基本类似；“地心惯性参考系”与原版的“轨道速度”基本类似。当然，这里只是非常浅显的解释，只是便于新人理解参考系的概念。</p>
