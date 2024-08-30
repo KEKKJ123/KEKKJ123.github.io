@@ -83,7 +83,7 @@
   
   
   <entry>
-    <title>[Test]Hello World</title>
+    <title>[Test] Hello World</title>
     <link href="/posts/Transcend-History/1/"/>
     <url>/posts/Transcend-History/1/</url>
     
@@ -150,6 +150,8 @@
     
     <tags>
       
+      <tag>教程</tag>
+      
       <tag>Linux</tag>
       
       <tag>Ubuntu</tag>
@@ -157,8 +159,6 @@
       <tag>OpenVINO</tag>
       
       <tag>Github</tag>
-      
-      <tag>教程</tag>
       
     </tags>
     
