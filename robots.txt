@@ -4,4 +4,6 @@ Disallow: /posts/suiyuan/
 Disallow: /categories/
 Disallow: /tags/
 Disallow: /posts/suiyuan/
+Disallow: /archives/
+Disallow: /about/
 Sitemap: https://kekkj123.github.io/sitemap.xml
