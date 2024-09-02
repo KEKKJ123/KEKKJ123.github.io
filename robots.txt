@@ -3,4 +3,5 @@ User-agent: *
 Allow: /
 Allow: /posts/
 Disallow: /posts/suiyuan/
+Disallow: /categories/
 Sitemap: https://kekkj123.github.io/sitemap.xml
