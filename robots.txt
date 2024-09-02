@@ -1,9 +1,6 @@
 # robots.txt generated at http://www.w3cschool.cn/
 User-agent: *
-Disallow: 
-Disallow: /archives/
-Disallow: /categories/
-Disallow: /tags/
-Disallow: /about/
+Allow: /
+Allow: /posts/
 Disallow: /posts/suiyuan/
 Sitemap: https://kekkj123.github.io/sitemap.xml
