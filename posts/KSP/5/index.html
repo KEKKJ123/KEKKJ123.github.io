@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="/img/Blog_Saturn.png">
   <link rel="icon" href="/img/Blog_Saturn.png">
   
-    <link rel="canonical" href="https://kekkj123.github.io/posts/5/"/>
+    <link rel="canonical" href="https://kekkj123.github.io/posts/KSP/5/"/>
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
@@ -23,11 +23,11 @@
   <meta name="author" content="KEKKJ">
   <meta name="keywords" content="KEKKJ">
   
-    <meta name="description" content="由于OpenVINO 2021.4 LTS 版本不被官方支持，官网下载界面没有对应版本的选项安装。经过大量尝试后，终于找到了相对稳定的安装方案，并且对大部分老版本同样适用。 本人尚是一枚新人，对各方面了解较浅，若有错误，欢迎各位指出。 感谢视觉救命群热心群友的帮助！  2024.4.2 一次修改：优化排版 2024.4.3 二次修改：调整“环境变量”文本提示 2024.7.6 三次修改：修改引用">
+    <meta name="description" content="TBD  各位小绿人你们好，欢迎阅读“超越历史”系列专栏！ 为方便讲解，在征得模组作者的同意后，我将分开讲解模组介绍（P1）和安装指导（P2）。 这是 RSS-Origin 安装指导（P2），讲解了安装的注意事项和步骤。 注意：此模组目前仍在开发中，但已经发布了能够稳定运行的正式版本。 此文适用范围：KSP1.12.5、RSS-Origin v1.1.0，若有描述错误，请以官方叙述为准！ 模组作">
   
   
   
-  <title>[Ubuntu] OpenVINO 2021.4 LTS 及旧版本编译安装方法 - KEKKJ的个人博客 - 小世界的一瞥</title>
+  <title>RSS-Origin安装指导（P2） - KEKKJ的个人博客 - 小世界的一瞥</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -190,13 +190,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/5/OpenVINO.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/ApolloSoyuz.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">[Ubuntu] OpenVINO 2021.4 LTS 及旧版本编译安装方法</span>
+            <span id="subtitle">RSS-Origin安装指导（P2）</span>
           
         </div>
 
@@ -212,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-04-02 19:20" pubdate>
-          2024年4月2日 晚上
+        <time datetime="2024-09-15 23:37" pubdate>
+          2024年9月15日 晚上
         </time>
       </span>
     
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          775 字
+          2.6k 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          6 分钟
+          18 分钟
         
       </span>
     
@@ -274,58 +274,6 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
-  <aside class="sidebar category-bar" style="margin-right: -1rem">
-    
-
-
-
-
-
-<div class="category-list">
-  
-  
-    
-    
-    
-    <div class="category row nomargin-x">
-      <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="视觉学习笔记"
-        id="heading-137188889c5834eb78b2f0ca1c9df393" role="tab" data-toggle="collapse" href="#collapse-137188889c5834eb78b2f0ca1c9df393"
-        aria-expanded="true"
-      >
-        视觉学习笔记
-        <span class="list-group-count">(1)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse show" id="collapse-137188889c5834eb78b2f0ca1c9df393"
-           role="tabpanel" aria-labelledby="heading-137188889c5834eb78b2f0ca1c9df393">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/posts/5/" title="[Ubuntu] OpenVINO 2021.4 LTS 及旧版本编译安装方法"
-           class="list-group-item list-group-item-action
-           active">
-          <span class="category-post">[Ubuntu] OpenVINO 2021.4 LTS 及旧版本编译安装方法</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-</div>
-
-
-  </aside>
-
 
     </div>
 
@@ -333,12 +281,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">[Ubuntu] OpenVINO 2021.4 LTS 及旧版本编译安装方法</h1>
+            <h1 id="seo-header">RSS-Origin安装指导（P2）</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-08-29T17:12:17+08:00
+                    本文最后更新于 2024-09-17T15:02:35+08:00
                   
                   
 
@@ -349,69 +297,113 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p><font color=gray>由于OpenVINO 2021.4 LTS 版本不被官方支持，官网下载界面没有对应版本的选项安装。经过大量尝试后，终于找到了相对稳定的安装方案，并且对大部分老版本同样适用。</font></p>
-<p><font color=gray>本人尚是一枚新人，对各方面了解较浅，若有错误，欢迎各位指出。</font></p>
-<p><font color=gray><strong>感谢视觉救命群热心群友的帮助！</strong></font></p>
+<p>TBD</p>
 </blockquote>
-<p>2024.4.2 一次修改：优化排版</p>
-<p>2024.4.3 二次修改：调整“环境变量”文本提示</p>
-<p>2024.7.6 三次修改：修改引用链接</p>
-<p>2024.8.26 迁移文章至博客，并同步更新 CSDN</p>
+<p>各位小绿人你们好，欢迎阅读“超越历史”系列专栏！</p>
+<p>为方便讲解，在征得模组作者的同意后，我将分开讲解模组介绍（P1）和安装指导（P2）。</p>
+<p>这是 <strong>RSS-Origin 安装指导（P2）</strong>，讲解了安装的注意事项和步骤。</p>
+<p><strong>注意：此模组目前仍在开发中，但已经发布了能够稳定运行的正式版本。</strong></p>
+<p>此文适用范围：<font color=e02525><strong>KSP1.12.5</strong></font>、<font color=e02525><strong>RSS-Origin v1.1.0</strong></font>，若有描述错误，请以<font color=0083ff><strong>官方</strong></font>叙述为准！</p>
+<p>模组作者的联系方式：（待补充），您可以通过此渠道直接向作者报告问题和提出建议。</p>
+<h2 id="本文会持续更新！"><a href="#本文会持续更新！" class="headerlink" title="本文会持续更新！"></a>本文会持续更新！</h2><h1 id="序、安装前须知"><a href="#序、安装前须知" class="headerlink" title="序、安装前须知"></a>序、安装前须知</h1><ul>
+<li><strong>RSS-Origin 支持且推荐使用 CKAN 安装！</strong></li>
+<li><strong>模组免责声明：天体的轨道数据、物理数据、外观等不能保证与现实完全一致。</strong></li>
+<li><strong>对于 RSS-Origin CelestialsPack，强烈推荐安装 Principia 以获得最佳体验。</strong></li>
+<li><strong>本文章的时效性可能会略晚于官方，请务必结合<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/blob/main/README.md#installation-guide">官方安装教程（Github）</a>食用。</strong></li>
+<li><strong>与 RP-1 和 RP-1 Legacy 的兼容性：TBD</strong></li>
+</ul>
+<p>RSS-Origin 是一个模组集合，但它的各部分并不互相依赖。所以，我们会针对它的不同部分给出专门的安装讲解。</p>
+<h1 id="一、RSS-Origin-CelestialsPack"><a href="#一、RSS-Origin-CelestialsPack" class="headerlink" title="一、RSS-Origin CelestialsPack"></a>一、RSS-Origin CelestialsPack</h1><p>在完整安装状态，本模组会添加 198 个额外的天体，再加上 RSS 自带的总共 231 个。如果以此状态游玩，KSP 将会严重卡顿。</p>
+<p>鉴于这种情况，本模组的每个天体或天体系统都在一个单独的文件夹。在实际游玩中，你可以根据自己的需要更改天体所在的文件夹，以保证游戏的流畅性。</p>
+<p><strong>除非特殊需要（观赏、任务规划等），不要一次性安装所有天体！建议只保留星际任务所需的天体。</strong></p>
+<p><strong>硬件要求</strong>：如果你的设备上可以运行 RSS（或 RSS+Principia），就可以安装这个模组。</p>
+<p>您可以在 GameData&#x2F;RSSOrigin&#x2F;RSSOriginSettings.cfg 中更改轨道的颜色和天体图标的类型。</p>
+<h2 id="1-更改天体的具体操作"><a href="#1-更改天体的具体操作" class="headerlink" title="1. 更改天体的具体操作"></a>1. 更改天体的具体操作</h2><p>进入 Gamedata 中的 <strong>RSSOrigin</strong> 文件夹，搜索您不需要的天体。</p>
+<p>将不需要的天体文件夹移动出 GameData，如果您哪天需要再次安装它，放回更改前的位置即可，或者直接重新安装。（如果忘记了天体的名字，可以去查看[Celestial bodies added in RSS-Origin](<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/blob/main/assets/Celestial">https://github.com/CharonSSS/RSS-Origin/blob/main/assets/Celestial</a> bodies added in RSS-Origin.png)）</p>
+<h2 id="2-我必须安装-Principia-吗？"><a href="#2-我必须安装-Principia-吗？" class="headerlink" title="2. 我必须安装 Principia 吗？"></a>2. 我必须安装 Principia 吗？</h2><p>当然不是！是否使用 Principia 主要取决于个人喜好。但你需要了解的是，Principia 使不规则引力场成为可能，同时具有更精确的轨道力学和轴向倾斜，所以，作者强烈推荐安装以获得最佳体验。如果您认为这些功能不是必需的，则不必安装 Principia。</p>
+<p>由于 Principia 本身的限制，您可以在开始新的存档之前更改天体，但不能在已有的存档中更改天体。即创建存档后，存档的天体就会被固定，不可被更改。</p>
+<p>而在原版引力环境，您可以随时向任意存档修改任意数量的天体，只需要注意环绕天体的飞船即可。<font color=gray><del>删档不规范，绿人两行泪</del></font></p>
+<h2 id="3-已知问题"><a href="#3-已知问题" class="headerlink" title="3. 已知问题"></a>3. 已知问题</h2><ul>
+<li>半径较小 （小于 409 米） 的对象可能存在渲染错误。从远处查看时，整体显示将为黑色。接近时，纹理可能会闪烁，但不会影响着陆。一旦接近，它就会恢复正常。</li>
+<li>在 Principia 环境添加大量的天体后，当<strong>绘制参考系选择器</strong>界面完全展开时，游戏会变得非常卡顿。减少安装天体数量或关闭界面可以缓解这个问题。</li>
+<li>在没有 Principia 的情况下安装了大量的天体后，当你进入地图视图时，由于渲染的轨道线太多，游戏会变得卡顿。安装 <strong>Too Many Orbits</strong> 可以缓解这个问题。</li>
+<li>Principia 的限制是每个物体的角频率恒定，这导致一些与行星潮汐锁定的卫星无法有效地保持潮汐锁定。在一段时间后，卫星会偏离正确的方向，目前无法解决。</li>
+<li>当尝试在一些小行星和它们的卫星之间转移（通过 SOI）时，可能会有一些未知原因的错误。先切换到追踪站，再切换回飞船可以解决此问题。</li>
+<li>游戏会从 1951 年 1 月 1 日开始，所以如果你想聚焦这两个星际天体（Oumuamua，奥陌陌；Borisov，鲍里索夫彗星），你可能需要在游戏中加速到至少 50 年后。</li>
+</ul>
+<h2 id="4-依赖关系和兼容情况"><a href="#4-依赖关系和兼容情况" class="headerlink" title="4. 依赖关系和兼容情况"></a>4. 依赖关系和兼容情况</h2><details>
+    <summary>依赖模组</summary>
+    <div style="line-height:40px;">
+        Real Solar System（CKAN 安装需要手动勾选），RSS-Reborn 或 KSRSS（后两者不支持 CKAN）<br/>
+        Niako's Kopernicus Utilities（已包含，无需额外下载）<br/>
+    </div>
+</details>
+
 <hr>
-<p>在准备安装之前，我们需要明确 OpenVINO 的完整安装流程。</p>
-<p>根据官方安装文档，OpenVINO 可以大致分为三个部分：<font color=gray>（个人理解）</font></p>
-<ol>
-<li>OpenVINO™ Toolkit Core Components —— OpenVINO 工具包</li>
-<li>External Software Dependencies —— OpenVINO 依赖项</li>
-<li>The Model Optimizer —— 模型优化器（若安装dev版本可略过）</li>
-</ol>
-<h2 id="第零步：确保网络环境畅通，能稳定访问-Github"><a href="#第零步：确保网络环境畅通，能稳定访问-Github" class="headerlink" title="第零步：确保网络环境畅通，能稳定访问 Github"></a>第零步：确保网络环境畅通，能稳定访问 Github</h2><p><strong>本文默认您已安装 CMake, GCC, Python 等基本依赖项</strong></p>
-<h2 id="第一步：获取旧版本OpenVINO-工具包-3-4"><a href="#第一步：获取旧版本OpenVINO-工具包-3-4" class="headerlink" title="第一步：获取旧版本OpenVINO 工具包[3][4]"></a>第一步：获取旧版本OpenVINO 工具包<sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="[[2019_R1] Install Intel® Distribution of OpenVINO™ toolkit for Linux - OpenVINO Toolkit](https://docs.openvino.ai/archive/2019_R1/_docs_install_guides_installing_openvino_linux.html#set-the-environment-variables)">[3]</span></a></sup><sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="[[2021.4] Install and Configure Intel® Distribution of OpenVINO™ toolkit for Linux — OpenVINO™ documentation](https://docs.openvino.ai/archive/2021.4/openvino_docs_install_guides_installing_openvino_linux.html)">[4]</span></a></sup></h2><p>对于旧版本，我们需要从官方存档仓库<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[OpenVINO 官方仓库](https://storage.openvinotoolkit.org/repositories/openvino/packages/)">[2]</span></a></sup>中寻找。请依据你的 Ubuntu 版本下载对应的版本。</p>
-<div style="display:inline-block;">
-    <img width="60%" src="https://img.picui.cn/free/2024/08/26/66cc9c422af2f.png" srcset="/img/loading.gif" lazyload style="float: left; margin-right: 5px;">
-    <img width="34.3%" src="https://img.picui.cn/free/2024/08/26/66cc9c4224d44.png" srcset="/img/loading.gif" lazyload style="float: left; margin-right: 5px;">
-</div>
+<details>
+    <summary>推荐模组</summary>
+    <div style="line-height:40px;">
+        <details>
+            <summary>强烈推荐</summary>
+            <b>Principia</b> - 引入了多体引力计算。<br/>
+            <b>Realism Overhaul</b> - 针对 RSS 提供的航天真实化修改，使游戏变得更加真实。<br/>
+            <b>Too Many Orbits（仅原版轨道环境）</b> - 在地图界面，一键隐藏无关的飞行器、轨道和天体。<br/>
+            <b>KSC Switcher</b> - 允许更改 KSC 的地理位置，提供了全球不同地区的几十个发射台。<br/>
+            <b>RSS DateTime Formatter</b> - 用正常的日历形式代替原版时间的表示方法。<br/>
+        </details>
+        <details>
+            <summary>建议安装</summary>
+            <b>Environmental Visual Enhancements</b> - <br/>
+            <b>Scatterer</b> - 为 KSP 添加了逼真的大气散射、水面及水下特效和阳光渲染等各种效果，一般是其他美化模组的依赖，无需主动安装。<br/>
+            <b>Parallax</b> - 对行星表面纹理的重做，并改进了原版有限的着色器，提高了渲染性能。<br/>
+            <b>TUFX</b> - 提供画面的后处理效果。建议额外安装配置文件使用。<br/>
+        </details>
+    </div>
+</details>
 
+<hr>
+<p>不兼容：其他 RSS 天体扩展包。但与 Kcalbeloh 兼容。</p>
+<p>如果你想添加气巨行星的卫星，也想给气巨行星添加行星环，建议安装 <strong>RSS-Origin JSUNrings</strong>。</p>
+<p>两者会根据现实情况调整卫星和行星环的位置。如果不使用这个环形包，卫星可能会运动到其他地方，例如从它们应该存在的行星环间隙中跑出来。</p>
+<h2 id="5-下载和安装"><a href="#5-下载和安装" class="headerlink" title="5. 下载和安装"></a>5. 下载和安装</h2><p><strong>1) 使用 CKAN 自动安装（推荐）</strong></p>
+<p><strong>2) 手动下载及安装（请务必保证原先已安装的重复天体已经删除）</strong></p>
+<p>① 进入 RSS-Origin 的<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/releases">发布页面</a>，下载 <strong>RSS-Origin.CelestialsPack.Core.zip</strong>。</p>
+<p>② 选择并下载你想要的天体附加包（后面的英文代表了它们所属的类别），它的名字应当是 <strong>RSS-Origin.CelestialsPack.xxx.zip</strong>。</p>
+<p>③ 解压 <strong>RSS-Origin CelestialsPack Core.zip</strong>，并将解压后的文件夹 <strong>RSSOrigin</strong> 和 <strong>000_NiakoUtils</strong> 移动至 KSP 游戏文件夹的 <strong>Gamedata</strong> 文件夹中。</p>
+<p>④ 解压 <strong>RSS-Origin.CelestialsPack.xxx.zip</strong>，并将解压后的文件夹 <strong>RSSOrigin</strong> 移动至 <strong>Gamedata</strong> 中。如果显示“替换或跳过文件”，请立刻停止当前的安装进程，重新检查你的 <strong>RSS-Origin</strong> 文件夹是否已安装了所需的天体（或旧版本）。</p>
+<p>⑤ 在已安装 Principia 的情况下，若更改了已安装的天体，<strong>不要打开旧的存档</strong>，请创建一个新存档游玩。否则会导致游戏崩溃或存档损坏！</p>
+<h1 id="二、RSS-Origin-RSSTexture-TopoRevamp"><a href="#二、RSS-Origin-RSSTexture-TopoRevamp" class="headerlink" title="二、RSS-Origin RSSTexture&amp;TopoRevamp"></a>二、RSS-Origin RSSTexture&amp;TopoRevamp</h1><h2 id="1-依赖关系和兼容情况"><a href="#1-依赖关系和兼容情况" class="headerlink" title="1. 依赖关系和兼容情况"></a>1. 依赖关系和兼容情况</h2><p>依赖：Real Solar System（CKAN 安装需要手动勾选）或 KSRSS（后者不支持 CKAN）</p>
+<p>不兼容：目前未发现。如果遇到了可以联系作者。</p>
+<p>目前，RSS-Origin RSSTexture&amp;TopoRevamp 与 RSS-Reborn 不兼容。但是，在下一次 RSS-Reborn 更新，Fox 可能会将 RSS-Origin 的纹理合并。这意味着如果您已经安装了 RSS-Reborn，则无需安装 RSS-Origin RSSTexture&amp;TopoRevamp。</p>
+<h2 id="2-下载和安装"><a href="#2-下载和安装" class="headerlink" title="2. 下载和安装"></a>2. 下载和安装</h2><p><strong>1) 使用 CKAN 自动安装（推荐）</strong></p>
+<p><strong>2) 手动下载及安装（请务必保证原先已安装的纹理已经删除）</strong></p>
+<p>① 进入 RSS-Origin 的<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/releases">发布页面</a>，下载 <strong>RSS-Origin.RSSTexture.TopoRevamp.Configs.zip</strong>。</p>
+<p>② 下载 <strong>RSS-Origin.RSSTexture.TopoRevamp.Textures.zip</strong>，选择 4k &#x2F; 8k &#x2F;16k 三种分辨率的<strong>其中一个</strong>即可。</p>
+<p>③ 解压 <strong>RSS-Origin.RSSTexture.TopoRevamp.Configs.zip</strong>，并将解压后的文件夹 <strong>RSSOrigin</strong> 移动至 KSP 游戏文件夹的 <strong>Gamedata</strong> 文件夹中。</p>
+<p>④ 解压 <strong>RSS-Origin.RSSTexture.TopoRevamp.Textures.zip</strong>。将解压后的文件夹 <strong>RSSOrigin</strong> 移动至 <strong>Gamedata</strong> 中。如果显示“替换或跳过文件”，请立刻停止当前的安装进程，重新检查你的 <strong>RSS-Origin</strong> 文件夹是否已安装了纹理（或旧版本）。</p>
+<h1 id="三、RSS-Origin-JSUNrings"><a href="#三、RSS-Origin-JSUNrings" class="headerlink" title="三、RSS-Origin JSUNrings"></a>三、RSS-Origin JSUNrings</h1><h2 id="1-依赖关系和兼容情况-1"><a href="#1-依赖关系和兼容情况-1" class="headerlink" title="1. 依赖关系和兼容情况"></a>1. 依赖关系和兼容情况</h2><p>依赖：Real Solar System（CKAN 安装需要手动勾选），RSS-Reborn 或 KSRSS（后两者不支持 CKAN）</p>
+<p>不兼容：在大多数情况下，<strong>RSS-Origin JSUNring</strong> 应该能够覆盖其他行星环的配置。若没有请联系作者。</p>
+<p>RSS-Origin JSUNrings 与 RSS-Reborn 的当前版本兼容。与 RSS-Origin RSSTexture&amp;TopoRevamp 一样，两者会在未来的版本更新被合并。</p>
+<h2 id="2-下载和安装-1"><a href="#2-下载和安装-1" class="headerlink" title="2. 下载和安装"></a>2. 下载和安装</h2><p><strong>1) 使用 CKAN 自动安装（推荐）</strong></p>
+<p><strong>2) 手动下载及安装（请务必保证原先已安装的纹理已经删除）</strong></p>
+<p>① 进入 RSS-Origin 的<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/releases">发布页面</a>，下载 <strong>RSS-Origin.JSUNrings.zip</strong>。</p>
+<p>② 解压 <strong>RSS-Origin.JSUNrings.zip</strong>，并将解压后的文件夹 <strong>RSSOrigin</strong> 移动至 KSP 游戏文件夹的 <strong>Gamedata</strong> 文件夹中。</p>
+<h1 id="四、RSS-Origin-GalaxyTex"><a href="#四、RSS-Origin-GalaxyTex" class="headerlink" title="四、RSS-Origin GalaxyTex"></a>四、RSS-Origin GalaxyTex</h1><h2 id="1-依赖关系和兼容情况-2"><a href="#1-依赖关系和兼容情况-2" class="headerlink" title="1. 依赖关系和兼容情况"></a>1. 依赖关系和兼容情况</h2><p>依赖：只需要 <strong>TextureReplacer</strong>。</p>
+<p>不兼容：其他改变星空背景的模组。</p>
+<p>如果在安装 RSS-Reborn 的情况下使用 RSS-Origin GalaxyTex，您必须删除 GameData&#x2F;RSS-Configs 中的 <strong>Skybox</strong> 文件夹。</p>
+<h2 id="2-下载和安装-2"><a href="#2-下载和安装-2" class="headerlink" title="2. 下载和安装"></a>2. 下载和安装</h2><p>① 手动下载和安装<strong>TextureReplacer</strong>。</p>
+<p>② 进入 RSS-Origin 的<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/releases">发布页面</a>，下载 <strong>RSS-Origin.GalaxyTex.zip</strong>，选择 8k &#x2F; 16k &#x2F; 32k &#x2F; 64k 四种分辨率的其中一个即可。</p>
+<p>③ 解压 <strong>RSS-Origin.GalaxyTex.zip</strong>，并将解压后的文件夹 <strong>RSSOrigin</strong> 移动至 KSP 游戏文件夹的 <strong>Gamedata</strong> 文件夹中。</p>
+<h1 id="五、Credit"><a href="#五、Credit" class="headerlink" title="五、Credit"></a>五、Credit</h1><h2 id="作者：-Charon-S"><a href="#作者：-Charon-S" class="headerlink" title="作者： Charon_S"></a>作者： Charon_S</h2><h3 id="主要贡献者（排名不分贡献大小，按字母顺序排列）"><a href="#主要贡献者（排名不分贡献大小，按字母顺序排列）" class="headerlink" title="主要贡献者（排名不分贡献大小，按字母顺序排列）"></a>主要贡献者（排名不分贡献大小，按字母顺序排列）</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs css">himīśā<br>Kerbinator Fras<br>NewoEther<br>Proxima-<span class="hljs-selector-tag">b</span><br></code></pre></td></tr></table></figure>
 
-<p>在本教程中，我们在 Ubuntu 20.04 环境安装 OpenVINO 2021.4.1</p>
-<p>即：l_openvino_toolkit_dev_ubuntu20_p_2021.4.689.tgz <font color=gray><del><strong>（作者犯懒就选择dev了）</strong></del></font></p>
-<p>下载后提取到此处即可</p>
-<p>提取后文件夹路径应为：~&#x2F;Downloads&#x2F;l_openvino_toolkit_dev_ubuntu20_p_2021.4.689</p>
-<p>将解压后的文件夹移动到 &#x2F;opt&#x2F;intel&#x2F;openvino（记得换成自己的路径）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> Downloads<br>tar -xvf l_openvino_toolkit_dev_ubuntu20_p_2021.4.689<br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">mv</span> /home/&lt;username&gt;/Downloads/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689 /opt/intel/openvino<br></code></pre></td></tr></table></figure>
+<h3 id="特别贡献者（按字母顺序排列，不区分贡献程度）"><a href="#特别贡献者（按字母顺序排列，不区分贡献程度）" class="headerlink" title="特别贡献者（按字母顺序排列，不区分贡献程度）"></a>特别贡献者（按字母顺序排列，不区分贡献程度）</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs css">Alice Christina<br>ballisticfox<br>caps lock<br>Lekword<br>猫猫是我心头好<br><span class="hljs-attribute">R</span>-T-<span class="hljs-selector-tag">B</span><br>游荡云雀<br>YWMKerman<br></code></pre></td></tr></table></figure>
 
-<p>进入 install_dependencies 文件夹，并运行 install_openvino_dependencies.sh</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /opt/intel/openvino/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689/install_dependencies<br><span class="hljs-built_in">sudo</span> -E ./install_openvino_dependencies.sh<br></code></pre></td></tr></table></figure>
+<h3 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">上述所有成员<br>内测团队的所有成员<br>所有对本模组提供建议和评论的成员<br></code></pre></td></tr></table></figure>
 
-<p>配置临时环境变量以验证安装成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> /opt/intel/openvino/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689/bin/setupvars.sh<br></code></pre></td></tr></table></figure>
+<h3 id="致歉"><a href="#致歉" class="headerlink" title="致歉"></a>致歉</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">所有对本模组做出杰出贡献但未在上面列出的成员<br></code></pre></td></tr></table></figure>
 
-<p>若显示</p>
-<p><strong>[setupvars.sh] OpenVINO environment initialized</strong></p>
-<p>则代表安装成功。</p>
-<p>配置永久环境变量：使用编辑器在 .bashrc 文件末尾输入刚才的source命令并保存。</p>
-<p>再次打开新终端，若出现相同信息则可进行下一步。</p>
-<h2 id="第二步：源代码构建并编译-5"><a href="#第二步：源代码构建并编译-5" class="headerlink" title="第二步：源代码构建并编译[5]"></a>第二步：源代码构建并编译<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Build OpenVINO™ Runtime for Linux systems - github.com](https://github.com/openvinotoolkit/openvino/blob/master/docs/dev/build_linux.md)">[5]</span></a></sup></h2><p>打开新终端，克隆 OpenVINO 存储库<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[GitHub下载克隆clone指定的分支tag代码 - Tse先生 - 博客园](https://www.cnblogs.com/Sungeek/p/10275903.html)">[1]</span></a></sup>和 init 子模块</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> -b releases/2021/4 https://github.com/openvinotoolkit/openvino.git	<span class="hljs-comment">#文件约500MB，注意流量</span><br><span class="hljs-built_in">cd</span> openvino<br>git submodule update --init --recursive<br></code></pre></td></tr></table></figure>
+<p>有关更多信息，请参阅 <a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/blob/main/CREDIT.md">CREDIT.md</a></p>
 
-<p>根据克隆库安装依赖</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> +x install_build_dependencies.sh	<span class="hljs-comment">#给予可执行权限</span><br><span class="hljs-built_in">sudo</span> ./install_build_dependencies.sh	<span class="hljs-comment">#执行脚本</span><br></code></pre></td></tr></table></figure>
-
-<p>创建文件夹并编译，到这里 OpenVINO 就安装完毕了</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> build &amp;&amp; <span class="hljs-built_in">cd</span> build<br>cmake -DCMAKE_BUILD_TYPE=Release ..<br>cmake --build . --parallel 8	<span class="hljs-comment">#数字代表并行线程数，根据处理器情况酌情修改</span><br></code></pre></td></tr></table></figure>
-
-
-
-<h2 id="第三步：安装模型优化器（WIP）"><a href="#第三步：安装模型优化器（WIP）" class="headerlink" title="第三步：安装模型优化器（WIP）"></a>第三步：安装模型优化器（WIP）</h2><p>（待补充）</p>
-<h2 id="一些碎碎念"><a href="#一些碎碎念" class="headerlink" title="一些碎碎念"></a>一些碎碎念</h2><p>若报错或显示“权限不够”，本文大部分命令都可以在开头添加 sudo 执行（理论上）</p>
-<p>善用搜索引擎，遇到报错，可复制关键文本查找解决方法。</p>
-<p><strong>很多情况下，直接阅读官方文档比搜索本身更加有效。</strong></p>
-<h2 id="参考文章（建议阅读）"><a href="#参考文章（建议阅读）" class="headerlink" title="参考文章（建议阅读）"></a>参考文章（建议阅读）</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Sungeek/p/10275903.html">GitHub下载克隆clone指定的分支tag代码 - Tse先生 - 博客园</a>
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://storage.openvinotoolkit.org/repositories/openvino/packages/">OpenVINO 官方仓库</a>
-<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.openvino.ai/archive/2019_R1/_docs_install_guides_installing_openvino_linux.html#set-the-environment-variables">[2019_R1] Install Intel® Distribution of OpenVINO™ toolkit for Linux - OpenVINO Toolkit</a>
-<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.openvino.ai/archive/2021.4/openvino_docs_install_guides_installing_openvino_linux.html">[2021.4] Install and Configure Intel® Distribution of OpenVINO™ toolkit for Linux — OpenVINO™ documentation</a>
-<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/openvinotoolkit/openvino/blob/master/docs/dev/build_linux.md">Build OpenVINO™ Runtime for Linux systems - github.com</a>
-<a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
             
@@ -429,7 +421,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%A7%86%E8%A7%89%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="category-chain-item">视觉学习笔记</a>
+  <a href="/categories/KSP/" class="category-chain-item">KSP</a>
   
   
 
@@ -444,15 +436,17 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
-      
-        <a href="/tags/Ubuntu/" class="print-no-link">#Ubuntu</a>
-      
-        <a href="/tags/OpenVINO/" class="print-no-link">#OpenVINO</a>
-      
-        <a href="/tags/Github/" class="print-no-link">#Github</a>
-      
         <a href="/tags/%E6%95%99%E7%A8%8B/" class="print-no-link">#教程</a>
+      
+        <a href="/tags/%E5%9D%8E%E5%B7%B4%E6%8B%89%E5%A4%AA%E7%A9%BA%E8%AE%A1%E5%88%92/" class="print-no-link">#坎巴拉太空计划</a>
+      
+        <a href="/tags/KSP/" class="print-no-link">#KSP</a>
+      
+        <a href="/tags/RSS-RO-RP-1/" class="print-no-link">#RSS/RO/RP-1</a>
+      
+        <a href="/tags/RP-1/" class="print-no-link">#RP-1</a>
+      
+        <a href="/tags/%E6%B8%B8%E6%88%8F/" class="print-no-link">#游戏</a>
       
     </div>
   
@@ -464,8 +458,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>[Ubuntu] OpenVINO 2021.4 LTS 及旧版本编译安装方法</div>
-      <div>https://kekkj123.github.io/posts/5/</div>
+      <div>RSS-Origin安装指导（P2）</div>
+      <div>https://kekkj123.github.io/posts/KSP/5/</div>
     </div>
     <div class="license-meta">
       
@@ -477,13 +471,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年4月2日</div>
+          <div>2024年9月15日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年8月29日</div>
+          <div>2024年9月17日</div>
         </div>
       
       
