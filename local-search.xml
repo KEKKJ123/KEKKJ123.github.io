@@ -13,7 +13,7 @@
     
     <categories>
       
-      <category>Transcend History</category>
+      <category>TranscendHistory</category>
       
     </categories>
     
@@ -48,7 +48,7 @@
     
     <categories>
       
-      <category>Transcend History</category>
+      <category>TranscendHistory</category>
       
     </categories>
     
@@ -102,7 +102,7 @@
     
     <categories>
       
-      <category>Transcend_History</category>
+      <category>TranscendHistory</category>
       
     </categories>
     
@@ -218,6 +218,8 @@
     
     <tags>
       
+      <tag>教程</tag>
+      
       <tag>Linux</tag>
       
       <tag>Ubuntu</tag>
@@ -225,8 +227,6 @@
       <tag>OpenVINO</tag>
       
       <tag>Github</tag>
-      
-      <tag>教程</tag>
       
     </tags>
     
@@ -358,7 +358,7 @@
     
     <categories>
       
-      <category>Transcend_History</category>
+      <category>TranscendHistory</category>
       
     </categories>
     
