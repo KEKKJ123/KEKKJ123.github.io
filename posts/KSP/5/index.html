@@ -356,7 +356,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-09-19T00:32:18+08:00
+                    本文最后更新于 2024-09-19T05:56:15+08:00
                   
                   
 
@@ -390,7 +390,7 @@
 <p><strong>硬件要求</strong>：如果你的设备上可以运行 RSS（或 RSS+Principia），就可以安装这个模组。</p>
 <p>您可以在 GameData&#x2F;RSSOrigin&#x2F;RSSOriginSettings.cfg 中更改轨道的颜色和天体图标的类型。</p>
 <h2 id="1-更改天体的具体操作"><a href="#1-更改天体的具体操作" class="headerlink" title="1. 更改天体的具体操作"></a>1. 更改天体的具体操作</h2><p>进入 Gamedata 中的 <strong>RSSOrigin</strong> 文件夹，搜索您不需要的天体。</p>
-<p>将不需要的天体文件夹移动出 GameData，如果您哪天需要再次安装它，放回更改前的位置即可，或者直接重新安装。（如果忘记了天体的名字，可以去查看[Celestial bodies added in RSS-Origin](<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/blob/main/assets/Celestial">https://github.com/CharonSSS/RSS-Origin/blob/main/assets/Celestial</a> bodies added in RSS-Origin.png)）</p>
+<p>将不需要的天体文件夹移动出 GameData，如果您哪天需要再次安装它，放回更改前的位置即可，或者直接重新安装。（如果忘记了天体的名字，可以去查看 [Celestial bodies added in RSS-Origin](<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/blob/main/assets/Celestial">https://github.com/CharonSSS/RSS-Origin/blob/main/assets/Celestial</a> bodies added in RSS-Origin.png)。</p>
 <h2 id="2-我必须安装-Principia-吗？"><a href="#2-我必须安装-Principia-吗？" class="headerlink" title="2. 我必须安装 Principia 吗？"></a>2. 我必须安装 Principia 吗？</h2><p>当然不是！是否使用 Principia 主要取决于个人喜好。但你需要了解的是，Principia 使不规则引力场成为可能，同时具有更精确的轨道力学和轴向倾斜，所以，作者强烈推荐安装以获得最佳体验。如果您认为这些功能不是必需的，则不必安装 Principia。</p>
 <p>由于 Principia 本身的限制，您可以在开始新的存档之前更改天体，但不能在已有的存档中更改天体。即创建存档后，存档的天体就会被固定，不可被更改。</p>
 <p>而在原版引力环境，您可以随时向任意存档修改任意数量的天体，只需要注意环绕天体的飞船即可。<font color=gray><del>删档不规范，绿人两行泪</del></font></p>
@@ -405,7 +405,7 @@
 <h2 id="4-依赖关系和兼容情况"><a href="#4-依赖关系和兼容情况" class="headerlink" title="4. 依赖关系和兼容情况"></a>4. 依赖关系和兼容情况</h2><details>
     <summary>依赖模组</summary>
     <div style="line-height:40px;">
-        Real Solar System（CKAN 安装需要手动勾选），RSS-Reborn 或 KSRSS（后两者不支持 CKAN）<br/>
+        Real Solar System<b>（CKAN 安装需要手动勾选）</b>，RSS-Reborn 或 KSRSS（后两者不支持 CKAN）<b>及它们的依赖项</b><br/>
         Niako's Kopernicus Utilities（已包含，无需额外下载）<br/>
     </div>
 </details>
@@ -413,9 +413,10 @@
 <hr>
 <details>
     <summary>推荐模组</summary>
-    <div style="line-height:40px;">
+    <div style="line-height:35px;">
         <details>
             <summary>强烈推荐</summary>
+            <div style="line-height:40px;">
             <b>Principia</b> - 引入了多体引力计算。<br/>
             <b>Realism Overhaul</b> - 针对 RSS 提供的航天真实化修改，使游戏变得更加真实。<br/>
             <b>Too Many Orbits（仅原版轨道环境）</b> - 在地图界面，一键隐藏无关的飞行器、轨道和天体。<br/>
@@ -424,6 +425,7 @@
         </details>
         <details>
             <summary>建议安装</summary>
+            <div style="line-height:40px;">
             <b>Environmental Visual Enhancements</b> - <br/>
             <b>Scatterer</b> - 为 KSP 添加了逼真的大气散射、水面及水下特效和阳光渲染等各种效果，一般是其他美化模组的依赖，无需主动安装。<br/>
             <b>Parallax</b> - 对行星表面纹理的重做，并改进了原版有限的着色器，提高了渲染性能。<br/>
@@ -435,7 +437,7 @@
 <hr>
 <p>不兼容：其他 RSS 天体扩展包。但与 Kcalbeloh 兼容。</p>
 <p>如果你想添加气巨行星的卫星，也想给气巨行星添加行星环，建议安装 <strong>RSS-Origin JSUNrings</strong>。</p>
-<p>两者会根据现实情况调整卫星和行星环的位置。如果不使用这个环形包，卫星可能会运动到其他地方，例如从它们应该存在的行星环间隙中跑出来。</p>
+<p>两者会根据现实情况调整卫星和行星环的位置。如果不使用这个环形包，卫星可能会运动到其他地方，例如从它们应该存在的行星环间隙中跑出来。不过，这并不会导致任何游戏上的错误，只是看起来很奇怪而已。</p>
 <h2 id="5-下载和安装"><a href="#5-下载和安装" class="headerlink" title="5. 下载和安装"></a>5. 下载和安装</h2><p><strong>1) 使用 CKAN 自动安装（推荐）</strong></p>
 <p><strong>2) 手动下载及安装（请务必保证原先已安装的重复天体已经删除）</strong></p>
 <p>① 进入 RSS-Origin 的<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/releases">发布页面</a>，下载 <strong>RSS-Origin.CelestialsPack.Core.zip</strong>。</p>
@@ -443,27 +445,29 @@
 <p>③ 解压 <strong>RSS-Origin CelestialsPack Core.zip</strong>，并将解压后的文件夹 <strong>RSSOrigin</strong> 和 <strong>000_NiakoUtils</strong> 移动至 KSP 游戏文件夹的 <strong>Gamedata</strong> 文件夹中。</p>
 <p>④ 解压 <strong>RSS-Origin.CelestialsPack.xxx.zip</strong>，并将解压后的文件夹 <strong>RSSOrigin</strong> 移动至 <strong>Gamedata</strong> 中。如果显示“替换或跳过文件”，请立刻停止当前的安装进程，重新检查你的 <strong>RSS-Origin</strong> 文件夹是否已安装了所需的天体（或旧版本）。</p>
 <p>⑤ 在已安装 Principia 的情况下，若更改了已安装的天体，<strong>不要打开旧的存档</strong>，请创建一个新存档游玩。否则会导致游戏崩溃或存档损坏！</p>
-<h1 id="二、RSS-Origin-RSSTexture-TopoRevamp"><a href="#二、RSS-Origin-RSSTexture-TopoRevamp" class="headerlink" title="二、RSS-Origin RSSTexture&amp;TopoRevamp"></a>二、RSS-Origin RSSTexture&amp;TopoRevamp</h1><h2 id="1-依赖关系和兼容情况"><a href="#1-依赖关系和兼容情况" class="headerlink" title="1. 依赖关系和兼容情况"></a>1. 依赖关系和兼容情况</h2><p>依赖：Real Solar System（CKAN 安装需要手动勾选）或 KSRSS（后者不支持 CKAN）</p>
-<p>不兼容：目前未发现。如果遇到了可以联系作者。</p>
-<p>目前，RSS-Origin RSSTexture&amp;TopoRevamp 与 RSS-Reborn 不兼容。但是，在下一次 RSS-Reborn 更新，Fox 可能会将 RSS-Origin 的纹理合并。这意味着如果您已经安装了 RSS-Reborn，则无需安装 RSS-Origin RSSTexture&amp;TopoRevamp。</p>
+<h1 id="二、RSS-Origin-RSSTexture-TopoRevamp"><a href="#二、RSS-Origin-RSSTexture-TopoRevamp" class="headerlink" title="二、RSS-Origin RSSTexture&amp;TopoRevamp"></a>二、RSS-Origin RSSTexture&amp;TopoRevamp</h1><p><strong>注意：不要在未安装此模组的旧存档中，打开安装了此模组的游戏，这会导致严重的毁档。</strong></p>
+<h2 id="1-依赖关系和兼容情况"><a href="#1-依赖关系和兼容情况" class="headerlink" title="1. 依赖关系和兼容情况"></a>1. 依赖关系和兼容情况</h2><p>依赖：Real Solar System<strong>（CKAN 安装需要手动勾选）</strong>或 KSRSS（后者不支持 CKAN）<strong>及它们的依赖项</strong></p>
+<p>不兼容：RSS-Reborn。如果发现其他不兼容模组可以联系作者。</p>
+<p>在下一次 RSS-Reborn 更新，Fox 可能会将 RSS-Origin 的纹理合并。这意味着如果您已经安装了 RSS-Reborn，则无需安装 RSS-Origin RSSTexture&amp;TopoRevamp。</p>
 <h2 id="2-下载和安装"><a href="#2-下载和安装" class="headerlink" title="2. 下载和安装"></a>2. 下载和安装</h2><p><strong>1) 使用 CKAN 自动安装（推荐）</strong></p>
 <p><strong>2) 手动下载及安装（请务必保证原先已安装的纹理已经删除）</strong></p>
 <p>① 进入 RSS-Origin 的<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/releases">发布页面</a>，下载 <strong>RSS-Origin.RSSTexture.TopoRevamp.Configs.zip</strong>。</p>
 <p>② 下载 <strong>RSS-Origin.RSSTexture.TopoRevamp.Textures.zip</strong>，选择 4k &#x2F; 8k &#x2F;16k 三种分辨率的<strong>其中一个</strong>即可。</p>
 <p>③ 解压 <strong>RSS-Origin.RSSTexture.TopoRevamp.Configs.zip</strong>，并将解压后的文件夹 <strong>RSSOrigin</strong> 移动至 KSP 游戏文件夹的 <strong>Gamedata</strong> 文件夹中。</p>
 <p>④ 解压 <strong>RSS-Origin.RSSTexture.TopoRevamp.Textures.zip</strong>。将解压后的文件夹 <strong>RSSOrigin</strong> 移动至 <strong>Gamedata</strong> 中。如果显示“替换或跳过文件”，请立刻停止当前的安装进程，重新检查你的 <strong>RSS-Origin</strong> 文件夹是否已安装了纹理（或旧版本）。</p>
-<h1 id="三、RSS-Origin-JSUNrings"><a href="#三、RSS-Origin-JSUNrings" class="headerlink" title="三、RSS-Origin JSUNrings"></a>三、RSS-Origin JSUNrings</h1><h2 id="1-依赖关系和兼容情况-1"><a href="#1-依赖关系和兼容情况-1" class="headerlink" title="1. 依赖关系和兼容情况"></a>1. 依赖关系和兼容情况</h2><p>依赖：Real Solar System（CKAN 安装需要手动勾选），RSS-Reborn 或 KSRSS（后两者不支持 CKAN）</p>
+<h1 id="三、RSS-Origin-JSUNrings"><a href="#三、RSS-Origin-JSUNrings" class="headerlink" title="三、RSS-Origin JSUNrings"></a>三、RSS-Origin JSUNrings</h1><h2 id="1-依赖关系和兼容情况-1"><a href="#1-依赖关系和兼容情况-1" class="headerlink" title="1. 依赖关系和兼容情况"></a>1. 依赖关系和兼容情况</h2><p>依赖：Real Solar System<strong>（CKAN 安装需要手动勾选）</strong>，RSS-Reborn 或 KSRSS（后两者不支持 CKAN）<strong>及它们的依赖项</strong></p>
 <p>不兼容：在大多数情况下，<strong>RSS-Origin JSUNring</strong> 应该能够覆盖其他行星环的配置。若没有请联系作者。</p>
 <p>RSS-Origin JSUNrings 与 RSS-Reborn 的当前版本兼容。与 RSS-Origin RSSTexture&amp;TopoRevamp 一样，两者会在未来的版本更新被合并。</p>
 <h2 id="2-下载和安装-1"><a href="#2-下载和安装-1" class="headerlink" title="2. 下载和安装"></a>2. 下载和安装</h2><p><strong>1) 使用 CKAN 自动安装（推荐）</strong></p>
 <p><strong>2) 手动下载及安装（请务必保证原先已安装的纹理已经删除）</strong></p>
 <p>① 进入 RSS-Origin 的<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/releases">发布页面</a>，下载 <strong>RSS-Origin.JSUNrings.zip</strong>。</p>
 <p>② 解压 <strong>RSS-Origin.JSUNrings.zip</strong>，并将解压后的文件夹 <strong>RSSOrigin</strong> 移动至 KSP 游戏文件夹的 <strong>Gamedata</strong> 文件夹中。</p>
-<h1 id="四、RSS-Origin-GalaxyTex"><a href="#四、RSS-Origin-GalaxyTex" class="headerlink" title="四、RSS-Origin GalaxyTex"></a>四、RSS-Origin GalaxyTex</h1><h2 id="1-依赖关系和兼容情况-2"><a href="#1-依赖关系和兼容情况-2" class="headerlink" title="1. 依赖关系和兼容情况"></a>1. 依赖关系和兼容情况</h2><p>依赖：只需要 <strong>TextureReplacer</strong>。</p>
+<p>③ 进入游戏后，观察土星有无星环。若有，则证明安装成功。</p>
+<h1 id="四、RSS-Origin-GalaxyTex"><a href="#四、RSS-Origin-GalaxyTex" class="headerlink" title="四、RSS-Origin GalaxyTex"></a>四、RSS-Origin GalaxyTex</h1><h2 id="1-依赖关系和兼容情况-2"><a href="#1-依赖关系和兼容情况-2" class="headerlink" title="1. 依赖关系和兼容情况"></a>1. 依赖关系和兼容情况</h2><p>依赖：<strong>TextureReplacer</strong> 和 <strong>Module Manager</strong>。</p>
 <p>不兼容：其他改变星空背景的模组。</p>
 <p>如果在安装 RSS-Reborn 的情况下使用 RSS-Origin GalaxyTex，您必须删除 GameData&#x2F;RSS-Configs 中的 <strong>Skybox</strong> 文件夹。</p>
-<h2 id="2-下载和安装-2"><a href="#2-下载和安装-2" class="headerlink" title="2. 下载和安装"></a>2. 下载和安装</h2><p>① 手动下载和安装<strong>TextureReplacer</strong>。</p>
-<p>② 进入 RSS-Origin 的<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/releases">发布页面</a>，下载 <strong>RSS-Origin.GalaxyTex.zip</strong>，选择 8k &#x2F; 16k &#x2F; 32k &#x2F; 64k 四种分辨率的其中一个即可。</p>
+<h2 id="2-下载和安装-2"><a href="#2-下载和安装-2" class="headerlink" title="2. 下载和安装"></a>2. 下载和安装</h2><p>① 手动下载和安装 <strong>TextureReplacer</strong>。</p>
+<p>② 进入 RSS-Origin 的<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/releases">发布页面</a>，下载 <strong>RSS-Origin.GalaxyTex.zip</strong>，选择 8k &#x2F; 16k &#x2F; 32k &#x2F; 64k 四种分辨率的<strong>其中一个</strong>即可。</p>
 <p>③ 解压 <strong>RSS-Origin.GalaxyTex.zip</strong>，并将解压后的文件夹 <strong>RSSOrigin</strong> 移动至 KSP 游戏文件夹的 <strong>Gamedata</strong> 文件夹中。</p>
 <h1 id="五、Credit"><a href="#五、Credit" class="headerlink" title="五、Credit"></a>五、Credit</h1><h2 id="作者：-Charon-S"><a href="#作者：-Charon-S" class="headerlink" title="作者： Charon_S"></a>作者： Charon_S</h2><h3 id="主要贡献者（排名不分贡献大小，按字母顺序排列）"><a href="#主要贡献者（排名不分贡献大小，按字母顺序排列）" class="headerlink" title="主要贡献者（排名不分贡献大小，按字母顺序排列）"></a>主要贡献者（排名不分贡献大小，按字母顺序排列）</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs css">himīśā<br>Kerbinator Fras<br>NewoEther<br>Proxima-<span class="hljs-selector-tag">b</span><br></code></pre></td></tr></table></figure>
 
