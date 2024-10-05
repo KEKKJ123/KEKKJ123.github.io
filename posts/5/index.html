@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          775 字
+          769 字
         
       </span>
     
@@ -329,7 +329,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-08-29T17:12:17+08:00
+                    本文最后更新于 2024-09-30T21:07:15+08:00
                   
                   
 
@@ -356,7 +356,7 @@
 <li>External Software Dependencies —— OpenVINO 依赖项</li>
 <li>The Model Optimizer —— 模型优化器（若安装dev版本可略过）</li>
 </ol>
-<h2 id="第零步：确保网络环境畅通，能稳定访问-Github"><a href="#第零步：确保网络环境畅通，能稳定访问-Github" class="headerlink" title="第零步：确保网络环境畅通，能稳定访问 Github"></a>第零步：确保网络环境畅通，能稳定访问 Github</h2><p><strong>本文默认您已安装 CMake, GCC, Python 等基本依赖项</strong></p>
+<h2 id="第零步：确保网络环境畅通，能稳定访问-Github"><a href="#第零步：确保网络环境畅通，能稳定访问-Github" class="headerlink" title="第零步：确保网络环境畅通，能稳定访问 Github"></a>第零步：确保网络环境畅通，能稳定访问 Github</h2><p><strong>本文默认您已安装 CMake, GCC, Python 等基本依赖项。</strong></p>
 <h2 id="第一步：获取旧版本OpenVINO-工具包-3-4"><a href="#第一步：获取旧版本OpenVINO-工具包-3-4" class="headerlink" title="第一步：获取旧版本OpenVINO 工具包[3][4]"></a>第一步：获取旧版本OpenVINO 工具包<sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="[[2019_R1] Install Intel® Distribution of OpenVINO™ toolkit for Linux - OpenVINO Toolkit](https://docs.openvino.ai/archive/2019_R1/_docs_install_guides_installing_openvino_linux.html#set-the-environment-variables)">[3]</span></a></sup><sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="[[2021.4] Install and Configure Intel® Distribution of OpenVINO™ toolkit for Linux — OpenVINO™ documentation](https://docs.openvino.ai/archive/2021.4/openvino_docs_install_guides_installing_openvino_linux.html)">[4]</span></a></sup></h2><p>对于旧版本，我们需要从官方存档仓库<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[OpenVINO 官方仓库](https://storage.openvinotoolkit.org/repositories/openvino/packages/)">[2]</span></a></sup>中寻找。请依据你的 Ubuntu 版本下载对应的版本。</p>
 <div style="display:inline-block;">
     <img width="60%" src="https://img.picui.cn/free/2024/08/26/66cc9c422af2f.png" srcset="/img/loading.gif" lazyload style="float: left; margin-right: 5px;">
@@ -364,25 +364,25 @@
 </div>
 
 
-<p>在本教程中，我们在 Ubuntu 20.04 环境安装 OpenVINO 2021.4.1</p>
+<p>在本教程中，我们在 <strong>Ubuntu 20.04</strong> 环境安装 <strong>OpenVINO 2021.4.1</strong>。</p>
 <p>即：l_openvino_toolkit_dev_ubuntu20_p_2021.4.689.tgz <font color=gray><del><strong>（作者犯懒就选择dev了）</strong></del></font></p>
-<p>下载后提取到此处即可</p>
-<p>提取后文件夹路径应为：~&#x2F;Downloads&#x2F;l_openvino_toolkit_dev_ubuntu20_p_2021.4.689</p>
-<p>将解压后的文件夹移动到 &#x2F;opt&#x2F;intel&#x2F;openvino（记得换成自己的路径）</p>
+<p>下载后提取到此处即可。</p>
+<p>提取后文件夹路径应为：<code>~/Downloads/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689</code></p>
+<p>将解压后的文件夹移动到 <code>/opt/intel/openvino</code>（记得换成自己的路径）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> Downloads<br>tar -xvf l_openvino_toolkit_dev_ubuntu20_p_2021.4.689<br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">mv</span> /home/&lt;username&gt;/Downloads/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689 /opt/intel/openvino<br></code></pre></td></tr></table></figure>
 
-<p>进入 install_dependencies 文件夹，并运行 install_openvino_dependencies.sh</p>
+<p>进入 <strong>install_dependencies</strong> 文件夹，并运行 <strong>install_openvino_dependencies.sh</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /opt/intel/openvino/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689/install_dependencies<br><span class="hljs-built_in">sudo</span> -E ./install_openvino_dependencies.sh<br></code></pre></td></tr></table></figure>
 
 <p>配置临时环境变量以验证安装成功</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> /opt/intel/openvino/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689/bin/setupvars.sh<br></code></pre></td></tr></table></figure>
 
 <p>若显示</p>
-<p><strong>[setupvars.sh] OpenVINO environment initialized</strong></p>
+<p><code>[setupvars.sh] OpenVINO environment initialized</code></p>
 <p>则代表安装成功。</p>
-<p>配置永久环境变量：使用编辑器在 .bashrc 文件末尾输入刚才的source命令并保存。</p>
+<p>配置永久环境变量：使用编辑器在 .bashrc 文件末尾输入刚才的 source 命令并保存。</p>
 <p>再次打开新终端，若出现相同信息则可进行下一步。</p>
-<h2 id="第二步：源代码构建并编译-5"><a href="#第二步：源代码构建并编译-5" class="headerlink" title="第二步：源代码构建并编译[5]"></a>第二步：源代码构建并编译<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Build OpenVINO™ Runtime for Linux systems - github.com](https://github.com/openvinotoolkit/openvino/blob/master/docs/dev/build_linux.md)">[5]</span></a></sup></h2><p>打开新终端，克隆 OpenVINO 存储库<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[GitHub下载克隆clone指定的分支tag代码 - Tse先生 - 博客园](https://www.cnblogs.com/Sungeek/p/10275903.html)">[1]</span></a></sup>和 init 子模块</p>
+<h2 id="第二步：源代码构建并编译-5"><a href="#第二步：源代码构建并编译-5" class="headerlink" title="第二步：源代码构建并编译[5]"></a>第二步：源代码构建并编译<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Build OpenVINO™ Runtime for Linux systems - Github](https://github.com/openvinotoolkit/openvino/blob/master/docs/dev/build_linux.md)">[5]</span></a></sup></h2><p>打开新终端，克隆 OpenVINO 存储库<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[GitHub下载克隆clone指定的分支tag代码 - Tse先生 - 博客园](https://www.cnblogs.com/Sungeek/p/10275903.html)">[1]</span></a></sup>和 init 子模块</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> -b releases/2021/4 https://github.com/openvinotoolkit/openvino.git	<span class="hljs-comment">#文件约500MB，注意流量</span><br><span class="hljs-built_in">cd</span> openvino<br>git submodule update --init --recursive<br></code></pre></td></tr></table></figure>
 
 <p>根据克隆库安装依赖</p>
@@ -401,7 +401,7 @@
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://storage.openvinotoolkit.org/repositories/openvino/packages/">OpenVINO 官方仓库</a>
 <a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.openvino.ai/archive/2019_R1/_docs_install_guides_installing_openvino_linux.html#set-the-environment-variables">[2019_R1] Install Intel® Distribution of OpenVINO™ toolkit for Linux - OpenVINO Toolkit</a>
 <a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.openvino.ai/archive/2021.4/openvino_docs_install_guides_installing_openvino_linux.html">[2021.4] Install and Configure Intel® Distribution of OpenVINO™ toolkit for Linux — OpenVINO™ documentation</a>
-<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/openvinotoolkit/openvino/blob/master/docs/dev/build_linux.md">Build OpenVINO™ Runtime for Linux systems - github.com</a>
+<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/openvinotoolkit/openvino/blob/master/docs/dev/build_linux.md">Build OpenVINO™ Runtime for Linux systems - Github</a>
 <a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
@@ -474,7 +474,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年8月29日</div>
+          <div>2024年9月30日</div>
         </div>
       
       
