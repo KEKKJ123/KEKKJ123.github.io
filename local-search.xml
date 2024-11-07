@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>跳广告软件推荐</title>
+    <link href="/posts/Tools/SkipAD/"/>
+    <url>/posts/Tools/SkipAD/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p><font color=gray>对国内各大软件平台的广告感到厌烦？看看这篇文章吧！</font></p></blockquote><h3 id="李跳跳（已停更）"><a href="#李跳跳（已停更）" class="headerlink" title="李跳跳（已停更）"></a>李跳跳（已停更）</h3><p>良心国产软件，由于众所周知的<a href="https://mp.weixin.qq.com/s/ha6hHr40umlj-ExHdGFXXw">原因</a>，已经不再更新。</p><p>作者曾使用了一年左右。停更后，由于广告弹窗“与时俱进”，即使是自定义规则也逐渐力微，某些弹窗则完全失效。</p><p><a href="https://github.com/eddlez/litiaotiao_package_backup">APK 备份 - Github</a></p><p><a href="https://github.com/rongzhiy/LiTiaotiao">另一个备份及使用指南 - Github</a></p><p><a href="https://juejin.cn/post/6938590373740544007#heading-8">李跳跳进阶指南 - 掘金</a>（官方撰写）</p><p><a href="https://github.com/Snoopy1866/LiTiaotiao-Custom-Rules/tree/main">自定义规则 - Github</a>（已停更）</p><hr><blockquote><p><font color=gray>一刻也没有为李跳跳的停更而感到悲哀，立刻赶到战场的是——</font>  <del>轻度玩梗，介意自删</del></p></blockquote><h3 id="GKD"><a href="#GKD" class="headerlink" title="GKD"></a><a href="https://gkd.li/">GKD</a></h3><p>部署在 <a href="https://github.com/gkd-kit/gkd">Github</a> 上，完全开源，拥有类似创意工坊一样的<a href="https://github.com/topics/gkd-subscription">第三方规则订阅列表</a>。</p><p>支持 Shikuzu 进行高级授权。</p><p>截至撰稿，此项目已有 2.1w 的星标数。 </p><p><a href="https://gkd.li/guide/faq">常见问题 - GKD</a></p><p>Tips：若后台经常莫名被清理，可安装<strong>无障碍管理器</strong>缓解杀后台，以及解决十秒无障碍警告的问题。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Tool</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>教程</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>实用网站自存（持续更新）</title>
     <link href="/posts/Webs/"/>
     <url>/posts/Webs/</url>
@@ -243,8 +268,6 @@
     
     <tags>
       
-      <tag>教程</tag>
-      
       <tag>Linux</tag>
       
       <tag>Ubuntu</tag>
@@ -252,6 +275,8 @@
       <tag>OpenVINO</tag>
       
       <tag>Github</tag>
+      
+      <tag>教程</tag>
       
     </tags>
     
