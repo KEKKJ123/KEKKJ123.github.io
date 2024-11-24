@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="/img/Blog_Saturn.png">
   <link rel="icon" href="/img/Blog_Saturn.png">
   
-    <link rel="canonical" href="https://kekkj123.github.io/posts/KSP/5/"/>
+    <link rel="canonical" href="https://kekkj123.github.io/posts/KSP/Origin_Guide/"/>
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.4k 字
+          3.5k 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          23 分钟
+          24 分钟
         
       </span>
     
@@ -317,7 +317,7 @@
     
       
       
-        <a href="/posts/KSP/4/" title="RSS-Origin 系列模组介绍（P1）"
+        <a href="/posts/KSP/Origin_Introduction/" title="RSS-Origin 系列模组介绍（P1）"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">RSS-Origin 系列模组介绍（P1）</span>
@@ -326,7 +326,7 @@
     
       
       
-        <a href="/posts/KSP/5/" title="RSS-Origin 安装指导（P2）"
+        <a href="/posts/KSP/Origin_Guide/" title="RSS-Origin 安装指导（P2）"
            class="list-group-item list-group-item-action
            active">
           <span class="category-post">RSS-Origin 安装指导（P2）</span>
@@ -356,7 +356,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-11-25T02:31:32+08:00
+                    本文最后更新于 2024-11-25T03:50:14+08:00
                   
                   
 
@@ -386,9 +386,9 @@
 <li><strong>对于 RSS-Origin CelestialsPack，强烈推荐安装 Principia 以获得最佳体验。</strong></li>
 <li><strong>受限于 Principia 本身，旧存档“翻新”的限制很多，在安装前请务必备份存档后再开始测试！</strong></li>
 <li><strong>本文章的时效性可能会略晚于官方，请务必结合<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/wiki">官方wiki（Github）</a>食用。</strong></li>
-<li>您可以在 <code>GameData/RSSOrigin/RSSOriginSettings.cfg</code> 中更改轨道的颜色和天体图标的类型。</li>
 </ul>
-<p>RSS-Origin 是一个模组集合，但它的各部分并不互相依赖。所以，我们会针对它的不同部分给出专门的安装讲解。</p>
+<p>RSS-Origin 是一个模组集合，但它的各部分并不互相依赖。</p>
+<p>所以，我们会针对它的不同部分给出专门的安装讲解。</p>
 <h3 id="免责声明"><a href="#免责声明" class="headerlink" title="免责声明"></a><strong>免责声明</strong></h3><p><strong>在添加模组前，你应当知道自己在做什么。</strong></p>
 <p><strong>本篇文章不对任何由于<font color=e02525>不规范</font>安装模组，以及<font color=e02525>未阅读</font>或<font color=e02525>未遵守</font>上述须知的行为导致游戏 &#x2F; 存档损坏的后果负责。</strong>                                                                                                                                                                                                                                                                                  </p>
 <h1 id="一、RSS-Origin-CelestialsPack（简称-RSSOCP）"><a href="#一、RSS-Origin-CelestialsPack（简称-RSSOCP）" class="headerlink" title="一、RSS-Origin CelestialsPack（简称 RSSOCP）"></a>一、RSS-Origin CelestialsPack（简称 RSSOCP）</h1><p>在完整安装状态，本模组会添加 200 个额外的天体，再加上 RSS 自带的 33 个天体，总共 233 个。如果以此状态游玩，KSP 将会严重卡顿。</p>
@@ -396,9 +396,11 @@
 <p>如果您觉得独立管理每个天体部分过于麻烦，可以尝试由 <a target="_blank" rel="noopener" href="https://github.com/Qazerowl">Qazerowl</a> 制作的轻量化版本 <a target="_blank" rel="noopener" href="https://github.com/Qazerowl/RSS-Origin-Less">RSS-Origin-Less</a>。它包含了 111 个天体，并分为 Primary 和 Secondary 两个部分，具体的天体列表请点击超链接阅读，而本系列教程依然适用。</p>
 <p><strong>除非特殊需要（观赏、任务规划等），不要一次性安装 RSSOCP 的所有天体！建议只保留星际任务所需的天体。</strong></p>
 <p><strong>硬件要求</strong>：如果你的设备上可以运行 RSS（或 RSS+Principia），就可以安装这个模组。</p>
+<p>如果想要更好的天体表面地形，<strong>必须安装 RSS-Reborn 或 <a target="_blank" rel="noopener" href="https://github.com/ballisticfox/Kopernicus/releases">Kopernicus Fork</a> 的情况下</strong>，可以在<code>GameData/RSSOrigin/RSSOriginSettings.cfg</code>中更改相关配置。</p>
 <h2 id="1-更改天体的具体操作"><a href="#1-更改天体的具体操作" class="headerlink" title="1. 更改天体的具体操作"></a>1. 更改天体的具体操作</h2><p>进入 Gamedata 中的 RSSOrigin 文件夹，寻找您不需要的天体。</p>
 <p>将不需要的天体文件夹移动出 GameData，如果您哪天需要再次安装，将它们放回更改前的位置即可，或者直接重新安装。</p>
 <p>如果忘记了天体的名字，可以去查看 <a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/blob/main/assets/Celestial%20bodies%20added%20in%20RSS-Origin.png">Celestial bodies added in RSS-Origin</a>。</p>
+<p>您可以在 <code>GameData/RSSOrigin/RSSOriginSettings.cfg</code> 中更改轨道的颜色和天体图标的类型。</p>
 <h2 id="2-我必须安装-Principia-吗？"><a href="#2-我必须安装-Principia-吗？" class="headerlink" title="2. 我必须安装 Principia 吗？"></a>2. 我必须安装 Principia 吗？</h2><p><strong>当然不是！</strong>是否使用 Principia 主要取决于个人喜好。但你需要了解的是，Principia 使不规则引力场成为可能，同时具有更精确的轨道力学和自转轴倾斜，所以，作者强烈推荐安装以获得最佳体验。如果您认为这些功能不是必需的，则不必安装。</p>
 <p>由于 Principia 本身的限制，您可以在创建新的存档之前更改天体，但不能在已有的存档中更改天体。即创建存档后，其中的天体就会被固定，不可被更改。</p>
 <p>而在原版引力环境，您可以随时向任意存档修改任意数量的天体，只需要注意环绕天体的航天器即可。<font color=gray><del>删档不规范，绿人两行泪</del></font></p>
@@ -455,6 +457,8 @@
 <p>② 选择并下载你想要的天体附加包（后面的英文代表了它们所属的类别），它的名字应当是 <strong>RSS-Origin.CelestialsPack.xxx.zip</strong>。</p>
 <p>③ 解压 <strong>RSS-Origin CelestialsPack Core.zip</strong>，并将解压后的文件夹 <strong>RSSOrigin</strong> 和 <strong>000_NiakoUtils</strong> 移动至 KSP 游戏文件夹的 <strong>GameData</strong> 文件夹中。</p>
 <p>④ 解压 <strong>RSS-Origin.CelestialsPack.xxx.zip</strong>，并将解压后的文件夹 <strong>RSSOrigin</strong> 移动至 <strong>Gamedata</strong> 中。如果显示“替换或跳过文件”，请立刻停止当前的安装进程，重新检查 <strong>RSS-Origin</strong> 文件夹是否已安装了所需的天体（或旧版本）。</p>
+<h2 id="7-RSS-Origin-和-RSS-Reborn-有什么区别？（WIP）"><a href="#7-RSS-Origin-和-RSS-Reborn-有什么区别？（WIP）" class="headerlink" title="7.RSS-Origin 和 RSS-Reborn 有什么区别？（WIP）"></a>7.RSS-Origin 和 RSS-Reborn 有什么区别？（WIP）</h2><p>RSS-Origin 和 RSS-Reborn 虽然有小部分内容重合，但还是两个侧重不同的模组。</p>
+<p>如果想要安装体积云，还需要安装 Reborn 的 RSSVE-Configs 和 RSSVE-Textures 部分，Reborn 的其它部分可以不安装。</p>
 <h1 id="二、RSS-Origin-RSSTexture-TopoRevamp（RSSTTR）"><a href="#二、RSS-Origin-RSSTexture-TopoRevamp（RSSTTR）" class="headerlink" title="二、RSS-Origin RSSTexture&amp;TopoRevamp（RSSTTR）"></a>二、RSS-Origin RSSTexture&amp;TopoRevamp（RSSTTR）</h1><p>在 Principia 环境，不要在安装了 RSSTTR 的情况下打开旧存档，否则会导致游戏崩溃或存档损坏！</p>
 <h2 id="1-依赖关系和兼容情况"><a href="#1-依赖关系和兼容情况" class="headerlink" title="1. 依赖关系和兼容情况"></a>1. 依赖关系和兼容情况</h2><p><strong>依赖</strong>：Real Solar System<strong>（CKAN 安装需要手动勾选）</strong>或 KSRSS（后者不支持 CKAN）<strong>及它们的依赖项</strong>。</p>
 <p><strong>半兼容</strong>：</p>
@@ -463,7 +467,7 @@
 <p>如果发现不兼容模组可以联系作者。</p>
 <h2 id="2-下载和安装"><a href="#2-下载和安装" class="headerlink" title="2. 下载和安装"></a>2. 下载和安装</h2><p><strong>1) 使用 CKAN 自动安装（推荐）</strong></p>
 <p><strong>2) 手动下载及安装（请务必保证原先已安装的纹理已经删除）</strong></p>
-<p>① 进入 RSS-Origin 的<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/releases">发布页面</a>，下载 <code>RSS-Origin.RSSTexture.TopoRevamp.Configs.zip</code>。</p>
+<p>① 进入 RSS-Origin 的<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/releases">发布页面</a>，下载 <strong>RSS-Origin.RSSTexture.TopoRevamp.Configs.zip</strong>。</p>
 <p>② 下载 <strong>RSS-Origin.RSSTexture.TopoRevamp.Textures.zip</strong>，选择 4k &#x2F; 8k &#x2F;16k 三种分辨率的<strong>其中一个</strong>即可。</p>
 <p>③ 解压 <strong>RSS-Origin.RSSTexture.TopoRevamp.Configs.zip</strong>，并将解压后的文件夹 <strong>RSSOrigin</strong> 移动至 KSP 游戏文件夹的 <strong>GameData</strong> 文件夹中。</p>
 <p>④ 解压 <strong>RSS-Origin.RSSTexture.TopoRevamp.Textures.zip</strong>。将解压后的文件夹 <strong>RSSOrigin</strong> 移动至 <strong>GameData</strong> 中。如果显示“替换或跳过文件”，请立刻停止当前的安装进程，重新检查 <strong>RSS-Origin</strong> 文件夹是否已安装了纹理（或旧版本）。</p>
@@ -476,16 +480,16 @@
 <p><strong>不兼容</strong>：暂未发现，若有请联系作者。RSS-Origin JSUNring 理论上有着高加载优先级并会覆盖其它星环。如果安装后未生效，请联系作者。</p>
 <h2 id="3-下载和安装"><a href="#3-下载和安装" class="headerlink" title="3. 下载和安装"></a>3. 下载和安装</h2><p><strong>1) 使用 CKAN 自动安装（推荐）</strong></p>
 <p><strong>2) 手动下载及安装（请务必保证原先已安装的纹理已经删除）</strong></p>
-<p>① 进入 RSS-Origin 的<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/releases">发布页面</a>，下载 <code>RSS-Origin.JSUNrings.zip</code>。</p>
-<p>② 解压 <code>RSS-Origin.JSUNrings.zip</code>，并将解压后的文件夹 <code>RSSOrigin</code> 移动至 KSP 游戏文件夹的 <code>Gamedata</code> 文件夹中。</p>
+<p>① 进入 RSS-Origin 的<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/releases">发布页面</a>，下载 <strong>RSS-Origin.JSUNrings.zip</strong>。</p>
+<p>② 解压 <strong>RSS-Origin.JSUNrings.zip</strong>，并将解压后的文件夹 <strong>RSSOrigin</strong> 移动至 KSP 游戏文件夹的 <strong>GameData</strong> 文件夹中。</p>
 <p>③ 进入游戏后，仔细观察天王星有无微弱的星环。若有，则证明安装成功。</p>
 <h1 id="四、RSS-Origin-GalaxyTex"><a href="#四、RSS-Origin-GalaxyTex" class="headerlink" title="四、RSS-Origin GalaxyTex"></a>四、RSS-Origin GalaxyTex</h1><h2 id="1-依赖关系和兼容情况-1"><a href="#1-依赖关系和兼容情况-1" class="headerlink" title="1. 依赖关系和兼容情况"></a>1. 依赖关系和兼容情况</h2><p><strong>依赖</strong>：<strong>TextureReplacer</strong> 和 <strong>Module Manager</strong>。</p>
 <p><strong>兼容性</strong>：理论上，RSS-Origin GalaxyTex 有着高加载优先级并会覆盖其它天空盒模组。如果安装后未生效，请联系作者。</p>
 <p>如果在安装 RSS-Reborn 的情况下使用 RSS-Origin GalaxyTex，您必须删除 <code>GameData/RSS-Configs</code> 中的 <code>Skybox</code> 文件夹。</p>
 <h2 id="2-下载和安装-1"><a href="#2-下载和安装-1" class="headerlink" title="2. 下载和安装"></a>2. 下载和安装</h2><p>① 手动下载和安装 <strong>TextureReplacer</strong>。</p>
-<p>② 进入 RSS-Origin 的<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/releases">发布页面</a>，下载 <code>RSS-Origin.GalaxyTex.zip</code>，选择 8k &#x2F; 16k &#x2F; 32k &#x2F; 64k 四种分辨率的<strong>其中一个</strong>即可。</p>
-<p>③ 解压 <code>RSS-Origin.GalaxyTex.zip</code>，并将解压后的文件夹 <code>RSSOrigin</code> 移动至 KSP 游戏文件夹的 <code>Gamedata</code> 文件夹中。</p>
-<h1 id="五、Credit"><a href="#五、Credit" class="headerlink" title="五、Credit"></a>五、Credit</h1><h2 id="作者：-Charon-S"><a href="#作者：-Charon-S" class="headerlink" title="作者： Charon_S"></a>作者： Charon_S</h2><h3 id="主要贡献者（排名不分贡献大小，按字母顺序排列）"><a href="#主要贡献者（排名不分贡献大小，按字母顺序排列）" class="headerlink" title="主要贡献者（排名不分贡献大小，按字母顺序排列）"></a>主要贡献者（排名不分贡献大小，按字母顺序排列）</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs Text">himīśā<br>Kerbinator Fras<br>NewoEther<br>Proxima-b<br></code></pre></td></tr></table></figure>
+<p>② 进入 RSS-Origin 的<a target="_blank" rel="noopener" href="https://github.com/CharonSSS/RSS-Origin/releases">发布页面</a>，下载 <strong>RSS-Origin.GalaxyTex.zip</strong>，选择 8k &#x2F; 16k &#x2F; 32k &#x2F; 64k 四种分辨率的<strong>其中一个</strong>即可。</p>
+<p>③ 解压 <strong>RSS-Origin.GalaxyTex.zip</strong>，并将解压后的文件夹 <strong>RSSOrigin</strong> 移动至 KSP 游戏文件夹的 <strong>GameData</strong> 文件夹中。</p>
+<h1 id="五、致谢，贡献和鸣谢"><a href="#五、致谢，贡献和鸣谢" class="headerlink" title="五、致谢，贡献和鸣谢"></a>五、致谢，贡献和鸣谢</h1><h2 id="作者：-Charon-S"><a href="#作者：-Charon-S" class="headerlink" title="作者： Charon_S"></a>作者： Charon_S</h2><h3 id="主要贡献者（排名不分贡献大小，按字母顺序排列）"><a href="#主要贡献者（排名不分贡献大小，按字母顺序排列）" class="headerlink" title="主要贡献者（排名不分贡献大小，按字母顺序排列）"></a>主要贡献者（排名不分贡献大小，按字母顺序排列）</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs Text">himīśā<br>Kerbinator Fras<br>NewoEther<br>Proxima-b<br></code></pre></td></tr></table></figure>
 
 <h3 id="特别贡献者（按字母顺序排列，不区分贡献程度）"><a href="#特别贡献者（按字母顺序排列，不区分贡献程度）" class="headerlink" title="特别贡献者（按字母顺序排列，不区分贡献程度）"></a>特别贡献者（按字母顺序排列，不区分贡献程度）</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs Text">Alice Christina<br>ballisticfox<br>caps lock<br>KEKKJ<br>Lekword<br>猫猫是我心头好<br>R-T-B<br>游荡云雀<br>YWMKerman<br></code></pre></td></tr></table></figure>
 
@@ -533,11 +537,11 @@
       
         <a href="/tags/KSP/" class="print-no-link">#KSP</a>
       
+        <a href="/tags/%E6%B8%B8%E6%88%8F/" class="print-no-link">#游戏</a>
+      
         <a href="/tags/RSS-RO-RP-1/" class="print-no-link">#RSS/RO/RP-1</a>
       
         <a href="/tags/RP-1/" class="print-no-link">#RP-1</a>
-      
-        <a href="/tags/%E6%B8%B8%E6%88%8F/" class="print-no-link">#游戏</a>
       
     </div>
   
@@ -550,7 +554,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>RSS-Origin 安装指导（P2）</div>
-      <div>https://kekkj123.github.io/posts/KSP/5/</div>
+      <div>https://kekkj123.github.io/posts/KSP/Origin_Guide/</div>
     </div>
     <div class="license-meta">
       
