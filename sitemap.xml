@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kekkj123.github.io/posts/KSP/5/</loc>
+    
+    <lastmod>2024-11-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kekkj123.github.io/posts/KSP/4/</loc>
+    
+    <lastmod>2024-11-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kekkj123.github.io/posts/Webs/</loc>
     
     <lastmod>2024-11-07</lastmod>
@@ -47,24 +65,6 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/KSP/5/</loc>
-    
-    <lastmod>2024-10-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kekkj123.github.io/posts/KSP/4/</loc>
-    
-    <lastmod>2024-10-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kekkj123.github.io/posts/Structured/Self-description/</loc>
     
     <lastmod>2024-09-17</lastmod>
@@ -76,7 +76,7 @@
 
   <url>
     <loc>https://kekkj123.github.io/</loc>
-    <lastmod>2024-11-07</lastmod>
+    <lastmod>2024-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
