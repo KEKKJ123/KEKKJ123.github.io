@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kekkj123.github.io/posts/4/</loc>
+    
+    <lastmod>2024-12-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kekkj123.github.io/posts/Ubuntu_Reset_Passwd/</loc>
     
     <lastmod>2024-12-18</lastmod>
@@ -23,15 +32,6 @@
     <loc>https://kekkj123.github.io/posts/SimulatorX_User_Manual/</loc>
     
     <lastmod>2024-12-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kekkj123.github.io/posts/4/</loc>
-    
-    <lastmod>2024-11-26</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
