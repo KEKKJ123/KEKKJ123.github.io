@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="/img/Blog_Saturn.png">
   <link rel="icon" href="/img/Blog_Saturn.png">
   
-    <link rel="canonical" href="https://kekkj123.github.io/archives/2024/11/"/>
+    <link rel="canonical" href="https://kekkj123.github.io/page/2/"/>
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
@@ -27,7 +27,7 @@
   
   
   
-  <title>归档 - KEKKJ的个人博客 - 小世界的一瞥</title>
+  <title>KEKKJ的个人博客 - 小世界的一瞥</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -108,7 +108,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 100vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -184,19 +184,23 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/Top_photo.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">归档</span>
+            <span id="subtitle" data-typed-text="来自小世界的一瞥"></span>
           
         </div>
 
         
       </div>
 
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
       
     </div>
   </div>
@@ -210,42 +214,54 @@
     
       <div class="container nopadding-x-md">
         <div id="board"
-          >
+          style="margin-top: 0">
           
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div class="list-group">
-  <p class="h4">共计 20 篇文章</p>
-  <hr>
-  
-  
+
+  <div class="row mx-auto index-card">
     
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/posts/3/" target="_self">
+          RSS/RO/RP-1 系列模组介绍（P0-Part1）
+        </a>
+      </h2>
+
       
-      <p class="h5">2024</p>
-    
-    <a href="/posts/SimulatorX_User_Manual/" class="list-group-item list-group-item-action">
-      <time>11-26</time>
-      <div class="list-group-item-title">华南虎模拟器 SimulatorX 使用手册（2024UL）</div>
-    </a>
-  
-    
-    <a href="/posts/Tools/SkipAD/" class="list-group-item list-group-item-action">
-      <time>11-08</time>
-      <div class="list-group-item-title">跳广告软件推荐</div>
-    </a>
-  
-    
-    <a href="/posts/Webs/" class="list-group-item list-group-item-action">
-      <time>11-06</time>
-      <div class="list-group-item-title">实用网站自存（持续更新）</div>
-    </a>
-  
-</div>
+      <a class="index-excerpt index-excerpt__noimg" href="/posts/3/" target="_self">
+        <div>
+          
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-10-27 14:27" pubdate>
+              2022-10-27
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
 
 
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </span>
+  </nav>
 
 
 
@@ -347,6 +363,21 @@
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
 
 
 
