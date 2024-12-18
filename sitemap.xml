@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kekkj123.github.io/posts/KSP/Origin_Guide/</loc>
+    
+    <lastmod>2024-12-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kekkj123.github.io/posts/Legacy_RP1_Installation_Guide/</loc>
     
     <lastmod>2024-12-18</lastmod>
@@ -12,15 +21,6 @@
   
   <url>
     <loc>https://kekkj123.github.io/posts/RSSRORP1_Seris_Introduction/</loc>
-    
-    <lastmod>2024-12-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kekkj123.github.io/posts/KSP/Origin_Guide/</loc>
     
     <lastmod>2024-12-18</lastmod>
     
