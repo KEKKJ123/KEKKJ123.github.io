@@ -2,16 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://kekkj123.github.io/posts/KSP/Origin_Guide/</loc>
+    <loc>https://kekkj123.github.io/posts/Legacy_RP1_Installation_Guide/</loc>
     
-    <lastmod>2024-12-18</lastmod>
+    <lastmod>2024-12-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Legacy_RP1_Installation_Guide/</loc>
+    <loc>https://kekkj123.github.io/posts/Tools/SkipAD/</loc>
+    
+    <lastmod>2024-12-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kekkj123.github.io/posts/KSP/Origin_Guide/</loc>
     
     <lastmod>2024-12-18</lastmod>
     
@@ -74,15 +83,6 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Tools/SkipAD/</loc>
-    
-    <lastmod>2024-11-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kekkj123.github.io/posts/Structured/Self-description/</loc>
     
     <lastmod>2024-09-17</lastmod>
@@ -94,7 +94,7 @@
 
   <url>
     <loc>https://kekkj123.github.io/</loc>
-    <lastmod>2024-12-18</lastmod>
+    <lastmod>2024-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
