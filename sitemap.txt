@@ -1,5 +1,5 @@
-https://kekkj123.github.io/posts/Legacy_RP1_Installation_Guide/
 https://kekkj123.github.io/posts/Structured/Self_Description/
+https://kekkj123.github.io/posts/Legacy_RP1_Installation_Guide/
 https://kekkj123.github.io/posts/Structured/Self_Use/
 https://kekkj123.github.io/posts/Ubuntu_Reset_Passwd/
 https://kekkj123.github.io/posts/Tools/SkipAD/
