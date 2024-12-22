@@ -8,7 +8,7 @@
     <link href="/posts/Structured/Self_Use/"/>
     <url>/posts/Structured/Self_Use/</url>
     
-    <content type="html"><![CDATA[<h3 id="颜色代码"><a href="#颜色代码" class="headerlink" title="颜色代码"></a>颜色代码</h3><table><thead><tr><th align="center">颜色</th><th align="center">HTML</th></tr></thead><tbody><tr><td align="center"><font color=e02525><strong>红色</strong></font></td><td align="center">e02525</td></tr><tr><td align="center"><font color=ffcd00><strong>黄色</strong></font></td><td align="center">ffcd00</td></tr><tr><td align="center"><font color=02a2ff><strong>蓝色</strong></font></td><td align="center">02a2ff</td></tr><tr><td align="center"><font color=6a737d><strong>灰色</strong></font></td><td align="center">6a737d</td></tr><tr><td align="center"><font color=ee7109><strong>橙色</strong></font></td><td align="center">ee7109</td></tr><tr><td align="center"><font color=33e33c><strong>绿色</strong></font></td><td align="center">33e33c</td></tr><tr><td align="center"><font color=c4c6c9><strong>白色</strong></font></td><td align="center">c4c6c9</td></tr></tbody></table><h3 id="插件测试"><a href="#插件测试" class="headerlink" title="插件测试"></a>插件测试</h3><p><strong>便签</strong></p><p>md ↓</p><div class="note note-success">            <p>文字 或者 <code>markdown</code> 均可</p>          </div><p>HTML：<p class="note note-primary">标签</p></p><hr><p><strong>行内标签</strong></p><p>md：<span class="label label-primary">text</span></p><p>HTML：<span class="label label-primary">Label</span></p><hr><p><strong>折叠块</strong></p><p>md</p>    <div class="fold">      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-b5714680" role="button" aria-expanded="false" aria-controls="collapse-b5714680">        <div class="fold-arrow">▶</div>title      </div>      <div class="fold-collapse collapse" id="collapse-b5714680">        <div class="fold-content">          <p>需要折叠的一段内容，支持 markdown</p>        </div>      </div>    </div><p>info: 和行内标签类似的可选参数</p><p>title: 折叠块上的标题</p><hr><p><strong>勾选框</strong></p><p>md：            <input type="checkbox"  checked="checked">text          </p><p>text：显示的文字</p><p>checked：默认是否已勾选，默认 false</p><p>incline: 是否内联（可以理解为后面的文字是否换行），默认 false</p><hr><p><strong>按钮</strong></p><p>md：<a class="btn" href="url"  title="title" target="_blank">text</a></p><p>html：<a class="btn" href="url" title="title">text</a></p><p>url：跳转链接</p><p>text：显示的文字</p><p>title：鼠标悬停时显示的文字（可选）</p><hr><p><strong>组图</strong></p><div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="/url"></div><div class="group-image-wrap"><img src="/url"></div><div class="group-image-wrap"><img src="/url"></div></div><div class="group-image-row"><div class="group-image-wrap"><img src="/url"></div><div class="group-image-wrap"><img src="/url"></div></div></div><p>（链接待补充）</p><p>total：图片总数量，对应中间包含的图片 url 数量<br>n1-n2-…：每行的图片数量，可以省略，默认单行最多 3 张图，求和必须相等于 total，否则按默认样式</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="颜色代码"><a href="#颜色代码" class="headerlink" title="颜色代码"></a>颜色代码</h3><table><thead><tr><th align="center">颜色</th><th align="center">HTML</th></tr></thead><tbody><tr><td align="center"><font color=e02525><strong>红色</strong></font></td><td align="center">e02525</td></tr><tr><td align="center"><font color=ffcd00><strong>黄色</strong></font></td><td align="center">ffcd00</td></tr><tr><td align="center"><font color=02a2ff><strong>蓝色</strong></font></td><td align="center">02a2ff</td></tr><tr><td align="center"><font color=6a737d><strong>灰色</strong></font></td><td align="center">6a737d</td></tr><tr><td align="center"><font color=ee7109><strong>橙色</strong></font></td><td align="center">ee7109</td></tr><tr><td align="center"><font color=33e33c><strong>绿色</strong></font></td><td align="center">33e33c</td></tr><tr><td align="center"><font color=c4c6c9><strong>白色</strong></font></td><td align="center">c4c6c9</td></tr></tbody></table><h3 id="插件测试"><a href="#插件测试" class="headerlink" title="插件测试"></a>插件测试</h3><p><strong>便签</strong></p><p>md：</p><div class="note note-success">            <p>文字 或者 <code>markdown</code> 均可</p>          </div><p>HTML：<p class="note note-primary">标签</p></p><hr><p><strong>行内标签</strong></p><p>md：<span class="label label-primary">text</span></p><p>HTML：<span class="label label-primary">Label</span></p><hr><p><strong>折叠块</strong></p><p>md</p>    <div class="fold">      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-b5714680" role="button" aria-expanded="false" aria-controls="collapse-b5714680">        <div class="fold-arrow">▶</div>title      </div>      <div class="fold-collapse collapse" id="collapse-b5714680">        <div class="fold-content">          <p>需要折叠的一段内容，支持 markdown</p>        </div>      </div>    </div><p>info: 和行内标签类似的可选参数</p><p>title: 折叠块上的标题</p><hr><p><strong>勾选框</strong></p><p>md：            <input type="checkbox"  checked="checked">text          </p><p>text：显示的文字</p><p>checked：默认是否已勾选，默认 false</p><p>incline: 是否内联（可以理解为后面的文字是否换行），默认 false</p><hr><p><strong>按钮</strong></p><p>md：<a class="btn" href="url"  title="title" target="_blank">text</a></p><p>html：<a class="btn" href="url" title="title">text</a></p><p>url：跳转链接</p><p>text：显示的文字</p><p>title：鼠标悬停时显示的文字（可选）</p><hr><p><strong>组图</strong></p><div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="/url"></div><div class="group-image-wrap"><img src="/url"></div><div class="group-image-wrap"><img src="/url"></div></div><div class="group-image-row"><div class="group-image-wrap"><img src="/url"></div><div class="group-image-wrap"><img src="/url"></div></div></div><p>（链接待补充）</p><p>total：图片总数量，对应中间包含的图片 url 数量<br>n1-n2-…：每行的图片数量，可以省略，默认单行最多 3 张图，求和必须相等于 total，否则按默认样式</p>]]></content>
     
     
     
@@ -267,15 +267,15 @@
       
       <tag>KSP</tag>
       
-      <tag>超越历史系列</tag>
-      
-      <tag>Transcend History</tag>
-      
       <tag>RSS/RO/RP-1</tag>
       
       <tag>RP-1</tag>
       
       <tag>游戏</tag>
+      
+      <tag>超越历史系列</tag>
+      
+      <tag>Transcend History</tag>
       
     </tags>
     
@@ -288,7 +288,7 @@
     <link href="/posts/Structured/Self_Description/"/>
     <url>/posts/Structured/Self_Description/</url>
     
-    <content type="html"><![CDATA[<p class="note note-danger"><font size="5"><b>本博客会持续更新！</b></font></p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs Text">    __ __ ________ __ __ __    __     ____  __    ____  ______<br>   / //_// ____/ //_// //_/   / /    / __ )/ /   / __ \/ ____/<br>  / ,&lt;  / __/ / ,&lt;  / ,&lt; __  / /    / __  / /   / / / / / __  <br> / /| |/ /___/ /| |/ /| / /_/ /    / /_/ / /___/ /_/ / /_/ /  <br>/_/ |_/_____/_/ |_/_/ |_\____/    /_____/_____/\____/\____/   <br></code></pre></td></tr></table></figure><p>你好，这里是 KEKKJ 的个人博客！</p><p>这里是我的思想窗口。目前的主要作用是充当仓库<font color=gray><del>垃圾桶</del></font>。</p><p>当然，也会随时丢一些自己想到的奇怪东西。</p><h3 id="文章迁移和创作清单"><a href="#文章迁移和创作清单" class="headerlink" title="文章迁移和创作清单"></a><strong>文章迁移和创作清单</strong></h3><p><strong>迁移</strong></p><ul><li><input checked="" disabled="" type="checkbox"> 随缘手记</li><li><input checked="" disabled="" type="checkbox"> B站的 KSP 教程</li><li><input checked="" disabled="" type="checkbox"> CSDN 的 OpenVINO 教程</li></ul><p>截至本文最后一次更新，作者的文章已经全部迁移至本博客！🎉🎉🎉</p><p><strong>创作</strong></p><ul><li><p><input disabled="" type="checkbox"> KSP 与航天科普向</p></li><li><p><input disabled="" type="checkbox"> 自述（持续更新ing）</p></li><li><p><input disabled="" type="checkbox"> 博客的建站知识合集</p></li><li><p><input disabled="" type="checkbox"> RoboMaster 学习笔记</p></li><li><p><input disabled="" type="checkbox"> 其他实用技能分享</p></li></ul><p>To be continued…</p><h2 id="持续更新的碎碎念"><a href="#持续更新的碎碎念" class="headerlink" title="持续更新的碎碎念"></a>持续更新的碎碎念</h2><h3 id="博客的搭建和主题的选择"><a href="#博客的搭建和主题的选择" class="headerlink" title="博客的搭建和主题的选择"></a>博客的搭建和主题的选择</h3><p>本博客由 <a href="https://hexo.io/zh-cn/">Hexo</a> 驱动，主题为 <a href="https://hexo.fluid-dev.com/">Fluid</a>，目前托管在 <a href="https://github.com/KEKKJ123/KEKKJ123.github.io">Github</a> ，您可自行查阅官方文档部署。</p><h3 id="搜索引擎的选择和使用"><a href="#搜索引擎的选择和使用" class="headerlink" title="搜索引擎的选择和使用"></a>搜索引擎的选择和使用</h3><p>中国大陆环境首选 <font color=02a2ff><strong>Bing 搜索引擎</strong></font>，在网络畅通的情况下请无脑选择 <font color=ee7109><strong>Google 搜索引擎</strong></font>。</p><p>对于一般性的检索，可使用空格将多个关键词分隔开，也便于搜索引擎识别。</p><p>注意搜索引擎不能正确识别全角符号（中文符号），需要手动删除或换为半角符号（英文符号）</p><p>e.g：中文逗号“，”<strong>→</strong>英文逗号“,”</p><h3 id="持续更新中……"><a href="#持续更新中……" class="headerlink" title="持续更新中……"></a>持续更新中……</h3><h2 id="关于作者"><a href="#关于作者" class="headerlink" title="关于作者"></a>关于作者</h2><p>我是 KEKKJ，全球 70 亿人中最平凡的一个。</p>]]></content>
+    <content type="html"><![CDATA[<p class="note note-danger"><b>本博客会持续更新！</b></p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs Text">    __ __ ________ __ __ __    __     ____  __    ____  ______<br>   / //_// ____/ //_// //_/   / /    / __ )/ /   / __ \/ ____/<br>  / ,&lt;  / __/ / ,&lt;  / ,&lt; __  / /    / __  / /   / / / / / __  <br> / /| |/ /___/ /| |/ /| / /_/ /    / /_/ / /___/ /_/ / /_/ /  <br>/_/ |_/_____/_/ |_/_/ |_\____/    /_____/_____/\____/\____/   <br></code></pre></td></tr></table></figure><p>你好，这里是 KEKKJ 的个人博客！</p><p>这里是我的思想窗口。目前的主要作用是充当仓库<font color=gray><del>垃圾桶</del></font>。</p><p>当然，也会随时丢一些自己想到的奇怪东西。</p><h3 id="文章迁移和创作清单"><a href="#文章迁移和创作清单" class="headerlink" title="文章迁移和创作清单"></a><strong>文章迁移和创作清单</strong></h3><p><strong>迁移</strong></p><ul><li><input checked="" disabled="" type="checkbox"> 随缘手记</li><li><input checked="" disabled="" type="checkbox"> B站的 KSP 教程</li><li><input checked="" disabled="" type="checkbox"> CSDN 的 OpenVINO 教程</li></ul><p>截至本文最后一次更新，作者的文章已经全部迁移至本博客！🎉🎉🎉</p><p><strong>创作</strong></p><ul><li><p><input disabled="" type="checkbox"> KSP 与航天科普向</p></li><li><p><input disabled="" type="checkbox"> 自述（持续更新ing）</p></li><li><p><input disabled="" type="checkbox"> 博客的建站知识合集</p></li><li><p><input disabled="" type="checkbox"> RoboMaster 学习笔记</p></li><li><p><input disabled="" type="checkbox"> 其他实用技能分享</p></li></ul><p>To be continued…</p><h2 id="持续更新的碎碎念"><a href="#持续更新的碎碎念" class="headerlink" title="持续更新的碎碎念"></a>持续更新的碎碎念</h2><h3 id="博客的搭建和主题的选择"><a href="#博客的搭建和主题的选择" class="headerlink" title="博客的搭建和主题的选择"></a>博客的搭建和主题的选择</h3><p>本博客由 <a href="https://hexo.io/zh-cn/">Hexo</a> 驱动，主题为 <a href="https://hexo.fluid-dev.com/">Fluid</a>，目前托管在 <a href="https://github.com/KEKKJ123/KEKKJ123.github.io">Github</a> ，您可自行查阅官方文档部署。</p><h3 id="搜索引擎的选择和使用"><a href="#搜索引擎的选择和使用" class="headerlink" title="搜索引擎的选择和使用"></a>搜索引擎的选择和使用</h3><p>中国大陆环境首选 <font color=02a2ff><strong>Bing 搜索引擎</strong></font>，在网络畅通的情况下请无脑选择 <font color=ee7109><strong>Google 搜索引擎</strong></font>。</p><p>对于一般性的检索，可使用空格将多个关键词分隔开，也便于搜索引擎识别。</p><p>注意搜索引擎不能正确识别全角符号（中文符号），需要手动删除或换为半角符号（英文符号）</p><p>e.g：中文逗号“，”<strong>→</strong>英文逗号“,”</p><h3 id="持续更新中……"><a href="#持续更新中……" class="headerlink" title="持续更新中……"></a>持续更新中……</h3><h2 id="关于作者"><a href="#关于作者" class="headerlink" title="关于作者"></a>关于作者</h2><p>我是 KEKKJ，全球 70 亿人中最平凡的一个。</p>]]></content>
     
     
     
@@ -376,11 +376,11 @@
       
       <tag>Ubuntu</tag>
       
-      <tag>教程</tag>
-      
       <tag>OpenVINO</tag>
       
       <tag>Github</tag>
+      
+      <tag>教程</tag>
       
     </tags>
     
@@ -527,15 +527,15 @@
       
       <tag>KSP</tag>
       
-      <tag>超越历史系列</tag>
-      
-      <tag>Transcend History</tag>
-      
       <tag>RSS/RO/RP-1</tag>
       
       <tag>RP-1</tag>
       
       <tag>游戏</tag>
+      
+      <tag>超越历史系列</tag>
+      
+      <tag>Transcend History</tag>
       
     </tags>
     
