@@ -23,25 +23,6 @@
   
   
   <entry>
-    <title>个人网站接入搜索引擎</title>
-    <link href="/posts/Structured/Blog_SEO/"/>
-    <url>/posts/Structured/Blog_SEO/</url>
-    
-    <content type="html"><![CDATA[<blockquote><p><font color=gray>本博客页面的最下方有一行字：总访问量 XXX 次 总访客数 XXX 人。</font></p><p><font color=gray>在默认情况下，搜索引擎不会主动收录我们的网站。</font></p><p><font color=gray>那如何才能让读者看到我们的文章呢？</font></p><p><font color=gray>阅读本篇教程，相信你一定会找到想要的答案！</font></p></blockquote><hr><h2 id="一、"><a href="#一、" class="headerlink" title="一、"></a>一、</h2>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>教程</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Ubuntu 20.04 重置密码教程</title>
     <link href="/posts/Ubuntu_Reset_Passwd/"/>
     <url>/posts/Ubuntu_Reset_Passwd/</url>
