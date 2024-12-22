@@ -6,4 +6,4 @@ Disallow: /tags/
 Disallow: /archives/
 Disallow: /about/
 Disallow: /page/
-Sitemap: https://kekkj123.github.io/sitemap.xml
+Sitemap: https://kekkj123.github.io/sitemap.txt
