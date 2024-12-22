@@ -2,7 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://kekkj123.github.io/posts/0/</loc>
+    <loc>https://kekkj123.github.io/posts/Structured/Self_Use/</loc>
+    
+    <lastmod>2024-12-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kekkj123.github.io/posts/Structured/Self_Description/</loc>
+    
+    <lastmod>2024-12-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kekkj123.github.io/posts/Ubuntu_Reset_Passwd/</loc>
+    
+    <lastmod>2024-12-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kekkj123.github.io/posts/Structured/Blog_SEO/</loc>
     
     <lastmod>2024-12-22</lastmod>
     
@@ -56,15 +83,6 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Ubuntu_Reset_Passwd/</loc>
-    
-    <lastmod>2024-12-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kekkj123.github.io/posts/OpenVINO_Installation_Guide/</loc>
     
     <lastmod>2024-12-16</lastmod>
@@ -86,15 +104,6 @@
     <loc>https://kekkj123.github.io/posts/Webs/</loc>
     
     <lastmod>2024-11-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kekkj123.github.io/posts/Structured/Self-description/</loc>
-    
-    <lastmod>2024-09-17</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

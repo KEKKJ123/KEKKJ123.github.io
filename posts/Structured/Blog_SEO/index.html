@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="/img/Blog_Saturn.png">
   <link rel="icon" href="/img/Blog_Saturn.png">
   
-    <link rel="canonical" href="https://kekkj123.github.io/posts/0/"/>
+    <link rel="canonical" href="https://kekkj123.github.io/posts/Structured/Blog_SEO/"/>
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
@@ -23,11 +23,11 @@
   <meta name="author" content="KEKKJ">
   <meta name="keywords" content="KEKKJ">
   
-    <meta name="description" content="只是胡思乱写而已。">
+    <meta name="description" content="本博客页面的最下方有一行字：总访问量 XXX 次 总访客数 XXX 人。 在默认情况下，搜索引擎不会主动收录我们的网站。 那如何才能让读者看到我们的文章呢？ 阅读本篇教程，相信你一定会找到想要的答案！   一、">
   
   
   
-  <title>KEKKJ的个人博客 - 小世界的一瞥</title>
+  <title>个人网站接入搜索引擎 - KEKKJ的个人博客 - 小世界的一瞥</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle"></span>
+            <span id="subtitle">个人网站接入搜索引擎</span>
           
         </div>
 
@@ -212,7 +212,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-12-23 00:42" pubdate>
+        <time datetime="2024-12-23 00:51" pubdate>
           2024年12月23日 凌晨
         </time>
       </span>
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          81 字
         
       </span>
     
@@ -296,12 +296,29 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header"></h1>
+            <h1 id="seo-header">个人网站接入搜索引擎</h1>
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2024-12-23T02:06:45+08:00
+                  
+                  
+
+                
+              </p>
             
             
               <div class="markdown-body">
                 
-                
+                <blockquote>
+<p><font color=gray>本博客页面的最下方有一行字：总访问量 XXX 次 总访客数 XXX 人。</font></p>
+<p><font color=gray>在默认情况下，搜索引擎不会主动收录我们的网站。</font></p>
+<p><font color=gray>那如何才能让读者看到我们的文章呢？</font></p>
+<p><font color=gray>阅读本篇教程，相信你一定会找到想要的答案！</font></p>
+</blockquote>
+<hr>
+<h2 id="一、"><a href="#一、" class="headerlink" title="一、"></a>一、</h2>
                 
               </div>
             
@@ -309,6 +326,13 @@
             <div>
               <div class="post-metas my-3">
   
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%95%99%E7%A8%8B/" class="print-no-link">#教程</a>
+      
+    </div>
   
 </div>
 
@@ -318,8 +342,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>https://kekkj123.github.io/posts/0/</div>
+      <div>个人网站接入搜索引擎</div>
+      <div>https://kekkj123.github.io/posts/Structured/Blog_SEO/</div>
     </div>
     <div class="license-meta">
       
@@ -334,6 +358,11 @@
           <div>2024年12月23日</div>
         </div>
       
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2024年12月23日</div>
+        </div>
       
       
         <div class="license-meta-item">
@@ -379,8 +408,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/Ubuntu_Reset_Passwd/" title="Ubuntu 20.04 重置密码教程">
-                        <span class="hidden-mobile">Ubuntu 20.04 重置密码教程</span>
+                      <a href="/posts/Structured/Self_Use/" title="博客自用结构性代码及示例">
+                        <span class="hidden-mobile">博客自用结构性代码及示例</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -590,6 +619,33 @@
   
 
 
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
 
 
   
