@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kekkj123.github.io/posts/Webs/</loc>
+    
+    <lastmod>2024-12-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kekkj123.github.io/posts/Structured/Self_Description/</loc>
     
     <lastmod>2024-12-22</lastmod>
@@ -91,19 +100,10 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://kekkj123.github.io/posts/Webs/</loc>
-    
-    <lastmod>2024-11-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://kekkj123.github.io/</loc>
-    <lastmod>2024-12-22</lastmod>
+    <lastmod>2024-12-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
