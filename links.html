@@ -166,7 +166,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/links.html" target="_self">
+              <a class="nav-link" href="/links/" target="_self">
                 <i class="iconfont icon-link-fill"></i>
                 <span>友链</span>
               </a>
@@ -374,10 +374,53 @@
 
   <!-- Custom -->
   <div class="custom mx-auto">
-    <hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：KEKKJ BLOG</li><li>短简介：小世界的一瞥。</li><li>简介：KEKKJ 的个人博客，分享各种技术教程和生活碎碎念。</li><li>链接：https://kekkj123.github.io/</li><li>图片：https://kekkj123.github.io/img/Blog_Saturn.png</li></ul>
+    <hr><p>本友链页面正在迁移中，各位可发送友链信息至 2899851191@qq.com，感谢您的合作！</p><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：KEKKJ BLOG</li><li>短简介：小世界的一瞥。</li><li>简介：KEKKJ 的个人博客，分享各种技术教程和生活碎碎念。</li><li>链接：https://kekkj123.github.io/</li><li>图片：https://kekkj123.github.io/img/Blog_Saturn.png</li></ul>
   </div>
 
 
+
+  
+  
+    <article id="comments" lazyload>
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"KEKKJ123/KEKKJ123.github.io","repo-id":"R_kgDOMihuAQ","category":"Announcements","category-id":"DIC_kwDOMihuAc4ChlYD","theme-light":"light","theme-dark":"dark","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
 
 
 
