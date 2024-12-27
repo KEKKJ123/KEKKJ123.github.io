@@ -22,7 +22,7 @@
       if(String(snum).length === 1 ){
         snum = "0" + snum;
       }
-      document.getElementById("timeDate").innerHTML = "本博客已运行&nbsp"+dnum+"&nbsp天";
+      document.getElementById("timeDate").innerHTML = "故事已经书写了&nbsp"+dnum+"&nbsp天";
       document.getElementById("times").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
     }
   
