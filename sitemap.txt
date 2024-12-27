@@ -1,3 +1,5 @@
+https://kekkj123.github.io/icon-font-css/travelling/demo_index.html
+https://kekkj123.github.io/icon-font-css/travelling/iconfont.json
 https://kekkj123.github.io/posts/OpenVINO_Installation_Guide/
 https://kekkj123.github.io/links.html
 https://kekkj123.github.io/posts/Structured/Self_Description/
