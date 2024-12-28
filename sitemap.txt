@@ -1,4 +1,3 @@
-https://kekkj123.github.io/scripts/show_wordcount_total.html
 https://kekkj123.github.io/posts/RSS_Origin_Guide/
 https://kekkj123.github.io/posts/RSS_Origin_Introduction/
 https://kekkj123.github.io/posts/OpenVINO_Installation_Guide/
