@@ -1,7 +1,7 @@
 !(function() {
     /** 计时起始时间，自行修改 **/
     var Birth_Time = new Date("2024/08/12 23:15:44");
-  
+    // by https://hexo.fluid-dev.com/posts/fluid-footer-custom/index.html
     function update() {
       var now = new Date();
       now.setTime(now.getTime()+250);
@@ -22,7 +22,7 @@
       if(String(snum).length === 1 ){
         snum = "0" + snum;
       }
-      document.getElementById("timeDate").innerHTML = "故事已经书写了&nbsp"+dnum+"&nbsp天";
+      document.getElementById("timeDate").innerHTML = "故事已经书写了&nbsp" + dnum + "&nbsp天";
       document.getElementById("times").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
     }
   
