@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="/img/Blog_Saturn.png">
   <link rel="icon" href="/img/Blog_Saturn.png">
   
-    <link rel="canonical" href="https://kekkj123.github.io/posts/OpenVINO_Installation_Guide/"/>
+    <link rel="canonical" href="https://kekkj123.github.io/posts/Ubuntu_Reset_Passwd/"/>
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
@@ -23,11 +23,11 @@
   <meta name="author" content="防灾科技学院 思玄战队 KEKKJ">
   <meta name="keywords" content="KEKKJ">
   
-    <meta name="description" content="由于OpenVINO 2021.4 LTS 版本已过时，官网下载界面没有对应版本的选项安装。经过大量尝试后，终于找到了相对稳定的安装方案，并且对大部分老版本同样适用。 Q&amp;amp;A：为什么要安装 OpenVINO ？ —— 此版本内置 OpenCV 4.5.3。 本人尚是一枚新人，对各方面了解较浅，若有错误，欢迎各位指出。 感谢视觉救命群热心群友的帮助！  2024.4.2 一次修改：优化排版">
+    <meta name="description" content="阅前提醒：数据无价，时间无价！切勿为了一时而填写了奇奇怪怪的密码。密码不规范，视觉两行泪。 作者某日发现自己遗忘了实验室某台 MiniPC 的密码，瞬间红温。但是如何解决呢？ 重装固然是一个最简单的思路，但不仅需要系统盘，还会丢失宝贵的数据。 暴力破解？看起来不太现实，反而有可能在试错中迷失。 置之不理？这显然万万不可，在视觉组的开发中，几乎不可能用不到sudo命令。 在查阅了一些资料后，作者总">
   
   
   
-  <title>OpenVINO 2021.4 LTS 及旧版本编译安装方法 - KEKKJ BLOG - 小世界的一瞥</title>
+  <title>Ubuntu 20.04 重置密码教程 - KEKKJ BLOG - 小世界的一瞥</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -246,13 +246,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/1_OpenVINO%E6%97%A7%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/OpenVINO.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/ApolloSoyuz.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">OpenVINO 2021.4 LTS 及旧版本编译安装方法</span>
+            <span id="subtitle">Ubuntu 20.04 重置密码教程</span>
           
         </div>
 
@@ -268,8 +268,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-04-02 19:20" pubdate>
-          2024年4月2日 晚上
+        <time datetime="2024-12-19 02:40" pubdate>
+          2024年12月19日 凌晨
         </time>
       </span>
     
@@ -280,7 +280,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          784 字
+          1.2k 字
         
       </span>
     
@@ -291,7 +291,7 @@
         
         
         
-          6 分钟
+          8 分钟
         
       </span>
     
@@ -366,7 +366,7 @@
       
         <a href="/posts/OpenVINO_Installation_Guide/" title="OpenVINO 2021.4 LTS 及旧版本编译安装方法"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">OpenVINO 2021.4 LTS 及旧版本编译安装方法</span>
         </a>
       
@@ -384,7 +384,7 @@
       
         <a href="/posts/Ubuntu_Reset_Passwd/" title="Ubuntu 20.04 重置密码教程"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Ubuntu 20.04 重置密码教程</span>
         </a>
       
@@ -416,12 +416,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">OpenVINO 2021.4 LTS 及旧版本编译安装方法</h1>
+            <h1 id="seo-header">Ubuntu 20.04 重置密码教程</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2025-03-01T15:46:35+08:00
+                    本文最后更新于 2025-03-01T15:47:50+08:00
                   
                   
 
@@ -432,72 +432,52 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p><font color=gray>由于OpenVINO 2021.4 LTS 版本已过时，官网下载界面没有对应版本的选项安装。经过大量尝试后，终于找到了相对稳定的安装方案，并且对大部分老版本同样适用。</font></p>
-<p><font color=gray>Q&amp;A：为什么要安装 OpenVINO ？ —— 此版本内置 OpenCV 4.5.3。</font></p>
-<p><font color=gray>本人尚是一枚新人，对各方面了解较浅，若有错误，欢迎各位指出。</font></p>
-<p><font color=gray><strong>感谢视觉救命群热心群友的帮助！</strong></font></p>
+<p><font color=gray>阅前提醒：数据无价，时间无价！切勿为了一时而填写了奇奇怪怪的密码。密码不规范，视觉两行泪。</font></p>
+<p><font color=gray>作者某日发现自己遗忘了实验室某台 MiniPC 的密码，瞬间红温。但是如何解决呢？</font></p>
+<p><font color=gray>重装固然是一个最简单的思路，但不仅需要系统盘，还会丢失宝贵的数据。</font></p>
+<p><font color=gray>暴力破解？看起来不太现实，反而有可能在试错中迷失。</font></p>
+<p><font color=gray>置之不理？这显然万万不可，在视觉组的开发中，几乎不可能用不到<code>sudo</code>命令。</font></p>
+<p><font color=gray>在查阅了一些资料后，作者总结出了这篇文章。</font></p>
 </blockquote>
-<p>2024.4.2 一次修改：优化排版</p>
-<p>2024.4.3 二次修改：调整“环境变量”文本提示</p>
-<p>2024.7.6 三次修改：修改引用链接</p>
-<p>2024.8.26 迁移文章至博客，并同步更新 CSDN</p>
 <hr>
-<p>在准备安装之前，我们需要明确 OpenVINO 的完整安装流程。</p>
-<p>根据官方安装文档，OpenVINO 可以大致分为三个部分：<font color=gray>（个人理解）</font></p>
-<ol>
-<li>OpenVINO™ Toolkit Core Components —— OpenVINO 工具包</li>
-<li>External Software Dependencies —— OpenVINO 依赖项</li>
-<li>The Model Optimizer —— 模型优化器（若安装dev版本可略过）</li>
-</ol>
-<h2 id="第零步：确保网络环境畅通，能稳定访问-Github"><a href="#第零步：确保网络环境畅通，能稳定访问-Github" class="headerlink" title="第零步：确保网络环境畅通，能稳定访问 Github"></a>第零步：确保网络环境畅通，能稳定访问 Github</h2><p><strong>本文默认您已安装 CMake, GCC, Python 等基本依赖项。</strong></p>
-<h2 id="第一步：获取旧版本OpenVINO-工具包-3-4"><a href="#第一步：获取旧版本OpenVINO-工具包-3-4" class="headerlink" title="第一步：获取旧版本OpenVINO 工具包[3][4]"></a>第一步：获取旧版本OpenVINO 工具包<sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="[[2019_R1] Install Intel® Distribution of OpenVINO™ toolkit for Linux - OpenVINO Toolkit](https://docs.openvino.ai/archive/2019_R1/_docs_install_guides_installing_openvino_linux.html#set-the-environment-variables)">[3]</span></a></sup><sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="[[2021.4] Install and Configure Intel® Distribution of OpenVINO™ toolkit for Linux — OpenVINO™ documentation](https://docs.openvino.ai/archive/2021.4/openvino_docs_install_guides_installing_openvino_linux.html)">[4]</span></a></sup></h2><p>对于旧版本，我们需要从官方存档仓库<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[OpenVINO 官方仓库](https://storage.openvinotoolkit.org/repositories/openvino/packages/)">[2]</span></a></sup>中寻找。请依据你的 Ubuntu 版本下载对应的版本。</p>
-<div style="display:inline-block;">
-    <img width="60%" src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/1_OpenVINO%E6%97%A7%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/OpenVINO_storage_1.png" srcset="/img/loading.gif" lazyload style="float: left; margin-right: 5px;">
-    <img width="34.3%" src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/1_OpenVINO%E6%97%A7%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/OpenVINO_storage_2.png" srcset="/img/loading.gif" lazyload style="float: left; margin-right: 5px;">
-</div>
+<p>总结网络上的教程，它们的思路都是一致的：获取到 root（根用户）权限，并更改用户组的密码。</p>
+<p>其方法一般有两种，即恢复模式（Recovery mode）和命令行模式（Command-Line）。</p>
+<h2 id="零、重置前准备"><a href="#零、重置前准备" class="headerlink" title="零、重置前准备"></a>零、重置前准备</h2><p>在实践之前，作者需要读者有一台预装 Ubuntu 20.04 并能够正常开机的电脑。</p>
+<p>当然，<em>最好</em>有 Ubuntu 启动盘。同时无需网络。</p>
+<p>在讲解之前，我们需要了解一下电脑启动的各个阶段。</p>
+<p>按顺序分别为 BIOS 阶段、Boot Manager（通常为 UEFI 引导，一般会被直接跳过）、系统自带引导菜单（Win 环境一般只有单硬盘存在多系统时才会出现）。 </p>
+<p>而我们需要进入的 Grub Menu 即为 Ubuntu 系统自带的引导菜单，即第三阶段。</p>
+<p>恢复模式和命令行模式两种方法都需要本机能够正常进入引导菜单，也就是此页面。</p>
+<p>（图片）</p>
+<p>不过在某些情况下可能无法进入菜单，包括但不限于：</p>
+<p>BIOS 开启了快速启动（Fast Boot）；引导菜单被隐藏或显示时间为零。</p>
+<h3 id="1-关闭-BIOS-快速启动"><a href="#1-关闭-BIOS-快速启动" class="headerlink" title="1.关闭 BIOS 快速启动"></a>1.关闭 BIOS 快速启动</h3><p>这一步非常简单，只需要在 BIOS 阶段，即电脑品牌标识出现的一小段时间内，按下键盘对应的键位即可进入 BIOS 菜单（一般为 F2、F10、F12或其他组合键，不同品牌的键位也不一样）。</p>
+<p>接下来找到快速启动（Fast Boot）并关闭即可。</p>
+<h3 id="2-调整-Grub-显示时间"><a href="#2-调整-Grub-显示时间" class="headerlink" title="2.调整 Grub 显示时间"></a>2.调整 Grub 显示时间</h3><p>这里有两种方法。第一种适用于无启动盘，无法获得临时超级用户权限的读者；第二种则是通用的修改方法。</p>
+<h4 id="①-临时启动"><a href="#①-临时启动" class="headerlink" title="① 临时启动"></a>① 临时启动</h4><p>如果仅仅想要临时打开 Grub ，可以在 BIOS 阶段按下 <code>ESC</code>或长按<code>Shift</code>。</p>
+<p>作者测试时，仅需要短按一次<code>ESC</code>即可正常进入，按两次会导致 Grub Menu 一闪而过，最后进入 Grub 命令行。</p>
+<h4 id="②-修改-Grub-文件"><a href="#②-修改-Grub-文件" class="headerlink" title="② 修改 Grub 文件"></a>② 修改 Grub 文件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># /etc/default/grub 文件控制了系统自带引导菜单的显示方式和时间。</span><br>GRUB_DEFAULT=0<br><span class="hljs-comment"># 光标默认指向的启动项，第一个为 0，&quot;1&gt; 2&quot;代表点击第二个后的第三个选项</span><br>GRUB_TIMEOUT_STYLE=hidden<br><span class="hljs-comment"># Grub Menu 启动样式：hidden（不显示）, menu（等待下一步操作）, countdown（倒计时结束后进入默认选项）</span><br>GRUB_TIMEOUT=10<br><span class="hljs-comment"># Grub Menu 显示时间，单位：秒。-1 为无限秒。</span><br></code></pre></td></tr></table></figure>
+
+<p>修改<code>GRUB_TIMEOUT_STYLE</code>的参数为<code>menu</code>或<code>countdown</code>，后者需要<code>GRUB_TIMEOUT</code>不为 0。</p>
+<p>保存之后执行<code>sudo update-grub</code>更新配置文件，即可在下次开机自动弹出 Grub 菜单。</p>
+<h2 id="一、恢复模式（Recovery-mode）"><a href="#一、恢复模式（Recovery-mode）" class="headerlink" title="一、恢复模式（Recovery mode）"></a>一、恢复模式（Recovery mode）</h2><p>通过第零步重启电脑，进入到 Grub Menu 后，选择 <strong>Ubuntu 的高级选项（Advanced options for Ubuntu）</strong>，选择一个后面带 <strong>recovery mode</strong> 的内核，按<code>Enter</code>进入。此时你应该能看到这样的画面。</p>
+<p>（图片）</p>
+<p>选择 <strong>root</strong>，会提示输入密码。默认为空，按<code>Enter</code>即可。</p>
+<p>保险起见，可以先输入<code>ls /home</code>显示系统已有的用户。</p>
+<p>接下来输入<code>passwd 要更改的用户名</code>，再输入两次新密码即可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">Give root password <span class="hljs-keyword">for</span> maintenance	<span class="hljs-comment"># 输入 root 用户的密码，默认为空</span><br>(or press Control-D to <span class="hljs-built_in">continue</span>):<br>root@root:~$ <span class="hljs-built_in">ls</span> /home				<span class="hljs-comment"># 列出系统已有的用户</span><br>XXXX<br>root@root:~$ passwd 要更改的用户名		<span class="hljs-comment"># 更改某用户的密码</span><br>New password:<br>Retype password:<br>passwd: password updated<br>successfully<br>root@root:~$ reboot					<span class="hljs-comment"># 重启</span><br></code></pre></td></tr></table></figure>
 
 
 
+<h2 id="二、命令行模式"><a href="#二、命令行模式" class="headerlink" title="二、命令行模式"></a>二、命令行模式</h2><p>前几步与进入恢复模式操作一样，但最后需要按<code>e</code>开始编辑 Grub。此时你应该能看到这样的画面。</p>
+<p>（图片）</p>
+<p>寻找以<code>linux /boot/vmlinuz</code>为开头的行，将<code>ro Quiet Splash $vt_handoff</code>一词替换为<code>rw init=/bin/bash</code>。</p>
+<p>接下来按 F10 保存，此时系统会重启，等待 root 命令行出现，正常修改密码即可。</p>
+<h2 id="三、引用文章"><a href="#三、引用文章" class="headerlink" title="三、引用文章"></a>三、引用文章</h2><p><a target="_blank" rel="noopener" href="https://cn.linux-console.net/?p=29949">如何在 Ubuntu 20.04 中重置忘记的 Root 密码</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44721831/article/details/122182958">Ubuntu20.04 忘记root和普通用户密码的恢复步骤</a></p>
+<p><a target="_blank" rel="noopener" href="https://cn.linux-console.net/?p=19579">如何在 2 分钟内重置忘记的 Ubuntu 密码</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36786467/article/details/108156413">【Ubuntu】在ubuntu上使用恢复模式及Recovery Mode各选项的使用方法_ubuntu recovery mode-CSDN博客</a></p>
 
-<p>在本教程中，我们在 <strong>Ubuntu 20.04</strong> 环境安装 <strong>OpenVINO 2021.4.1</strong>。</p>
-<p>即：l_openvino_toolkit_dev_ubuntu20_p_2021.4.689.tgz <font color=gray><del><strong>（作者犯懒就选择dev了）</strong></del></font></p>
-<p>下载后提取到此处即可。</p>
-<p>提取后文件夹路径应为：<code>~/Downloads/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689</code></p>
-<p>将解压后的文件夹移动到 <code>/opt/intel/openvino</code>（记得换成自己的路径）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> Downloads<br>tar -xvf l_openvino_toolkit_dev_ubuntu20_p_2021.4.689<br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">mv</span> /home/&lt;username&gt;/Downloads/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689 /opt/intel/openvino<br></code></pre></td></tr></table></figure>
-
-<p>进入 <strong>install_dependencies</strong> 文件夹，并运行 <strong>install_openvino_dependencies.sh</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /opt/intel/openvino/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689/install_dependencies<br><span class="hljs-built_in">sudo</span> -E ./install_openvino_dependencies.sh<br></code></pre></td></tr></table></figure>
-
-<p>配置临时环境变量以验证安装成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> /opt/intel/openvino/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689/bin/setupvars.sh<br></code></pre></td></tr></table></figure>
-
-<p>若显示</p>
-<p><code>[setupvars.sh] OpenVINO environment initialized</code></p>
-<p>则代表安装成功。</p>
-<p>配置永久环境变量：使用编辑器在 .bashrc 文件末尾输入刚才的 source 命令并保存。</p>
-<p>再次打开新终端，若出现相同信息则可进行下一步。</p>
-<h2 id="第二步：源代码构建并编译-5"><a href="#第二步：源代码构建并编译-5" class="headerlink" title="第二步：源代码构建并编译[5]"></a>第二步：源代码构建并编译<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Build OpenVINO™ Runtime for Linux systems - Github](https://github.com/openvinotoolkit/openvino/blob/master/docs/dev/build_linux.md)">[5]</span></a></sup></h2><p>打开新终端，克隆 OpenVINO 存储库<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[GitHub下载克隆clone指定的分支tag代码 - Tse先生 - 博客园](https://www.cnblogs.com/Sungeek/p/10275903.html)">[1]</span></a></sup>和 init 子模块</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> -b releases/2021/4 https://github.com/openvinotoolkit/openvino.git	<span class="hljs-comment">#文件约500MB，注意流量</span><br><span class="hljs-built_in">cd</span> openvino<br>git submodule update --init --recursive<br></code></pre></td></tr></table></figure>
-
-<p>根据克隆库安装依赖</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> +x install_build_dependencies.sh	<span class="hljs-comment">#给予可执行权限</span><br><span class="hljs-built_in">sudo</span> ./install_build_dependencies.sh	<span class="hljs-comment">#执行脚本</span><br></code></pre></td></tr></table></figure>
-
-<p>创建文件夹并编译，到这里 OpenVINO 就安装完毕了</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> build &amp;&amp; <span class="hljs-built_in">cd</span> build<br>cmake -DCMAKE_BUILD_TYPE=Release ..<br>cmake --build . --parallel 8	<span class="hljs-comment">#数字代表并行线程数，根据处理器情况酌情修改</span><br></code></pre></td></tr></table></figure>
-
-
-
-<h2 id="第三步：安装模型优化器（WIP）"><a href="#第三步：安装模型优化器（WIP）" class="headerlink" title="第三步：安装模型优化器（WIP）"></a>第三步：安装模型优化器（WIP）</h2><p>（待补充）</p>
-<h2 id="一些碎碎念"><a href="#一些碎碎念" class="headerlink" title="一些碎碎念"></a>一些碎碎念</h2><p>若报错或显示“权限不够”，本文大部分命令都可以在开头添加 sudo 执行（理论上）</p>
-<p>善用搜索引擎，遇到报错，可复制关键文本查找解决方法。</p>
-<p><strong>很多情况下，直接阅读官方文档比搜索本身更加有效。</strong></p>
-<h2 id="参考文章（建议阅读）"><a href="#参考文章（建议阅读）" class="headerlink" title="参考文章（建议阅读）"></a>参考文章（建议阅读）</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Sungeek/p/10275903.html">GitHub下载克隆clone指定的分支tag代码 - Tse先生 - 博客园</a>
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://storage.openvinotoolkit.org/repositories/openvino/packages/">OpenVINO 官方仓库</a>
-<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.openvino.ai/archive/2019_R1/_docs_install_guides_installing_openvino_linux.html#set-the-environment-variables">[2019_R1] Install Intel® Distribution of OpenVINO™ toolkit for Linux - OpenVINO Toolkit</a>
-<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.openvino.ai/archive/2021.4/openvino_docs_install_guides_installing_openvino_linux.html">[2021.4] Install and Configure Intel® Distribution of OpenVINO™ toolkit for Linux — OpenVINO™ documentation</a>
-<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/openvinotoolkit/openvino/blob/master/docs/dev/build_linux.md">Build OpenVINO™ Runtime for Linux systems - Github</a>
-<a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
             
@@ -535,8 +515,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>OpenVINO 2021.4 LTS 及旧版本编译安装方法</div>
-      <div>https://kekkj123.github.io/posts/OpenVINO_Installation_Guide/</div>
+      <div>Ubuntu 20.04 重置密码教程</div>
+      <div>https://kekkj123.github.io/posts/Ubuntu_Reset_Passwd/</div>
     </div>
     <div class="license-meta">
       
@@ -548,7 +528,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年4月2日</div>
+          <div>2024年12月19日</div>
         </div>
       
       
@@ -591,9 +571,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/suiyuan/7/" title="日常碎碎念 - P7">
+                      <a href="/posts/Structured/Self_Use/" title="博客自用结构性代码及示例">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">日常碎碎念 - P7</span>
+                        <span class="hidden-mobile">博客自用结构性代码及示例</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -601,8 +581,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/suiyuan/6/" title="特辑：祝我生日快乐 - P6">
-                        <span class="hidden-mobile">特辑：祝我生日快乐 - P6</span>
+                      <a href="/posts/SimulatorX_User_Manual/" title="华南虎模拟器使用手册（2024UL）">
+                        <span class="hidden-mobile">华南虎模拟器使用手册（2024UL）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

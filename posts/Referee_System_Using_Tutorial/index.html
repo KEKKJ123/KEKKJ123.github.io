@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="/img/Blog_Saturn.png">
   <link rel="icon" href="/img/Blog_Saturn.png">
   
-    <link rel="canonical" href="https://kekkj123.github.io/posts/OpenVINO_Installation_Guide/"/>
+    <link rel="canonical" href="https://kekkj123.github.io/posts/Referee_System_Using_Tutorial/"/>
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
@@ -23,11 +23,11 @@
   <meta name="author" content="防灾科技学院 思玄战队 KEKKJ">
   <meta name="keywords" content="KEKKJ">
   
-    <meta name="description" content="由于OpenVINO 2021.4 LTS 版本已过时，官网下载界面没有对应版本的选项安装。经过大量尝试后，终于找到了相对稳定的安装方案，并且对大部分老版本同样适用。 Q&amp;amp;A：为什么要安装 OpenVINO ？ —— 此版本内置 OpenCV 4.5.3。 本人尚是一枚新人，对各方面了解较浅，若有错误，欢迎各位指出。 感谢视觉救命群热心群友的帮助！  2024.4.2 一次修改：优化排版">
+    <meta name="description" content="最近，作者所在的实验室借用了一套裁判系统。 借此机会，作者大致体验了一遍裁判系统的验收流程和使用方法。 当然，在这个过程中作者也踩了不少坑。为了便于参考和查缺补漏，这里总结了一些注意事项。 受各种条件限制，本文可能存在错误或不够严谨。欢迎各位大佬指出，感激不尽！   本文适用环境：RoboMaster2025高校联盟赛。 本文不是官方的使用手册，作者不保证本文的通用性。请务必结合裁判系统用户手册">
   
   
   
-  <title>OpenVINO 2021.4 LTS 及旧版本编译安装方法 - KEKKJ BLOG - 小世界的一瞥</title>
+  <title>RoboMaster 裁判系统使用心得 - KEKKJ BLOG - 小世界的一瞥</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -246,13 +246,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/1_OpenVINO%E6%97%A7%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/OpenVINO.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/ApolloSoyuz.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">OpenVINO 2021.4 LTS 及旧版本编译安装方法</span>
+            <span id="subtitle">RoboMaster 裁判系统使用心得</span>
           
         </div>
 
@@ -268,8 +268,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-04-02 19:20" pubdate>
-          2024年4月2日 晚上
+        <time datetime="2025-03-01 01:40" pubdate>
+          2025年3月1日 凌晨
         </time>
       </span>
     
@@ -280,7 +280,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          784 字
+          1.7k 字
         
       </span>
     
@@ -291,7 +291,7 @@
         
         
         
-          6 分钟
+          12 分钟
         
       </span>
     
@@ -366,7 +366,7 @@
       
         <a href="/posts/OpenVINO_Installation_Guide/" title="OpenVINO 2021.4 LTS 及旧版本编译安装方法"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">OpenVINO 2021.4 LTS 及旧版本编译安装方法</span>
         </a>
       
@@ -393,7 +393,7 @@
       
         <a href="/posts/Referee_System_Using_Tutorial/" title="RoboMaster 裁判系统使用心得"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">RoboMaster 裁判系统使用心得</span>
         </a>
       
@@ -416,12 +416,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">OpenVINO 2021.4 LTS 及旧版本编译安装方法</h1>
+            <h1 id="seo-header">RoboMaster 裁判系统使用心得</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2025-03-01T15:46:35+08:00
+                    本文最后更新于 2025-03-01T15:47:53+08:00
                   
                   
 
@@ -432,72 +432,91 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p><font color=gray>由于OpenVINO 2021.4 LTS 版本已过时，官网下载界面没有对应版本的选项安装。经过大量尝试后，终于找到了相对稳定的安装方案，并且对大部分老版本同样适用。</font></p>
-<p><font color=gray>Q&amp;A：为什么要安装 OpenVINO ？ —— 此版本内置 OpenCV 4.5.3。</font></p>
-<p><font color=gray>本人尚是一枚新人，对各方面了解较浅，若有错误，欢迎各位指出。</font></p>
-<p><font color=gray><strong>感谢视觉救命群热心群友的帮助！</strong></font></p>
+<p><font color=gray>最近，作者所在的实验室借用了一套裁判系统。</font></p>
+<p><font color=gray>借此机会，作者大致体验了一遍裁判系统的验收流程和使用方法。</font></p>
+<p><font color=gray>当然，在这个过程中作者也踩了不少坑。为了便于参考和查缺补漏，这里总结了一些注意事项。</font></p>
+<p><font color=gray>受各种条件限制，本文可能存在错误或不够严谨。欢迎各位大佬指出，感激不尽！</font></p>
 </blockquote>
-<p>2024.4.2 一次修改：优化排版</p>
-<p>2024.4.3 二次修改：调整“环境变量”文本提示</p>
-<p>2024.7.6 三次修改：修改引用链接</p>
-<p>2024.8.26 迁移文章至博客，并同步更新 CSDN</p>
 <hr>
-<p>在准备安装之前，我们需要明确 OpenVINO 的完整安装流程。</p>
-<p>根据官方安装文档，OpenVINO 可以大致分为三个部分：<font color=gray>（个人理解）</font></p>
-<ol>
-<li>OpenVINO™ Toolkit Core Components —— OpenVINO 工具包</li>
-<li>External Software Dependencies —— OpenVINO 依赖项</li>
-<li>The Model Optimizer —— 模型优化器（若安装dev版本可略过）</li>
-</ol>
-<h2 id="第零步：确保网络环境畅通，能稳定访问-Github"><a href="#第零步：确保网络环境畅通，能稳定访问-Github" class="headerlink" title="第零步：确保网络环境畅通，能稳定访问 Github"></a>第零步：确保网络环境畅通，能稳定访问 Github</h2><p><strong>本文默认您已安装 CMake, GCC, Python 等基本依赖项。</strong></p>
-<h2 id="第一步：获取旧版本OpenVINO-工具包-3-4"><a href="#第一步：获取旧版本OpenVINO-工具包-3-4" class="headerlink" title="第一步：获取旧版本OpenVINO 工具包[3][4]"></a>第一步：获取旧版本OpenVINO 工具包<sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="[[2019_R1] Install Intel® Distribution of OpenVINO™ toolkit for Linux - OpenVINO Toolkit](https://docs.openvino.ai/archive/2019_R1/_docs_install_guides_installing_openvino_linux.html#set-the-environment-variables)">[3]</span></a></sup><sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="[[2021.4] Install and Configure Intel® Distribution of OpenVINO™ toolkit for Linux — OpenVINO™ documentation](https://docs.openvino.ai/archive/2021.4/openvino_docs_install_guides_installing_openvino_linux.html)">[4]</span></a></sup></h2><p>对于旧版本，我们需要从官方存档仓库<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[OpenVINO 官方仓库](https://storage.openvinotoolkit.org/repositories/openvino/packages/)">[2]</span></a></sup>中寻找。请依据你的 Ubuntu 版本下载对应的版本。</p>
-<div style="display:inline-block;">
-    <img width="60%" src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/1_OpenVINO%E6%97%A7%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/OpenVINO_storage_1.png" srcset="/img/loading.gif" lazyload style="float: left; margin-right: 5px;">
-    <img width="34.3%" src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/1_OpenVINO%E6%97%A7%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/OpenVINO_storage_2.png" srcset="/img/loading.gif" lazyload style="float: left; margin-right: 5px;">
-</div>
-
-
-
-
-<p>在本教程中，我们在 <strong>Ubuntu 20.04</strong> 环境安装 <strong>OpenVINO 2021.4.1</strong>。</p>
-<p>即：l_openvino_toolkit_dev_ubuntu20_p_2021.4.689.tgz <font color=gray><del><strong>（作者犯懒就选择dev了）</strong></del></font></p>
-<p>下载后提取到此处即可。</p>
-<p>提取后文件夹路径应为：<code>~/Downloads/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689</code></p>
-<p>将解压后的文件夹移动到 <code>/opt/intel/openvino</code>（记得换成自己的路径）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> Downloads<br>tar -xvf l_openvino_toolkit_dev_ubuntu20_p_2021.4.689<br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">mv</span> /home/&lt;username&gt;/Downloads/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689 /opt/intel/openvino<br></code></pre></td></tr></table></figure>
-
-<p>进入 <strong>install_dependencies</strong> 文件夹，并运行 <strong>install_openvino_dependencies.sh</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /opt/intel/openvino/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689/install_dependencies<br><span class="hljs-built_in">sudo</span> -E ./install_openvino_dependencies.sh<br></code></pre></td></tr></table></figure>
-
-<p>配置临时环境变量以验证安装成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> /opt/intel/openvino/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689/bin/setupvars.sh<br></code></pre></td></tr></table></figure>
-
-<p>若显示</p>
-<p><code>[setupvars.sh] OpenVINO environment initialized</code></p>
-<p>则代表安装成功。</p>
-<p>配置永久环境变量：使用编辑器在 .bashrc 文件末尾输入刚才的 source 命令并保存。</p>
-<p>再次打开新终端，若出现相同信息则可进行下一步。</p>
-<h2 id="第二步：源代码构建并编译-5"><a href="#第二步：源代码构建并编译-5" class="headerlink" title="第二步：源代码构建并编译[5]"></a>第二步：源代码构建并编译<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Build OpenVINO™ Runtime for Linux systems - Github](https://github.com/openvinotoolkit/openvino/blob/master/docs/dev/build_linux.md)">[5]</span></a></sup></h2><p>打开新终端，克隆 OpenVINO 存储库<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[GitHub下载克隆clone指定的分支tag代码 - Tse先生 - 博客园](https://www.cnblogs.com/Sungeek/p/10275903.html)">[1]</span></a></sup>和 init 子模块</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> -b releases/2021/4 https://github.com/openvinotoolkit/openvino.git	<span class="hljs-comment">#文件约500MB，注意流量</span><br><span class="hljs-built_in">cd</span> openvino<br>git submodule update --init --recursive<br></code></pre></td></tr></table></figure>
-
-<p>根据克隆库安装依赖</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> +x install_build_dependencies.sh	<span class="hljs-comment">#给予可执行权限</span><br><span class="hljs-built_in">sudo</span> ./install_build_dependencies.sh	<span class="hljs-comment">#执行脚本</span><br></code></pre></td></tr></table></figure>
-
-<p>创建文件夹并编译，到这里 OpenVINO 就安装完毕了</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> build &amp;&amp; <span class="hljs-built_in">cd</span> build<br>cmake -DCMAKE_BUILD_TYPE=Release ..<br>cmake --build . --parallel 8	<span class="hljs-comment">#数字代表并行线程数，根据处理器情况酌情修改</span><br></code></pre></td></tr></table></figure>
-
-
-
-<h2 id="第三步：安装模型优化器（WIP）"><a href="#第三步：安装模型优化器（WIP）" class="headerlink" title="第三步：安装模型优化器（WIP）"></a>第三步：安装模型优化器（WIP）</h2><p>（待补充）</p>
-<h2 id="一些碎碎念"><a href="#一些碎碎念" class="headerlink" title="一些碎碎念"></a>一些碎碎念</h2><p>若报错或显示“权限不够”，本文大部分命令都可以在开头添加 sudo 执行（理论上）</p>
-<p>善用搜索引擎，遇到报错，可复制关键文本查找解决方法。</p>
-<p><strong>很多情况下，直接阅读官方文档比搜索本身更加有效。</strong></p>
-<h2 id="参考文章（建议阅读）"><a href="#参考文章（建议阅读）" class="headerlink" title="参考文章（建议阅读）"></a>参考文章（建议阅读）</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Sungeek/p/10275903.html">GitHub下载克隆clone指定的分支tag代码 - Tse先生 - 博客园</a>
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://storage.openvinotoolkit.org/repositories/openvino/packages/">OpenVINO 官方仓库</a>
-<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.openvino.ai/archive/2019_R1/_docs_install_guides_installing_openvino_linux.html#set-the-environment-variables">[2019_R1] Install Intel® Distribution of OpenVINO™ toolkit for Linux - OpenVINO Toolkit</a>
-<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.openvino.ai/archive/2021.4/openvino_docs_install_guides_installing_openvino_linux.html">[2021.4] Install and Configure Intel® Distribution of OpenVINO™ toolkit for Linux — OpenVINO™ documentation</a>
-<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/openvinotoolkit/openvino/blob/master/docs/dev/build_linux.md">Build OpenVINO™ Runtime for Linux systems - Github</a>
-<a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+<p>本文适用环境：RoboMaster2025高校联盟赛。</p>
+<h3 id="本文不是官方的使用手册，作者不保证本文的通用性。"><a href="#本文不是官方的使用手册，作者不保证本文的通用性。" class="headerlink" title="本文不是官方的使用手册，作者不保证本文的通用性。"></a>本文不是官方的使用手册，作者不保证本文的通用性。</h3><h3 id="请务必结合裁判系统用户手册、裁判系统FAQ等其他官方网页和文档说明食用！！"><a href="#请务必结合裁判系统用户手册、裁判系统FAQ等其他官方网页和文档说明食用！！" class="headerlink" title="请务必结合裁判系统用户手册、裁判系统FAQ等其他官方网页和文档说明食用！！"></a>请务必结合<font color=ee7109>裁判系统用户手册</font>、<font color=ee7109>裁判系统FAQ</font>等其他官方网页和文档说明食用！！</h3><p><strong><a href="#%E5%9B%9B%E3%80%81%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">点我跳转到第四章：参考文章</a></strong></p>
+<h2 id="一、基本机器人、主控模块和电源管理模块（简称电管模块）"><a href="#一、基本机器人、主控模块和电源管理模块（简称电管模块）" class="headerlink" title="一、基本机器人、主控模块和电源管理模块（简称电管模块）"></a>一、基本机器人、主控模块和电源管理模块（简称电管模块）</h2><h3 id="1-基本机器人"><a href="#1-基本机器人" class="headerlink" title="1.基本机器人"></a>1.基本机器人</h3><p>如果不考虑离线模块，最基本的机器人由三部分组成：电源、电源管理模块和主控模块。</p>
+<p>基本机器人便于加装和调试其他模块。若无特殊说明，下文所指机器人均为<strong>基本机器人</strong>。</p>
+<p>如何组装？按照<strong>电源——电管模块——主控模块</strong>的顺序串联即可。</p>
+<h3 id="2-主控模块"><a href="#2-主控模块" class="headerlink" title="2.主控模块"></a>2.主控模块</h3><ul>
+<li><p>部分主控模块到手为英文模式。</p>
+<p>解决方法：长按确定键进入菜单，移动光标至 Language，点击确定后再选择简体中文，确定后即可恢复中文。</p>
+</li>
+<li><p>主控模块需要在<strong>已连接 PC</strong> 的情况下安装驱动，否则可能无法正确识别。<a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/detail/122">下载链接</a><sup id="fnref:7" class="footnote-ref"><a href="#fn:7" rel="footnote"><span class="hint--top hint--rounded" aria-label="[RoboMaster 遥控器套装](https://www.robomaster.com/zh-CN/products/components/detail/122)——主控模块驱动">[7]</span></a></sup>在此。</p>
+</li>
+<li><p>主控必须连接电管模块的<strong>黑色</strong>航空线接口，否则无效。其余接口无顺序要求。</p>
+</li>
+</ul>
+<h2 id="二、选手端、裁判端和服务器的搭建"><a href="#二、选手端、裁判端和服务器的搭建" class="headerlink" title="二、选手端、裁判端和服务器的搭建"></a>二、选手端、裁判端和服务器的搭建</h2><h3 id="1-裁判端和服务器"><a href="#1-裁判端和服务器" class="headerlink" title="1.裁判端和服务器"></a>1.裁判端和服务器</h3><p>自25赛季开始，服务器需要连接互联网（大疆账号），这显著增加了搭建服务器的繁琐程度。</p>
+<p><strong>搭建服务器前请务必关闭本机网络防火墙！</strong></p>
+<p>这里贴一个链接，<a target="_blank" rel="noopener" href="https://github.com/Inetgeek/RM-Referee-Aid">RM-Referee-Aid：RM裁判系统工具箱</a>，内含关闭防火墙的功能。</p>
+<p>由于作者所在实验室的网络无法连接到互联网，故摸索了一个基于双网卡的搭建方案。</p>
+<p>经过测试，本方法适用连接校园网的情况。但样本数极少，无法保证可靠性，若不成功可使用个人热点等联网方式替代。</p>
+<ul>
+<li>搭建方法</li>
+</ul>
+<p>① 主机连接 WiFi（有线网未测试）并能够正常连接互联网。</p>
+<p>② 打开主机的个人热点（与其他设备共享我的 Internet 连接），选择 <strong>2.4G</strong> 频带。</p>
+<p>③ 打开控制面板，依次点击<strong>网络和共享中心</strong>，<strong>更改适配器设置</strong>，<strong>Microsoft Wi-Fi Direct Virtual Adapter</strong>，<strong>属性</strong>。</p>
+<p>④ 双击 <strong>Internet 协议版本 4（TCP&#x2F;IPv4）</strong>，更改 IP 地址为 <strong>192.168.1.2</strong>，子网掩码为 <strong>255.255.255.0</strong>，一路点击确定。</p>
+<p>此时就能够保证服务器能够连接互联网，且其他机器人可连接到本机共享的移动热点。</p>
+<h3 id="2-选手端"><a href="#2-选手端" class="headerlink" title="2.选手端"></a>2.选手端</h3><p>建议先让基本机器人连接服务器，再打开选手端登录。</p>
+<ul>
+<li>若主控联网后显示<strong>找不到服务器</strong>，请更换主控重新尝试，若仍不成功可重新解压裁判端。</li>
+</ul>
+<p><font color=gray><del>被这个构式裁判端坑了三个小时</del></font></p>
+<h2 id="三、激活图传模块，搭建图传链路"><a href="#三、激活图传模块，搭建图传链路" class="headerlink" title="三、激活图传模块，搭建图传链路"></a>三、激活图传模块，搭建图传链路</h2><p><strong>RoboMaster Tool 2</strong> 是裁判系统固件版本的管理工具。它还能激活图传模块。<a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/referee">下载链接</a><sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[RoboMaster Tool 2](https://www.robomaster.com/zh-CN/products/components/detail/4185)——介绍及工具下载">[2]</span></a></sup>在此。</p>
+<p>建议使用最新版本的 <strong>RM Tool</strong>、裁判端、选手端和模块固件！</p>
+<h3 id="0-连接主控，查询和更新固件版本"><a href="#0-连接主控，查询和更新固件版本" class="headerlink" title="0.连接主控，查询和更新固件版本"></a>0.连接主控，查询和更新固件版本</h3><p>① 搭建基本机器人，不要上电，用 Micro-USB 数据线连接主控和 PC 后再打开电源。</p>
+<p>② 打开 RM Tool，显示网络正常后再选择并打开串口，此时应当显示绿色的对勾标志。</p>
+<ul>
+<li>若不成功，可尝试重新插拔 Micro-USB 数据线。</li>
+</ul>
+<p>③ 在已连接基本机器人的前提下，需要升级固件版本的模块会显示红色。</p>
+<p>④ 点击升级。<strong>升级期间，不要断电或操作模块。</strong></p>
+<h3 id="1-图传模块-VT02（发送端）的激活"><a href="#1-图传模块-VT02（发送端）的激活" class="headerlink" title="1.图传模块 VT02（发送端）的激活"></a>1.图传模块 VT02（发送端）的激活</h3><p>① 在已执行第零节的前提下，将发送端与基本机器人连接，检查模块版本是否需要升级。</p>
+<p>② 打开串口，待出现绿色对勾标志后，点击<strong>图传激活</strong>，点击<strong>发送端激活</strong>。</p>
+<p>③ 确认激活区域为<strong>中国和其他地区</strong>后，再点击激活。</p>
+<ul>
+<li>若显示激活区域为<strong>日本地区</strong>，请检查 PC 的网络环境。</li>
+<li>必要时可以科学上网开启香港节点，不要使用台湾节点。（From 视觉救命群群友）</li>
+</ul>
+<h3 id="2-图传模块-VT12（接收端）的激活"><a href="#2-图传模块-VT12（接收端）的激活" class="headerlink" title="2.图传模块 VT12（接收端）的激活"></a>2.图传模块 VT12（接收端）的激活</h3><p>① 使用双头 Type-C 数据线连接 PC 和接收端，用适配器给接收端供电。</p>
+<p>② 打开 RM Tool，显示网络正常后再选择并打开串口，此时应当显示绿色的对勾标志。</p>
+<p>③ 安装接收端驱动。<a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/detail/1458">下载链接</a><sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="[RoboMaster 图传模块 VT02 2019](https://www.robomaster.com/zh-CN/products/components/detail/1458)——接收端驱动">[5]</span></a></sup><sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="[RoboMaster 图传模块 VT12 2020](https://www.robomaster.com/zh-CN/products/components/detail/2595)——接收端驱动（经测试，两网页驱动版本相同）">[6]</span></a></sup>在此。</p>
+<p>④ 点击<strong>图传激活</strong>，点击<strong>接收端激活</strong>。在弹出的窗口中再次打开对应的串口。</p>
+<p>⑤ 确认激活区域为<strong>中国和其他地区</strong>后，再点击激活。注意事项见上。</p>
+<h3 id="3-图传链路的搭建"><a href="#3-图传链路的搭建" class="headerlink" title="3.图传链路的搭建"></a>3.图传链路的搭建</h3><ul>
+<li>发送端</li>
+</ul>
+<p>连接发送端与基本机器人，并使用主控更改机器人 ID 和类型。</p>
+<ul>
+<li>接收端</li>
+</ul>
+<p>① 使用双头 Type-C 数据线连接 PC 和接收端，用适配器给接收端供电。</p>
+<p>② 打开 PC 的<strong>设备管理器</strong>，双击<strong>网络适配器</strong>，检查有无 <strong>Remote NDIS based Iinternet Sharing Device</strong>。</p>
+<p>③ 根据前一节内容，安装接收端的驱动。</p>
+<p>④ 打开选手端，进入客户端后按 P 键打开设置面板，登录发送端机器人的 ID。</p>
+<p>⑤ 待图传串口和连接状态都变为绿色后，若未出现图传画面，请断电重启接收端。</p>
+<ul>
+<li>若半分钟后指示灯依然为红色，请重启发送端。</li>
+<li>若重启后依然无法连接，请参考第二章第一节的搭建方法，找到 <strong>Remote NDIS based Iinternet Sharing Device</strong>，检查 IP 地址是否为 <strong>192.168.42.105</strong>，并再次重启接收端。</li>
+</ul>
+<h2 id="四、参考文章和注意事项"><a href="#四、参考文章和注意事项" class="headerlink" title="四、参考文章和注意事项"></a>四、参考文章和注意事项</h2><p>由于官网赛季页面分为当前赛季和过往赛季，部分参考链接存在时效性。</p>
+<p>请根据实际情况下载最新的软件版本，并参考最新的说明文档！</p>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/referee">RoboMaster 产品 裁判系统</a>——主页面
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/detail/4185">RoboMaster Tool 2</a>——介绍及工具下载
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/detail/5663">RoboMaster 2025 机甲大师高校联盟赛 赛事引擎</a>——软件及说明文档
+<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/detail/2596">RoboMaster 图传模块 VT02 2020</a>——发送端驱动
+<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/detail/1458">RoboMaster 图传模块 VT02 2019</a>——接收端驱动
+<a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:6" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/detail/2595">RoboMaster 图传模块 VT12 2020</a>——接收端驱动（经测试，两网页驱动版本相同）
+<a href="#fnref:6" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:7" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/detail/122">RoboMaster 遥控器套装</a>——主控模块驱动
+<a href="#fnref:7" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
             
@@ -535,8 +554,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>OpenVINO 2021.4 LTS 及旧版本编译安装方法</div>
-      <div>https://kekkj123.github.io/posts/OpenVINO_Installation_Guide/</div>
+      <div>RoboMaster 裁判系统使用心得</div>
+      <div>https://kekkj123.github.io/posts/Referee_System_Using_Tutorial/</div>
     </div>
     <div class="license-meta">
       
@@ -548,7 +567,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年4月2日</div>
+          <div>2025年3月1日</div>
         </div>
       
       
@@ -591,18 +610,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/suiyuan/7/" title="日常碎碎念 - P7">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">日常碎碎念 - P7</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/suiyuan/6/" title="特辑：祝我生日快乐 - P6">
-                        <span class="hidden-mobile">特辑：祝我生日快乐 - P6</span>
+                      <a href="/posts/Tools/Remove_WinNTSetup_cmd_Context_Menu/" title="回退 WinNTSetup 修改 cmd 右键菜单">
+                        <span class="hidden-mobile">回退 WinNTSetup 修改 cmd 右键菜单</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

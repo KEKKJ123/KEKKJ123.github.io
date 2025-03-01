@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="/img/Blog_Saturn.png">
   <link rel="icon" href="/img/Blog_Saturn.png">
   
-    <link rel="canonical" href="https://kekkj123.github.io/posts/OpenVINO_Installation_Guide/"/>
+    <link rel="canonical" href="https://kekkj123.github.io/posts/SimulatorX_User_Manual/"/>
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
@@ -23,11 +23,11 @@
   <meta name="author" content="防灾科技学院 思玄战队 KEKKJ">
   <meta name="keywords" content="KEKKJ">
   
-    <meta name="description" content="由于OpenVINO 2021.4 LTS 版本已过时，官网下载界面没有对应版本的选项安装。经过大量尝试后，终于找到了相对稳定的安装方案，并且对大部分老版本同样适用。 Q&amp;amp;A：为什么要安装 OpenVINO ？ —— 此版本内置 OpenCV 4.5.3。 本人尚是一枚新人，对各方面了解较浅，若有错误，欢迎各位指出。 感谢视觉救命群热心群友的帮助！  2024.4.2 一次修改：优化排版">
+    <meta name="description" content="零、阅读前提醒本文默认读者对电脑的使用一无所知，会尽量以教学的口吻叙述。 若您感觉不适，请关闭此网页。 一、下载与安装1. 下载模拟器打开 SimulatorX 下载站，点击 SimulatorX [2024UL]，这时你应该看到如下画面： 任选其一，点击 SimulatorX-2024ul-2.0.4.0.7z 或 SimulatorX-2024ul-2.0.4.0.zip ，再点击下载即可。">
   
   
   
-  <title>OpenVINO 2021.4 LTS 及旧版本编译安装方法 - KEKKJ BLOG - 小世界的一瞥</title>
+  <title>华南虎模拟器使用手册（2024UL） - KEKKJ BLOG - 小世界的一瞥</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -246,13 +246,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/1_OpenVINO%E6%97%A7%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/OpenVINO.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/ApolloSoyuz.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">OpenVINO 2021.4 LTS 及旧版本编译安装方法</span>
+            <span id="subtitle">华南虎模拟器使用手册（2024UL）</span>
           
         </div>
 
@@ -268,8 +268,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-04-02 19:20" pubdate>
-          2024年4月2日 晚上
+        <time datetime="2024-11-26 21:27" pubdate>
+          2024年11月26日 晚上
         </time>
       </span>
     
@@ -280,7 +280,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          784 字
+          1.4k 字
         
       </span>
     
@@ -291,7 +291,7 @@
         
         
         
-          6 分钟
+          10 分钟
         
       </span>
     
@@ -366,7 +366,7 @@
       
         <a href="/posts/OpenVINO_Installation_Guide/" title="OpenVINO 2021.4 LTS 及旧版本编译安装方法"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">OpenVINO 2021.4 LTS 及旧版本编译安装方法</span>
         </a>
       
@@ -375,7 +375,7 @@
       
         <a href="/posts/SimulatorX_User_Manual/" title="华南虎模拟器使用手册（2024UL）"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">华南虎模拟器使用手册（2024UL）</span>
         </a>
       
@@ -416,12 +416,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">OpenVINO 2021.4 LTS 及旧版本编译安装方法</h1>
+            <h1 id="seo-header">华南虎模拟器使用手册（2024UL）</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2025-03-01T15:46:35+08:00
+                    本文最后更新于 2025-03-01T15:47:48+08:00
                   
                   
 
@@ -431,73 +431,57 @@
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p><font color=gray>由于OpenVINO 2021.4 LTS 版本已过时，官网下载界面没有对应版本的选项安装。经过大量尝试后，终于找到了相对稳定的安装方案，并且对大部分老版本同样适用。</font></p>
-<p><font color=gray>Q&amp;A：为什么要安装 OpenVINO ？ —— 此版本内置 OpenCV 4.5.3。</font></p>
-<p><font color=gray>本人尚是一枚新人，对各方面了解较浅，若有错误，欢迎各位指出。</font></p>
-<p><font color=gray><strong>感谢视觉救命群热心群友的帮助！</strong></font></p>
-</blockquote>
-<p>2024.4.2 一次修改：优化排版</p>
-<p>2024.4.3 二次修改：调整“环境变量”文本提示</p>
-<p>2024.7.6 三次修改：修改引用链接</p>
-<p>2024.8.26 迁移文章至博客，并同步更新 CSDN</p>
-<hr>
-<p>在准备安装之前，我们需要明确 OpenVINO 的完整安装流程。</p>
-<p>根据官方安装文档，OpenVINO 可以大致分为三个部分：<font color=gray>（个人理解）</font></p>
-<ol>
-<li>OpenVINO™ Toolkit Core Components —— OpenVINO 工具包</li>
-<li>External Software Dependencies —— OpenVINO 依赖项</li>
-<li>The Model Optimizer —— 模型优化器（若安装dev版本可略过）</li>
-</ol>
-<h2 id="第零步：确保网络环境畅通，能稳定访问-Github"><a href="#第零步：确保网络环境畅通，能稳定访问-Github" class="headerlink" title="第零步：确保网络环境畅通，能稳定访问 Github"></a>第零步：确保网络环境畅通，能稳定访问 Github</h2><p><strong>本文默认您已安装 CMake, GCC, Python 等基本依赖项。</strong></p>
-<h2 id="第一步：获取旧版本OpenVINO-工具包-3-4"><a href="#第一步：获取旧版本OpenVINO-工具包-3-4" class="headerlink" title="第一步：获取旧版本OpenVINO 工具包[3][4]"></a>第一步：获取旧版本OpenVINO 工具包<sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="[[2019_R1] Install Intel® Distribution of OpenVINO™ toolkit for Linux - OpenVINO Toolkit](https://docs.openvino.ai/archive/2019_R1/_docs_install_guides_installing_openvino_linux.html#set-the-environment-variables)">[3]</span></a></sup><sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="[[2021.4] Install and Configure Intel® Distribution of OpenVINO™ toolkit for Linux — OpenVINO™ documentation](https://docs.openvino.ai/archive/2021.4/openvino_docs_install_guides_installing_openvino_linux.html)">[4]</span></a></sup></h2><p>对于旧版本，我们需要从官方存档仓库<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[OpenVINO 官方仓库](https://storage.openvinotoolkit.org/repositories/openvino/packages/)">[2]</span></a></sup>中寻找。请依据你的 Ubuntu 版本下载对应的版本。</p>
-<div style="display:inline-block;">
-    <img width="60%" src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/1_OpenVINO%E6%97%A7%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/OpenVINO_storage_1.png" srcset="/img/loading.gif" lazyload style="float: left; margin-right: 5px;">
-    <img width="34.3%" src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/1_OpenVINO%E6%97%A7%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/OpenVINO_storage_2.png" srcset="/img/loading.gif" lazyload style="float: left; margin-right: 5px;">
-</div>
+                <h2 id="零、阅读前提醒"><a href="#零、阅读前提醒" class="headerlink" title="零、阅读前提醒"></a>零、阅读前提醒</h2><p>本文默认读者对电脑的使用一无所知，会尽量以教学的口吻叙述。</p>
+<p>若您感觉不适，请关闭此网页。</p>
+<h2 id="一、下载与安装"><a href="#一、下载与安装" class="headerlink" title="一、下载与安装"></a>一、下载与安装</h2><h3 id="1-下载模拟器"><a href="#1-下载模拟器" class="headerlink" title="1. 下载模拟器"></a>1. 下载模拟器</h3><p>打开 <a target="_blank" rel="noopener" href="https://dl.sim.scutbot.cn/">SimulatorX 下载站</a>，点击 <strong>SimulatorX [2024UL]</strong>，这时你应该看到如下画面：<img src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/2_%E6%A8%A1%E6%8B%9F%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%B8%8B%E8%BD%BD%E7%95%8C%E9%9D%A2.png" srcset="/img/loading.gif" lazyload alt="模拟器下载界面" style="zoom:30%;" /></p>
+<p>任选其一，点击 <strong>SimulatorX-2024ul-2.0.4.0.7z</strong> 或 <strong>SimulatorX-2024ul-2.0.4.0.zip</strong> ，再点击<strong>下载</strong>即可。</p>
+<p>*<em>如果是Win10系统，建议下载 zip 文件，便于接下来的操作。</em></p>
+<h3 id="2-解压和安装"><a href="#2-解压和安装" class="headerlink" title="2. 解压和安装"></a>2. 解压和安装</h3><p>打开<strong>此电脑</strong>或<strong>文件资源管理器</strong>，找到此页面的<strong>下载</strong>文件夹，双击进入。此时你应该能找到你下载的模拟器文件。</p>
+<p>右键 <strong>SimulatorX-2024ul-2.0.4.0</strong>，点击<strong>全部解压缩</strong>，点击确定，此时你应该能看到有一个 <strong>SimulatorX-2024ul-2.0.4.0</strong> 文件夹。</p>
+<p>这就是你的模拟器文件。</p>
+<h2 id="二、模拟器的启动和页面说明"><a href="#二、模拟器的启动和页面说明" class="headerlink" title="二、模拟器的启动和页面说明"></a>二、模拟器的启动和页面说明</h2><p>进入 <strong>SimulatorX-2024ul-2.0.4.0</strong> 文件夹，双击 <strong>SimulatorX</strong> 或 <strong>SimulatorX.exe</strong> 启动模拟器。<img src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/2_%E6%A8%A1%E6%8B%9F%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/%E5%90%AF%E5%8A%A8%E9%A1%B5%E9%9D%A2.png" srcset="/img/loading.gif" lazyload alt="启动页面" style="zoom:33%;" /></p>
+<p>用户名：<strong>仅在联机时需要填写</strong>。内容随意。</p>
+<p>服务器口令：联机时房间的口令，为一串字母。填写时不分大小写。</p>
+<p>服务器密码：仅在说明时需要填写，默认不需要。</p>
+<p>本地跑图：不联机情况下，进入单人练习房间。<strong>不需要填写用户名</strong>。</p>
+<p>退出：字面意思。</p>
+<p>全屏：字面意思。</p>
+<p>其余选项不需要变动。如果填写了用户名，<strong>本地跑图</strong>会变为<strong>创建房间</strong>。</p>
+<p>但此时点击<strong>创建房间</strong>，会显示<strong>请检查密码是否正确或稍后再试</strong>。</p>
+<h2 id="三、正式比赛"><a href="#三、正式比赛" class="headerlink" title="三、正式比赛"></a>三、正式比赛</h2><h3 id="1-比赛前页面"><a href="#1-比赛前页面" class="headerlink" title="1. 比赛前页面"></a>1. 比赛前页面</h3><p>在不填写用户名的情况下，点击<strong>本地跑图</strong>，会进入到单人练习房间。<img src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/2_%E6%A8%A1%E6%8B%9F%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/%E6%AF%94%E8%B5%9B%E5%89%8D%E9%A1%B5%E9%9D%A2.png" srcset="/img/loading.gif" lazyload alt="Self Room" style="zoom:33%;" /></p>
+<p>若填写了用户名，则可以点击<strong>创建房间</strong>，进入联机模式。</p>
+<p>创建房间后，左上角即为<strong>服务器口令</strong>，其他联机的玩家们在<strong>填写用户名</strong>后，填写<strong>服务器口令</strong>，即可进入到房间中。</p>
+<p><em>有的服务器需要密码，联机时要注意，如果没有说明则无需填写</em><img src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/2_%E6%A8%A1%E6%8B%9F%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/%E8%81%94%E6%9C%BA%E6%A8%A1%E5%BC%8F.jpg" srcset="/img/loading.gif" lazyload style="zoom:17%;" /></p>
+<p>以下设置在<strong>本地跑图</strong>和<strong>联机模式</strong>均适用。</p>
+<p>点击<strong>一号英雄</strong>、<strong>三号或四号步兵</strong>和<strong>哨兵</strong>可以选择自己的兵种。在实际比赛中，<strong>不允许选择哨兵</strong>。</p>
+<p><strong>裁判</strong>、<strong>观众</strong>：字面意思。</p>
+<p><strong>开始比赛</strong>、<strong>离开房间</strong>：字面意思。</p>
+<p>点击<strong>红方</strong>和<strong>蓝方</strong>可以更改队伍名称。</p>
+<p>点击<strong>开始比赛</strong>即可开始单人练习。在本篇教程中，以<strong>三号步兵</strong>为演示。<img src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/2_%E6%A8%A1%E6%8B%9F%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/%E5%80%92%E8%AE%A1%E6%97%B6%E5%8D%81%E7%A7%92.png" srcset="/img/loading.gif" lazyload alt="Choose" style="zoom:33%;" /></p>
+<h3 id="2-倒计时十秒"><a href="#2-倒计时十秒" class="headerlink" title="2. 倒计时十秒"></a>2. 倒计时十秒</h3><p>根据指示按下 <strong>P</strong> 键，此时弹出来<strong>设置面板</strong>，共分为四栏。作为操作手，你只需要调试以下参数。</p>
+<h5 id="①登录栏-→-登出：退出比赛回到模拟器启动页面。"><a href="#①登录栏-→-登出：退出比赛回到模拟器启动页面。" class="headerlink" title="①登录栏 → 登出：退出比赛回到模拟器启动页面。"></a>①登录栏 → 登出：退出比赛回到模拟器启动页面。</h5><h5 id="②性能配置"><a href="#②性能配置" class="headerlink" title="②性能配置"></a>②性能配置</h5><p>底盘类型：分为<strong>功率优先</strong>和<strong>血量优先</strong>。简单来说，前者跑得快但脆皮，后者跑的慢但血厚。</p>
+<p>发射机构1类型：分为<strong>爆发优先</strong>和<strong>冷却优先</strong>。这里内容较为复杂，详见本章第3节。</p>
+<p>慎重选择，<strong>选择完毕后不可更改</strong>。</p>
+<h5 id="③硬件设置"><a href="#③硬件设置" class="headerlink" title="③硬件设置"></a>③硬件设置</h5><p>控制灵敏度：滑条越左，准星移动速度越慢，反之亦然。</p>
+<p>音量设置：字面意思。</p>
+<p>背景音效音量设置：比赛时的背景音乐音量。<img src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/2_%E6%A8%A1%E6%8B%9F%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/%E9%80%89%E6%8B%A9%E6%A8%A1%E5%BC%8F.png" srcset="/img/loading.gif" lazyload style="zoom:33%;" /></p>
+<p>在一般情况下，只需要调整<strong>底盘类型</strong>、<strong>发射机构1类型</strong>和<strong>控制灵敏度</strong>。</p>
+<h3 id="3-比赛简要规则"><a href="#3-比赛简要规则" class="headerlink" title="3. 比赛简要规则"></a>3. 比赛简要规则</h3><p><strong>本教程不讨论数值，只讲述大致原理，若有需要可自行计算。</strong></p>
+<h5 id="①场地名称"><a href="#①场地名称" class="headerlink" title="①场地名称"></a>①场地名称</h5><p>补给区：兑换弹丸，回血。<strong>一方补给区相对另一方是禁区</strong>，进入会被罚下。</p>
+<p>中央增益点：占领后获得经验，可用于升级，提高机器人的性能。</p>
+<p>基地：字面意思。胜负的重要判定之一。<img src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/2_%E6%A8%A1%E6%8B%9F%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/%E6%AF%94%E8%B5%9B%E5%9C%BA%E5%9C%B0.png" srcset="/img/loading.gif" lazyload alt="比赛场地" style="zoom:33%;" /></p>
+<h5 id="②简要规则解释"><a href="#②简要规则解释" class="headerlink" title="②简要规则解释"></a>②简要规则解释</h5><p>机器人扣血伤害来源：弹丸击中装甲板（步兵弹丸-10，英雄弹丸-100），枪口热量（主要是英雄）。</p>
+<p>枪口热量：可视作发射弹丸频率的限制。每发射一个弹丸都会积累一定量的热量值，并且有上限，超过的部分会按照一定比例给予机器人伤害。热量值会随时间减少，热量限制也会随着升级提高上限。</p>
+<p><strong>爆发优先</strong>和<strong>冷却优先</strong>：前者的热量上限更高，但散热速度较慢；后者的热量上限较低，但散热速度相对更快。</p>
+<p>经验值和机器人等级：发射弹丸、造成伤害、击败对方机器人和占领中央增益点均可获得经验值。机器人等级越高，血量越大，移动速度越快，热量上限和冷却速度也会更高。</p>
+<p>胜负规则：当一方基地血量归0，比赛立刻结束，另一方胜利；比赛倒计时归0，按基地血量判胜负；若基地血量相同，按机器人伤害值判胜负。</p>
+<h3 id="4-操作键位一览"><a href="#4-操作键位一览" class="headerlink" title="4. 操作键位一览"></a>4. 操作键位一览</h3><p>C —— 超级电容。可以在短时间内提高机器人的移动速度。<em>用完记得关。</em></p>
+<p>Y —— 小陀螺模式。牺牲一定速度换取底盘的持续旋转，<font color=gray>也许</font>可以降低对方的命中率。</p>
+<p>H —— 单发 &#x2F; 连发模式切换。仅限步兵机器人。</p>
+<p>T &#x2F; I —— 打开补弹页面。仅在补给区区域可用。</p>
+<p>鼠标左键 —— 发射弹丸。</p>
+<p>鼠标右键 —— 自动瞄准。<strong>在思玄内部赛中不允许使用</strong>。</p>
 
-
-
-
-<p>在本教程中，我们在 <strong>Ubuntu 20.04</strong> 环境安装 <strong>OpenVINO 2021.4.1</strong>。</p>
-<p>即：l_openvino_toolkit_dev_ubuntu20_p_2021.4.689.tgz <font color=gray><del><strong>（作者犯懒就选择dev了）</strong></del></font></p>
-<p>下载后提取到此处即可。</p>
-<p>提取后文件夹路径应为：<code>~/Downloads/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689</code></p>
-<p>将解压后的文件夹移动到 <code>/opt/intel/openvino</code>（记得换成自己的路径）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> Downloads<br>tar -xvf l_openvino_toolkit_dev_ubuntu20_p_2021.4.689<br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">mv</span> /home/&lt;username&gt;/Downloads/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689 /opt/intel/openvino<br></code></pre></td></tr></table></figure>
-
-<p>进入 <strong>install_dependencies</strong> 文件夹，并运行 <strong>install_openvino_dependencies.sh</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /opt/intel/openvino/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689/install_dependencies<br><span class="hljs-built_in">sudo</span> -E ./install_openvino_dependencies.sh<br></code></pre></td></tr></table></figure>
-
-<p>配置临时环境变量以验证安装成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> /opt/intel/openvino/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689/bin/setupvars.sh<br></code></pre></td></tr></table></figure>
-
-<p>若显示</p>
-<p><code>[setupvars.sh] OpenVINO environment initialized</code></p>
-<p>则代表安装成功。</p>
-<p>配置永久环境变量：使用编辑器在 .bashrc 文件末尾输入刚才的 source 命令并保存。</p>
-<p>再次打开新终端，若出现相同信息则可进行下一步。</p>
-<h2 id="第二步：源代码构建并编译-5"><a href="#第二步：源代码构建并编译-5" class="headerlink" title="第二步：源代码构建并编译[5]"></a>第二步：源代码构建并编译<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Build OpenVINO™ Runtime for Linux systems - Github](https://github.com/openvinotoolkit/openvino/blob/master/docs/dev/build_linux.md)">[5]</span></a></sup></h2><p>打开新终端，克隆 OpenVINO 存储库<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[GitHub下载克隆clone指定的分支tag代码 - Tse先生 - 博客园](https://www.cnblogs.com/Sungeek/p/10275903.html)">[1]</span></a></sup>和 init 子模块</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> -b releases/2021/4 https://github.com/openvinotoolkit/openvino.git	<span class="hljs-comment">#文件约500MB，注意流量</span><br><span class="hljs-built_in">cd</span> openvino<br>git submodule update --init --recursive<br></code></pre></td></tr></table></figure>
-
-<p>根据克隆库安装依赖</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> +x install_build_dependencies.sh	<span class="hljs-comment">#给予可执行权限</span><br><span class="hljs-built_in">sudo</span> ./install_build_dependencies.sh	<span class="hljs-comment">#执行脚本</span><br></code></pre></td></tr></table></figure>
-
-<p>创建文件夹并编译，到这里 OpenVINO 就安装完毕了</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> build &amp;&amp; <span class="hljs-built_in">cd</span> build<br>cmake -DCMAKE_BUILD_TYPE=Release ..<br>cmake --build . --parallel 8	<span class="hljs-comment">#数字代表并行线程数，根据处理器情况酌情修改</span><br></code></pre></td></tr></table></figure>
-
-
-
-<h2 id="第三步：安装模型优化器（WIP）"><a href="#第三步：安装模型优化器（WIP）" class="headerlink" title="第三步：安装模型优化器（WIP）"></a>第三步：安装模型优化器（WIP）</h2><p>（待补充）</p>
-<h2 id="一些碎碎念"><a href="#一些碎碎念" class="headerlink" title="一些碎碎念"></a>一些碎碎念</h2><p>若报错或显示“权限不够”，本文大部分命令都可以在开头添加 sudo 执行（理论上）</p>
-<p>善用搜索引擎，遇到报错，可复制关键文本查找解决方法。</p>
-<p><strong>很多情况下，直接阅读官方文档比搜索本身更加有效。</strong></p>
-<h2 id="参考文章（建议阅读）"><a href="#参考文章（建议阅读）" class="headerlink" title="参考文章（建议阅读）"></a>参考文章（建议阅读）</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Sungeek/p/10275903.html">GitHub下载克隆clone指定的分支tag代码 - Tse先生 - 博客园</a>
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://storage.openvinotoolkit.org/repositories/openvino/packages/">OpenVINO 官方仓库</a>
-<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.openvino.ai/archive/2019_R1/_docs_install_guides_installing_openvino_linux.html#set-the-environment-variables">[2019_R1] Install Intel® Distribution of OpenVINO™ toolkit for Linux - OpenVINO Toolkit</a>
-<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.openvino.ai/archive/2021.4/openvino_docs_install_guides_installing_openvino_linux.html">[2021.4] Install and Configure Intel® Distribution of OpenVINO™ toolkit for Linux — OpenVINO™ documentation</a>
-<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/openvinotoolkit/openvino/blob/master/docs/dev/build_linux.md">Build OpenVINO™ Runtime for Linux systems - Github</a>
-<a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
             
@@ -535,8 +519,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>OpenVINO 2021.4 LTS 及旧版本编译安装方法</div>
-      <div>https://kekkj123.github.io/posts/OpenVINO_Installation_Guide/</div>
+      <div>华南虎模拟器使用手册（2024UL）</div>
+      <div>https://kekkj123.github.io/posts/SimulatorX_User_Manual/</div>
     </div>
     <div class="license-meta">
       
@@ -548,7 +532,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年4月2日</div>
+          <div>2024年11月26日</div>
         </div>
       
       
@@ -591,9 +575,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/suiyuan/7/" title="日常碎碎念 - P7">
+                      <a href="/posts/Ubuntu_Reset_Passwd/" title="Ubuntu 20.04 重置密码教程">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">日常碎碎念 - P7</span>
+                        <span class="hidden-mobile">Ubuntu 20.04 重置密码教程</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -601,8 +585,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/suiyuan/6/" title="特辑：祝我生日快乐 - P6">
-                        <span class="hidden-mobile">特辑：祝我生日快乐 - P6</span>
+                      <a href="/posts/Tools/SkipAD/" title="跳广告软件推荐">
+                        <span class="hidden-mobile">跳广告软件推荐</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
