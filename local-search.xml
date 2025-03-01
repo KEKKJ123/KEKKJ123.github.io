@@ -18,6 +18,12 @@
     </categories>
     
     
+    <tags>
+      
+      <tag>教程</tag>
+      
+    </tags>
+    
   </entry>
   
   
@@ -37,6 +43,14 @@
     </categories>
     
     
+    <tags>
+      
+      <tag>教程</tag>
+      
+      <tag>Windows</tag>
+      
+    </tags>
+    
   </entry>
   
   
@@ -49,6 +63,14 @@
     <content type="html"><![CDATA[<h3 id="颜色代码"><a href="#颜色代码" class="headerlink" title="颜色代码"></a>颜色代码</h3><table><thead><tr><th align="center">颜色</th><th align="center">HTML</th></tr></thead><tbody><tr><td align="center"><font color=e02525><strong>红色</strong></font></td><td align="center">e02525</td></tr><tr><td align="center"><font color=ffcd00><strong>黄色</strong></font></td><td align="center">ffcd00</td></tr><tr><td align="center"><font color=02a2ff><strong>蓝色</strong></font></td><td align="center">02a2ff</td></tr><tr><td align="center"><font color=6a737d><strong>灰色</strong></font></td><td align="center">6a737d</td></tr><tr><td align="center"><font color=ee7109><strong>橙色</strong></font></td><td align="center">ee7109</td></tr><tr><td align="center"><font color=33e33c><strong>绿色</strong></font></td><td align="center">33e33c</td></tr><tr><td align="center"><font color=c4c6c9><strong>白色</strong></font></td><td align="center">c4c6c9</td></tr></tbody></table><h3 id="插件测试"><a href="#插件测试" class="headerlink" title="插件测试"></a>插件测试</h3><p><strong>便签</strong></p><p>md：</p><div class="note note-success">            <p>文字 或者 <code>markdown</code> 均可</p>          </div><p>HTML：<p class="note note-primary">标签</p></p><hr><p><strong>行内标签</strong></p><p>md：<span class="label label-primary">text</span></p><p>HTML：<span class="label label-primary">Label</span></p><hr><p><strong>折叠块</strong></p><p>md</p>    <div class="fold">      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-b5714680" role="button" aria-expanded="false" aria-controls="collapse-b5714680">        <div class="fold-arrow">▶</div>title      </div>      <div class="fold-collapse collapse" id="collapse-b5714680">        <div class="fold-content">          <p>需要折叠的一段内容，支持 markdown</p>        </div>      </div>    </div><p>info: 和行内标签类似的可选参数</p><p>title: 折叠块上的标题</p><hr><p><strong>勾选框</strong></p><p>md：            <input type="checkbox"  checked="checked">text          </p><p>text：显示的文字</p><p>checked：默认是否已勾选，默认 false</p><p>incline: 是否内联（可以理解为后面的文字是否换行），默认 false</p><hr><p><strong>按钮</strong></p><p>md：<a class="btn" href="url"  title="title" target="_blank">text</a></p><p>html：<a class="btn" href="url" title="title">text</a></p><p>url：跳转链接</p><p>text：显示的文字</p><p>title：鼠标悬停时显示的文字（可选）</p><hr><p><strong>组图</strong></p><div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="/url"></div><div class="group-image-wrap"><img src="/url"></div><div class="group-image-wrap"><img src="/url"></div></div><div class="group-image-row"><div class="group-image-wrap"><img src="/url"></div><div class="group-image-wrap"><img src="/url"></div></div></div><p>（链接待补充）</p><p>total：图片总数量，对应中间包含的图片 url 数量<br>n1-n2-…：每行的图片数量，可以省略，默认单行最多 3 张图，求和必须相等于 total，否则按默认样式</p>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>教程</tag>
+      
+      <tag>博客</tag>
+      
+    </tags>
     
   </entry>
   
@@ -69,6 +91,14 @@
     </categories>
     
     
+    <tags>
+      
+      <tag>Ubuntu</tag>
+      
+      <tag>教程</tag>
+      
+    </tags>
+    
   </entry>
   
   
@@ -87,6 +117,12 @@
       
     </categories>
     
+    
+    <tags>
+      
+      <tag>教程</tag>
+      
+    </tags>
     
   </entry>
   
@@ -107,6 +143,12 @@
     </categories>
     
     
+    <tags>
+      
+      <tag>教程</tag>
+      
+    </tags>
+    
   </entry>
   
   
@@ -125,6 +167,12 @@
       
     </categories>
     
+    
+    <tags>
+      
+      <tag>教程</tag>
+      
+    </tags>
     
   </entry>
   
@@ -221,18 +269,13 @@
     
     
     
-  </entry>
-  
-  
-  
-  <entry>
-    <title>[Test] Hello World</title>
-    <link href="/posts/Hello_World/"/>
-    <url>/posts/Hello_World/</url>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-    
-    
+    <tags>
+      
+      <tag>教程</tag>
+      
+      <tag>博客</tag>
+      
+    </tags>
     
   </entry>
   
@@ -290,6 +333,16 @@
       
     </categories>
     
+    
+    <tags>
+      
+      <tag>Ubuntu</tag>
+      
+      <tag>OpenVINO</tag>
+      
+      <tag>教程</tag>
+      
+    </tags>
     
   </entry>
   
