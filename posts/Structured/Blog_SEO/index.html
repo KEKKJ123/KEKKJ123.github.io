@@ -23,7 +23,7 @@
   <meta name="author" content="KEKKJ">
   <meta name="keywords" content="KEKKJ">
   
-    <meta name="description" content="在默认情况下，搜索引擎不会主动收录我们的网站。 那如何才能让读者看到我们的文章呢？ 阅读本篇教程，相信你一定会找到想要的答案！   零、部署前准备为了减少部署过程的麻烦，作者建议读者准备科学上网工具。 本文不涉及百度搜素引擎，因为 Github 禁用了百度爬虫，基于此的博客网站无法被收录。 Fluid 主题原生支持 Google Analytics 导入。 为什么使用 Bing 和 Google">
+    <meta name="description" content="在默认情况下，搜索引擎不会主动收录我们的网站。 那如何才能让读者看到我们的文章呢？ 阅读本篇教程，相信你一定会找到想要的答案！   零、部署前准备为了减少部署过程的麻烦，作者建议读者准备科学上网工具。 本文不涉及百度搜素引擎，因为 Github 禁用了百度爬虫，基于 Github Page 的博客网站无法被收录。 Fluid 主题原生支持 Google Analytics 导入。 为什么使用 B">
   
   
   
@@ -280,7 +280,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          628 字
+          621 字
         
       </span>
     
@@ -342,7 +342,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2025-03-01T23:22:40+08:00
+                    本文最后更新于 2025-03-01T23:51:06+08:00
                   
                   
 
@@ -359,7 +359,7 @@
 </blockquote>
 <hr>
 <h2 id="零、部署前准备"><a href="#零、部署前准备" class="headerlink" title="零、部署前准备"></a>零、部署前准备</h2><p>为了减少部署过程的麻烦，作者建议读者准备科学上网工具。</p>
-<p>本文不涉及<strong>百度</strong>搜素引擎，因为 Github 禁用了百度爬虫，基于此的博客网站无法被收录。</p>
+<p>本文不涉及<strong>百度</strong>搜素引擎，因为 Github 禁用了百度爬虫，基于 Github Page 的博客网站无法被收录。</p>
 <p>Fluid 主题原生支持 Google Analytics 导入。</p>
 <p><strong>为什么使用 Bing 和 Google 搜索引擎？</strong></p>
 <h2 id="一、Google-Analytics"><a href="#一、Google-Analytics" class="headerlink" title="一、Google Analytics"></a>一、Google Analytics</h2><p>Google Analytics 是 Google 旗下的网络分析服务平台。</p>
@@ -370,15 +370,15 @@
 <p>⑤ 数据收集选择<strong>网站</strong>，填写自己的博客网站网址，并填写<strong>数据流名称</strong></p>
 <p>⑥ 点击刚才创建的数据流，在这里面可以看到<strong>衡量 ID</strong>（即 measurement_id）：G-XXXXXXXXXX。</p>
 <h3 id="2-开启网页访问统计"><a href="#2-开启网页访问统计" class="headerlink" title="2.开启网页访问统计"></a>2.开启网页访问统计</h3><p>进入博客根目录，编辑 <code>_config.fluid.yml</code>，找到<strong>网页访问统计</strong>（<code>web_analytics</code>）并启用和填入<strong>衡量 ID</strong>。</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-comment"># 网页访问统计</span><br><span class="hljs-comment"># Analysis of website visitors</span><br><span class="hljs-attr">web_analytics:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">google:</span> <br>    <span class="hljs-attr">measurement_id:</span> <span class="hljs-string">G-XXXXXXXXXX</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-comment"># 网页访问统计</span><br><span class="hljs-comment"># Analysis of website visitors</span><br><span class="hljs-attr">web_analytics:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">google:</span> <br>    <span class="hljs-attr">measurement_id:</span> <span class="hljs-string">G-XXXXXXXXXX</span>	<span class="hljs-comment">#衡量 ID</span><br></code></pre></td></tr></table></figure>
 
 
 
 <h2 id="二、Google-Search-Console"><a href="#二、Google-Search-Console" class="headerlink" title="二、Google Search Console"></a>二、Google Search Console</h2><p>Google Search Console 是 Google 搜索引擎的网站管理员工具，你可以在这里调整你的个人网站。</p>
 <p>① 添加</p>
 <h2 id="三、Bing-Webmaster-Tools"><a href="#三、Bing-Webmaster-Tools" class="headerlink" title="三、Bing Webmaster Tools"></a>三、Bing Webmaster Tools</h2><p>Bing Webmaster Tools 是 Bing 搜索引擎的网站管理员工具，你可以在这里调整你的个人网站。</p>
-<h3 id="1-注册和登录"><a href="#1-注册和登录" class="headerlink" title="1.注册和登录"></a>1.注册和登录</h3><p>进入 <a target="_blank" rel="noopener" href="https://www.bing.com/webmasters">Bing Webmaster Tools</a>，点击右上角的<strong>登录</strong>，你可以选择 Microsoft、Google 和 Facebook 三种方式登录。</p>
-<p>这里选择第一种。后续你也可以将 Microsoft 账号与 Google 账号绑定，这样就不会意外创建新的账户了。</p>
+<h3 id="1-注册和登录"><a href="#1-注册和登录" class="headerlink" title="1.注册和登录"></a>1.注册和登录</h3><p>进入 <a target="_blank" rel="noopener" href="https://www.bing.com/webmasters">Bing Webmaster Tools</a>，点击右上角<strong>登录</strong>，你可以选择 Microsoft、Google 和 Facebook 三种方式登录。</p>
+<p>这里选择第一种。你也可以将 Microsoft 账号与 Google 账号绑定，便于后续的同步。</p>
 <h3 id="2-导入网站"><a href="#2-导入网站" class="headerlink" title="2.导入网站"></a>2.导入网站</h3><p>如果是首次登录，会提示添加你的个人网站。</p>
 <p>这里有两种导入方法：<font color=ffcd00>Google Search Console 导入</font>（推荐）和<font color=02a2ff>手动添加网站</font>。</p>
 <p>第一种需要有 GSC 账号并已导入网站，而它和 Bing Webmaster Tools 都是网站管理员工具。</p>
