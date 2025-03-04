@@ -1,5 +1,5 @@
+https://kekkj123.github.io/posts/Structured/Self_Description/
 https://kekkj123.github.io/posts/Structured/Self_Use/
-https://kekkj123.github.io/posts/about.html/
 https://kekkj123.github.io/posts/SimulatorX_User_Manual/
 https://kekkj123.github.io/posts/Tools/Remove_WinNTSetup_cmd_Context_Menu/
 https://kekkj123.github.io/posts/Tools/SkipAD/
