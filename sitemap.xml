@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kekkj123.github.io/posts/Structured/Self_Use/</loc>
+    
+    <lastmod>2025-03-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kekkj123.github.io/posts/about.html/</loc>
+    
+    <lastmod>2025-03-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kekkj123.github.io/posts/SimulatorX_User_Manual/</loc>
     
     <lastmod>2025-03-03</lastmod>
@@ -101,24 +119,6 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Structured/Self_Use/</loc>
-    
-    <lastmod>2025-03-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kekkj123.github.io/posts/Structured/Self_Description/</loc>
-    
-    <lastmod>2025-03-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kekkj123.github.io/icon-font-css/travelling/demo_index.html</loc>
     
     <lastmod>2024-12-27</lastmod>
@@ -148,7 +148,7 @@
 
   <url>
     <loc>https://kekkj123.github.io/</loc>
-    <lastmod>2025-03-03</lastmod>
+    <lastmod>2025-03-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
