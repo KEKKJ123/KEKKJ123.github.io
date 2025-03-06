@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="/img/Blog_Saturn.png">
   <link rel="icon" href="/img/Blog_Saturn.png">
   
-    <link rel="canonical" href="https://kekkj123.github.io/posts/OpenVINO_Installation_Guide/"/>
+    <link rel="canonical" href="https://kekkj123.github.io/posts/Terminal_Auto_Start/"/>
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
@@ -23,11 +23,11 @@
   <meta name="author" content="防灾科技学院 思玄战队 KEKKJ">
   <meta name="keywords" content="KEKKJ">
   
-    <meta name="description" content="由于OpenVINO 2021.4 LTS 版本已过时，官网下载界面没有对应版本的选项安装。经过大量尝试后，终于找到了相对稳定的安装方案，并且对大部分老版本同样适用。 Q&amp;amp;A：为什么要安装 OpenVINO ？ —— 此版本内置 OpenCV 4.5.3。 本人尚是一枚新人，对各方面了解较浅，若有错误，欢迎各位指出。 感谢视觉救命群热心群友的帮助！  2024.4.2 一次修改：优化排版">
+    <meta name="description" content="众所周知，RoboMaster 的比赛流程非常紧凑。 在某些极端情况下，留给战队整备的时间甚至只有几分钟。 这个时候，如果我们的视觉程序拥有自启动功能，就能节省出更多的调试时间。 经过几十分钟的学习，作者学会了一个基于终端的自启动方法，现在分享给大家。   本文测试环境：Ubuntu 20.04。 本方法的自启动流程是开机打开终端——终端内启动 shell 文件——通过 shell 文件启动视觉">
   
   
   
-  <title>OpenVINO 2021.4 LTS 及旧版本编译安装方法 - KEKKJ BLOG - 小世界的一瞥</title>
+  <title>Ubuntu 20.04 基于终端的自启动程序 - KEKKJ BLOG - 小世界的一瞥</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -246,13 +246,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/1_OpenVINO_Installation_Guide/1-OpenVINO.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/ApolloSoyuz.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">OpenVINO 2021.4 LTS 及旧版本编译安装方法</span>
+            <span id="subtitle">Ubuntu 20.04 基于终端的自启动程序</span>
           
         </div>
 
@@ -268,8 +268,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-04-02 19:20" pubdate>
-          2024年4月2日 晚上
+        <time datetime="2025-03-07 04:40" pubdate>
+          2025年3月7日 凌晨
         </time>
       </span>
     
@@ -280,7 +280,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          786 字
+          589 字
         
       </span>
     
@@ -291,7 +291,7 @@
         
         
         
-          6 分钟
+          4 分钟
         
       </span>
     
@@ -366,7 +366,7 @@
       
         <a href="/posts/OpenVINO_Installation_Guide/" title="OpenVINO 2021.4 LTS 及旧版本编译安装方法"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">OpenVINO 2021.4 LTS 及旧版本编译安装方法</span>
         </a>
       
@@ -402,7 +402,7 @@
       
         <a href="/posts/Terminal_Auto_Start/" title="Ubuntu 20.04 基于终端的自启动程序"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">Ubuntu 20.04 基于终端的自启动程序</span>
         </a>
       
@@ -425,12 +425,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">OpenVINO 2021.4 LTS 及旧版本编译安装方法</h1>
+            <h1 id="seo-header">Ubuntu 20.04 基于终端的自启动程序</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2025-03-06T22:13:11+08:00
+                    本文最后更新于 2025-03-07T05:05:35+08:00
                   
                   
 
@@ -441,73 +441,38 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p><font color=gray>由于OpenVINO 2021.4 LTS 版本已过时，官网下载界面没有对应版本的选项安装。经过大量尝试后，终于找到了相对稳定的安装方案，并且对大部分老版本同样适用。</font></p>
-<p><font color=gray>Q&amp;A：为什么要安装 OpenVINO ？ —— 此版本内置 OpenCV 4.5.3。</font></p>
-<p><font color=gray>本人尚是一枚新人，对各方面了解较浅，若有错误，欢迎各位指出。</font></p>
-<p><font color=gray><strong>感谢视觉救命群热心群友的帮助！</strong></font></p>
+<p><font color=gray>众所周知，RoboMaster 的比赛流程非常紧凑。</font></p>
+<p><font color=gray>在某些极端情况下，留给战队整备的时间甚至只有几分钟。</font></p>
+<p><font color=gray>这个时候，如果我们的视觉程序拥有自启动功能，就能节省出更多的调试时间。</font></p>
+<p><font color=gray>经过几十分钟的学习，作者学会了一个基于终端的自启动方法，现在分享给大家。</font></p>
 </blockquote>
-<p>2024.4.2 一次修改：优化排版</p>
-<p>2024.4.3 二次修改：调整“环境变量”文本提示</p>
-<p>2024.7.6 三次修改：修改引用链接</p>
-<p>2024.8.26 迁移文章至博客，并同步更新 CSDN</p>
 <hr>
-<p>在准备安装之前，我们需要明确 OpenVINO 的完整安装流程。</p>
-<p>根据官方安装文档，OpenVINO 可以大致分为三个部分：<font color=gray>（个人理解）</font></p>
-<ol>
-<li>OpenVINO™ Toolkit Core Components —— OpenVINO 工具包</li>
-<li>External Software Dependencies —— OpenVINO 依赖项</li>
-<li>The Model Optimizer —— 模型优化器（若安装dev版本可略过）</li>
-</ol>
-<h2 id="第零步：确保网络环境畅通，能稳定访问-Github"><a href="#第零步：确保网络环境畅通，能稳定访问-Github" class="headerlink" title="第零步：确保网络环境畅通，能稳定访问 Github"></a>第零步：确保网络环境畅通，能稳定访问 Github</h2><p><strong>本文默认您已安装 CMake, GCC, Python 等基本依赖项。</strong></p>
-<h2 id="第一步：获取旧版本OpenVINO-工具包-3-4"><a href="#第一步：获取旧版本OpenVINO-工具包-3-4" class="headerlink" title="第一步：获取旧版本OpenVINO 工具包[3][4]"></a>第一步：获取旧版本OpenVINO 工具包<sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="[[2019_R1] Install Intel® Distribution of OpenVINO™ toolkit for Linux - OpenVINO Toolkit](https://docs.openvino.ai/archive/2019_R1/_docs_install_guides_installing_openvino_linux.html#set-the-environment-variables)">[3]</span></a></sup><sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="[[2021.4] Install and Configure Intel® Distribution of OpenVINO™ toolkit for Linux — OpenVINO™ documentation](https://docs.openvino.ai/archive/2021.4/openvino_docs_install_guides_installing_openvino_linux.html)">[4]</span></a></sup></h2><p>对于旧版本，我们需要从官方存档仓库<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[OpenVINO 官方仓库](https://storage.openvinotoolkit.org/repositories/openvino/packages/)">[2]</span></a></sup>中寻找。请依据你的 Ubuntu 版本下载对应的版本。</p>
-<div style="display:inline-block;">
-    <img width="60%" src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/1_OpenVINO_Installation_Guide/2-OpenVINO_Storage.png" srcset="/img/loading.gif" lazyload style="float: left; margin-right: 5px;">
-    <img width="34.3%" src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/1_OpenVINO_Installation_Guide/3-OpenVINO_Storage.png" srcset="/img/loading.gif" lazyload style="float: left; margin-right: 5px;">
-</div>
+<p>本文测试环境：Ubuntu 20.04。</p>
+<p>本方法的自启动流程是<strong>开机打开终端——终端内启动 shell 文件——通过 shell 文件启动视觉程序</strong>。</p>
+<p><strong><a href="#%E5%9B%9B%E3%80%81%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0">点我跳转到第四章：参考文章</a></strong></p>
+<h2 id="一、编辑-shell-文件"><a href="#一、编辑-shell-文件" class="headerlink" title="一、编辑 shell 文件"></a>一、编辑 shell 文件</h2><p>这里参考一下战队的自启动脚本。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">!/bin/bash</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">开机自启动视觉自瞄代码并检测，可调整<span class="hljs-built_in">sleep</span>后的数字来调整监测周期(单位：秒)</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">(请根据实际路径自行替换)</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">gnome-terminal -- /bin/bash -c <span class="hljs-string">&quot;/home/sx/桌面/auto_start.sh; exec bash&quot;</span></span><br>while true<br>do<br><span class="hljs-meta prompt_">	# </span><span class="language-bash"><span class="hljs-built_in">source</span> /opt/intel/openvino/bin/setupvars.sh <span class="hljs-comment"># 参考作者的另一篇文章：OpenVINO 旧版本编译安装方法</span></span><br>	ps -ef | grep -v grep | grep echo &#x27;123&#x27; | ./run --test-show-armor-predict<br>	cd /home/sx/桌面/rm2022_cidp_vision-master/build<br>	echo &#x27;123&#x27; | ./run --test-show-armor-predict<br>	sleep 2<br>done<br></code></pre></td></tr></table></figure>
 
 
 
-
-
-<p>在本教程中，我们在 <strong>Ubuntu 20.04</strong> 环境安装 <strong>OpenVINO 2021.4.1</strong>。</p>
-<p>即：l_openvino_toolkit_dev_ubuntu20_p_2021.4.689.tgz <font color=gray><del><strong>（作者犯懒就选择dev了）</strong></del></font></p>
-<p>下载后提取到此处即可。</p>
-<p>提取后文件夹路径应为：<code>~/Downloads/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689</code></p>
-<p>将解压后的文件夹移动到 <code>/opt/intel/openvino</code>（记得换成自己的路径）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> Downloads<br>tar -xvf l_openvino_toolkit_dev_ubuntu20_p_2021.4.689<br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">mv</span> /home/&lt;username&gt;/Downloads/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689 /opt/intel/openvino<br></code></pre></td></tr></table></figure>
-
-<p>进入 <strong>install_dependencies</strong> 文件夹，并运行 <strong>install_openvino_dependencies.sh</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /opt/intel/openvino/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689/install_dependencies<br><span class="hljs-built_in">sudo</span> -E ./install_openvino_dependencies.sh<br></code></pre></td></tr></table></figure>
-
-<p>配置临时环境变量以验证安装成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> /opt/intel/openvino/l_openvino_toolkit_dev_ubuntu20_p_2021.4.689/bin/setupvars.sh<br></code></pre></td></tr></table></figure>
-
-<p>若显示</p>
-<p><code>[setupvars.sh] OpenVINO environment initialized</code></p>
-<p>则代表安装成功。</p>
-<p>配置永久环境变量：使用编辑器在 <code>/home/[user name]/.bashrc</code> 文件末尾输入刚才的 source 命令并保存。</p>
-<p>再次打开新终端，若出现相同信息则可进行下一步。</p>
-<h2 id="第二步：源代码构建并编译-5"><a href="#第二步：源代码构建并编译-5" class="headerlink" title="第二步：源代码构建并编译[5]"></a>第二步：源代码构建并编译<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Build OpenVINO™ Runtime for Linux systems - Github](https://github.com/openvinotoolkit/openvino/blob/master/docs/dev/build_linux.md)">[5]</span></a></sup></h2><p>打开新终端，克隆 OpenVINO 存储库<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[GitHub下载克隆clone指定的分支tag代码 - Tse先生 - 博客园](https://www.cnblogs.com/Sungeek/p/10275903.html)">[1]</span></a></sup>和 init 子模块</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> -b releases/2021/4 https://github.com/openvinotoolkit/openvino.git	<span class="hljs-comment">#文件约500MB，注意流量</span><br><span class="hljs-built_in">cd</span> openvino<br>git submodule update --init --recursive<br></code></pre></td></tr></table></figure>
-
-<p>根据克隆库安装依赖</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> +x install_build_dependencies.sh	<span class="hljs-comment">#给予可执行权限</span><br><span class="hljs-built_in">sudo</span> ./install_build_dependencies.sh	<span class="hljs-comment">#执行脚本</span><br></code></pre></td></tr></table></figure>
-
-<p>创建文件夹并编译，到这里 OpenVINO 就安装完毕了</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> build &amp;&amp; <span class="hljs-built_in">cd</span> build<br>cmake -DCMAKE_BUILD_TYPE=Release ..<br>cmake --build . --parallel 8	<span class="hljs-comment">#数字代表并行线程数，根据处理器情况酌情修改</span><br></code></pre></td></tr></table></figure>
-
-
-
-<h2 id="第三步：安装模型优化器（WIP）"><a href="#第三步：安装模型优化器（WIP）" class="headerlink" title="第三步：安装模型优化器（WIP）"></a>第三步：安装模型优化器（WIP）</h2><p>（待补充）</p>
-<h2 id="一些碎碎念"><a href="#一些碎碎念" class="headerlink" title="一些碎碎念"></a>一些碎碎念</h2><p>若报错或显示“权限不够”，本文大部分命令都可以在开头添加 sudo 执行（理论上）</p>
-<p>善用搜索引擎，遇到报错，可复制关键文本查找解决方法。</p>
-<p><strong>很多情况下，直接阅读官方文档比搜索本身更加有效。</strong></p>
-<h2 id="参考文章（建议阅读）"><a href="#参考文章（建议阅读）" class="headerlink" title="参考文章（建议阅读）"></a>参考文章（建议阅读）</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Sungeek/p/10275903.html">GitHub下载克隆clone指定的分支tag代码 - Tse先生 - 博客园</a>
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://storage.openvinotoolkit.org/repositories/openvino/packages/">OpenVINO 官方仓库</a>
-<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.openvino.ai/archive/2019_R1/_docs_install_guides_installing_openvino_linux.html#set-the-environment-variables">[2019_R1] Install Intel® Distribution of OpenVINO™ toolkit for Linux - OpenVINO Toolkit</a>
-<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.openvino.ai/archive/2021.4/openvino_docs_install_guides_installing_openvino_linux.html">[2021.4] Install and Configure Intel® Distribution of OpenVINO™ toolkit for Linux — OpenVINO™ documentation</a>
-<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/openvinotoolkit/openvino/blob/master/docs/dev/build_linux.md">Build OpenVINO™ Runtime for Linux systems - Github</a>
-<a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+<h2 id="二、设置自启动程序"><a href="#二、设置自启动程序" class="headerlink" title="二、设置自启动程序"></a>二、设置自启动程序</h2><p>① 打开终端输入<code>gnome-session-properties</code>，出现弹窗<strong>启动应用程序首选项</strong>。</p>
+<p>② 点击<strong>添加</strong>，在<strong>命令</strong>一栏填写<code>gnome-terminal -- bash -c &quot;sh /home/sx/桌面/autostart.sh; exec bash&quot;</code>。</p>
+<p>③ 填写<strong>名称</strong>，以及可选的<strong>注释</strong>，最后保存即可。</p>
+<h2 id="三、一些-FAQ"><a href="#三、一些-FAQ" class="headerlink" title="三、一些 FAQ"></a>三、一些 FAQ</h2><p>注意：自启动脚本应以是否在开机后显示终端，且终端自动执行 shell 文件为准。</p>
+<p>为便于测试，可直接在终端执行<code>./autostart.sh</code>，检查脚本内命令是否正确。</p>
+<ul>
+<li><p>开机后成功执行脚本，但程序显示找不到 OpenCV 共享库文件。</p>
+<p>根据<a href="/posts/OpenVINO_Installation_Guide">文章</a>所述，需要在脚本中手动添加永久环境变量命令。</p>
+</li>
+<li><p>开机前，NUC 已插入串口，但仍显示串口离线。</p>
+<p>推测是串口权限未开启。在脚本中添加命令<code>echo &quot;123&quot; | sudo -S chmod 777 /dev/ttyUSB0</code>。</p>
+</li>
+</ul>
+<h2 id="四、参考文章"><a href="#四、参考文章" class="headerlink" title="四、参考文章"></a>四、参考文章</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40497850/article/details/127383230">ubuntu20.04通过gnome-session-properties实现开机自启动shell脚本-CSDN博客</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://blog.csdn.net/2302_81456999/article/details/142957800">ubuntu自启动脚本_gnome 自启动-CSDN博客</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://linuxconfig.org/how-to-autostart-applications-on-ubuntu-20-04-focal-fossa-linux">How to autostart applications on Ubuntu 20.04 Focal Fossa Linux - LinuxConfig</a>
+<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_51116518/article/details/120634968">还在苦恼RM视觉开源代码怎么看？带你解读最近深大的视觉开源源码_rm开源-CSDN博客</a>
+<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
             
@@ -542,10 +507,6 @@
       
         <a href="/tags/Tutorial/" class="print-no-link">#Tutorial</a>
       
-        <a href="/tags/Ubuntu/" class="print-no-link">#Ubuntu</a>
-      
-        <a href="/tags/OpenVINO/" class="print-no-link">#OpenVINO</a>
-      
     </div>
   
 </div>
@@ -556,8 +517,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>OpenVINO 2021.4 LTS 及旧版本编译安装方法</div>
-      <div>https://kekkj123.github.io/posts/OpenVINO_Installation_Guide/</div>
+      <div>Ubuntu 20.04 基于终端的自启动程序</div>
+      <div>https://kekkj123.github.io/posts/Terminal_Auto_Start/</div>
     </div>
     <div class="license-meta">
       
@@ -569,7 +530,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年4月2日</div>
+          <div>2025年3月7日</div>
         </div>
       
       
@@ -607,18 +568,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/suiyuan/7/" title="日常碎碎念 - P7">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">日常碎碎念 - P7</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/suiyuan/6/" title="特辑：祝我生日快乐 - P6">
-                        <span class="hidden-mobile">特辑：祝我生日快乐 - P6</span>
+                      <a href="/posts/suiyuan/11/" title="特辑：被迫赶工的 20 岁生日手记 - P11">
+                        <span class="hidden-mobile">特辑：被迫赶工的 20 岁生日手记 - P11</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
