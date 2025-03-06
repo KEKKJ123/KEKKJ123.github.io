@@ -280,7 +280,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          589 字
+          608 字
         
       </span>
     
@@ -291,7 +291,7 @@
         
         
         
-          4 分钟
+          5 分钟
         
       </span>
     
@@ -430,7 +430,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2025-03-07T05:05:35+08:00
+                    本文最后更新于 2025-03-07T05:08:31+08:00
                   
                   
 
@@ -455,7 +455,7 @@
 
 
 
-<h2 id="二、设置自启动程序"><a href="#二、设置自启动程序" class="headerlink" title="二、设置自启动程序"></a>二、设置自启动程序</h2><p>① 打开终端输入<code>gnome-session-properties</code>，出现弹窗<strong>启动应用程序首选项</strong>。</p>
+<h2 id="二、设置自启动程序-1"><a href="#二、设置自启动程序-1" class="headerlink" title="二、设置自启动程序[1]"></a>二、设置自启动程序<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[ubuntu20.04通过gnome-session-properties实现开机自启动shell脚本-CSDN博客](https://blog.csdn.net/weixin_40497850/article/details/127383230)">[1]</span></a></sup></h2><p>① 打开终端输入<code>gnome-session-properties</code>，出现弹窗<strong>启动应用程序首选项</strong>。</p>
 <p>② 点击<strong>添加</strong>，在<strong>命令</strong>一栏填写<code>gnome-terminal -- bash -c &quot;sh /home/sx/桌面/autostart.sh; exec bash&quot;</code>。</p>
 <p>③ 填写<strong>名称</strong>，以及可选的<strong>注释</strong>，最后保存即可。</p>
 <h2 id="三、一些-FAQ"><a href="#三、一些-FAQ" class="headerlink" title="三、一些 FAQ"></a>三、一些 FAQ</h2><p>注意：自启动脚本应以是否在开机后显示终端，且终端自动执行 shell 文件为准。</p>
@@ -465,14 +465,15 @@
 <p>根据<a href="/posts/OpenVINO_Installation_Guide">文章</a>所述，需要在脚本中手动添加永久环境变量命令。</p>
 </li>
 <li><p>开机前，NUC 已插入串口，但仍显示串口离线。</p>
-<p>推测是串口权限未开启。在脚本中添加命令<code>echo &quot;123&quot; | sudo -S chmod 777 /dev/ttyUSB0</code>。</p>
+<p>推测是串口权限未开启<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="[解决Linux非root用户读写串口权限问题_root dialout-CSDN博客](https://blog.csdn.net/itas109/article/details/83027431)">[5]</span></a></sup>。在脚本中添加命令<code>echo &quot;123&quot; | sudo -S chmod 777 /dev/ttyUSB0</code>。</p>
 </li>
 </ul>
 <h2 id="四、参考文章"><a href="#四、参考文章" class="headerlink" title="四、参考文章"></a>四、参考文章</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40497850/article/details/127383230">ubuntu20.04通过gnome-session-properties实现开机自启动shell脚本-CSDN博客</a>
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://blog.csdn.net/2302_81456999/article/details/142957800">ubuntu自启动脚本_gnome 自启动-CSDN博客</a>
 <a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://linuxconfig.org/how-to-autostart-applications-on-ubuntu-20-04-focal-fossa-linux">How to autostart applications on Ubuntu 20.04 Focal Fossa Linux - LinuxConfig</a>
 <a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_51116518/article/details/120634968">还在苦恼RM视觉开源代码怎么看？带你解读最近深大的视觉开源源码_rm开源-CSDN博客</a>
-<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://blog.csdn.net/itas109/article/details/83027431">解决Linux非root用户读写串口权限问题_root dialout-CSDN博客</a>
+<a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
             
