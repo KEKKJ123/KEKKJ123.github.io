@@ -280,7 +280,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          784 字
+          786 字
         
       </span>
     
@@ -421,7 +421,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2025-03-04T01:39:17+08:00
+                    本文最后更新于 2025-03-06T22:13:11+08:00
                   
                   
 
@@ -476,7 +476,7 @@
 <p>若显示</p>
 <p><code>[setupvars.sh] OpenVINO environment initialized</code></p>
 <p>则代表安装成功。</p>
-<p>配置永久环境变量：使用编辑器在 .bashrc 文件末尾输入刚才的 source 命令并保存。</p>
+<p>配置永久环境变量：使用编辑器在 <code>/home/[user name]/.bashrc</code> 文件末尾输入刚才的 source 命令并保存。</p>
 <p>再次打开新终端，若出现相同信息则可进行下一步。</p>
 <h2 id="第二步：源代码构建并编译-5"><a href="#第二步：源代码构建并编译-5" class="headerlink" title="第二步：源代码构建并编译[5]"></a>第二步：源代码构建并编译<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Build OpenVINO™ Runtime for Linux systems - Github](https://github.com/openvinotoolkit/openvino/blob/master/docs/dev/build_linux.md)">[5]</span></a></sup></h2><p>打开新终端，克隆 OpenVINO 存储库<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[GitHub下载克隆clone指定的分支tag代码 - Tse先生 - 博客园](https://www.cnblogs.com/Sungeek/p/10275903.html)">[1]</span></a></sup>和 init 子模块</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> -b releases/2021/4 https://github.com/openvinotoolkit/openvino.git	<span class="hljs-comment">#文件约500MB，注意流量</span><br><span class="hljs-built_in">cd</span> openvino<br>git submodule update --init --recursive<br></code></pre></td></tr></table></figure>
