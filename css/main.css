@@ -184,7 +184,7 @@ h6:hover > .anchorjs-link {
   text-align: center;
 }
 .footer-inner > div:not(:first-child) {
-  margin: 0.25rem 0;
+  margin: 0 0;
   font-size: 0.85rem;
 }
 .footer-inner .statistics {
