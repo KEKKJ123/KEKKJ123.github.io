@@ -1,7 +1,8 @@
+https://kekkj123.github.io/posts/Structured/Self_Use/
+https://kekkj123.github.io/posts/Structured/Fluid_Theme_Modify/
 https://kekkj123.github.io/posts/Terminal_Auto_Start/
 https://kekkj123.github.io/posts/OpenVINO_Installation_Guide/
 https://kekkj123.github.io/posts/Structured/Self_Description/
-https://kekkj123.github.io/posts/Structured/Self_Use/
 https://kekkj123.github.io/posts/SimulatorX_User_Manual/
 https://kekkj123.github.io/posts/Tools/Remove_WinNTSetup_cmd_Context_Menu/
 https://kekkj123.github.io/posts/Tools/SkipAD/

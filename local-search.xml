@@ -20,9 +20,9 @@
     
     <tags>
       
-      <tag>Ubuntu</tag>
-      
       <tag>Tutorial</tag>
+      
+      <tag>Ubuntu</tag>
       
     </tags>
     
@@ -128,12 +128,45 @@
     <content type="html"><![CDATA[<h3 id="颜色代码"><a href="#颜色代码" class="headerlink" title="颜色代码"></a>颜色代码</h3><table><thead><tr><th align="center">颜色</th><th align="center">HTML</th></tr></thead><tbody><tr><td align="center"><font color=e02525><strong>红色</strong></font></td><td align="center">e02525</td></tr><tr><td align="center"><font color=ffcd00><strong>黄色</strong></font></td><td align="center">ffcd00</td></tr><tr><td align="center"><font color=02a2ff><strong>蓝色</strong></font></td><td align="center">02a2ff</td></tr><tr><td align="center"><font color=6a737d><strong>灰色</strong></font></td><td align="center">6a737d</td></tr><tr><td align="center"><font color=ee7109><strong>橙色</strong></font></td><td align="center">ee7109</td></tr><tr><td align="center"><font color=33e33c><strong>绿色</strong></font></td><td align="center">33e33c</td></tr><tr><td align="center"><font color=c4c6c9><strong>白色</strong></font></td><td align="center">c4c6c9</td></tr></tbody></table><h3 id="插件测试"><a href="#插件测试" class="headerlink" title="插件测试"></a>插件测试</h3><p><strong>便签</strong></p><p>md：</p><div class="note note-success">            <p>文字 或者 <code>markdown</code> 均可</p>          </div><p>HTML：<p class="note note-primary">标签</p></p><hr><p><strong>行内标签</strong></p><p>md：<span class="label label-primary">text</span></p><p>HTML：<span class="label label-primary">Label</span></p><hr><p><strong>折叠块</strong></p><p>md</p>    <div class="fold">      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-b5714680" role="button" aria-expanded="false" aria-controls="collapse-b5714680">        <div class="fold-arrow">▶</div>title      </div>      <div class="fold-collapse collapse" id="collapse-b5714680">        <div class="fold-content">          <p>需要折叠的一段内容，支持 markdown</p>        </div>      </div>    </div><p>info: 和行内标签类似的可选参数</p><p>title: 折叠块上的标题</p><hr><p><strong>勾选框</strong></p><p>md：            <input type="checkbox"  checked="checked">text          </p><p>text：显示的文字</p><p>checked：默认是否已勾选，默认 false</p><p>incline: 是否内联（可以理解为后面的文字是否换行），默认 false</p><hr><p><strong>按钮</strong></p><p>md：<a class="btn" href="url"  title="title" target="_blank">text</a></p><p>html：<a class="btn" href="url" title="title">text</a></p><p>url：跳转链接</p><p>text：显示的文字</p><p>title：鼠标悬停时显示的文字（可选）</p><hr><p><strong>组图</strong></p><div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="/url"></div><div class="group-image-wrap"><img src="/url"></div><div class="group-image-wrap"><img src="/url"></div></div><div class="group-image-row"><div class="group-image-wrap"><img src="/url"></div><div class="group-image-wrap"><img src="/url"></div></div></div><p>（链接待补充）</p><p>total：图片总数量，对应中间包含的图片 url 数量<br>n1-n2-…：每行的图片数量，可以省略，默认单行最多 3 张图，求和必须相等于 total，否则按默认样式</p>]]></content>
     
     
+    <categories>
+      
+      <category>Blog</category>
+      
+    </categories>
+    
     
     <tags>
       
+      <tag>Blog</tag>
+      
       <tag>Tutorial</tag>
       
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Fluid 主题博客修改历程</title>
+    <link href="/posts/Structured/Fluid_Theme_Modify/"/>
+    <url>/posts/Structured/Fluid_Theme_Modify/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>相信大部分博主都会对使用中的博客主题进行一定程度的修改。</p><p>尽管作者的代码能力并不高，但借助网络教程也摸索了一部分方法。</p><p>在这里分享出来踩坑和成功的例子，仅供大家参考！</p></blockquote><hr><p>本文章不定期更新，修改内容的顺序与博客<a href="/about.html#%E6%97%B6%E9%97%B4%E7%BA%BF-TimeLine">时间线</a>同步。</p><p><strong><a href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0">点我跳转到参考文章</a></strong></p><h2 id="Giscus-评论系统"><a href="#Giscus-评论系统" class="headerlink" title="Giscus 评论系统"></a>Giscus 评论系统</h2><ul><li>通过<a href="https://github.com/apps/giscus">GitHub Apps - giscus</a></li></ul><h2 id="搜索引擎收录"><a href="#搜索引擎收录" class="headerlink" title="搜索引擎收录"></a>搜索引擎收录</h2><h2 id="接入-Bing-IndexNow"><a href="#接入-Bing-IndexNow" class="headerlink" title="接入 Bing IndexNow"></a>接入 Bing <a href="https://www.bing.com/indexnow/getstarted#implementation">IndexNow</a></h2><h2 id="页脚添加网站运行时间-1"><a href="#页脚添加网站运行时间-1" class="headerlink" title="页脚添加网站运行时间[1]"></a>页脚添加网站运行时间<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Fluid 页脚增加网站运行时长 - Hexo Theme Fluid](https://hexo.fluid-dev.com/posts/fluid-footer-custom/)">[1]</span></a></sup></h2><h2 id="页脚文字与网站统计数文字格式不匹配"><a href="#页脚文字与网站统计数文字格式不匹配" class="headerlink" title="页脚文字与网站统计数文字格式不匹配"></a>页脚文字与网站统计数文字格式不匹配</h2><ul><li><p>两者 HTML 格式不同。</p><p>复现：右键<strong>总访客数</strong>，点击检查，此时的代码应当是</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.footer-inner</span> &gt; <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:first-child</span>) &#123;<br>    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0.25rem</span> <span class="hljs-number">0</span>;<span class="hljs-comment">/*取消勾选后，行间距统一*/</span><br>    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">0.85rem</span>;<br>&#125;<br></code></pre></td></tr></table></figure><p>修改：进入博客主目录<code>~\node_modules\hexo-theme-fluid\source\css\_pages\_base\_widget</code>，打开<code>footer.styl</code>。</p><p>将第六行<code>margin</code>的值由<code>.25rem 0</code>改为<code>0 0</code>即可。</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css">&amp; &gt; <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:first-child</span>)<br>  <span class="hljs-attribute">margin</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span><br>  <span class="hljs-attribute">font-size</span> .<span class="hljs-number">85rem</span><br></code></pre></td></tr></table></figure></li></ul><h2 id="顶栏修改和自定义图标的添加"><a href="#顶栏修改和自定义图标的添加" class="headerlink" title="顶栏修改和自定义图标的添加"></a>顶栏修改和自定义图标的添加</h2><h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://hexo.fluid-dev.com/posts/fluid-footer-custom/">Fluid 页脚增加网站运行时长 - Hexo Theme Fluid</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blog</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
       <tag>Blog</tag>
+      
+      <tag>Tutorial</tag>
       
     </tags>
     
@@ -158,9 +191,9 @@
     
     <tags>
       
-      <tag>Ubuntu</tag>
-      
       <tag>Tutorial</tag>
+      
+      <tag>Ubuntu</tag>
       
     </tags>
     
@@ -376,9 +409,9 @@
     
     <tags>
       
-      <tag>Tutorial</tag>
-      
       <tag>Blog</tag>
+      
+      <tag>Tutorial</tag>
       
     </tags>
     
@@ -441,11 +474,11 @@
     
     <tags>
       
+      <tag>Tutorial</tag>
+      
       <tag>Ubuntu</tag>
       
       <tag>OpenVINO</tag>
-      
-      <tag>Tutorial</tag>
       
     </tags>
     
