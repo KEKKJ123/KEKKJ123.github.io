@@ -280,7 +280,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          717 字
+          718 字
         
       </span>
     
@@ -430,7 +430,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2025-03-08T05:57:34+08:00
+                    本文最后更新于 2025-03-08T08:14:05+08:00
                   
                   
 
@@ -468,7 +468,7 @@
 <p>推测是串口权限未开启<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="[解决Linux非root用户读写串口权限问题_root dialout-CSDN博客](https://blog.csdn.net/itas109/article/details/83027431)">[5]</span></a></sup>。在脚本中添加命令<code>echo &quot;123&quot; | sudo -S chmod 777 /dev/ttyUSB0</code>。</p>
 </li>
 <li><p><strong>启动应用程序首选项</strong>中添加的自启动程序无法保存。</p>
-<p>推测是权限问题。请检查<code>~/.config/autostart</code>的所有者是否为<code>root</code>（根用户）。</p>
+<p>推测是权限问题<sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="[无法更改启动应用程序首选项“无法保存/home/USER/.config/autostart/sideportrait.sh.desktop文件”-腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/ask/sof/116455013)">[6]</span></a></sup>。请检查<code>~/.config/autostart</code>的所有者是否为<code>root</code>（根用户）。</p>
 <p>后执行<code>sudo chown $UserName ~/.config/autostart</code>即可解决。</p>
 </li>
 </ul>
@@ -512,9 +512,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Tutorial/" class="print-no-link">#Tutorial</a>
-      
         <a href="/tags/Ubuntu/" class="print-no-link">#Ubuntu</a>
+      
+        <a href="/tags/Tutorial/" class="print-no-link">#Tutorial</a>
       
     </div>
   
