@@ -430,7 +430,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2025-03-11T02:16:53+08:00
+                    本文最后更新于 2025-03-11T02:31:04+08:00
                   
                   
 
@@ -477,7 +477,7 @@
 <p>选择 <strong>root</strong>，会提示输入密码。默认为空，按<code>Enter</code>即可。</p>
 <p>保险起见，可以先输入<code>ls /home</code>显示系统已有的用户。</p>
 <p>接下来输入<code>passwd 要更改的用户名</code>，再输入两次新密码即可。</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-title class_">Give</span> root password <span class="hljs-keyword">for</span> maintenance	<span class="hljs-comment"># 输入 root 用户的密码，默认为空</span><br>(<span class="hljs-keyword">or</span> press <span class="hljs-title class_">Control</span>-D to continue):<br>root<span class="hljs-variable">@root</span><span class="hljs-symbol">:~</span><span class="hljs-variable">$ </span>ls /home				<span class="hljs-comment"># 列出系统已有的用户</span><br><span class="hljs-title class_">XXXX</span><br>root<span class="hljs-variable">@root</span><span class="hljs-symbol">:~</span><span class="hljs-variable">$ </span>passwd 要更改的用户名		<span class="hljs-comment"># 更改某用户的密码</span><br><span class="hljs-title class_">New</span> <span class="hljs-symbol">password:</span><br><span class="hljs-title class_">Retype</span> <span class="hljs-symbol">password:</span><br><span class="hljs-symbol">passwd:</span> password updated<br>successfully<br>root<span class="hljs-variable">@root</span><span class="hljs-symbol">:~</span><span class="hljs-variable">$ </span>reboot					<span class="hljs-comment"># 重启</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">Give root password <span class="hljs-keyword">for</span> maintenance	<span class="hljs-comment"># 输入 root 用户的密码，默认为空</span><br>(or press Control-D to <span class="hljs-built_in">continue</span>):<br>root@root:~$ <span class="hljs-built_in">ls</span> /home				<span class="hljs-comment"># 列出系统已有的用户</span><br>XXXX<br>root@root:~$ passwd 要更改的用户名		<span class="hljs-comment"># 更改某用户的密码</span><br>New password:<br>Retype password:<br>passwd: password updated<br>successfully<br>root@root:~$ reboot					<span class="hljs-comment"># 重启</span><br></code></pre></td></tr></table></figure>
 
 
 
