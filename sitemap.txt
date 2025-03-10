@@ -1,6 +1,5 @@
 https://kekkj123.github.io/posts/Webs/
 https://kekkj123.github.io/posts/Structured/Self_Use/
-https://kekkj123.github.io/posts/Terminal_Auto_Start/
 https://kekkj123.github.io/posts/OpenVINO_Installation_Guide/
 https://kekkj123.github.io/posts/Structured/Self_Description/
 https://kekkj123.github.io/posts/SimulatorX_User_Manual/

@@ -4,33 +4,6 @@
   
   
   <entry>
-    <title>Ubuntu 20.04 基于终端的自启动程序</title>
-    <link href="/posts/Terminal_Auto_Start/"/>
-    <url>/posts/Terminal_Auto_Start/</url>
-    
-    <content type="html"><![CDATA[<blockquote><p><font color=gray>众所周知，RoboMaster 的比赛流程非常紧凑。</font></p><p><font color=gray>在某些极端情况下，留给战队整备的时间甚至只有几分钟。</font></p><p><font color=gray>这个时候，如果我们的视觉程序拥有自启动功能，就能节省出更多的调试时间。</font></p><p><font color=gray>经过几十分钟的学习，作者学会了一个基于终端的自启动方法，现在分享给大家。</font></p></blockquote><hr><p>本文测试环境：Ubuntu 20.04。</p><p>本方法的自启动流程是<strong>开机打开终端——终端内启动 shell 文件——通过 shell 文件启动视觉程序</strong>。</p><p><strong><a href="#%E5%9B%9B%E3%80%81%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0">点我跳转到第四章：参考文章</a></strong></p><h2 id="一、编辑-shell-文件"><a href="#一、编辑-shell-文件" class="headerlink" title="一、编辑 shell 文件"></a>一、编辑 shell 文件</h2><p>这里参考一下战队的自启动脚本。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">!/bin/bash</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">开机自启动视觉自瞄代码并检测，可调整<span class="hljs-built_in">sleep</span>后的数字来调整监测周期(单位：秒)</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">(请根据实际路径自行替换)</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">gnome-terminal -- /bin/bash -c <span class="hljs-string">&quot;/home/sx/桌面/auto_start.sh; exec bash&quot;</span></span><br>while true<br>do<br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-built_in">source</span> /opt/intel/openvino/bin/setupvars.sh</span><br>ps -ef | grep -v grep | grep echo &#x27;123&#x27; | ./run --test-show-armor-predict<br>cd /home/sx/桌面/rm2022_cidp_vision-master/build<br>echo &#x27;123&#x27; | ./run --test-show-armor-predict<br>sleep 2<br>done<br></code></pre></td></tr></table></figure><h2 id="二、设置自启动程序-1-2"><a href="#二、设置自启动程序-1-2" class="headerlink" title="二、设置自启动程序[1][2]"></a>二、设置自启动程序<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[ubuntu20.04通过gnome-session-properties实现开机自启动shell脚本-CSDN博客](https://blog.csdn.net/weixin_40497850/article/details/127383230)">[1]</span></a></sup><sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[ubuntu自启动脚本_gnome 自启动-CSDN博客](https://blog.csdn.net/2302_81456999/article/details/142957800)">[2]</span></a></sup></h2><p>① 打开终端输入<code>gnome-session-properties</code>，出现弹窗<strong>启动应用程序首选项</strong>。</p><p>② 点击<strong>添加</strong>，在<strong>命令</strong>一栏填写<code>gnome-terminal -- bash -c &quot;sh /home/sx/桌面/autostart.sh; exec bash&quot;</code>。</p><p>③ 填写<strong>名称</strong>，以及可选的<strong>注释</strong>，最后保存即可。</p><h2 id="三、一些-FAQ"><a href="#三、一些-FAQ" class="headerlink" title="三、一些 FAQ"></a>三、一些 FAQ</h2><p>注意：自启动脚本应以是否在开机后显示终端，且终端自动执行 shell 文件为准。</p><p>为便于测试，可直接在终端执行<code>./autostart.sh</code>，检查脚本内命令是否正确。</p><ul><li><p>开机后成功执行脚本，但程序显示找不到 OpenCV 共享库文件。</p><p>根据<a href="/posts/OpenVINO_Installation_Guide">文章</a>所述<sup id="fnref:7" class="footnote-ref"><a href="#fn:7" rel="footnote"><span class="hint--top hint--rounded" aria-label="[OpenVINO 2021.4 LTS 及旧版本编译安装方法 - KEKKJ BLOG - 小世界的一瞥](/posts/OpenVINO_Installation_Guide/)">[7]</span></a></sup>，需要在脚本中手动添加永久环境变量命令<code>source /opt/intel/openvino/bin/setupvars.sh</code>。</p></li><li><p>开机前，NUC 已插入串口，但自启动脚本显示串口离线。</p><p>推测是串口权限未开启<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="[解决Linux非root用户读写串口权限问题_root dialout-CSDN博客](https://blog.csdn.net/itas109/article/details/83027431)">[5]</span></a></sup>。在脚本中添加命令<code>echo &quot;123&quot; | sudo -S chmod 777 /dev/ttyUSB0</code>。</p></li><li><p><strong>启动应用程序首选项</strong>中添加的自启动程序无法保存。</p><p>推测是权限问题<sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="[无法更改启动应用程序首选项“无法保存/home/USER/.config/autostart/sideportrait.sh.desktop文件”-腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/ask/sof/116455013)">[6]</span></a></sup>。请检查<code>~/.config/autostart</code>的所有者是否为<code>root</code>（根用户）。</p><p>后执行<code>sudo chown $UserName ~/.config/autostart</code>即可解决。</p></li></ul><h2 id="四、参考文章"><a href="#四、参考文章" class="headerlink" title="四、参考文章"></a>四、参考文章</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://blog.csdn.net/weixin_40497850/article/details/127383230">ubuntu20.04通过gnome-session-properties实现开机自启动shell脚本-CSDN博客</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://blog.csdn.net/2302_81456999/article/details/142957800">ubuntu自启动脚本_gnome 自启动-CSDN博客</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a href="https://linuxconfig.org/how-to-autostart-applications-on-ubuntu-20-04-focal-fossa-linux">How to autostart applications on Ubuntu 20.04 Focal Fossa Linux - LinuxConfig</a><a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a href="https://blog.csdn.net/qq_51116518/article/details/120634968#_284">还在苦恼RM视觉开源代码怎么看？带你解读最近深大的视觉开源源码_rm开源-CSDN博客</a><a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a href="https://blog.csdn.net/itas109/article/details/83027431">解决Linux非root用户读写串口权限问题_root dialout-CSDN博客</a><a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:6" class="footnote-text"><span><a href="https://cloud.tencent.com/developer/ask/sof/116455013">无法更改启动应用程序首选项“无法保存&#x2F;home&#x2F;USER&#x2F;.config&#x2F;autostart&#x2F;sideportrait.sh.desktop文件”-腾讯云开发者社区-腾讯云</a><a href="#fnref:6" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:7" class="footnote-text"><span><a href="/posts/OpenVINO_Installation_Guide/">OpenVINO 2021.4 LTS 及旧版本编译安装方法 - KEKKJ BLOG - 小世界的一瞥</a><a href="#fnref:7" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
-    
-    
-    <categories>
-      
-      <category>RoboMaster</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Ubuntu</tag>
-      
-      <tag>Tutorial</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>特辑：被迫赶工的 20 岁生日手记 - P11</title>
     <link href="/posts/suiyuan/11/"/>
     <url>/posts/suiyuan/11/</url>
@@ -164,9 +137,9 @@
     
     <tags>
       
-      <tag>Ubuntu</tag>
-      
       <tag>Tutorial</tag>
+      
+      <tag>Ubuntu</tag>
       
     </tags>
     
@@ -447,11 +420,11 @@
     
     <tags>
       
+      <tag>Tutorial</tag>
+      
       <tag>Ubuntu</tag>
       
       <tag>OpenVINO</tag>
-      
-      <tag>Tutorial</tag>
       
     </tags>
     
