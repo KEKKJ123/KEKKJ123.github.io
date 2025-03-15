@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>KEKKJ BLOG - 小世界的一瞥</title>
+  <icon>https://kekkj123.github.io/icon.png</icon>
+  
+  <link href="https://kekkj123.github.io/RSS_atom.xml" rel="self"/>
+  
+  <link href="https://kekkj123.github.io/"/>
+  <updated>2025-03-10T08:24:05.000Z</updated>
+  <id>https://kekkj123.github.io/</id>
+  
+  <author>
+    <name>KEKKJ</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ubuntu 20.04 基于终端的自启动程序</title>
+    <link href="https://kekkj123.github.io/posts/Terminal_Auto_Start/"/>
+    <id>https://kekkj123.github.io/posts/Terminal_Auto_Start/</id>
+    <published>2025-03-10T08:24:05.000Z</published>
+    <updated>2025-03-10T08:24:05.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;font color=gray&gt;众所周知，RoboMaster 的比赛流程非常紧凑。&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font color=gray&gt;在某些极端情况下，留给战队整备的时间甚至只有几分钟。&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font</summary>
+        
+      
+    
+    
+    
+    <category term="RoboMaster" scheme="https://kekkj123.github.io/categories/RoboMaster/"/>
+    
+    
+    <category term="Tutorial" scheme="https://kekkj123.github.io/tags/Tutorial/"/>
+    
+    <category term="Ubuntu" scheme="https://kekkj123.github.io/tags/Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>特辑：被迫赶工的 20 岁生日手记 - P11</title>
+    <link href="https://kekkj123.github.io/posts/suiyuan/11/"/>
+    <id>https://kekkj123.github.io/posts/suiyuan/11/</id>
+    <published>2025-03-04T18:22:13.000Z</published>
+    <updated>2025-03-04T18:22:13.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;font size=&quot;5&quot;&gt;随缘手记 —— 随心而想，随缘而写&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;font size=&quot;4&quot;&gt;Random Notes - Think as you like,</summary>
+        
+      
+    
+    
+    
+    <category term="随缘手记" scheme="https://kekkj123.github.io/categories/%E9%9A%8F%E7%BC%98%E6%89%8B%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>纪念建站两百天和随缘手记的一次苏醒 - P10</title>
+    <link href="https://kekkj123.github.io/posts/suiyuan/10/"/>
+    <id>https://kekkj123.github.io/posts/suiyuan/10/</id>
+    <published>2025-03-03T19:10:22.000Z</published>
+    <updated>2025-03-03T19:10:22.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;font size=&quot;5&quot;&gt;随缘手记 —— 随心而想，随缘而写&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;font size=&quot;4&quot;&gt;Random Notes - Think as you like,</summary>
+        
+      
+    
+    
+    
+    <category term="随缘手记" scheme="https://kekkj123.github.io/categories/%E9%9A%8F%E7%BC%98%E6%89%8B%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>RoboMaster 裁判系统使用心得</title>
+    <link href="https://kekkj123.github.io/posts/Referee_System_Using_Tutorial/"/>
+    <id>https://kekkj123.github.io/posts/Referee_System_Using_Tutorial/</id>
+    <published>2025-02-28T17:40:33.000Z</published>
+    <updated>2025-02-28T17:40:33.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;font color=gray&gt;最近，作者所在的实验室借用了一套裁判系统。&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font color=gray&gt;借此机会，作者大致体验了一遍裁判系统的验收流程和使用方法。&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font</summary>
+        
+      
+    
+    
+    
+    <category term="RoboMaster" scheme="https://kekkj123.github.io/categories/RoboMaster/"/>
+    
+    
+    <category term="Tutorial" scheme="https://kekkj123.github.io/tags/Tutorial/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>回退 WinNTSetup 修改 cmd 右键菜单</title>
+    <link href="https://kekkj123.github.io/posts/Tools/Remove_WinNTSetup_cmd_Context_Menu/"/>
+    <id>https://kekkj123.github.io/posts/Tools/Remove_WinNTSetup_cmd_Context_Menu/</id>
+    <published>2025-02-25T18:38:51.000Z</published>
+    <updated>2025-02-25T18:38:51.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;font color=gray&gt;WinNTSetup 中的&lt;strong&gt;优化调整&lt;/strong&gt;有这样一个功能：显示右键命令提示符图标。&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font</summary>
+        
+      
+    
+    
+    
+    <category term="Tool" scheme="https://kekkj123.github.io/categories/Tool/"/>
+    
+    
+    <category term="Tutorial" scheme="https://kekkj123.github.io/tags/Tutorial/"/>
+    
+    <category term="Windows" scheme="https://kekkj123.github.io/tags/Windows/"/>
+    
+  </entry>
+  
+</feed>

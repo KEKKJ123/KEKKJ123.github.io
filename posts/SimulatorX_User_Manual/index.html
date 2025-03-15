@@ -1,0 +1,923 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=dark>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Blog_Saturn.png">
+  <link rel="icon" href="/img/Blog_Saturn.png">
+  
+    <link rel="canonical" href="https://kekkj123.github.io/posts/SimulatorX_User_Manual/"/>
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="防灾科技学院 思玄战队 KEKKJ">
+  <meta name="keywords" content="KEKKJ">
+  
+    <meta name="description" content="零、阅读前提醒本文默认读者对电脑的使用一无所知，会尽量以教学的口吻叙述。 若您感觉不适，请关闭此网页。 一、下载与安装1. 下载模拟器打开 SimulatorX 下载站，点击 SimulatorX [2024UL]，这时你应该看到如下画面： 任选其一，点击 SimulatorX-2024ul-2.0.4.0.7z 或 SimulatorX-2024ul-2.0.4.0.zip ，再点击下载即可。">
+  
+  
+  
+  <title>华南虎模拟器使用手册（2024UL） - KEKKJ BLOG - 小世界的一瞥</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/icon-font-css/travelling/iconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"kekkj123.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":50,"cursorChar":"_","loop":false,"scope":"home"},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"#"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-9E1Z9RDTPM"},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"ZQprfmfI0LYS9JMbW9dfSh7S-gzGzoHsz","app_key":"LPar9cIawJj3p5BljrrEYtOC","server_url":"https://zqprfmfi.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-08-12T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-9E1Z9RDTPM", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-9E1Z9RDTPM');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/RSS_atom.xml" title="KEKKJ BLOG - 小世界的一瞥" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>KEKKJ BLOG</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/%E9%9A%8F%E7%BC%98%E6%89%8B%E8%AE%B0/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>手记</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                <span>目录</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/archives/" target="_self">
+                    <i class="iconfont icon-archive-fill"></i>
+                    <span>归档</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/" target="_self">
+                    <i class="iconfont icon-category-fill"></i>
+                    <span>分类</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/" target="_self">
+                    <i class="iconfont icon-tags-fill"></i>
+                    <span>标签</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/RSS_atom.xml" target="_self">
+                    <i class="iconfont icon-rss-fill"></i>
+                    <span>RSS</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.travellings.cn/go.html" target="_self">
+                <i class="iconfont icon-travelling"></i>
+                <span>开往</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/ApolloSoyuz.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">华南虎模拟器使用手册（2024UL）</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        防灾科技学院 思玄战队 KEKKJ
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-11-26 21:27" pubdate>
+          2024年11月26日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          10 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 阅读
+        </span>
+        
+      
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="RoboMaster"
+        id="heading-4dbe9c6fd889de0044a81ef60ca8437b" role="tab" data-toggle="collapse" href="#collapse-4dbe9c6fd889de0044a81ef60ca8437b"
+        aria-expanded="true"
+      >
+        RoboMaster
+        <span class="list-group-count">(5)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-4dbe9c6fd889de0044a81ef60ca8437b"
+           role="tabpanel" aria-labelledby="heading-4dbe9c6fd889de0044a81ef60ca8437b">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/OpenVINO_Installation_Guide/" title="OpenVINO 2021.4 LTS 及旧版本编译安装方法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">OpenVINO 2021.4 LTS 及旧版本编译安装方法</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/SimulatorX_User_Manual/" title="华南虎模拟器使用手册（2024UL）"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">华南虎模拟器使用手册（2024UL）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/Ubuntu_Reset_Passwd/" title="Ubuntu 20.04 重置密码教程"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Ubuntu 20.04 重置密码教程</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/Referee_System_Using_Tutorial/" title="RoboMaster 裁判系统使用心得"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">RoboMaster 裁判系统使用心得</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/Terminal_Auto_Start/" title="Ubuntu 20.04 基于终端的自启动程序"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Ubuntu 20.04 基于终端的自启动程序</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">华南虎模拟器使用手册（2024UL）</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="零、阅读前提醒"><a href="#零、阅读前提醒" class="headerlink" title="零、阅读前提醒"></a>零、阅读前提醒</h2><p>本文默认读者对电脑的使用一无所知，会尽量以教学的口吻叙述。</p>
+<p>若您感觉不适，请关闭此网页。</p>
+<h2 id="一、下载与安装"><a href="#一、下载与安装" class="headerlink" title="一、下载与安装"></a>一、下载与安装</h2><h3 id="1-下载模拟器"><a href="#1-下载模拟器" class="headerlink" title="1. 下载模拟器"></a>1. 下载模拟器</h3><p>打开 <a target="_blank" rel="noopener" href="https://dl.sim.scutbot.cn/">SimulatorX 下载站</a>，点击 <strong>SimulatorX [2024UL]</strong>，这时你应该看到如下画面：<img src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/2_SimulatorX_User_Manual/1-Download.png" srcset="/img/loading.gif" lazyload alt="模拟器下载界面" style="zoom:30%;" /></p>
+<p>任选其一，点击 <strong>SimulatorX-2024ul-2.0.4.0.7z</strong> 或 <strong>SimulatorX-2024ul-2.0.4.0.zip</strong> ，再点击<strong>下载</strong>即可。</p>
+<p>*<em>如果是Win10系统，建议下载 zip 文件，便于接下来的操作。</em></p>
+<h3 id="2-解压和安装"><a href="#2-解压和安装" class="headerlink" title="2. 解压和安装"></a>2. 解压和安装</h3><p>打开<strong>此电脑</strong>或<strong>文件资源管理器</strong>，找到此页面的<strong>下载</strong>文件夹，双击进入。此时你应该能找到你下载的模拟器文件。</p>
+<p>右键 <strong>SimulatorX-2024ul-2.0.4.0</strong>，点击<strong>全部解压缩</strong>，点击确定，此时你应该能看到有一个 <strong>SimulatorX-2024ul-2.0.4.0</strong> 文件夹。</p>
+<p>这就是你的模拟器文件。</p>
+<h2 id="二、模拟器的启动和页面说明"><a href="#二、模拟器的启动和页面说明" class="headerlink" title="二、模拟器的启动和页面说明"></a>二、模拟器的启动和页面说明</h2><p>进入 <strong>SimulatorX-2024ul-2.0.4.0</strong> 文件夹，双击 <strong>SimulatorX</strong> 或 <strong>SimulatorX.exe</strong> 启动模拟器。<img src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/2_SimulatorX_User_Manual/2-Start.png" srcset="/img/loading.gif" lazyload alt="启动页面" style="zoom:33%;" /></p>
+<p>用户名：<strong>仅在联机时需要填写</strong>。内容随意。</p>
+<p>服务器口令：联机时房间的口令，为一串字母。填写时不分大小写。</p>
+<p>服务器密码：仅在说明时需要填写，默认不需要。</p>
+<p>本地跑图：不联机情况下，进入单人练习房间。<strong>不需要填写用户名</strong>。</p>
+<p>退出：字面意思。</p>
+<p>全屏：字面意思。</p>
+<p>其余选项不需要变动。如果填写了用户名，<strong>本地跑图</strong>会变为<strong>创建房间</strong>。</p>
+<p>但此时点击<strong>创建房间</strong>，会显示<strong>请检查密码是否正确或稍后再试</strong>。</p>
+<h2 id="三、正式比赛"><a href="#三、正式比赛" class="headerlink" title="三、正式比赛"></a>三、正式比赛</h2><h3 id="1-比赛前页面"><a href="#1-比赛前页面" class="headerlink" title="1. 比赛前页面"></a>1. 比赛前页面</h3><p>在不填写用户名的情况下，点击<strong>本地跑图</strong>，会进入到单人练习房间。<img src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/2_SimulatorX_User_Manual/3-Practice_Room.png" srcset="/img/loading.gif" lazyload alt="练习房间" style="zoom:33%;" /></p>
+<p>若填写了用户名，则可以点击<strong>创建房间</strong>，进入联机模式。</p>
+<p>创建房间后，左上角即为<strong>服务器口令</strong>，其他联机的玩家们在<strong>填写用户名</strong>后，填写<strong>服务器口令</strong>，即可进入到房间中。</p>
+<p><em>有的服务器需要密码，联机时要注意，如果没有说明则无需填写</em><img src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/2_SimulatorX_User_Manual/4-Online_Room.jpg" srcset="/img/loading.gif" lazyload alt="联机房间" style="zoom:17%;" /></p>
+<p>以下设置在<strong>本地跑图</strong>和<strong>联机模式</strong>均适用。</p>
+<p>点击<strong>一号英雄</strong>、<strong>三号或四号步兵</strong>和<strong>哨兵</strong>可以选择自己的兵种。在实际比赛中，<strong>不允许选择哨兵</strong>。</p>
+<p><strong>裁判</strong>、<strong>观众</strong>：字面意思。</p>
+<p><strong>开始比赛</strong>、<strong>离开房间</strong>：字面意思。</p>
+<p>点击<strong>红方</strong>和<strong>蓝方</strong>可以更改队伍名称。</p>
+<p>点击<strong>开始比赛</strong>即可开始单人练习。在本篇教程中，以<strong>三号步兵</strong>为演示。<img src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/2_SimulatorX_User_Manual/5-Race.png" srcset="/img/loading.gif" lazyload alt="进入比赛" style="zoom:33%;" /></p>
+<h3 id="2-倒计时十秒"><a href="#2-倒计时十秒" class="headerlink" title="2. 倒计时十秒"></a>2. 倒计时十秒</h3><p>根据指示按下 <strong>P</strong> 键，此时弹出来<strong>设置面板</strong>，共分为四栏。作为操作手，你只需要调试以下参数。</p>
+<h5 id="①登录栏-→-登出：退出比赛回到模拟器启动页面。"><a href="#①登录栏-→-登出：退出比赛回到模拟器启动页面。" class="headerlink" title="①登录栏 → 登出：退出比赛回到模拟器启动页面。"></a>①登录栏 → 登出：退出比赛回到模拟器启动页面。</h5><h5 id="②性能配置"><a href="#②性能配置" class="headerlink" title="②性能配置"></a>②性能配置</h5><p>底盘类型：分为<strong>功率优先</strong>和<strong>血量优先</strong>。简单来说，前者跑得快但脆皮，后者跑的慢但血厚。</p>
+<p>发射机构1类型：分为<strong>爆发优先</strong>和<strong>冷却优先</strong>。这里内容较为复杂，详见本章第3节。</p>
+<p>慎重选择，<strong>选择完毕后不可更改</strong>。</p>
+<h5 id="③硬件设置"><a href="#③硬件设置" class="headerlink" title="③硬件设置"></a>③硬件设置</h5><p>控制灵敏度：滑条越左，准星移动速度越慢，反之亦然。</p>
+<p>音量设置：字面意思。</p>
+<p>背景音效音量设置：比赛时的背景音乐音量。<img src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/2_SimulatorX_User_Manual/6-Setting.png" srcset="/img/loading.gif" lazyload alt="设置界面" style="zoom:33%;" /></p>
+<p>在一般情况下，只需要调整<strong>底盘类型</strong>、<strong>发射机构1类型</strong>和<strong>控制灵敏度</strong>。</p>
+<h3 id="3-比赛简要规则"><a href="#3-比赛简要规则" class="headerlink" title="3. 比赛简要规则"></a>3. 比赛简要规则</h3><p><strong>本教程不讨论数值，只讲述大致原理，若有需要可自行计算。</strong></p>
+<h5 id="①场地名称"><a href="#①场地名称" class="headerlink" title="①场地名称"></a>①场地名称</h5><p>补给区：兑换弹丸，回血。<strong>一方补给区相对另一方是禁区</strong>，进入会被罚下。</p>
+<p>中央增益点：占领后获得经验，可用于升级，提高机器人的性能。</p>
+<p>基地：字面意思。胜负的重要判定之一。<img src="https://raw.githubusercontent.com/KEKKJ123/KEKKJ123.github.io/refs/heads/main/img/RM/2_SimulatorX_User_Manual/7-Map.png" srcset="/img/loading.gif" lazyload alt="比赛场地" style="zoom:33%;" /></p>
+<h5 id="②简要规则解释"><a href="#②简要规则解释" class="headerlink" title="②简要规则解释"></a>②简要规则解释</h5><p>机器人扣血伤害来源：弹丸击中装甲板（步兵弹丸-10，英雄弹丸-100），枪口热量（主要是英雄）。</p>
+<p>枪口热量：可视作发射弹丸频率的限制。每发射一个弹丸都会积累一定量的热量值，并且有上限，超过的部分会按照一定比例给予机器人伤害。热量值会随时间减少，热量限制也会随着升级提高上限。</p>
+<p><strong>爆发优先</strong>和<strong>冷却优先</strong>：前者的热量上限更高，但散热速度较慢；后者的热量上限较低，但散热速度相对更快。</p>
+<p>经验值和机器人等级：发射弹丸、造成伤害、击败对方机器人和占领中央增益点均可获得经验值。机器人等级越高，血量越大，移动速度越快，热量上限和冷却速度也会更高。</p>
+<p>胜负规则：当一方基地血量归0，比赛立刻结束，另一方胜利；比赛倒计时归0，按基地血量判胜负；若基地血量相同，按机器人伤害值判胜负。</p>
+<h3 id="4-操作键位一览"><a href="#4-操作键位一览" class="headerlink" title="4. 操作键位一览"></a>4. 操作键位一览</h3><p>C —— 超级电容。可以在短时间内提高机器人的移动速度。<em>用完记得关。</em></p>
+<p>Y —— 小陀螺模式。牺牲一定速度换取底盘的持续旋转，<font color=gray>也许</font>可以降低对方的命中率。</p>
+<p>H —— 单发 &#x2F; 连发模式切换。仅限步兵机器人。</p>
+<p>T &#x2F; I —— 打开补弹页面。仅在补给区区域可用。</p>
+<p>鼠标左键 —— 发射弹丸。</p>
+<p>鼠标右键 —— 自动瞄准。<strong>在思玄内部赛中不允许使用</strong>。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/RoboMaster/" class="category-chain-item">RoboMaster</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Tutorial/" class="print-no-link">#Tutorial</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>华南虎模拟器使用手册（2024UL）</div>
+      <div>https://kekkj123.github.io/posts/SimulatorX_User_Manual/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>防灾科技学院 思玄战队 KEKKJ</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年11月26日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-cc-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/Ubuntu_Reset_Passwd/" title="Ubuntu 20.04 重置密码教程">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Ubuntu 20.04 重置密码教程</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/Tools/SkipAD/" title="跳广告软件推荐">
+                        <span class="hidden-mobile">跳广告软件推荐</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"KEKKJ123/KEKKJ123.github.io","repo-id":"R_kgDOMihuAQ","category":"Announcements","category-id":"DIC_kwDOMihuAc4ChlYD","theme-light":"light","theme-dark":"dark","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <i class="iconfont icon-love"></i> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo Blog </span></a> <span>|</span> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span> Fluid Theme </span></a> <span>|</span> <a href="https://github.com/KEKKJ123/KEKKJ123.github.io" target="_blank" rel="nofollow noopener"><span>KEKKJ Storge</span></a> <i class="iconfont icon-love"></i> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/scripts/running-time.js"></script> </div>  
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

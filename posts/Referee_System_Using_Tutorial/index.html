@@ -1,0 +1,971 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=dark>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Blog_Saturn.png">
+  <link rel="icon" href="/img/Blog_Saturn.png">
+  
+    <link rel="canonical" href="https://kekkj123.github.io/posts/Referee_System_Using_Tutorial/"/>
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="防灾科技学院 思玄战队 KEKKJ">
+  <meta name="keywords" content="KEKKJ">
+  
+    <meta name="description" content="最近，作者所在的实验室借用了一套裁判系统。 借此机会，作者大致体验了一遍裁判系统的验收流程和使用方法。 当然，在这个过程中作者也踩了不少坑。为了便于参考和查缺补漏，这里总结了一些注意事项。 受各种条件限制，本文可能存在错误或不够严谨。欢迎各位大佬指出，感激不尽！   本文适用环境：RoboMaster2025高校联盟赛。 本文不是官方的使用手册，作者不保证本文的通用性。请务必结合裁判系统用户手册">
+  
+  
+  
+  <title>RoboMaster 裁判系统使用心得 - KEKKJ BLOG - 小世界的一瞥</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/icon-font-css/travelling/iconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"kekkj123.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":50,"cursorChar":"_","loop":false,"scope":"home"},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"#"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-9E1Z9RDTPM"},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"ZQprfmfI0LYS9JMbW9dfSh7S-gzGzoHsz","app_key":"LPar9cIawJj3p5BljrrEYtOC","server_url":"https://zqprfmfi.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-08-12T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-9E1Z9RDTPM", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-9E1Z9RDTPM');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/RSS_atom.xml" title="KEKKJ BLOG - 小世界的一瞥" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>KEKKJ BLOG</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/%E9%9A%8F%E7%BC%98%E6%89%8B%E8%AE%B0/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>手记</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                <span>目录</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/archives/" target="_self">
+                    <i class="iconfont icon-archive-fill"></i>
+                    <span>归档</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/" target="_self">
+                    <i class="iconfont icon-category-fill"></i>
+                    <span>分类</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/" target="_self">
+                    <i class="iconfont icon-tags-fill"></i>
+                    <span>标签</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/RSS_atom.xml" target="_self">
+                    <i class="iconfont icon-rss-fill"></i>
+                    <span>RSS</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.travellings.cn/go.html" target="_self">
+                <i class="iconfont icon-travelling"></i>
+                <span>开往</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/ApolloSoyuz.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">RoboMaster 裁判系统使用心得</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        防灾科技学院 思玄战队 KEKKJ
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-03-01 01:40" pubdate>
+          2025年3月1日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          13 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 阅读
+        </span>
+        
+      
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="RoboMaster"
+        id="heading-4dbe9c6fd889de0044a81ef60ca8437b" role="tab" data-toggle="collapse" href="#collapse-4dbe9c6fd889de0044a81ef60ca8437b"
+        aria-expanded="true"
+      >
+        RoboMaster
+        <span class="list-group-count">(5)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-4dbe9c6fd889de0044a81ef60ca8437b"
+           role="tabpanel" aria-labelledby="heading-4dbe9c6fd889de0044a81ef60ca8437b">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/OpenVINO_Installation_Guide/" title="OpenVINO 2021.4 LTS 及旧版本编译安装方法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">OpenVINO 2021.4 LTS 及旧版本编译安装方法</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/SimulatorX_User_Manual/" title="华南虎模拟器使用手册（2024UL）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">华南虎模拟器使用手册（2024UL）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/Ubuntu_Reset_Passwd/" title="Ubuntu 20.04 重置密码教程"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Ubuntu 20.04 重置密码教程</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/Referee_System_Using_Tutorial/" title="RoboMaster 裁判系统使用心得"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">RoboMaster 裁判系统使用心得</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/Terminal_Auto_Start/" title="Ubuntu 20.04 基于终端的自启动程序"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Ubuntu 20.04 基于终端的自启动程序</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">RoboMaster 裁判系统使用心得</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p><font color=gray>最近，作者所在的实验室借用了一套裁判系统。</font></p>
+<p><font color=gray>借此机会，作者大致体验了一遍裁判系统的验收流程和使用方法。</font></p>
+<p><font color=gray>当然，在这个过程中作者也踩了不少坑。为了便于参考和查缺补漏，这里总结了一些注意事项。</font></p>
+<p><font color=gray>受各种条件限制，本文可能存在错误或不够严谨。欢迎各位大佬指出，感激不尽！</font></p>
+</blockquote>
+<hr>
+<p>本文适用环境：RoboMaster2025高校联盟赛。</p>
+<h3 id="本文不是官方的使用手册，作者不保证本文的通用性。"><a href="#本文不是官方的使用手册，作者不保证本文的通用性。" class="headerlink" title="本文不是官方的使用手册，作者不保证本文的通用性。"></a>本文不是官方的使用手册，作者不保证本文的通用性。</h3><h3 id="请务必结合裁判系统用户手册、裁判系统FAQ等其他官方网页和文档说明食用！！"><a href="#请务必结合裁判系统用户手册、裁判系统FAQ等其他官方网页和文档说明食用！！" class="headerlink" title="请务必结合裁判系统用户手册、裁判系统FAQ等其他官方网页和文档说明食用！！"></a>请务必结合<font color=ee7109>裁判系统用户手册</font>、<font color=ee7109>裁判系统FAQ</font>等其他官方网页和文档说明食用！！</h3><p><strong><a href="#%E5%9B%9B%E3%80%81%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">点我跳转到第四章：参考文章</a></strong></p>
+<h2 id="一、基本机器人、主控模块和电源管理模块（简称电管模块）"><a href="#一、基本机器人、主控模块和电源管理模块（简称电管模块）" class="headerlink" title="一、基本机器人、主控模块和电源管理模块（简称电管模块）"></a>一、基本机器人、主控模块和电源管理模块（简称电管模块）</h2><h3 id="1-基本机器人"><a href="#1-基本机器人" class="headerlink" title="1.基本机器人"></a>1.基本机器人</h3><p>如果不考虑离线模块，最基本的机器人由三部分组成：电源、电源管理模块和主控模块。</p>
+<p>基本机器人便于加装和调试其他模块。若无特殊说明，下文所指机器人均为<strong>基本机器人</strong>。</p>
+<p>如何组装？按照<strong>电源——电管模块——主控模块</strong>的顺序串联即可。</p>
+<h3 id="2-主控模块"><a href="#2-主控模块" class="headerlink" title="2.主控模块"></a>2.主控模块</h3><ul>
+<li><p>部分主控模块到手为英文模式。</p>
+<p>解决方法：长按确定键进入菜单，移动光标至 Language，点击确定后再选择简体中文，确定后即可恢复中文。</p>
+</li>
+<li><p>主控模块需要在<strong>已连接 PC</strong> 的情况下安装驱动，否则可能无法正确识别。<a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/detail/122">下载链接</a><sup id="fnref:7" class="footnote-ref"><a href="#fn:7" rel="footnote"><span class="hint--top hint--rounded" aria-label="[RoboMaster 遥控器套装](https://www.robomaster.com/zh-CN/products/components/detail/122)——主控模块驱动">[7]</span></a></sup>在此。</p>
+</li>
+<li><p>主控必须连接电管模块的<strong>黑色</strong>航空线接口，否则无效。其余接口无顺序要求。</p>
+</li>
+</ul>
+<h2 id="二、选手端、裁判端和服务器的搭建"><a href="#二、选手端、裁判端和服务器的搭建" class="headerlink" title="二、选手端、裁判端和服务器的搭建"></a>二、选手端、裁判端和服务器的搭建</h2><ul>
+<li><strong>注意：选手端、裁判端和服务器的文件路径不要有任何<font color=e02525>中文字符</font>！！</strong></li>
+</ul>
+<h3 id="1-裁判端和服务器"><a href="#1-裁判端和服务器" class="headerlink" title="1.裁判端和服务器"></a>1.裁判端和服务器</h3><p>自25赛季开始，服务器需要连接互联网（大疆账号），这显著增加了搭建服务器的繁琐程度。</p>
+<p><strong>搭建服务器前请务必关闭本机网络防火墙！</strong></p>
+<p>这里贴一个链接，<a target="_blank" rel="noopener" href="https://github.com/Inetgeek/RM-Referee-Aid">RM-Referee-Aid：RM裁判系统工具箱</a>，内含关闭防火墙的功能。</p>
+<p><strong>只有 RM Server 的日志系统窗口标题为 [Online] 时，服务器才算搭建成功！</strong></p>
+<h4 id="双网卡方案（无需路由器，但概率失效）"><a href="#双网卡方案（无需路由器，但概率失效）" class="headerlink" title="双网卡方案（无需路由器，但概率失效）"></a>双网卡方案（无需路由器，但概率失效）</h4><p>由于作者所在实验室的网络无法连接到互联网，故摸索了一个基于双网卡的搭建方案。</p>
+<ul>
+<li>使用双网卡方案时，科学上网工具的 TUN 模式无法使用。</li>
+</ul>
+<p>经过测试，本方法适用连接校园网的情况。但样本数极少，无法保证可靠性，若不成功可使用个人热点等联网方式替代。</p>
+<ul>
+<li>搭建方法</li>
+</ul>
+<p>① 主机连接 WiFi（有线网未测试）并能够正常连接互联网。</p>
+<p>② 打开主机的个人热点（与其他设备共享我的 Internet 连接），选择 <strong>2.4G</strong> 频带。</p>
+<p>③ 打开控制面板，依次点击<strong>网络和共享中心</strong>，<strong>更改适配器设置</strong>，<strong>Microsoft Wi-Fi Direct Virtual Adapter</strong>，<strong>属性</strong>。</p>
+<p>④ 双击 <strong>Internet 协议版本 4（TCP&#x2F;IPv4）</strong>，更改 IP 地址为 <strong>192.168.1.2</strong>，子网掩码为 <strong>255.255.255.0</strong>，一路点击确定。</p>
+<p>此时就能够保证服务器能够连接互联网，且其他机器人可连接到本机共享的移动热点。</p>
+<h4 id="【待验证】路由器方案（建议使用较好的路由器）"><a href="#【待验证】路由器方案（建议使用较好的路由器）" class="headerlink" title="【待验证】路由器方案（建议使用较好的路由器）"></a>【待验证】路由器方案（建议使用较好的路由器）</h4><p>单主机双网卡方案虽简单，但比较依赖电脑自带网卡的性能，有概率无法搭建成功（服务器连接丢失）。</p>
+<p>若有额外的路由器则能大大减少出错概率。</p>
+<ul>
+<li>搭建方法</li>
+</ul>
+<p>① 调试路由器。设置 IP 地址为 192.168.1.1，</p>
+<h3 id="2-选手端"><a href="#2-选手端" class="headerlink" title="2.选手端"></a>2.选手端</h3><p>建议先让基本机器人连接服务器，再打开选手端登录。</p>
+<ul>
+<li>若主控联网后显示<strong>找不到服务器</strong>，请更换主控重新尝试，若仍不成功可重新解压裁判端。</li>
+</ul>
+<p><font color=gray><del>被这个构式裁判端坑了三个小时</del></font></p>
+<h2 id="三、激活图传模块，搭建图传链路"><a href="#三、激活图传模块，搭建图传链路" class="headerlink" title="三、激活图传模块，搭建图传链路"></a>三、激活图传模块，搭建图传链路</h2><p><strong>RoboMaster Tool 2</strong> 是裁判系统固件版本的管理工具。它还能激活图传模块。<a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/referee">下载链接</a><sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[RoboMaster Tool 2](https://www.robomaster.com/zh-CN/products/components/detail/4185)——介绍及工具下载">[2]</span></a></sup>在此。</p>
+<p>建议使用最新版本的 <strong>RM Tool</strong>、裁判端、选手端和模块固件！</p>
+<h3 id="0-连接主控，查询和更新固件版本"><a href="#0-连接主控，查询和更新固件版本" class="headerlink" title="0.连接主控，查询和更新固件版本"></a>0.连接主控，查询和更新固件版本</h3><p>① 搭建基本机器人，不要上电，用 Micro-USB 数据线连接主控和 PC 后再打开电源。</p>
+<p>② 打开 RM Tool，显示网络正常后再选择并打开串口，此时应当显示绿色的对勾标志。</p>
+<ul>
+<li>若不成功，可尝试重新插拔 Micro-USB 数据线。</li>
+</ul>
+<p>③ 在已连接基本机器人的前提下，需要升级固件版本的模块会显示红色。</p>
+<p>④ 点击升级。<strong>升级期间，不要断电或操作模块。</strong></p>
+<h3 id="1-图传模块-VT02（发送端）的激活"><a href="#1-图传模块-VT02（发送端）的激活" class="headerlink" title="1.图传模块 VT02（发送端）的激活"></a>1.图传模块 VT02（发送端）的激活</h3><p>① 在已执行第零节的前提下，将发送端与基本机器人连接，检查模块版本是否需要升级。</p>
+<p>② 打开串口，待出现绿色对勾标志后，点击<strong>图传激活</strong>，点击<strong>发送端激活</strong>。</p>
+<p>③ 确认激活区域为<strong>中国和其他地区</strong>后，再点击激活。</p>
+<ul>
+<li>若显示激活区域为<strong>日本地区</strong>，请检查 PC 的网络环境。</li>
+<li>必要时可以科学上网开启香港节点，不要使用台湾节点。（From 视觉救命群群友）</li>
+</ul>
+<h3 id="2-图传模块-VT12（接收端）的激活"><a href="#2-图传模块-VT12（接收端）的激活" class="headerlink" title="2.图传模块 VT12（接收端）的激活"></a>2.图传模块 VT12（接收端）的激活</h3><p>① 使用双头 Type-C 数据线连接 PC 和接收端，用适配器给接收端供电。</p>
+<p>② 打开 RM Tool，显示网络正常后再选择并打开串口，此时应当显示绿色的对勾标志。</p>
+<p>③ 安装接收端驱动。<a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/detail/1458">下载链接</a><sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="[RoboMaster 图传模块 VT02 2019](https://www.robomaster.com/zh-CN/products/components/detail/1458)——接收端驱动">[5]</span></a></sup><sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="[RoboMaster 图传模块 VT12 2020](https://www.robomaster.com/zh-CN/products/components/detail/2595)——接收端驱动（经测试，两网页驱动版本相同）">[6]</span></a></sup>在此。</p>
+<p>④ 点击<strong>图传激活</strong>，点击<strong>接收端激活</strong>。在弹出的窗口中再次打开对应的串口。</p>
+<p>⑤ 确认激活区域为<strong>中国和其他地区</strong>后，再点击激活。注意事项见上。</p>
+<h3 id="3-图传链路的搭建"><a href="#3-图传链路的搭建" class="headerlink" title="3.图传链路的搭建"></a>3.图传链路的搭建</h3><ul>
+<li>发送端</li>
+</ul>
+<p>连接发送端与基本机器人，并使用主控更改机器人 ID 和类型。</p>
+<ul>
+<li>接收端</li>
+</ul>
+<p>① 使用双头 Type-C 数据线连接 PC 和接收端，用适配器给接收端供电。</p>
+<p>② 打开 PC 的<strong>设备管理器</strong>，双击<strong>网络适配器</strong>，检查有无 <strong>Remote NDIS based Iinternet Sharing Device</strong>。</p>
+<p>③ 根据前一节内容，安装接收端的驱动。</p>
+<p>④ 打开选手端，进入客户端后按 P 键打开设置面板，登录发送端机器人的 ID。</p>
+<p>⑤ 待图传串口和连接状态都变为绿色后，若未出现图传画面，请断电重启接收端。</p>
+<ul>
+<li>若半分钟后指示灯依然为红色，请重启发送端。</li>
+<li>若重启后依然无法连接，请参考第二章第一节的搭建方法，找到 <strong>Remote NDIS based Iinternet Sharing Device</strong>，检查 IP 地址是否为 <strong>192.168.42.105</strong>，并再次重启接收端。</li>
+</ul>
+<h2 id="四、参考文章和注意事项"><a href="#四、参考文章和注意事项" class="headerlink" title="四、参考文章和注意事项"></a>四、参考文章和注意事项</h2><p>由于官网赛季页面分为当前赛季和过往赛季，部分参考链接存在时效性。</p>
+<p>请根据实际情况下载最新的软件版本，并参考最新的说明文档！</p>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/referee">RoboMaster 产品 裁判系统</a>——主页面
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/detail/4185">RoboMaster Tool 2</a>——介绍及工具下载
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/detail/5663">RoboMaster 2025 机甲大师高校联盟赛 赛事引擎</a>——软件及说明文档
+<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/detail/2596">RoboMaster 图传模块 VT02 2020</a>——发送端驱动
+<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/detail/1458">RoboMaster 图传模块 VT02 2019</a>——接收端驱动
+<a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:6" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/detail/2595">RoboMaster 图传模块 VT12 2020</a>——接收端驱动（经测试，两网页驱动版本相同）
+<a href="#fnref:6" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:7" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.robomaster.com/zh-CN/products/components/detail/122">RoboMaster 遥控器套装</a>——主控模块驱动
+<a href="#fnref:7" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/RoboMaster/" class="category-chain-item">RoboMaster</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Tutorial/" class="print-no-link">#Tutorial</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>RoboMaster 裁判系统使用心得</div>
+      <div>https://kekkj123.github.io/posts/Referee_System_Using_Tutorial/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>防灾科技学院 思玄战队 KEKKJ</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年3月1日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-cc-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/suiyuan/10/" title="纪念建站两百天和随缘手记的一次苏醒 - P10">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">纪念建站两百天和随缘手记的一次苏醒 - P10</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/Tools/Remove_WinNTSetup_cmd_Context_Menu/" title="回退 WinNTSetup 修改 cmd 右键菜单">
+                        <span class="hidden-mobile">回退 WinNTSetup 修改 cmd 右键菜单</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"KEKKJ123/KEKKJ123.github.io","repo-id":"R_kgDOMihuAQ","category":"Announcements","category-id":"DIC_kwDOMihuAc4ChlYD","theme-light":"light","theme-dark":"dark","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <i class="iconfont icon-love"></i> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo Blog </span></a> <span>|</span> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span> Fluid Theme </span></a> <span>|</span> <a href="https://github.com/KEKKJ123/KEKKJ123.github.io" target="_blank" rel="nofollow noopener"><span>KEKKJ Storge</span></a> <i class="iconfont icon-love"></i> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/scripts/running-time.js"></script> </div>  
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
