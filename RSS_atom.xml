@@ -6,7 +6,7 @@
   <link href="https://kekkj123.github.io/RSS_atom.xml" rel="self"/>
   
   <link href="https://kekkj123.github.io/"/>
-  <updated>2025-03-10T08:27:19.916Z</updated>
+  <updated>2025-03-17T22:04:49.000Z</updated>
   <id>https://kekkj123.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的两年 RM 时光 - P12</title>
+    <link href="https://kekkj123.github.io/posts/suiyuan/12/"/>
+    <id>https://kekkj123.github.io/posts/suiyuan/12/</id>
+    <published>2025-03-17T22:04:49.000Z</published>
+    <updated>2025-03-17T22:04:49.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;font size=&quot;5&quot;&gt;随缘手记 —— 随心而想，随缘而写&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;font size=&quot;4&quot;&gt;Random Notes - Think as you want,</summary>
+        
+      
+    
+    
+    
+    <category term="随缘手记" scheme="https://kekkj123.github.io/categories/%E9%9A%8F%E7%BC%98%E6%89%8B%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Ubuntu 20.04 基于终端的自启动程序</title>
@@ -60,7 +85,7 @@
         
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;&lt;font size=&quot;5&quot;&gt;随缘手记 —— 随心而想，随缘而写&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;font size=&quot;4&quot;&gt;Random Notes - Think as you like,</summary>
+&lt;p&gt;&lt;strong&gt;&lt;font size=&quot;4&quot;&gt;Random Notes - Think as you want,</summary>
         
       
     
@@ -85,7 +110,7 @@
         
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;&lt;font size=&quot;5&quot;&gt;随缘手记 —— 随心而想，随缘而写&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;font size=&quot;4&quot;&gt;Random Notes - Think as you like,</summary>
+&lt;p&gt;&lt;strong&gt;&lt;font size=&quot;4&quot;&gt;Random Notes - Think as you want,</summary>
         
       
     
@@ -121,35 +146,6 @@
     
     
     <category term="Tutorial" scheme="https://kekkj123.github.io/tags/Tutorial/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>回退 WinNTSetup 修改 cmd 右键菜单</title>
-    <link href="https://kekkj123.github.io/posts/Tools/Remove_WinNTSetup_cmd_Context_Menu/"/>
-    <id>https://kekkj123.github.io/posts/Tools/Remove_WinNTSetup_cmd_Context_Menu/</id>
-    <published>2025-02-25T18:38:51.000Z</published>
-    <updated>2025-03-03T17:40:00.485Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;font color=gray&gt;WinNTSetup 中的&lt;strong&gt;优化调整&lt;/strong&gt;有这样一个功能：显示右键命令提示符图标。&lt;/font&gt;&lt;/p&gt;
-&lt;p&gt;&lt;font</summary>
-        
-      
-    
-    
-    
-    <category term="Tool" scheme="https://kekkj123.github.io/categories/Tool/"/>
-    
-    
-    <category term="Tutorial" scheme="https://kekkj123.github.io/tags/Tutorial/"/>
-    
-    <category term="Windows" scheme="https://kekkj123.github.io/tags/Windows/"/>
     
   </entry>
   
