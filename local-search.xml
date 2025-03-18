@@ -39,9 +39,9 @@
     
     <tags>
       
-      <tag>Tutorial</tag>
-      
       <tag>Ubuntu</tag>
+      
+      <tag>Tutorial</tag>
       
     </tags>
     
@@ -156,9 +156,9 @@
     
     <tags>
       
-      <tag>Blog</tag>
-      
       <tag>Tutorial</tag>
+      
+      <tag>Blog</tag>
       
     </tags>
     
@@ -183,9 +183,9 @@
     
     <tags>
       
-      <tag>Tutorial</tag>
-      
       <tag>Ubuntu</tag>
+      
+      <tag>Tutorial</tag>
       
     </tags>
     
@@ -291,11 +291,11 @@
       
       <tag>Tutorial</tag>
       
+      <tag>Game</tag>
+      
       <tag>RKSP</tag>
       
       <tag>RSS-Origin</tag>
-      
-      <tag>Game</tag>
       
     </tags>
     
@@ -324,11 +324,11 @@
       
       <tag>Tutorial</tag>
       
+      <tag>Game</tag>
+      
       <tag>RKSP</tag>
       
       <tag>RSS-Origin</tag>
-      
-      <tag>Game</tag>
       
     </tags>
     
@@ -369,7 +369,7 @@
       
       <category>超越历史系列</category>
       
-      <category>RP-1 Legacy 教程</category>
+      <category>RP-1Legacy教程</category>
       
     </categories>
     
@@ -378,9 +378,9 @@
       
       <tag>Tutorial</tag>
       
-      <tag>RKSP</tag>
-      
       <tag>Game</tag>
+      
+      <tag>RKSP</tag>
       
       <tag>RP-1</tag>
       
@@ -403,9 +403,9 @@
     
     <tags>
       
-      <tag>Blog</tag>
-      
       <tag>Tutorial</tag>
+      
+      <tag>Blog</tag>
       
     </tags>
     
@@ -468,11 +468,11 @@
     
     <tags>
       
-      <tag>Tutorial</tag>
-      
       <tag>Ubuntu</tag>
       
       <tag>OpenVINO</tag>
+      
+      <tag>Tutorial</tag>
       
     </tags>
     
@@ -608,7 +608,7 @@
       
       <category>超越历史系列</category>
       
-      <category>RP-1 Legacy 教程</category>
+      <category>RP-1Legacy教程</category>
       
     </categories>
     
@@ -617,9 +617,9 @@
       
       <tag>Tutorial</tag>
       
-      <tag>RKSP</tag>
-      
       <tag>Game</tag>
+      
+      <tag>RKSP</tag>
       
       <tag>RP-1</tag>
       
