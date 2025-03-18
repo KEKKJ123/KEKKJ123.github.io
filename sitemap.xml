@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://kekkj123.github.io/posts/RSS_Origin_Guide/</loc>
+    <loc>https://kekkj123.github.io/posts/Legacy_RP1_Installation_Guide/</loc>
     
-    <lastmod>2025-03-15</lastmod>
+    <lastmod>2025-03-18</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/RSSRORP1_Seris_Introduction/</loc>
+    <loc>https://kekkj123.github.io/posts/RSS_Origin_Guide/</loc>
     
     <lastmod>2025-03-15</lastmod>
     
@@ -119,9 +119,9 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Legacy_RP1_Installation_Guide/</loc>
+    <loc>https://kekkj123.github.io/posts/RSSRORP1_Seris_Introduction/</loc>
     
-    <lastmod>2025-03-03</lastmod>
+    <lastmod>2025-01-18</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -148,7 +148,7 @@
 
   <url>
     <loc>https://kekkj123.github.io/</loc>
-    <lastmod>2025-03-17</lastmod>
+    <lastmod>2025-03-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
