@@ -20,15 +20,6 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Structured/Self_Description/</loc>
-    
-    <lastmod>2025-03-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kekkj123.github.io/posts/Structured/Self_Use/</loc>
     
     <lastmod>2025-03-15</lastmod>
@@ -113,6 +104,15 @@
     <loc>https://kekkj123.github.io/posts/RSS_Origin_Guide/</loc>
     
     <lastmod>2025-01-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kekkj123.github.io/posts/Structured/Self_Description/</loc>
+    
+    <lastmod>2024-12-31</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
