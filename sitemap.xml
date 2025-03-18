@@ -20,6 +20,24 @@
   </url>
   
   <url>
+    <loc>https://kekkj123.github.io/posts/Referee_System_Using_Tutorial/</loc>
+    
+    <lastmod>2025-03-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kekkj123.github.io/posts/Terminal_Auto_Start/</loc>
+    
+    <lastmod>2025-03-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kekkj123.github.io/posts/Structured/Self_Description/</loc>
     
     <lastmod>2025-03-15</lastmod>
@@ -38,72 +56,9 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Referee_System_Using_Tutorial/</loc>
-    
-    <lastmod>2025-03-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kekkj123.github.io/posts/Ubuntu_Reset_Passwd/</loc>
-    
-    <lastmod>2025-03-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kekkj123.github.io/posts/Terminal_Auto_Start/</loc>
-    
-    <lastmod>2025-03-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kekkj123.github.io/posts/Webs/</loc>
-    
-    <lastmod>2025-03-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kekkj123.github.io/posts/OpenVINO_Installation_Guide/</loc>
-    
-    <lastmod>2025-03-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kekkj123.github.io/posts/SimulatorX_User_Manual/</loc>
-    
-    <lastmod>2025-03-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kekkj123.github.io/posts/Tools/Remove_WinNTSetup_cmd_Context_Menu/</loc>
     
-    <lastmod>2025-03-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kekkj123.github.io/posts/Tools/SkipAD/</loc>
-    
-    <lastmod>2025-03-03</lastmod>
+    <lastmod>2025-02-28</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -128,6 +83,24 @@
   </url>
   
   <url>
+    <loc>https://kekkj123.github.io/posts/SimulatorX_User_Manual/</loc>
+    
+    <lastmod>2025-01-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kekkj123.github.io/posts/Ubuntu_Reset_Passwd/</loc>
+    
+    <lastmod>2025-01-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kekkj123.github.io/icon-font-css/travelling/demo_index.html</loc>
     
     <lastmod>2024-12-27</lastmod>
@@ -140,6 +113,33 @@
     <loc>https://kekkj123.github.io/icon-font-css/travelling/iconfont.json</loc>
     
     <lastmod>2024-12-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kekkj123.github.io/posts/Tools/SkipAD/</loc>
+    
+    <lastmod>2024-12-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kekkj123.github.io/posts/Webs/</loc>
+    
+    <lastmod>2024-12-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kekkj123.github.io/posts/OpenVINO_Installation_Guide/</loc>
+    
+    <lastmod>2024-08-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
