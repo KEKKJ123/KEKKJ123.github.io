@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Legacy_RP1_Installation_Guide/</loc>
-    
-    <lastmod>2025-03-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kekkj123.github.io/posts/RSSRORP1_Seris_Introduction/</loc>
     
     <lastmod>2025-03-18</lastmod>
@@ -20,7 +11,16 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Structured/Self_Use/</loc>
+    <loc>https://kekkj123.github.io/posts/Legacy_RP1_Installation_Guide/</loc>
+    
+    <lastmod>2025-03-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kekkj123.github.io/posts/Structured/Self_Description/</loc>
     
     <lastmod>2025-03-15</lastmod>
     
@@ -110,15 +110,6 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Structured/Self_Description/</loc>
-    
-    <lastmod>2024-12-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kekkj123.github.io/icon-font-css/travelling/demo_index.html</loc>
     
     <lastmod>2024-12-27</lastmod>
@@ -131,6 +122,15 @@
     <loc>https://kekkj123.github.io/icon-font-css/travelling/iconfont.json</loc>
     
     <lastmod>2024-12-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kekkj123.github.io/posts/Structured/Self_Use/</loc>
+    
+    <lastmod>2024-12-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
