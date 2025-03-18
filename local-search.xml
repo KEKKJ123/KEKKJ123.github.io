@@ -39,9 +39,9 @@
     
     <tags>
       
-      <tag>Ubuntu</tag>
-      
       <tag>Tutorial</tag>
+      
+      <tag>Ubuntu</tag>
       
     </tags>
     
@@ -156,9 +156,9 @@
     
     <tags>
       
-      <tag>Tutorial</tag>
-      
       <tag>Blog</tag>
+      
+      <tag>Tutorial</tag>
       
     </tags>
     
@@ -183,9 +183,9 @@
     
     <tags>
       
-      <tag>Ubuntu</tag>
-      
       <tag>Tutorial</tag>
+      
+      <tag>Ubuntu</tag>
       
     </tags>
     
@@ -369,8 +369,6 @@
       
       <category>超越历史系列</category>
       
-      <category>RP-1Legacy教程</category>
-      
     </categories>
     
     
@@ -403,9 +401,9 @@
     
     <tags>
       
-      <tag>Tutorial</tag>
-      
       <tag>Blog</tag>
+      
+      <tag>Tutorial</tag>
       
     </tags>
     
@@ -468,11 +466,11 @@
     
     <tags>
       
+      <tag>Tutorial</tag>
+      
       <tag>Ubuntu</tag>
       
       <tag>OpenVINO</tag>
-      
-      <tag>Tutorial</tag>
       
     </tags>
     
@@ -607,8 +605,6 @@
       <category>KSP</category>
       
       <category>超越历史系列</category>
-      
-      <category>RP-1Legacy教程</category>
       
     </categories>
     
