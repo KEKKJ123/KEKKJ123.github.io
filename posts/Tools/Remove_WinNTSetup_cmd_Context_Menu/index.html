@@ -23,7 +23,7 @@
   <meta name="author" content="KEKKJ">
   <meta name="keywords" content="KEKKJ">
   
-    <meta name="description" content="WinNTSetup 中的优化调整有这样一个功能：显示右键命令提示符图标。 因此重装系统之后，右键菜单多了一行在此处打开命令窗口。 但是对作者来说，这个功能几乎是无用的。 经过摸索，作者找到了被改动的注册表位置，成功删掉了多余的一行。可喜可贺！   一、进入注册表目录① 按住 Windows 键（徽标键）后，按一下 R 键再松手，打开运行窗口。 ② 输入 regedit，打开注册表编辑器。 ③">
+    <meta name="description" content="WinNTSetup 中的优化调整有这样一个功能：显示右键命令提示符图标。 因此重装系统之后，右键菜单多了一行在此处打开命令窗口。 但是对作者来说，这个功能几乎是无用的。 经过摸索，作者找到了被改动的注册表位置，成功删掉了多余的一行。可喜可贺！   一、进入注册表目录① 按住 Windows 键（徽标键）后，按一下 R 键即可唤出运行窗口。 ② 输入 regedit，打开注册表编辑器。 ③ 依据">
   
   
   
@@ -289,7 +289,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          715 字
+          713 字
         
       </span>
     
@@ -438,7 +438,7 @@
 <p><font color=gray>经过摸索，作者找到了被改动的注册表位置，成功删掉了多余的一行。可喜可贺！</font></p>
 </blockquote>
 <hr>
-<h2 id="一、进入注册表目录"><a href="#一、进入注册表目录" class="headerlink" title="一、进入注册表目录"></a>一、进入注册表目录</h2><p>① 按住 <strong>Windows 键</strong>（徽标键）后，按一下 <strong>R 键</strong>再松手，打开<strong>运行</strong>窗口。</p>
+<h2 id="一、进入注册表目录"><a href="#一、进入注册表目录" class="headerlink" title="一、进入注册表目录"></a>一、进入注册表目录</h2><p>① 按住 <strong>Windows 键</strong>（徽标键）后，按一下 <strong>R 键</strong>即可唤出<strong>运行</strong>窗口。</p>
 <p>② 输入 <strong>regedit</strong>，打开注册表编辑器。</p>
 <p>③ 依据目录进入 “<strong>计算机\HKEY_CLASSES_ROOT\Directory\background\shell</strong>”。（加粗字体可直接复制到地址栏）</p>
 <p>④ 点击文件夹 <strong>shell</strong> 左边的小角，展开文件夹，应有一个名为 <strong>cmd</strong> 的文件夹。</p>
@@ -459,7 +459,7 @@
 <p>只需要创建一个 <strong>txt</strong> 文件，复制以上代码并粘贴，保存文件后修改后缀名为 <strong>reg</strong> 即可。</p>
 <p>那我不知道什么是后缀名怎么办？</p>
 <p>¿¿出门右转B站扫盲，搜索<strong>什么是文件后缀名</strong>。</p>
-<p>也别再问我B站是什么了😡弱智吧不收真弱智，装的也不收。</p>
+<p>也别再问我B站是什么😡弱智吧不收真弱智，装的也不收。</p>
 <h2 id="四、参考文章"><a href="#四、参考文章" class="headerlink" title="四、参考文章"></a>四、参考文章</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://msfn.org/board/topic/149612-winntsetup-v541/">WinNTSetup v5.4.1 - Install Windows from USB - MSFN</a> <font color=6a737d><del>虽然根本没用上</del></font>
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1354507">win10 系统下，修改此处打开命令行为cmd或powershell-腾讯云开发者社区-腾讯云</a>
 <a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://blog.csdn.net/ice_ly000/article/details/106868992">Win10右键菜单添加在此处打开CMD命令窗口（亲测有效）右键打开command prompt-CSDN博客</a>
