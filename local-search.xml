@@ -39,9 +39,36 @@
     
     <tags>
       
+      <tag>Ubuntu</tag>
+      
       <tag>Tutorial</tag>
       
-      <tag>Ubuntu</tag>
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Fluid 主题修改历程</title>
+    <link href="/posts/Structured/Fluid_Theme_Modify/"/>
+    <url>/posts/Structured/Fluid_Theme_Modify/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>相信大部分博主都会对使用中的博客主题进行一定程度的修改。</p><p>尽管作者的代码能力并不高，但也借助网络教程摸索了一些方法。</p><p>在这里分享出来踩坑和成功的例子，仅供大家参考！</p></blockquote><hr><p>本文章不定期更新，且正在修改中，不保证内容完全可用！</p><p>章节顺序与博客<a href="/about.html#%E6%97%B6%E9%97%B4%E7%BA%BF-TimeLine">时间线</a>同步。</p><h2 id="Giscus-评论系统"><a href="#Giscus-评论系统" class="headerlink" title="Giscus 评论系统"></a>Giscus 评论系统</h2><p><a href="https://ghyuav.netlify.app/2023/01/12/hexo-fluid%E9%83%A8%E7%BD%B2%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/">hexo-fluid免费部署评论功能 - Haoyu的博客</a></p><ul><li>若网站链接有变动，可直接在博客仓库的 <strong>Discussions</strong> 修改。</li></ul><h2 id="接入-Bing-和-Google-搜索引擎"><a href="#接入-Bing-和-Google-搜索引擎" class="headerlink" title="接入 Bing 和 Google 搜索引擎"></a>接入 Bing 和 Google 搜索引擎</h2><p><a href="https://ksh7.com/posts/docs-hexo-seo-submit/">hexo-seo-submit，Hexo 博客 SEO 优化插件 | kshao-blog-前端知识记录</a></p><ul><li>WIP</li></ul><h2 id="接入-Bing-IndexNow"><a href="#接入-Bing-IndexNow" class="headerlink" title="接入 Bing IndexNow"></a>接入 Bing <a href="https://www.bing.com/indexnow/getstarted#implementation">IndexNow</a></h2><p><a href="https://github.com/zkz098/hexo-indexnow">zkz098&#x2F;hexo-indexnow: Use the indexnow protocol to push links to search engines to improve SEO</a></p><p><a href="https://www.kaitaku.xyz/webbuild/hexo/indexnow/">hexo-indexnow插件使用教程</a></p><h2 id="页脚添加网站运行时间-1"><a href="#页脚添加网站运行时间-1" class="headerlink" title="页脚添加网站运行时间[1]"></a>页脚添加网站运行时间<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Fluid 页脚增加网站运行时长 - Hexo Theme Fluid](https://hexo.fluid-dev.com/posts/fluid-footer-custom/)">[1]</span></a></sup></h2><p><a href="https://hexo.fluid-dev.com/posts/fluid-footer-custom/">Fluid 页脚增加网站运行时长 - Hexo Theme Fluid</a></p><h2 id="页脚文字与网站统计数文字格式不匹配"><a href="#页脚文字与网站统计数文字格式不匹配" class="headerlink" title="页脚文字与网站统计数文字格式不匹配"></a>页脚文字与网站统计数文字格式不匹配</h2><ul><li>两者 HTML 格式不同。</li></ul><p>复现：右键<strong>总访客数</strong>，点击检查，此时的代码应当是</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.footer-inner</span> &gt; <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:first-child</span>) &#123;<br>  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0.25rem</span> <span class="hljs-number">0</span>;<span class="hljs-comment">/*取消勾选后，行间距统一*/</span><br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">0.85rem</span>;<br>&#125;<br></code></pre></td></tr></table></figure><p>修改：进入博客主目录<code>~\node_modules\hexo-theme-fluid\source\css\_pages\_base\_widget</code>，打开<code>footer.styl</code>。</p><p>将第六行<code>margin</code>的值由<code>.25rem 0</code>改为<code>0 0</code>即可。</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css">&amp; &gt; <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:first-child</span>)<br>  <span class="hljs-attribute">margin</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span><br>  <span class="hljs-attribute">font-size</span> .<span class="hljs-number">85rem</span><br></code></pre></td></tr></table></figure><h2 id="顶栏修改和自定义图标的添加"><a href="#顶栏修改和自定义图标的添加" class="headerlink" title="顶栏修改和自定义图标的添加"></a>顶栏修改和自定义图标的添加</h2><h2 id="RSS-生成"><a href="#RSS-生成" class="headerlink" title="RSS 生成"></a>RSS 生成</h2><p><a href="https://qbmzc.github.io/2024/10/14/2024/11/091806/">hexo 添加 RSS 订阅功能 | 沐曦留曳</a></p><p><a href="https://github.com/hexojs/hexo-generator-feed">hexojs&#x2F;hexo-generator-feed: Feed generator for Hexo.</a></p><h2 id="全站字数统计"><a href="#全站字数统计" class="headerlink" title="全站字数统计"></a>全站字数统计</h2><p>注意：Fluid 官方指南可能有误。</p><ul><li>WIP</li></ul><h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://hexo.fluid-dev.com/posts/fluid-footer-custom/">Fluid 页脚增加网站运行时长 - Hexo Theme Fluid</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blog</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Tutorial</tag>
+      
+      <tag>Blog</tag>
       
     </tags>
     
@@ -175,9 +202,9 @@
     
     <tags>
       
-      <tag>Blog</tag>
-      
       <tag>Tutorial</tag>
+      
+      <tag>Blog</tag>
       
     </tags>
     
@@ -202,9 +229,9 @@
     
     <tags>
       
-      <tag>Tutorial</tag>
-      
       <tag>Ubuntu</tag>
+      
+      <tag>Tutorial</tag>
       
     </tags>
     
@@ -464,11 +491,11 @@
     
     <tags>
       
-      <tag>Tutorial</tag>
-      
       <tag>Ubuntu</tag>
       
       <tag>OpenVINO</tag>
+      
+      <tag>Tutorial</tag>
       
     </tags>
     

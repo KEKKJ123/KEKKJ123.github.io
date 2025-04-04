@@ -65,9 +65,42 @@
     <category term="RoboMaster" scheme="https://kekkj123.github.io/categories/RoboMaster/"/>
     
     
+    <category term="Ubuntu" scheme="https://kekkj123.github.io/tags/Ubuntu/"/>
+    
     <category term="Tutorial" scheme="https://kekkj123.github.io/tags/Tutorial/"/>
     
-    <category term="Ubuntu" scheme="https://kekkj123.github.io/tags/Ubuntu/"/>
+  </entry>
+  
+  <entry>
+    <title>Fluid 主题修改历程</title>
+    <link href="https://kekkj123.github.io/posts/Structured/Fluid_Theme_Modify/"/>
+    <id>https://kekkj123.github.io/posts/Structured/Fluid_Theme_Modify/</id>
+    <published>2025-03-08T17:57:38.000Z</published>
+    <updated>2025-04-04T20:37:19.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;相信大部分博主都会对使用中的博客主题进行一定程度的修改。&lt;/p&gt;
+&lt;p&gt;尽管作者的代码能力并不高，但也借助网络教程摸索了一些方法。&lt;/p&gt;
+&lt;p&gt;在这里分享出来踩坑和成功的例子，仅供大家参考！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;本</summary>
+        
+      
+    
+    
+    
+    <category term="Blog" scheme="https://kekkj123.github.io/categories/Blog/"/>
+    
+    
+    <category term="Tutorial" scheme="https://kekkj123.github.io/tags/Tutorial/"/>
+    
+    <category term="Blog" scheme="https://kekkj123.github.io/tags/Blog/"/>
     
   </entry>
   
@@ -117,31 +150,6 @@
     
     
     <category term="随缘手记" scheme="https://kekkj123.github.io/categories/%E9%9A%8F%E7%BC%98%E6%89%8B%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>一个回答</title>
-    <link href="https://kekkj123.github.io/posts/LifeEpisode/20250303/"/>
-    <id>https://kekkj123.github.io/posts/LifeEpisode/20250303/</id>
-    <published>2025-03-03T15:11:30.000Z</published>
-    <updated>2025-03-03T15:11:30.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;我的确不明白为什么会有人喜欢我，喜欢什么呢，会一直喜欢吗，无论我是什么样子都会喜欢吗，会喜欢多久，打算什么时候走，能忍受我吗，能忍受我恶毒的阴暗的样子吗。当我给你的那些东西都被收回时，当我从高处跌落时，你还是会看着我吗？&lt;/p&gt;
-&lt;/blockqu</summary>
-        
-      
-    
-    
-    
-    <category term="灵光一现" scheme="https://kekkj123.github.io/categories/%E7%81%B5%E5%85%89%E4%B8%80%E7%8E%B0/"/>
     
     
   </entry>

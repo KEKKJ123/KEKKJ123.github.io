@@ -219,7 +219,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about.html" target="_self">
+              <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
               </a>
@@ -283,13 +283,19 @@
                 
 
 <div class="list-group">
-  <p class="h4">共计 30 篇文章</p>
+  <p class="h4">共计 31 篇文章</p>
   <hr>
   
   
     
       
       <p class="h5">2024</p>
+    
+    <a href="/posts/SimulatorX_User_Manual/" class="list-group-item list-group-item-action">
+      <time>11-26</time>
+      <div class="list-group-item-title">华南虎模拟器使用手册（2024UL）</div>
+    </a>
+  
     
     <a href="/posts/Tools/SkipAD/" class="list-group-item list-group-item-action">
       <time>11-08</time>
@@ -344,18 +350,12 @@
       <div class="list-group-item-title">OpenVINO 2021.4 LTS 及旧版本编译安装方法</div>
     </a>
   
-    
-    <a href="/posts/suiyuan/20240315/" class="list-group-item list-group-item-action">
-      <time>03-15</time>
-      <div class="list-group-item-title">特辑：祝我生日快乐 - P6</div>
-    </a>
-  
 </div>
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/archives/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/#board">3</a><a class="extend next" rel="next" href="/archives/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/archives/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/#board">3</a><a class="page-number" href="/archives/page/4/#board">4</a><a class="extend next" rel="next" href="/archives/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
@@ -406,8 +406,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <i class="iconfont icon-love"></i> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo Blog </span></a> <span>|</span> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span> Fluid Theme </span></a> <span>|</span> <a href="https://github.com/KEKKJ123/KEKKJ123.github.io" target="_blank" rel="nofollow noopener"><span>KEKKJ Storge</span></a> <i class="iconfont icon-love"></i> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/scripts/running-time.js"></script>
-<span class="word-counter">加载中...</span> <script src="word-counter.js" defer></script> </div> 
+       <i class="iconfont icon-love"></i> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo Blog </span></a> <span>|</span> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span> Fluid Theme </span></a> <span>|</span> <a href="https://github.com/KEKKJ123/KEKKJ123.github.io" target="_blank" rel="nofollow noopener"><span>KEKKJ Storge</span></a> <i class="iconfont icon-love"></i> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/scripts/running_time.js"></script> </div> 
     </div>
   
   
@@ -438,8 +437,11 @@
 
   
   
+  <!-- 此处格式同步 footer 参数 -->
+  <div style="font-size: 0.85rem">
+    <span id="g-post-count-id">载入字数...</span>
+  </div>
 </div>
-
   </footer>
 
   <!-- Scripts -->
@@ -485,7 +487,9 @@
 <script  src="/js/boot.js" ></script>
 
 
-  
+  <script type="text/javascript">
+    document.getElementById("g-post-count-id").innerHTML = "小世界总字数 40k";
+</script>
 
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>

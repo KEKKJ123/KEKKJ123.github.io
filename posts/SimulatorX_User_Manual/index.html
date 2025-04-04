@@ -225,7 +225,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about.html" target="_self">
+              <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
               </a>
@@ -753,8 +753,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <i class="iconfont icon-love"></i> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo Blog </span></a> <span>|</span> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span> Fluid Theme </span></a> <span>|</span> <a href="https://github.com/KEKKJ123/KEKKJ123.github.io" target="_blank" rel="nofollow noopener"><span>KEKKJ Storge</span></a> <i class="iconfont icon-love"></i> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/scripts/running-time.js"></script>
-<span class="word-counter">加载中...</span> <script src="word-counter.js" defer></script> </div> 
+       <i class="iconfont icon-love"></i> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo Blog </span></a> <span>|</span> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span> Fluid Theme </span></a> <span>|</span> <a href="https://github.com/KEKKJ123/KEKKJ123.github.io" target="_blank" rel="nofollow noopener"><span>KEKKJ Storge</span></a> <i class="iconfont icon-love"></i> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/scripts/running_time.js"></script> </div> 
     </div>
   
   
@@ -785,8 +784,11 @@
 
   
   
+  <!-- 此处格式同步 footer 参数 -->
+  <div style="font-size: 0.85rem">
+    <span id="g-post-count-id">载入字数...</span>
+  </div>
 </div>
-
   </footer>
 
   <!-- Scripts -->
@@ -952,7 +954,9 @@
 <script  src="/js/boot.js" ></script>
 
 
-  
+  <script type="text/javascript">
+    document.getElementById("g-post-count-id").innerHTML = "小世界总字数 40k";
+</script>
 
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
