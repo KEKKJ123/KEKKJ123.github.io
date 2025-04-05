@@ -467,10 +467,10 @@
 
 <h2 id="导航栏修改和自定义图标的添加"><a href="#导航栏修改和自定义图标的添加" class="headerlink" title="导航栏修改和自定义图标的添加"></a>导航栏修改和自定义图标的添加</h2><p>加入开往项目的一个要求就是把开往外链放在<a target="_blank" rel="noopener" href="https://www.travellings.cn/docs/join.html#%E7%BD%91%E7%AB%99%E5%B7%B2%E6%94%BE%E7%BD%AE%E5%BC%80%E5%BE%80%E5%A4%96%E9%93%BE"><strong>打开网站就能看到的地方</strong></a>。刚好想修改下导航栏，说干就干。</p>
 <p>由于 Fluid 主题自带图标库没有合适的，还需要额外导入。我这里选择的是 <code>travelling</code>。</p>
-<h3 id="添加自定义图标"><a href="#添加自定义图标" class="headerlink" title="添加自定义图标"></a>添加自定义图标</h3><p>① 根据<a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/icon/#%E5%86%85%E7%BD%AE%E7%A4%BE%E4%BA%A4%E5%9B%BE%E6%A0%87">主题指南</a>，将选好的图标添加到购物车，然后直接点击<strong>下载代码</strong>。</p>
-<p>② 将下载的压缩包中的 <code>download.zip/font_xxxxxxxx/iconfont.css</code> 提取到博客目录里面。</p>
+<h3 id="添加自定义图标"><a href="#添加自定义图标" class="headerlink" title="添加自定义图标"></a>添加自定义图标</h3><p>① 根据<a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/icon/#%E5%86%85%E7%BD%AE%E7%A4%BE%E4%BA%A4%E5%9B%BE%E6%A0%87">主题指南</a>，将选好的图标添加到购物车，然后直接点击<strong>下载代码</strong>，会得到 <code>download.zip</code>。</p>
+<p>② 进入压缩包文件夹 <code>/font_xxxxxxxx</code>，将 <code>iconfont.css</code> 和 <code>iconfont.ttf</code> 提取到博客目录里面。</p>
 <ul>
-<li>作者的路径是 <code>source/icon-font-css/travelling/iconfont.css</code>，但你可以自己修改路径。</li>
+<li>作者的路径是 <code>/source/icon-font-css/travelling/iconfont.css</code>，但你可以自己修改路径。</li>
 </ul>
 <p>③ 进入主题配置文件 <code>_config.fluid.yml</code>，指定自定义 <code>.css</code> 文件路径。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">custom_css:</span> <br>  <span class="hljs-bullet">-</span> <span class="hljs-string">/icon-font-css/travelling/iconfont.css</span><br></code></pre></td></tr></table></figure>
