@@ -1,4 +1,4 @@
 // 本插件不生效，请转到 node_modules\hexo-theme-fluid\scripts\theme_inject.js
-hexo.extend.filter.register('theme_inject', function(injects) {
-  injects.bodyEnd.file('showword', 'source/_inject/word_total.ejs', { key: 'value' }, -1);
-});
+// hexo.extend.filter.register('theme_inject', function(injects) {
+//   injects.bodyEnd.file('showword', 'source/_inject/word_total.ejs', { key: 'value' }, -1);
+// });
