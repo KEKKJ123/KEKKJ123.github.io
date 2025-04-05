@@ -5,4 +5,5 @@ Disallow: /categories/*
 Disallow: /tags/*
 Disallow: /archives/*
 Disallow: /page/*
+Disallow: /Temporary_Storage/
 Sitemap: https://kekkj123.github.io/sitemap.xml
