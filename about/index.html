@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="/img/Blog_Saturn.png">
   <link rel="icon" href="/img/Blog_Saturn.png">
   
-    <link rel="canonical" href="https://kekkj123.github.io/posts/YARKMFD_Development_LOG/"/>
+    <link rel="canonical" href="https://kekkj123.github.io/about/"/>
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
@@ -23,11 +23,11 @@
   <meta name="author" content="KEKKJ">
   <meta name="keywords" content="KEKKJ">
   
-    <meta name="description" content="**YARK Multifunctional Display（YARK-MFD） **是一个程序，它使用 YARK 插件通过 TCP 连接来获取飞行数据，并将其显示在单独的窗口中。 YARK-MFD 拥有许多实用功能，包括但不限于：导航球、极简的轨道界面、星下点轨迹、第一人称对接界面等。 某次偶然发现了这个 mod 并很感兴趣，但由于它目前发布的版本仅支持原版星系。 作者灵光一闪，顺手 Fork">
+    <meta name="description" content="KEKKJ 的个人博客，分享各种技术教程和生活碎碎念。">
   
   
   
-  <title>YARK-MFD 编译开发日志 - KEKKJ BLOG - 小世界的一瞥</title>
+  <title>关于 - KEKKJ BLOG - 小世界的一瞥</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -119,7 +119,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 70vh;">
+<div class="header-inner" style="height: 60vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -267,69 +267,15 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/ApolloSoyuz.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">YARK-MFD 编译开发日志</span>
+            <span id="subtitle">关于</span>
           
         </div>
-
-        
-          
-  <div class="mt-3">
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-author" aria-hidden="true"></i>
-        KEKKJ
-      </span>
-    
-    
-      <span class="post-meta">
-        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-03-12 17:02" pubdate>
-          2025年3月12日 下午
-        </time>
-      </span>
-    
-  </div>
-
-  <div class="mt-1">
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-chart"></i>
-        
-          261 字
-        
-      </span>
-    
-
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-clock-fill"></i>
-        
-        
-        
-          2 分钟
-        
-      </span>
-    
-
-    
-    
-      
-        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
-          <i class="iconfont icon-eye" aria-hidden="true"></i>
-          <span id="leancloud-page-views"></span> 阅读
-        </span>
-        
-      
-      
-    
-  </div>
-
 
         
       </div>
@@ -345,153 +291,189 @@
 
   <main>
     
+      <div class="container nopadding-x-md">
+        <div id="board"
+          >
+          
+            <div class="about-avatar">
+              <img src="/img/Avatar.jpg" srcset="/img/loading.gif" lazyload class="img-fluid" alt="avatar">
+            </div>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<div class="text-center">
+  <div class="about-info">
+    <div class="about-name">KEKKJ</div>
+    <div class="about-intro">一只细节怪鸽子🕊</div>
+    <div class="about-icons">
       
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <h1 id="seo-header">YARK-MFD 编译开发日志</h1>
-            
-              <p id="updated-time" class="note note-info" style="display: none">
-                
-                  
-                    本文最后更新于 2025-04-06T05:38:31+08:00
-                  
-                  
-
-                
-              </p>
-            
-            
-              <div class="markdown-body">
-                
-                <blockquote>
-<p><font color=gray>**YARK Multifunctional Display（YARK-MFD） **是一个程序，它使用 <a target="_blank" rel="noopener" href="https://forum.kerbalspaceprogram.com/index.php?/topic/176833-*/">YARK</a> 插件通过 TCP 连接来获取飞行数据，并将其显示在单独的窗口中。</font></p>
-<p><font color=gray>YARK-MFD 拥有许多实用功能，包括但不限于：导航球、<em>极简的</em>轨道界面、星下点轨迹、第一人称对接界面等。</font></p>
-<p><font color=gray>某次偶然发现了这个 mod 并很感兴趣，但由于它目前发布的版本仅支持原版星系。</font></p>
-<p><font color=gray>作者灵光一闪，<em>顺手</em> Fork 了仓库，于是开始了痛苦的开发之路。</font></p>
-</blockquote>
-<hr>
-<p>各位小绿人你们好，欢迎阅读<strong>超越历史</strong>系列专栏！</p>
-<p>当作者意识到自己在做什么的时候，他的手已经下载并安装了 VS 2019。</p>
-<p>为什么不用 VS 2022？也许是为了避免<em>可能</em>出现的跨版本问题。尽管在配环境的过程中，VS 之外的运行库也给了我不小的麻烦。</p>
-<h2 id="一、环境配置"><a href="#一、环境配置" class="headerlink" title="一、环境配置"></a>一、环境配置</h2><p>根据作者的<code>Lib/about libs.txt</code>，我们需要安装以下运行库。<strong>SDL2</strong>，<strong>glew-2.0.0</strong>，<strong>glm</strong>，<strong>freetype</strong></p>
-<p><a class="btn" href="url" title="title">text</a></p>
-
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
         
-  <a href="/categories/KSP/" class="category-chain-item">KSP</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/KSP/%E8%B6%85%E8%B6%8A%E5%8E%86%E5%8F%B2%E7%B3%BB%E5%88%97/" class="category-chain-item">超越历史系列</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
+        
+        
+        <a href=https://github.com/KEKKJ123 class="
+           hint--bottom hint--rounded"
+           aria-label="GitHub"
+           target="_blank"
+        >
+          <i class="iconfont icon-github-fill" aria-hidden="true"></i>
+          
+        </a>
+      
+        
+        
+        
+        <a href=https://space.bilibili.com/446160338 class="
+           hint--bottom hint--rounded"
+           aria-label="Bilibili"
+           target="_blank"
+        >
+          <i class="iconfont icon-bilibili-fill" aria-hidden="true"></i>
+          
+        </a>
+      
+        
+        
+        
+        <a href=mailto:kekkj123@qq.com class="
+           hint--bottom hint--rounded"
+           aria-label="Mail"
+           target="_blank"
+        >
+          <i class="iconfont icon-mail" aria-hidden="true"></i>
+          
+        </a>
+      
+        
+        
+        
+        <a href=/RSS_atom.xml class="
+           hint--bottom hint--rounded"
+           aria-label="RSS"
+           target="_blank"
+        >
+          <i class="iconfont icon-rss-fill" aria-hidden="true"></i>
+          
+        </a>
+      
     </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/Tutorial/" class="print-no-link">#Tutorial</a>
-      
-        <a href="/tags/Game/" class="print-no-link">#Game</a>
-      
-    </div>
-  
+  </div>
 </div>
 
+<article class="about-content page-content mt-5">
+  <div class="markdown-body">
+    <h2 id="Welcome-to-KEKKJ-BLOG！"><a href="#Welcome-to-KEKKJ-BLOG！" class="headerlink" title="Welcome to KEKKJ BLOG！"></a>Welcome to KEKKJ BLOG！</h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs Text">    __ __ ________ __ __ __    __     ____  __    ____  ______<br>   / //_// ____/ //_// //_/   / /    / __ )/ /   / __ \/ ____/<br>  / ,&lt;  / __/ / ,&lt;  / ,&lt; __  / /    / __  / /   / / / / / __  <br> / /| |/ /___/ /| |/ /| / /_/ /    / /_/ / /___/ /_/ / /_/ /  <br>/_/ |_/_____/_/ |_/_/ |_\____/    /_____/_____/\____/\____/   <br></code></pre></td></tr></table></figure>
 
-              
-  
+<p>你好，这里是我的个人博客，<strong>KEKKJ BLOG</strong>！</p>
+<p>本博客基于 <code>Hexo 7.3.0</code> 和 <code>Fluid Theme 1.9.8</code> 构建和渲染，并部署于 <a target="_blank" rel="noopener" href="https://pages.github.com/">Github Page</a>。</p>
+<p>这里是我的思想窗口。目前的主要作用是充当<a href="/archives/">仓库</a><font color=gray><del>垃圾桶</del></font>。</p>
+<p>当然，也会随时丢一些自己想到的<a href="/Temporary_Storage/">奇怪东西</a>。</p>
+<p>目前的创作内容主要有四个大类：<a href="/categories/%E9%9A%8F%E7%BC%98%E6%89%8B%E8%AE%B0/">随缘手记</a>，<a href="/categories/KSP/">坎巴拉教程</a>，<a href="/tags/Tutorial/">学习笔记和教程</a>，以及<a href="/categories/Tool/">实用资源or网站分享</a>。</p>
+<p>Bing 已收录本博客文章，而 Google 由于未知原因仅能读取首页。</p>
+<h2 id="问与答-Q-A"><a href="#问与答-Q-A" class="headerlink" title="问与答 - Q&amp;A"></a>问与答 - Q&amp;A</h2><ul>
+<li><h3 id="为什么叫-KEKKJ？"><a href="#为什么叫-KEKKJ？" class="headerlink" title="为什么叫 KEKKJ？"></a>为什么叫 KEKKJ？</h3></li>
+</ul>
+<p>灵感源于游戏 Kerbal Space Program（KSP）的<a target="_blank" rel="noopener" href="https://forum.kerbalspaceprogram.com/topic/182150-*/">行星际转移路线</a>。</p>
+<ul>
+<li><h3 id="你有什么爱好or习惯？能简单说下吗？"><a href="#你有什么爱好or习惯？能简单说下吗？" class="headerlink" title="你有什么爱好or习惯？能简单说下吗？"></a>你有什么爱好or习惯？能简单说下吗？</h3></li>
+</ul>
+<p><font color=6a737d>三言两语说清楚一个人的喜好是不现实的！但我会尽量简洁一点。</font></p>
+<p>我喜欢航天，也喜欢玩航天模拟游戏，目前正在创作自己的 KSP-RP1 视频系列，即<a target="_blank" rel="noopener" href="https://space.bilibili.com/446160338/channel/collectiondetail?sid=893836"><strong>超越历史</strong></a>。</p>
+<p>我玩 MC 很多年了，主要倾向生存红石电路（生电），但很菜 : P</p>
+<p>我还是个粥批，也欢迎一起交流舟！<font color=6a737d><del>（果然这样介绍自己还是会不好意思吗）</del></font></p>
+<p>平时还常看些科普，包括但不限于数码区、科技区等。</p>
+<ul>
+<li><h3 id="为什么叫-KEKKJ-BLOG？"><a href="#为什么叫-KEKKJ-BLOG？" class="headerlink" title="为什么叫 KEKKJ BLOG？"></a>为什么叫 KEKKJ BLOG？</h3></li>
+</ul>
+<p>KEKKJ 的博客叫这个名字当然很合理，不是吗？</p>
+<ul>
+<li><h3 id="为什么建立博客？"><a href="#为什么建立博客？" class="headerlink" title="为什么建立博客？"></a>为什么建立博客？</h3></li>
+</ul>
+<p>最早知道博客是由于 Duck 的 <a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv3527353/">KSP-FAQ</a>，但并未深入了解。</p>
+<p>后苦于B站专栏的维护异常困难，同时多平台文章同步极为不便，以及<a href="/categories/%E9%9A%8F%E7%BC%98%E6%89%8B%E8%AE%B0/">随缘手记</a>的创作等一系列因素。</p>
+<p>最后，本人在假期的某天灵光一现，决定创建个人博客。这就是本站的由来。</p>
+<ul>
+<li><h3 id="关于自己，还有想补充的吗？"><a href="#关于自己，还有想补充的吗？" class="headerlink" title="关于自己，还有想补充的吗？"></a>关于自己，还有想补充的吗？</h3></li>
+</ul>
+<p>我并不擅长编程，但兴趣使然，我依然学会了很多有用的技能。</p>
+<p>我喜欢接触新事物，并尽可能保持这个习惯，至少我希望自己正在这样做。</p>
+<p>如果你愿意，可以通过我给出的任一联系方式与我联系。只要讲明来意，我不会拒绝的。</p>
+<ul>
+<li><h3 id="我知道这有点过于鸡汤了。但你有什么想对求学者说的吗？"><a href="#我知道这有点过于鸡汤了。但你有什么想对求学者说的吗？" class="headerlink" title="我知道这有点过于鸡汤了。但你有什么想对求学者说的吗？"></a>我知道这有点过于鸡汤了。但你有什么想对求学者说的吗？</h3></li>
+</ul>
+<p>无论是哪个方面，我肯定都赶不上其他的博客前辈们。但这并不影响我讨论自己的经历，即使很幼稚。</p>
+<p>对我来说，头破血流总好过一事无成，况且我并没有到不该莽撞的年纪。所以，大胆去尝试就好。</p>
+<p>随附<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1i2sKeAEKV/">一个视频</a>。</p>
+<ul>
+<li><h3 id="这个章节会慢慢更新。"><a href="#这个章节会慢慢更新。" class="headerlink" title="这个章节会慢慢更新。"></a>这个章节会慢慢更新。</h3></li>
+</ul>
+<p><font color=6a737d><del>如果作者想起来的话</del></font></p>
+<h2 id="时间线-TimeLine"><a href="#时间线-TimeLine" class="headerlink" title="时间线 - TimeLine"></a>时间线 - TimeLine</h2><ul>
+<li>2024.08.12 创立博客，名称：<code>KEKKJ的个人博客</code></li>
+<li>2024.08.13 应用 <a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid"><strong>Fluid</strong></a> 主题，添加 <a target="_blank" rel="noopener" href="https://giscus.app/"><strong>Giscus</strong></a> 评论系统，并逐步迁移其他平台文章</li>
+<li>2024.08.27 接入 <a target="_blank" rel="noopener" href="https://www.bing.com/search?q=site:kekkj123.github.io"><strong>Bing</strong></a> 和 <a target="_blank" rel="noopener" href="https://www.google.com/search?q=site:kekkj123.github.io"><strong>Google</strong></a> 搜索引擎</li>
+<li>2024.12.19 网链全面弃用纯数字命名</li>
+<li>2024.12.20 接入 Bing <a target="_blank" rel="noopener" href="https://www.bing.com/indexnow/getstarted#implementation"><strong>IndexNow</strong></a></li>
+<li>2024.12.24 博客名称更新：<code>KEKKJ BLOG</code></li>
+<li>2024.12.25 页尾新增<strong>网站运行时间</strong></li>
+<li>2024.12.26 导航栏新增<a href="/about/"><strong>关于</strong></a>页</li>
+<li>2024.12.27 导航栏接入<a target="_blank" rel="noopener" href="https://www.travellings.cn/go.html"><strong>开往</strong></a>外链</li>
+<li>2025.03.02 重启用 <a href="/tags/"><strong>Tag</strong></a> 页</li>
+<li>2025.03.04 图源全面弃用中文命名</li>
+<li>2025.03.05 开往<a target="_blank" rel="noopener" href="https://github.com/travellings-link/travellings/issues/2929"><strong>收录申请</strong></a>通过</li>
+<li>2025.03.16 添加 <a href="/RSS_atom.xml"><strong>RSS</strong></a> 订阅功能</li>
+<li>2025.04.05 页尾新增<strong>全站字数统计</strong>，导航栏新增<a href="/Temporary_Storage/"><strong>书签</strong></a></li>
+<li>To be continued …</li>
+</ul>
+<h2 id="TODO-List"><a href="#TODO-List" class="headerlink" title="TODO List"></a>TODO List</h2>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-84cdb52a" role="button" aria-expanded="false" aria-controls="collapse-84cdb52a">
+        <div class="fold-arrow">▶</div>文章创作清单
+      </div>
+      <div class="fold-collapse collapse" id="collapse-84cdb52a">
+        <div class="fold-content">
+          <ul><li><p>KSP 与航天科普向</p></li><li><p>自述（持续更新 ing）</p></li><li><p>博客的建站知识合集</p></li><li><p>RoboMaster 学习笔记</p></li><li><p>其他实用技能</p></li></ul>
+        </div>
+      </div>
+    </div>
 
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>YARK-MFD 编译开发日志</div>
-      <div>https://kekkj123.github.io/posts/YARKMFD_Development_LOG/</div>
+
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-8b99543b" role="button" aria-expanded="false" aria-controls="collapse-8b99543b">
+        <div class="fold-arrow">▶</div>博客功能完善
+      </div>
+      <div class="fold-collapse collapse" id="collapse-8b99543b">
+        <div class="fold-content">
+          <ul><li><p>弹幕留言板</p></li><li><p>友链更多信息及分类</p></li><li><p><font color=6a737d><del>Tag 页面重启用</del></font>——已完成</p></li><li><p><strong>关于</strong>页英文版——计划中</p></li></ul>
+        </div>
+      </div>
     </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>KEKKJ</div>
+
+
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-5c31b970" role="button" aria-expanded="false" aria-controls="collapse-5c31b970">
+        <div class="fold-arrow">▶</div>SEO 优化和长期计划
+      </div>
+      <div class="fold-collapse collapse" id="collapse-5c31b970">
+        <div class="fold-content">
+          <ul><li><p><font color=6a737d><del>RSS 订阅链接</del></font>——已完成</p></li><li><p>网站独立域名——暂无计划</p></li><li><p>加入博客圈合作计划</p></li><li><p>本地备份</p></li><li><p>异地备份（网盘备份）</p></li></ul>
         </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2025年3月12日</div>
-        </div>
-      
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-cc-by"></i>
-                  </span>
-                </a>
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
-                    <i class="iconfont icon-cc-sa"></i>
-                  </span>
-                </a>
-              
-            
-          </div>
-        </div>
-      
+      </div>
     </div>
-    <div class="license-icon iconfont"></div>
+
+<p>To be continued …</p>
+
   </div>
 
-
-
-              
-            </div>
-
-            
   
-  
+    <!-- Comments -->
     <article id="comments" lazyload>
+      
+      
+        
+      
       
     <div id="giscus" class="giscus"></div>
     <script type="text/javascript">
@@ -531,61 +513,39 @@
 
     </article>
   
+</article>
 
 
-          </article>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header">
-    <i class="iconfont icon-list"></i>
-    <span>目录</span>
-  </p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
     
 
     
@@ -691,73 +651,6 @@
   
 
 
-
-
-  
-<script>
-  var relativeDate = function() {
-    var updatedTime = document.getElementById('updated-time');
-    if (updatedTime) {
-      var text = updatedTime.textContent;
-      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
-      var matchs = text.match(reg);
-      if (matchs) {
-        var relativeTime = moment(matchs[0]).fromNow();
-        updatedTime.textContent = text.replace(reg, relativeTime);
-      }
-      updatedTime.style.display = '';
-    }
-  };
-  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
-    if (!'zh-cn'.startsWith('en')) {
-      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
-        relativeDate();
-      });
-    } else {
-      relativeDate();
-    }
-  });
-</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
-
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
-  });
-</script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
