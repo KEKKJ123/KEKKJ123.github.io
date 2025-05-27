@@ -1,6 +1,7 @@
 # robots.txt generated at http://www.w3cschool.cn/
 User-agent: *
 Disallow: /posts/suiyuan/*
+Disallow: /posts/LifeEpisode/*
 Disallow: /categories/*
 Disallow: /tags/*
 Disallow: /archives/*
