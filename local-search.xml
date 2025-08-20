@@ -4,16 +4,18 @@
   
   
   <entry>
-    <title>最傻瓜的i学刷时长方案</title>
-    <link href="/posts/Tools/Unlimited_Idle_Time_for_Readoor/"/>
-    <url>/posts/Tools/Unlimited_Idle_Time_for_Readoor/</url>
+    <title>简单的 PVZ 金钱修改方法</title>
+    <link href="/posts/PVZ_saves_money_modify/"/>
+    <url>/posts/PVZ_saves_money_modify/</url>
     
-    <content type="html"><![CDATA[<blockquote><p>免责声明：本教程仅供爱好者学习代码原理，不得用于商业或者非法用途。否则后果自负。</p><p>若有侵权，请务必通过本站<strong>关于</strong>页的邮箱联系处理。</p></blockquote><hr><h2 id="太长不看版"><a href="#太长不看版" class="headerlink" title="太长不看版"></a>太长不看版</h2><p>非常简单，只需要调出开发者工具，禁用 JavaScript 即可。</p><p>勾选期间，计时器会冻结，但不影响真正的计时。取消勾选后就可以看到真实的计时时长。</p><h2 id="也许是原理"><a href="#也许是原理" class="headerlink" title="也许是原理"></a><em>也许是</em>原理</h2><p>猜测网站内置计时器实为插件，禁用后则无法运行。</p><p>而计时器会自动累计<em>经过的时间</em>，只有显示部分涉及到了 JavaScript。所以不会影响到真正的时间。</p><p>作者抛砖引玉，若有大佬还望讲解！</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p><font color=gray>博主喜欢打全成就，最近在打植物大战僵尸。</font></p><p><font color=gray>但游戏里有个养智慧树到100英尺的成就，古法刷钱刷到肝疼。</font></p><p><font color=gray>刚好在 Steam 上知道了游戏存档的位置，于是查了下修改方法，减少不必要的工作。</font></p></blockquote><hr><h2 id="一、找到游戏存档"><a href="#一、找到游戏存档" class="headerlink" title="一、找到游戏存档"></a>一、找到游戏存档</h2><p>PVZ存档位置：<code>Steam的安装位置\Steam\userdata\你的好友代码\3590\remote</code></p><p>比如，作者的存档位置就是 <code>C:\Program Files (x86)\Steam\userdata\一串数字\3590\remote</code></p><p>好友代码：打开Steam客户端，点击左上角<strong>好友</strong>—<strong>添加好友</strong>—<strong>您的好友代码</strong></p><p>打开 <code>remote</code> 文件夹后，你会看到一堆文件，它们可以分为三类。</p><p>game 开头的是关卡数据，“user+数字”的是玩家数据，而“users”记录的是所有玩家的ID等信息。</p><p>显而易见的，金钱需要在玩家数据里修改。</p><h2 id="二、下载十六进制文本编辑器"><a href="#二、下载十六进制文本编辑器" class="headerlink" title="二、下载十六进制文本编辑器"></a>二、下载十六进制文本编辑器</h2><p>PVZ 存档数据都是以<code>.dat</code>文件保存的，普通的文本编辑器会显示乱码。</p><p>所以我们需要一个专门的编辑器来修改数据，这里使用软件 HxD 。</p><p>进入 <a href="https://mh-nexus.de/en/hxd/">HxD 官网</a>，向下翻动，寻找 Download page，点击进入后会有一堆国家语言。</p><p>找到 **Chinese (simplified)**，点击右边的 <strong>Download per HTTPS</strong> 即可下载。</p><p>下载的压缩包里只有一个.exe文件，可以不解压直接双击安装。</p><p>接下来按照安装包的流程即可。</p><h2 id="三、修改存档数据"><a href="#三、修改存档数据" class="headerlink" title="三、修改存档数据"></a>三、修改存档数据</h2><p><strong>建议在修改前先备份数据，防止意外。</strong></p><p>打开 HxD 后，点击左上角<strong>文件</strong>，点击<strong>打开</strong>，在弹出的窗口找到刚才的玩家数据文件。</p><p>*也可以直接将需要修改的文件拖动至 HxD 窗口</p><p>根据参考文章<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[植物大战僵尸修改存档用户名、关卡、金钱说明修改 - 掘金](https://juejin.cn/post/7108904016599318536)">[1]</span></a></sup>，行00000000，列08和09的四位数是我们需要修改的数据，即金钱。</p><p>选住四位数后，右边的编辑器 Int16 会显示你当前金钱&#x2F;10的数字，此时可以比对一下，防止改错了数据。</p><p>Int16 的最大值是 32767，在游戏中是 327670 金钱，这远低于游戏设定的最大金钱。<font color=gray><em>不过作者懒得继续研究了</em></font></p><p>关闭软件时提示保存修改，点保存即可。</p><h2 id="四、启动游戏"><a href="#四、启动游戏" class="headerlink" title="四、启动游戏"></a>四、启动游戏</h2><p>启动 PVZ 时，Steam 会提示本地文件与云存档不符，选择本地文件即可。</p><p>进入游戏后，你应该会发现金钱已经被修改成功！</p><h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://juejin.cn/post/7108904016599318536">植物大战僵尸修改存档用户名、关卡、金钱说明修改 - 掘金</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2779596685">植物大战僵尸 汉化中文指南 - Steam 社区</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3279974183">【植物大战僵尸】多功能指南 - Steam 社区</a><a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2879512369">非steam版PVZ存档转移到steam版的方法 - Steam 社区</a><a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
     
     
     <categories>
       
       <category>Tool</category>
+      
+      <category>Games</category>
       
     </categories>
     
@@ -22,9 +24,30 @@
       
       <tag>Tutorial</tag>
       
-      <tag>Windows</tag>
+      <tag>Game</tag>
+      
+      <tag>PVZ</tag>
       
     </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>随便写写吧 - P15</title>
+    <link href="/posts/suiyuan/20250721-0725/"/>
+    <url>/posts/suiyuan/20250721-0725/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p><strong><font size="5">随缘手记 —— <em>随心而想，随缘而写</em></font></strong></p><p><font size="4"><strong>Random Essays - <em>Think as you want, write as you like.</em></strong></font></p><p>本手记最初发表于个人微信朋友圈，现已同步至个人博客和 QQ 空间，随缘更新。</p><p><strong>阅前提醒：本手记不遵循初高中文体规范，阅读时请勿联系上下文及题目。</strong></p><p><strong>手记内容仅代表个人不同时期的见解，跟不上只能说明你和作者不在同一频道。</strong></p><p><strong>请勿上纲上线。(*╹▽╹*)</strong></p></blockquote><hr><p>在过去数月的思想危机中，我无数次被噩梦惊醒，无论是虚幻还是真实的。自己好像变得不可相信，我怀疑乃至逃避，悲伤乃至绝望，痛苦乃至疯狂。这绝不是我所期望的，但我似乎无力阻挠它。</p><p>直到现在，我依然有些患得患失。得益于“茶馆”——虽然名字已不太贴切了，也许真的是“世界”——其中许多的朋友的关照，至少我可以开始回想那些黯淡的夜和刺眼的光了。我很幸运，拥有许多可以聊很深的朋友。如果不是，我会脆弱如一片已碎的玻璃，随时会摊成一地。</p><p>——结于0721，另记于0725——</p><p>我不得不悲伤的意识到，即使如今我仍在任意时空无限地闪回片段，自己回忆中的美好生活也早已一去不返了。往昔存留的温暖变成了利刃，戳破了脆弱而又矛盾的内心。相比两年前，我自己，好像并没有变多少…吗？</p><p>在永恒变动的现实生活中，总有一些东西不会被时间的涌流所裹挟，最终沉淀下来。就像吃过的食物，无论你是否记住，它都变成了你血肉的一部分。七年前，那时幼稚但真诚的行为带给我无尽的欺辱，而后我学会了伪装；四年前，那时对意义的思考曾一度让我绝望，而后我学会了遗忘；两年前，那时我人生中最幸福的时光让我有了希望，尽管一年前的我早已知晓结局。过去的特定事件和感官叠加并无过多含义，只是给我的印象最为深刻，以至于压过了其他幸福或痛苦的部分。然而很遗憾，我的记忆力一直很糟糕，有时候我只有空间和朋友圈可供回忆，这是另一个悲伤的故事。</p><p>我害怕失去，无论是带有重要意义的物品，还是携有关键记忆的信息，小到物品，大到环境，没有人不害怕失去。如果一个人没有可以失去的了，那他也没有可以牵挂的了。那我有牵挂吗？其实是有的。但在负作用的压倒性胜利下，并没有不超越牵挂结束的可能。这对任何人都一样。说得对，人最重要的只有两件事，吃和快乐。一个负责物质，一个负责精神。</p><p>我喜欢我的小世界，无论是虚拟还是现实的。他们也许是我的赛博宠物——或者用西方的说法，家人——这也许是表达欲的转移，而当我深入思考自己的用意时，这几乎总会导致自我猜疑的困境，尽管其行为是无意的。</p><p>也许是emo，也许是反思，也许是深究，也许是追忆。行为的本身并不重要，记录的当下才是重要的。</p><p>所以？</p><p>还是早点睡吧。<br>只当这是一个梦境，一个没那么美好、也没那么糟的梦境。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随缘手记</category>
+      
+    </categories>
+    
     
   </entry>
   

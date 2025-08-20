@@ -6,7 +6,7 @@
   <link href="https://kekkj123.github.io/RSS_atom.xml" rel="self"/>
   
   <link href="https://kekkj123.github.io/"/>
-  <updated>2025-05-27T11:35:04.000Z</updated>
+  <updated>2025-08-20T04:19:06.000Z</updated>
   <id>https://kekkj123.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>最傻瓜的i学刷时长方案</title>
-    <link href="https://kekkj123.github.io/posts/Tools/Unlimited_Idle_Time_for_Readoor/"/>
-    <id>https://kekkj123.github.io/posts/Tools/Unlimited_Idle_Time_for_Readoor/</id>
-    <published>2025-05-27T11:35:03.000Z</published>
-    <updated>2025-05-27T11:35:04.000Z</updated>
+    <title>简单的 PVZ 金钱修改方法</title>
+    <link href="https://kekkj123.github.io/posts/PVZ_saves_money_modify/"/>
+    <id>https://kekkj123.github.io/posts/PVZ_saves_money_modify/</id>
+    <published>2025-08-20T04:19:05.000Z</published>
+    <updated>2025-08-20T04:19:06.000Z</updated>
     
     
       
@@ -29,11 +29,9 @@
         
         
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;免责声明：本教程仅供爱好者学习代码原理，不得用于商业或者非法用途。否则后果自负。&lt;/p&gt;
-&lt;p&gt;若有侵权，请务必通过本站&lt;strong&gt;关于&lt;/strong&gt;页的邮箱联系处理。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2</summary>
+&lt;p&gt;&lt;font color=gray&gt;博主喜欢打全成就，最近在打植物大战僵尸。&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font color=gray&gt;但游戏里有个养智慧树到100英尺的成就，古法刷钱刷到肝疼。&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font</summary>
         
       
     
@@ -41,10 +39,39 @@
     
     <category term="Tool" scheme="https://kekkj123.github.io/categories/Tool/"/>
     
+    <category term="Games" scheme="https://kekkj123.github.io/categories/Tool/Games/"/>
+    
     
     <category term="Tutorial" scheme="https://kekkj123.github.io/tags/Tutorial/"/>
     
-    <category term="Windows" scheme="https://kekkj123.github.io/tags/Windows/"/>
+    <category term="Game" scheme="https://kekkj123.github.io/tags/Game/"/>
+    
+    <category term="PVZ" scheme="https://kekkj123.github.io/tags/PVZ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>随便写写吧 - P15</title>
+    <link href="https://kekkj123.github.io/posts/suiyuan/20250721-0725/"/>
+    <id>https://kekkj123.github.io/posts/suiyuan/20250721-0725/</id>
+    <published>2025-07-20T16:48:30.000Z</published>
+    <updated>2025-07-24T16:48:31.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;font size=&quot;5&quot;&gt;随缘手记 —— &lt;em&gt;随心而想，随缘而写&lt;/em&gt;&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font size=&quot;4&quot;&gt;&lt;strong&gt;Random Essays - &lt;em&gt;Think</summary>
+        
+      
+    
+    
+    
+    <category term="随缘手记" scheme="https://kekkj123.github.io/categories/%E9%9A%8F%E7%BC%98%E6%89%8B%E8%AE%B0/"/>
+    
     
   </entry>
   
@@ -118,29 +145,6 @@
     
     
     <category term="随缘手记" scheme="https://kekkj123.github.io/categories/%E9%9A%8F%E7%BC%98%E6%89%8B%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>我曾拥有的日子</title>
-    <link href="https://kekkj123.github.io/posts/LifeEpisode/20250408/"/>
-    <id>https://kekkj123.github.io/posts/LifeEpisode/20250408/</id>
-    <published>2025-04-08T08:20:14.000Z</published>
-    <updated>2025-04-08T08:20:14.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86</summary>
-        
-      
-    
-    
-    
-    <category term="回忆片段" scheme="https://kekkj123.github.io/categories/%E5%9B%9E%E5%BF%86%E7%89%87%E6%AE%B5/"/>
     
     
   </entry>
