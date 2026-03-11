@@ -1,0 +1,1022 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=dark>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Blog_Saturn.png">
+  <link rel="icon" href="/img/Blog_Saturn.png">
+  
+    <link rel="canonical" href="https://kekkj123.github.io/posts/Tools/Android_APP_Version_Rollback/"/>
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="KEKKJ">
+  <meta name="keywords" content="KEKKJ">
+  
+    <meta name="description" content="为何要回退版本？难道紧跟最新版本不好吗？请看： 广告众多——即使开启简洁模式依然防不胜防； 功能繁杂——某网盘软件能刷视频、看新闻，甚至是借贷； 性能低下——不仅占用空间大，而且运行起来很卡，手机发烫。 阅前提醒：本文章仅为抛砖引玉，用于技术交流。本人不对他人回退软件版本的影响负责，包括但不限于，账号被风控or封禁、数据损坏或丢失、安装盗版软件导致个人隐私泄露等各种影响。   零、真正需要注意的">
+  
+  
+  
+  <title>安卓软件降级指南 - KEKKJ BLOG - 小世界的一瞥</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/icon-font-css/travelling/iconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"kekkj123.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":50,"cursorChar":"_","loop":false,"scope":"home"},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"#"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-9E1Z9RDTPM"},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"ZQprfmfI0LYS9JMbW9dfSh7S-gzGzoHsz","app_key":"LPar9cIawJj3p5BljrrEYtOC","server_url":"https://zqprfmfi.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-08-12T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-9E1Z9RDTPM", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-9E1Z9RDTPM');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/RSS_atom.xml" title="KEKKJ BLOG - 小世界的一瞥" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>KEKKJ BLOG</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/%E9%9A%8F%E7%BC%98%E6%89%8B%E8%AE%B0/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>手记</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                <span>目录</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/archives/" target="_self">
+                    <i class="iconfont icon-archive-fill"></i>
+                    <span>归档</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/" target="_self">
+                    <i class="iconfont icon-category-fill"></i>
+                    <span>分类</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/" target="_self">
+                    <i class="iconfont icon-tags-fill"></i>
+                    <span>标签</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/Temporary_Storage/" target="_self">
+                    <i class="iconfont icon-bookmark"></i>
+                    <span>书签</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.travellings.cn/go.html" target="_self">
+                <i class="iconfont icon-travelling"></i>
+                <span>开往</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/RSS_atom.xml" target="_self">
+                <i class="iconfont icon-rss-fill"></i>
+                <span></span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/ApolloSoyuz.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">安卓软件降级指南</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        KEKKJ
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-01-23 19:54" pubdate>
+          2026年1月23日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          10 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 阅读
+        </span>
+        
+      
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Tool"
+        id="heading-d421fd439cd14456726791338b3b397e" role="tab" data-toggle="collapse" href="#collapse-d421fd439cd14456726791338b3b397e"
+        aria-expanded="true"
+      >
+        Tool
+        <span class="list-group-count">(5)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-d421fd439cd14456726791338b3b397e"
+           role="tabpanel" aria-labelledby="heading-d421fd439cd14456726791338b3b397e">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/Webs/" title="实用网站自存（持续更新）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">实用网站自存（持续更新）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/Tools/SkipAD/" title="跳广告软件推荐"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">跳广告软件推荐</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/Tools/Remove_WinNTSetup_cmd_Context_Menu/" title="回退 WinNTSetup 修改 cmd 右键菜单"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">回退 WinNTSetup 修改 cmd 右键菜单</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/Tools/Android_APP_Version_Rollback/" title="安卓软件降级指南"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">安卓软件降级指南</span>
+        </a>
+      
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Games"
+        id="heading-251bd8143891238ecedc306508e29017" role="tab" data-toggle="collapse" href="#collapse-251bd8143891238ecedc306508e29017"
+        aria-expanded="false"
+      >
+        Games
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-251bd8143891238ecedc306508e29017"
+           role="tabpanel" aria-labelledby="heading-251bd8143891238ecedc306508e29017">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/PVZ_saves_money_modify/" title="简单的 PVZ 金钱修改方法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">简单的 PVZ 金钱修改方法</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">安卓软件降级指南</h1>
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2026-03-12T01:27:12+08:00
+                  
+                  
+
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p><font color=gray>为何要回退版本？难道紧跟最新版本不好吗？请看：</font></p>
+<p><font color=gray>广告众多——即使开启简洁模式依然防不胜防；</font></p>
+<p><font color=gray>功能繁杂——某网盘软件能刷视频、看新闻，甚至是借贷；</font></p>
+<p><font color=gray>性能低下——不仅占用空间大，而且运行起来很卡，手机发烫。</font></p>
+<p><strong>阅前提醒：本文章仅为抛砖引玉，用于技术交流。本人不对他人回退软件版本的影响负责，包括但不限于，账号被风控or封禁、数据损坏或丢失、安装盗版软件导致个人隐私泄露等各种影响。</strong></p>
+</blockquote>
+<hr>
+<h2 id="零、真正需要注意的事"><a href="#零、真正需要注意的事" class="headerlink" title="零、真正需要注意的事"></a>零、真正需要注意的事</h2><ul>
+<li><p>数据无价，提前备份：版本回退后，部分本地数据，尤其是<strong>聊天软件的聊天记录</strong>等重要数据可能无法一同迁移到旧版本。所以，请务必提前备份好重要数据，以防意外丢失。</p>
+</li>
+<li><p>时效性：过旧的软件版本可能会被强制停用，尤其是腾讯、阿里系这种自带版本审查的软件。所以，作者给出的软件版本可能<strong>已经过时</strong>。</p>
+</li>
+<li><p>千人千面：由于机型、系统架构等原因，作者测试成功的版本<strong>不一定</strong>在你的手机能运行。</p>
+</li>
+<li><p>功能缺失：作者认为无用的冗余功能，在你这里可能是有用的。如有需求，可以自行测试和筛选版本。</p>
+</li>
+<li><p>由于降级安装功能在 Android 15+ 系统需要 ROOT 权限，<strong>本方法可能无法适用最新款安卓手机！<font color=gray></strong><del>（F**k u, Android）</del></font></p>
+</li>
+<li><p>To be continue…</p>
+</li>
+</ul>
+<h2 id="一、原理解释"><a href="#一、原理解释" class="headerlink" title="一、原理解释"></a>一、原理解释</h2><p>原理非常简单，利用软件 <strong>InstallerX</strong> 或 <strong>InstallerX Revived</strong> 的<strong>降级安装</strong>功能即可实现操作。</p>
+<p>但在这之前，大部分安卓机型都必须用<strong>授权器</strong>以覆盖系统自带的安装器。</p>
+<p>授权器可以是 <strong>ROOT 超级用户</strong>，也可以是其他提权工具，如 Shizuku，Dhizuku 等。其中，<strong>Shizuku</strong> 的兼容性和泛用度最好，使用门槛也很低。所以，我们在教程中的演示工具也是它。</p>
+<p>如果你的手机已经成功 ROOT，可以直接跳转到 [InstallerX 章节](#三、授权 InstallerX 并开启降级安装)。<font color=gray><del>（不过 ROOT 玩家真的需要看我这篇教程吗）</del></font></p>
+<p>整理一下思路，即<code>授权器（Shizuku 等） → InstallerX → 降级安装</code>。</p>
+<h3 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h3><ul>
+<li>Shizuku：<a target="_blank" rel="noopener" href="https://github.com/thedjchi/Shizuku/releases/latest">Release · thedjchi&#x2F;Shizuku</a></li>
+<li>Shizuku（旧）：<a target="_blank" rel="noopener" href="https://shizuku.rikka.app/zh-hans/download/">下载 | Shizuku</a></li>
+<li>InstallerX：<a target="_blank" rel="noopener" href="https://github.com/iamr0s/InstallerX/releases">Releases · iamr0s&#x2F;InstallerX</a></li>
+<li>InstallerX Revived：<a target="_blank" rel="noopener" href="https://github.com/wxxsfxyzm/InstallerX-Revived/releases">Releases · wxxsfxyzm&#x2F;InstallerX-Revived</a></li>
+</ul>
+<h2 id="二、启动授权器-Shizuku"><a href="#二、启动授权器-Shizuku" class="headerlink" title="二、启动授权器 Shizuku"></a>二、启动授权器 Shizuku</h2><p>Shizuku 有三种启动方法，ROOT（这里不提及）、无线调试和 adb 调试启动。</p>
+<p>注：后两种启动方法无法实现 Shizuku 自启动，故每次重启手机后需要再次启动 Shizuku。</p>
+<h3 id="1-无线调试"><a href="#1-无线调试" class="headerlink" title="1. 无线调试"></a>1. 无线调试</h3><p><strong>无线调试</strong>可以更快速的启动 Shizuku，但此功能仅在 Android 11+ 系统可用。</p>
+<p>启动软件观察首页，若没有无线调试的字样，则说明你的手机仅支持 adb 启动。</p>
+<p>由于软件内可以直接访问教程，此处不再赘述<font color=gray><del>（懒了）</del></font>。</p>
+<p>不过需要注意，无线调试必须连接 Wi-Fi 才可用，即使 Wi-Fi 本身无法联网也没关系，而连接移动数据（流量）则不可以。</p>
+<h3 id="2-通过连接电脑启动（使用-adb-工具）"><a href="#2-通过连接电脑启动（使用-adb-工具）" class="headerlink" title="2. 通过连接电脑启动（使用 adb 工具）"></a>2. 通过连接电脑启动（使用 adb 工具）</h3><p>这里官方也给了很详细的教程<font color=gray><del>，而且我犯懒所以不写了</del></font>。</p>
+<p><font color=gray><del>如果呼声很高的话可能会写一个。</del></font></p>
+<h2 id="三、授权-InstallerX-并开启降级安装"><a href="#三、授权-InstallerX-并开启降级安装" class="headerlink" title="三、授权 InstallerX 并开启降级安装"></a>三、授权 InstallerX 并开启降级安装</h2><p>一般情况下，安装 InstallerX 主要是为了把很难用的系统自带安装程序替代掉，而不单单只是为了降级安装。<font color=gray><del>（是的，我写到这才知道，ADB 工具可以直接强制降级安装）</del></font></p>
+<ul>
+<li><p>开启降级安装：点击进入 InstallerX，左下角<strong>配置</strong>，点击 Default（全局默认）左下角的<strong>笔图标</strong>进入配置页面，向下翻动至<strong>安装选项</strong>，开启<strong>允许降级安装</strong>。</p>
+</li>
+<li><p>启动授权器：返回到软件主页面，点击右下角设置→安装器设置→授权器，选择 Shizuku。</p>
+</li>
+</ul>
+<p>如果有请求授权 Shizuku 的提示，允许即可。</p>
+<p>这时，你应该可以直接实现降级安装的操作。</p>
+<h2 id="四、获取旧版安装包"><a href="#四、获取旧版安装包" class="headerlink" title="四、获取旧版安装包"></a>四、获取旧版安装包</h2><p>由于各大手机厂商的应用商店都无法下载到旧版本安装包，只能通过其他渠道获得。以下是可选的获取安装包的方法，这些条目不一定每一条都有效。</p>
+<ul>
+<li><p>豌豆荚：最简单，推荐。豌豆荚的旧版列表在应用页面最下方，尽管不全，但大多数时候已经能够满足需要。作者大部分的旧版包都是在这里获取的。</p>
+</li>
+<li><p>酷安：仅当豌豆荚没有时可以尝试，版本不全。与豌豆荚相似，也有旧版列表，但列表已经阉割的不成样子了，但有时意外能找到特别古老的版本（抽奖）。</p>
+</li>
+<li><p>应用汇：豌豆荚的下位，最旧版本限定在 2024 年中附近，除非前两个都找不到才用。</p>
+</li>
+<li><p>其余方法可以参考此链接：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/liulangdelieren/p/19049774">早期Android软件资源的应用下载站点和应用商店的一些网址 - 博客园</a></p>
+</li>
+</ul>
+<h2 id="五、参考文章"><a href="#五、参考文章" class="headerlink" title="五、参考文章"></a>五、参考文章</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>Shizuku 旧版官网 <a target="_blank" rel="noopener" href="https://shizuku.rikka.app/">https://shizuku.rikka.app/</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span>Shizuku 新版项目地址 <a target="_blank" rel="noopener" href="https://github.com/thedjchi/Shizuku/">https://github.com/thedjchi/Shizuku/</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span>InstallerX 项目链接 <a target="_blank" rel="noopener" href="https://github.com/iamr0s/InstallerX/">https://github.com/iamr0s/InstallerX/</a>
+<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span>InstallerX-Revived 项目链接 <a target="_blank" rel="noopener" href="https://github.com/wxxsfxyzm/InstallerX-Revived/">https://github.com/wxxsfxyzm/InstallerX-Revived/</a>
+<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.cnblogs.com/liulangdelieren/p/19049774">早期Android软件资源的应用下载站点和应用商店的一些网址 - 流浪的猎人 - 博客园</a>
+<a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Tool/" class="category-chain-item">Tool</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Tutorial/" class="print-no-link">#Tutorial</a>
+      
+        <a href="/tags/Android/" class="print-no-link">#Android</a>
+      
+        <a href="/tags/Shizuku/" class="print-no-link">#Shizuku</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>安卓软件降级指南</div>
+      <div>https://kekkj123.github.io/posts/Tools/Android_APP_Version_Rollback/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>KEKKJ</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2026年1月23日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-cc-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/suiyuan/20251231/" title="提前祝大家新年快乐 - P19">
+                        <span class="hidden-mobile">提前祝大家新年快乐 - P19</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"KEKKJ123/KEKKJ123.github.io","repo-id":"R_kgDOMihuAQ","category":"Announcements","category-id":"DIC_kwDOMihuAc4ChlYD","theme-light":"light","theme-dark":"dark","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <i class="iconfont icon-love"></i> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo Blog </span></a> <span>|</span> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span> Fluid Theme </span></a> <span>|</span> <a href="https://github.com/KEKKJ123/KEKKJ123.github.io" target="_blank" rel="nofollow noopener"><span>KEKKJ Storge</span></a> <i class="iconfont icon-love"></i> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/scripts/running_time.js"></script> </div> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+  <!-- 此处格式同步 footer 参数 -->
+  <div style="font-size: 0.85rem">
+    <span id="g-post-count-id">载入字数...</span>
+  </div>
+</div>
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  <script type="text/javascript">
+    document.getElementById("g-post-count-id").innerHTML = "小世界总字数 51k";
+</script>
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
