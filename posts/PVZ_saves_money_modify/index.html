@@ -23,7 +23,7 @@
   <meta name="author" content="KEKKJ">
   <meta name="keywords" content="KEKKJ">
   
-    <meta name="description" content="博主喜欢打全成就，最近在打植物大战僵尸。 但游戏里有个养智慧树到100英尺的成就，古法刷钱刷到肝疼。 刚好在 Steam 上知道了游戏存档的位置，于是查了下修改方法，减少不必要的工作。   一、找到游戏存档PVZ存档位置：Steam的安装位置\Steam\userdata\你的好友代码\3590\remote 比如，作者的存档位置就是 C:\Program Files (x86)\Steam\u">
+    <meta name="description" content="博主喜欢打全成就，最近在打植物大战僵尸。 但游戏里有个养智慧树到100英尺的成就，古法刷钱刷到肝疼。 刚好在 Steam 上知道了游戏存档的位置，于是查了下修改方法，减少不必要的工作。   一、找到游戏存档PVZ 存档位置：Steam的安装位置\Steam\userdata\你的好友代码\3590\remote 比如，作者的存档位置就是 C:\Program Files (x86)\Steam\">
   
   
   
@@ -371,7 +371,7 @@
         aria-expanded="true"
       >
         Tool
-        <span class="list-group-count">(5)</span>
+        <span class="list-group-count">(6)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -417,6 +417,15 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">安卓软件降级指南</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/bite-sized-tweaks/" title="短平快的设置优化合集"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">短平快的设置优化合集</span>
         </a>
       
     
@@ -498,22 +507,22 @@
 <p><font color=gray>刚好在 Steam 上知道了游戏存档的位置，于是查了下修改方法，减少不必要的工作。</font></p>
 </blockquote>
 <hr>
-<h2 id="一、找到游戏存档"><a href="#一、找到游戏存档" class="headerlink" title="一、找到游戏存档"></a>一、找到游戏存档</h2><p>PVZ存档位置：<code>Steam的安装位置\Steam\userdata\你的好友代码\3590\remote</code></p>
+<h2 id="一、找到游戏存档"><a href="#一、找到游戏存档" class="headerlink" title="一、找到游戏存档"></a>一、找到游戏存档</h2><p>PVZ 存档位置：<code>Steam的安装位置\Steam\userdata\你的好友代码\3590\remote</code></p>
 <p>比如，作者的存档位置就是 <code>C:\Program Files (x86)\Steam\userdata\一串数字\3590\remote</code></p>
 <p>好友代码：打开Steam客户端，点击左上角<strong>好友</strong>—<strong>添加好友</strong>—<strong>您的好友代码</strong></p>
 <p>打开 <code>remote</code> 文件夹后，你会看到一堆文件，它们可以分为三类。</p>
 <p>game 开头的是关卡数据，“user+数字”的是玩家数据，而“users”记录的是所有玩家的ID等信息。</p>
 <p>显而易见的，金钱需要在玩家数据里修改。</p>
-<h2 id="二、下载十六进制文本编辑器"><a href="#二、下载十六进制文本编辑器" class="headerlink" title="二、下载十六进制文本编辑器"></a>二、下载十六进制文本编辑器</h2><p>PVZ 存档数据都是以<code>.dat</code>文件保存的，普通的文本编辑器会显示乱码。</p>
+<h2 id="二、下载十六进制文本编辑器"><a href="#二、下载十六进制文本编辑器" class="headerlink" title="二、下载十六进制文本编辑器"></a>二、下载十六进制文本编辑器</h2><p>PVZ 存档数据都是以 <code>.dat</code> 文件保存的，普通的文本编辑器会显示乱码。</p>
 <p>所以我们需要一个专门的编辑器来修改数据，这里使用软件 HxD 。</p>
 <p>进入 <a target="_blank" rel="noopener" href="https://mh-nexus.de/en/hxd/">HxD 官网</a>，向下翻动，寻找 Download page，点击进入后会有一堆国家语言。</p>
 <p>找到 <strong>Chinese (simplified)</strong>，点击右边的 <strong>Download per HTTPS</strong> 即可下载。</p>
-<p>下载的压缩包里只有一个.exe文件，可以不解压直接双击安装。</p>
+<p>下载的压缩包里只有一个 <code>.exe</code> 文件，可以不解压直接双击安装。</p>
 <p>接下来按照安装包的流程即可。</p>
 <h2 id="三、修改存档数据"><a href="#三、修改存档数据" class="headerlink" title="三、修改存档数据"></a>三、修改存档数据</h2><p><strong>建议在修改前先备份数据，防止意外。</strong></p>
 <p>打开 HxD 后，点击左上角<strong>文件</strong>，点击<strong>打开</strong>，在弹出的窗口找到刚才的玩家数据文件。</p>
 <p>*也可以直接将需要修改的文件拖动至 HxD 窗口</p>
-<p>根据参考文章<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[植物大战僵尸修改存档用户名、关卡、金钱说明修改 - 掘金](https://juejin.cn/post/7108904016599318536)">[1]</span></a></sup>，行00000000，列08和09的四位数是我们需要修改的数据，即金钱。</p>
+<p>根据参考文章<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[植物大战僵尸修改存档用户名、关卡、金钱说明修改 - 掘金](https://juejin.cn/post/7108904016599318536)">[1]</span></a></sup>，行 00000000，列 08 和 09 的四位数是我们需要修改的数据，即金钱。</p>
 <p>选住四位数后，右边的编辑器 Int16 会显示你当前金钱&#x2F;10的数字，此时可以比对一下，防止改错了数据。</p>
 <p>Int16 的最大值是 32767，在游戏中是 327670 金钱，这远低于游戏设定的最大金钱。<font color=gray><em>不过作者懒得继续研究了</em></font></p>
 <p>关闭软件时提示保存修改，点保存即可。</p>
@@ -990,7 +999,7 @@
 
 
   <script type="text/javascript">
-    document.getElementById("g-post-count-id").innerHTML = "小世界总字数 51k";
+    document.getElementById("g-post-count-id").innerHTML = "小世界总字数 52k";
 </script>
 
   <noscript>
