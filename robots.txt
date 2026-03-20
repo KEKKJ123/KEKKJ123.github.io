@@ -2,10 +2,10 @@
 User-agent: *
 Disallow: /posts/suiyuan/*
 Disallow: /posts/LifeEpisode/*
-Disallow: /categories/*
-Disallow: /tags/*
-Disallow: /archives/*
-Disallow: /page/*
+# Disallow: /categories/*
+# Disallow: /tags/*
+# Disallow: /archives/*
+# Disallow: /page/*
 Disallow: /Temporary_Storage/
 
 Sitemap: https://kekkj123.github.io/sitemap-reupload.xml
