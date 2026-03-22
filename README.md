@@ -1,4 +1,4 @@
-# Welcome to KEKKJ BLOG！
+# Welcome to KEKKJ BLOG
 
 ```Text
     __ __ ________ __ __ __    __     ____  __    ____  ______
