@@ -8,3 +8,4 @@ Disallow: /posts/LifeEpisode/*
 # Disallow: /page/*
 Disallow: /Temporary_Storage/
 Sitemap: https://kekkj123.github.io/sitemap-reupload.xml
+Sitemap: https://kekkj123.github.io/sitemap.txt
