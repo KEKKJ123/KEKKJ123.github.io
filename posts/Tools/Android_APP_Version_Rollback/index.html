@@ -301,7 +301,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2k 字
+          2.1k 字
         
       </span>
     
@@ -462,10 +462,10 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p><font color=gray>为何要回退版本？难道紧跟最新版本不好吗？请看：</font></p>
-<p><font color=gray>广告众多——即使开启简洁模式依然防不胜防；</font></p>
-<p><font color=gray>功能繁杂——某某网盘不仅能刷视频、看新闻，甚至还能借贷；</font></p>
-<p><font color=gray>性能低下——软件堆砌无用功能，导致占用空间大，运行卡，手机发烫。</font></p>
+<p><font color=6a737d>为何要回退版本？难道紧跟最新版本不好吗？请看：</font></p>
+<p><font color=6a737d>广告众多——即使开启简洁模式依然防不胜防；</font></p>
+<p><font color=6a737d>功能繁杂——某某网盘不仅能刷视频、看新闻，甚至还能借贷；</font></p>
+<p><font color=6a737d>性能低下——软件堆砌无用功能，导致占用空间大，运行卡，手机发烫。</font></p>
 <p><strong>阅前提醒：本文章仅为抛砖引玉，用于技术交流。本人不对他人回退软件版本的影响负责，包括但不限于，账号被风控或封禁、数据损坏或丢失、安装盗版软件导致个人隐私泄露等各种影响。</strong></p>
 </blockquote>
 <hr>
@@ -478,7 +478,7 @@
 </li>
 <li><p>功能缺失：作者认为无用的冗余功能，在你这里可能是有用的。如有需求，可以自行测试和筛选版本。</p>
 </li>
-<li><p>降级安装功能在 Android 15+ 系统需要 ROOT 权限，**本方法可能在最新的安卓手机上无效！<font color=gray>**<del>（F**k u, Android）</del></font></p>
+<li><p>降级安装功能在 Android 15+ 系统需要 ROOT 权限，**本方法可能在最新的安卓手机上无效！<font color=6a737d>**<del>（F**k u, Android）</del></font></p>
 </li>
 <li><p>由于潜在的安全问题，<strong>不建议</strong>降级**银行，zfb 等理财类软件。</p>
 </li>
@@ -490,7 +490,7 @@
 <h2 id="一、原理解释"><a href="#一、原理解释" class="headerlink" title="一、原理解释"></a>一、原理解释</h2><p>原理非常简单，利用软件 <strong>InstallerX</strong> 或 <strong>InstallerX Revived</strong> 的<strong>降级安装</strong>功能即可实现操作。</p>
 <p>但在这之前，大部分安卓机型都必须用<strong>授权器</strong>以覆盖系统自带的安装器。</p>
 <p>授权器可以是 <strong>ROOT 超级用户</strong>，也可以是其他提权工具，如 Shizuku，Dhizuku 等。其中，<strong>Shizuku</strong> 的兼容性和泛用度最好，使用门槛也很低。所以，我们在教程中的演示工具也是它。</p>
-<p>如果你的手机已经成功 ROOT，可以直接跳转到 <a href="#%E4%B8%89%E3%80%81%E6%8E%88%E6%9D%83-InstallerX-%E5%B9%B6%E5%BC%80%E5%90%AF%E9%99%8D%E7%BA%A7%E5%AE%89%E8%A3%85">InstallerX 章节</a>。<font color=gray><del>（不过 ROOT 玩家真的需要看我这篇教程吗）</del></font></p>
+<p>如果你的手机已经成功 ROOT，可以直接跳转到 <a href="#%E4%B8%89%E3%80%81%E6%8E%88%E6%9D%83-InstallerX-%E5%B9%B6%E5%BC%80%E5%90%AF%E9%99%8D%E7%BA%A7%E5%AE%89%E8%A3%85">InstallerX 章节</a>。<font color=6a737d><del>（不过 ROOT 玩家真的需要看我这篇教程吗）</del></font></p>
 <p>整理一下思路，即<code>授权器（Shizuku 等） → InstallerX → 降级安装</code>。</p>
 <h3 id="工具下载链接"><a href="#工具下载链接" class="headerlink" title="工具下载链接"></a>工具下载链接</h3><ul>
 <li>Shizuku（已停更但网页内教程仍可用）：<a target="_blank" rel="noopener" href="https://shizuku.rikka.app/zh-hans/download/">下载 | Shizuku</a></li>
@@ -504,8 +504,8 @@
 <p>启动软件观察首页，若没有无线调试的字样，则说明你的手机仅支持 ADB 调试启动。</p>
 <p>由于软件内置了教程，此处不再赘述。</p>
 <p>需要注意，无线调试必须连接 Wi-Fi 才可用，即使 Wi-Fi 本身无法联网也没关系，而移动数据（手机流量）则不可以。</p>
-<h3 id="2-ADB-调试（需要连接电脑）"><a href="#2-ADB-调试（需要连接电脑）" class="headerlink" title="2. ADB 调试（需要连接电脑）"></a>2. ADB 调试（需要连接电脑）</h3><p>这里官方也给了很详细的 <a target="_blank" rel="noopener" href="https://shizuku.rikka.app/zh-hans/guide/setup/">教程</a> <font color=gray><del>，所以我犯懒不写了，如果呼声很高的话可能会写一个</del></font>。</p>
-<h2 id="三、授权-InstallerX-并开启降级安装"><a href="#三、授权-InstallerX-并开启降级安装" class="headerlink" title="三、授权 InstallerX 并开启降级安装"></a>三、授权 InstallerX 并开启降级安装</h2><p>一般情况下，安装 InstallerX 主要是为了把很难用的系统自带安装程序替代掉，而不单单只是为了降级安装。<font color=gray><del>（是的，我写到这才知道，ADB 工具可以直接强制降级安装）</del></font></p>
+<h3 id="2-ADB-调试（需要连接电脑）"><a href="#2-ADB-调试（需要连接电脑）" class="headerlink" title="2. ADB 调试（需要连接电脑）"></a>2. ADB 调试（需要连接电脑）</h3><p>这里官方也给了很详细的 <a target="_blank" rel="noopener" href="https://shizuku.rikka.app/zh-hans/guide/setup/">教程</a> <font color=6a737d><del>，所以我犯懒不写了，如果呼声很高的话可能会写一个</del></font>。</p>
+<h2 id="三、授权-InstallerX-并开启降级安装"><a href="#三、授权-InstallerX-并开启降级安装" class="headerlink" title="三、授权 InstallerX 并开启降级安装"></a>三、授权 InstallerX 并开启降级安装</h2><p>一般情况下，安装 InstallerX 主要是为了把很难用的系统自带安装程序替代掉，而不单单只是为了降级安装。<font color=6a737d><del>（是的，我写到这才知道，ADB 工具可以直接强制降级安装）</del></font></p>
 <ul>
 <li><p>开启降级安装：点击进入 InstallerX，左下角<strong>配置</strong>，点击 Default（全局默认）左下角的<strong>笔图标</strong>进入配置页面，向下翻动至<strong>安装选项</strong>，开启<strong>允许降级安装</strong>。</p>
 </li>
@@ -604,16 +604,22 @@
 <td>wdj 最旧版本，不能正常登录（懒得测了）</td>
 </tr>
 <tr>
+<td>gddt</td>
+<td>10.25.0.2887</td>
+<td>2020-01-15</td>
+<td>wdj最旧版本。能用，非常违反直觉，语音播报很烂</td>
+</tr>
+<tr>
 <td>hlzh</td>
-<td>8.0.8</td>
-<td>2024-12-28</td>
-<td>好像忘记回退这个了</td>
+<td>8.1.1</td>
+<td>2025-02-15</td>
+<td>支持小米出行助手的最低功能</td>
 </tr>
 <tr>
 <td>jd</td>
-<td>13.1.0</td>
-<td>2024-07-01</td>
-<td>支持秒送功能</td>
+<td>13.1.0<br>13.6.2</td>
+<td>2024-07-01<br>2024-10-22</td>
+<td>支持秒送功能<br>支持自提功能</td>
 </tr>
 <tr>
 <td>kk</td>
@@ -636,7 +642,7 @@
 <tr>
 <td>pdd</td>
 <td>5.95.1</td>
-<td></td>
+<td>2022-01-10</td>
 <td></td>
 </tr>
 <tr>
@@ -653,9 +659,9 @@
 </tr>
 <tr>
 <td>qq</td>
-<td>9.1.50</td>
-<td>2025-02-25</td>
-<td>此版本有频道收纳功能，合法最旧版本为 9.1.25</td>
+<td>9.1.50<br>9.1.25</td>
+<td>2025-02-25<br>2024-12-19</td>
+<td>有频道收纳功能<br>合法最旧版本</td>
 </tr>
 <tr>
 <td>qqyx</td>
@@ -695,9 +701,9 @@
 </tr>
 <tr>
 <td>wx</td>
-<td>8.0.23</td>
-<td>2022-05-31</td>
-<td>非最旧</td>
+<td>8.0.24</td>
+<td>2022-06-29</td>
+<td>64 位最低版本</td>
 </tr>
 <tr>
 <td>wyy</td>
@@ -707,9 +713,9 @@
 </tr>
 <tr>
 <td>xhh</td>
-<td>1.3.278</td>
-<td>2023-07-21</td>
-<td>不能购买游戏</td>
+<td>1.3.278<br>1.3.305<br>1.3.346</td>
+<td>2023-07-21<br>2024-03-15<br>2024-12-25</td>
+<td>不能购买游戏<br>可购买游戏的最低版本<br>支持社区任务的最低版本<del>，因为 H 币可以抵钱</del></td>
 </tr>
 <tr>
 <td>xhs</td>
@@ -1217,7 +1223,7 @@
 
 
   <script type="text/javascript">
-    document.getElementById("g-post-count-id").innerHTML = "小世界总字数 54k";
+    document.getElementById("g-post-count-id").innerHTML = "小世界总字数 60k";
 </script>
 
   <noscript>
