@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kekkj123.github.io/posts/Tools/k60pro-devlog/</loc>
+    
+    <lastmod>2026-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kekkj123.github.io/posts/Tools/LSPatch-demo/</loc>
+    
+    <lastmod>2026-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kekkj123.github.io/about/index.html</loc>
     
     <lastmod>2026-09-18</lastmod>
@@ -11,16 +29,7 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Tools/Android_APP_Version_Rollback/</loc>
-    
-    <lastmod>2026-09-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kekkj123.github.io/posts/bite-sized-tweaks/</loc>
+    <loc>https://kekkj123.github.io/posts/Tools/bite-sized-tweaks/</loc>
     
     <lastmod>2026-06-29</lastmod>
     
@@ -38,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/RSS_Origin_Guide/</loc>
+    <loc>https://kekkj123.github.io/posts/RSS-Origin-guide/</loc>
     
     <lastmod>2026-03-21</lastmod>
     
@@ -47,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/RSS_Origin_Introduction/</loc>
+    <loc>https://kekkj123.github.io/posts/RSS-Origin-introduction/</loc>
     
     <lastmod>2026-03-21</lastmod>
     
@@ -56,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Webs/</loc>
+    <loc>https://kekkj123.github.io/posts/webs/</loc>
     
     <lastmod>2026-03-20</lastmod>
     
@@ -65,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Tools/Android_APP_Version_Rollback/</loc>
+    <loc>https://kekkj123.github.io/posts/Tools/android-app-version-rollback/</loc>
     
     <lastmod>2026-03-20</lastmod>
     
@@ -83,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/PVZ_saves_money_modify/</loc>
+    <loc>https://kekkj123.github.io/posts/PVZ-saves-money-modify/</loc>
     
     <lastmod>2025-08-20</lastmod>
     
@@ -92,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Legacy_RP1_Installation_Guide/</loc>
+    <loc>https://kekkj123.github.io/posts/Legacy-RP1-installation-guide/</loc>
     
     <lastmod>2025-04-15</lastmod>
     
@@ -110,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/RSSRORP1_Seris_Introduction/</loc>
+    <loc>https://kekkj123.github.io/posts/RSSRORP1-seris-introduction/</loc>
     
     <lastmod>2025-03-18</lastmod>
     
@@ -119,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Referee_System_Using_Tutorial/</loc>
+    <loc>https://kekkj123.github.io/posts/referee-system-using-tutorial/</loc>
     
     <lastmod>2025-03-15</lastmod>
     
@@ -128,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Ubuntu_Reset_Passwd/</loc>
+    <loc>https://kekkj123.github.io/posts/Ubuntu-reset-passwd/</loc>
     
     <lastmod>2025-03-10</lastmod>
     
@@ -137,7 +146,7 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Terminal_Auto_Start/</loc>
+    <loc>https://kekkj123.github.io/posts/terminal-auto-start/</loc>
     
     <lastmod>2025-03-10</lastmod>
     
@@ -146,7 +155,7 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/SimulatorX_User_Manual/</loc>
+    <loc>https://kekkj123.github.io/posts/SimulatorX-user-manual/</loc>
     
     <lastmod>2025-03-03</lastmod>
     
@@ -155,7 +164,7 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Tools/Remove_WinNTSetup_cmd_Context_Menu/</loc>
+    <loc>https://kekkj123.github.io/posts/Tools/remove-winntsetup-cmd-context-menu/</loc>
     
     <lastmod>2025-03-03</lastmod>
     
@@ -164,7 +173,7 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Tools/SkipAD/</loc>
+    <loc>https://kekkj123.github.io/posts/Tools/skipad/</loc>
     
     <lastmod>2025-03-03</lastmod>
     
@@ -182,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://kekkj123.github.io/posts/OpenVINO_Installation_Guide/</loc>
+    <loc>https://kekkj123.github.io/posts/OpenVINO-installation-guide/</loc>
     
     <lastmod>2024-08-27</lastmod>
     
@@ -193,7 +202,7 @@
 
   <url>
     <loc>https://kekkj123.github.io/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
