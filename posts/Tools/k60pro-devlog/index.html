@@ -23,7 +23,7 @@
   <meta name="author" content="KEKKJ">
   <meta name="keywords" content="KEKKJ">
   
-    <meta name="description" content="在刷机之前，你真的想好了吗？ 你可以获得更流畅的设备，更少的隐私泄露，更多的“权力” 但代价是什么？ 你可能要解决只有你自己遇到的问题，在重要时刻遇到掉权限的打击，甚至损失一台手机&amp;#x2F;平板。 如果想好了，就继续阅读吧！前面的天空一望无际！   解锁 Bootloader关键词 机型 + bootloader unlock，如 K60Pro bootloader unlock 或 socr">
+    <meta name="description" content="在刷机之前，你真的想好了吗？ 你可以获得更流畅的设备，更少的隐私泄露，更多的权力。 但代价是什么？ 你可能要解决只有你自己遇到的问题，在重要时刻遇到掉权限的打击，甚至损失一台设备。 如果想好了，就继续阅读吧！前面的天空一望无际！   解锁 Bootloader关键词 机型 + bootloader unlock，如 K60Pro bootloader unlock 或 socrates boot">
   
   
   
@@ -293,7 +293,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          600 字
+          699 字
         
       </span>
     
@@ -363,7 +363,7 @@
         aria-expanded="true"
       >
         Tool
-        <span class="list-group-count">(7)</span>
+        <span class="list-group-count">(8)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -438,6 +438,15 @@
         </a>
       
     
+      
+      
+        <a href="/posts/Tools/STSS-FORM/" title="继发性创伤应激（STS）量表自测"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">继发性创伤应激（STS）量表自测</span>
+        </a>
+      
+    
   </div>
 
         
@@ -461,7 +470,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2026-09-25T15:00:33+08:00
+                    本文最后更新于 2026-10-06T13:35:00+08:00
                   
                   
 
@@ -473,24 +482,28 @@
                 
                 <blockquote>
 <p>在刷机之前，你真的想好了吗？</p>
-<p>你可以获得更流畅的设备，更少的隐私泄露，更多的“权力”</p>
+<p>你可以获得更流畅的设备，更少的隐私泄露，更多的<em>权力</em>。</p>
 <p>但代价是什么？</p>
-<p>你可能要解决只有你自己遇到的问题，在重要时刻遇到掉权限的打击，甚至损失一台手机&#x2F;平板。</p>
+<p>你可能要解决只有你自己遇到的问题，在重要时刻遇到掉权限的打击，甚至损失一台设备。</p>
 <p>如果想好了，就继续阅读吧！前面的天空一望无际！</p>
 </blockquote>
 <hr>
 <h3 id="解锁-Bootloader"><a href="#解锁-Bootloader" class="headerlink" title="解锁 Bootloader"></a>解锁 Bootloader</h3><p>关键词 <code>机型 + bootloader unlock</code>，如 <code>K60Pro bootloader unlock</code> 或 <code>socrates bootloader unlock</code>。</p>
 <p>必要时在 xda 或酷安论坛中寻找相关信息。</p>
-<p>可参考 <a target="_blank" rel="noopener" href="https://github.com/AdaUnlocked/2026-All-Brands-Bootloader-Unlock-Status">全网最全手机 BL 解锁与 Root 现状汇总</a></p>
+<p>可参考 <a target="_blank" rel="noopener" href="https://github.com/AdaUnlocked/2026-All-Brands-Bootloader-Unlock-Status">全网最全手机 BL 解锁与 Root 现状汇总</a>。</p>
 <h3 id="刷入-TWRP"><a href="#刷入-TWRP" class="headerlink" title="刷入 TWRP"></a>刷入 TWRP</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">adb reboot fastboot <span class="hljs-comment"># 进入 bootloader 引导模式</span><br><span class="hljs-comment"># 注意此命令在部分机型可能仅能进入 fastbootd 模式</span><br><br>fastboot flash recovery recovery.img<br><span class="hljs-comment"># 有时 recovery.img 也可能为 twrp-x.x.img 的名字</span><br><br>fastboot reboot recovery <span class="hljs-comment"># 重启至 recovery 恢复模式</span><br></code></pre></td></tr></table></figure>
 
 <h3 id="在-TWRP-中刷入-ROM（或内核）（可选）"><a href="#在-TWRP-中刷入-ROM（或内核）（可选）" class="headerlink" title="在 TWRP 中刷入 ROM（或内核）（可选）"></a>在 TWRP 中刷入 ROM（或内核）（可选）</h3><p>现代 TWRP 大都支持触控，在 GUI 界面安装 ROM 即可。</p>
-<p>若 ROM 在 PC 上不便传输（或无法访问 &#x2F;sdcard），也可使用 <code>adb sideload</code> 安装。</p>
+<p>若 ROM 在 PC 上不便传输，或无法访问 <code>/sdcard</code>，也可使用 <code>adb sideload</code> 安装。</p>
+<p>注意：<code>adb sideload</code> 对于 K60P 这种双槽位系统的手机，倘若是 ROM，刷入的是非活动槽位；而 Kernel 则为活动槽位。<del>当然也可以两个槽位都刷一遍</del></p>
 <h3 id="内核级-ROOT-的获取"><a href="#内核级-ROOT-的获取" class="headerlink" title="内核级 ROOT 的获取"></a>内核级 ROOT 的获取</h3><p>相比于传统的 Magisk，KernelSU 级别的内核 ROOT 隐藏效果通常最好，APatch次之。故笔者建议使用内核级 ROOT。</p>
-<p>不过，具体的隐藏效果还是要看内核本身的构建和 ROM隐藏支持程度，以上比较并不绝对。</p>
-<p>在 4.0 或更旧内核的设备上，必须手动刷入 GKI 内核；而在 5.15 或更新的设备上，则可以使用 LKM 修补内核获得权限。</p>
-<p>在使用上，LKM 与 GKI 并无太大区别。唯一较大的区别是 GKI 支持 susfs<del>，但据小道消息说 susfs 代码稀烂而且隐藏效果有限</del>。</p>
-<p>笔者所用的是 ReSukiSU。</p>
+<p>不过，具体的隐藏效果还是要看内核本身构建和 ROM 隐藏支持程度，以上比较并不绝对。</p>
+<p>在 4.0 或更旧版本内核的设备上，必须手动刷入 GKI 内核；而在 5.15 版本及以上的设备上，则可以使用 LKM 修补内核获得权限。</p>
+<p>个别 SU 管理器可以支持更低版本的内核，如 BakaSU 支持 5.10 及以上版本的内核。</p>
+<p>在使用上，LKM 与 GKI 并无太大区别。唯一较大的区别是 GKI 支持 SUSFS。<del>但据小道消息说 SUSFS 代码质量不佳且隐藏效果有限</del></p>
+<p>笔者所用的是 ReSukiSU（现已改名为 BakaSU）。</p>
+<p>通用 GKI 内核构建：<a target="_blank" rel="noopener" href="https://github.com/zzh20188/GKI_KernelSU_SUSFS">GKI_KernelSU_SUSFS</a></p>
+<p>Wild Kernels：<a target="_blank" rel="noopener" href="https://github.com/WildKernels/GKI_KernelSU_SUSFS">WildKernels&#x2F;GKI_KernelSU_SUSFS</a></p>
 <h3 id="环境隐藏与模块（WIP）"><a href="#环境隐藏与模块（WIP）" class="headerlink" title="环境隐藏与模块（WIP）"></a>环境隐藏与模块（WIP）</h3><table>
 <thead>
 <tr>
@@ -504,7 +517,7 @@
 </tr>
 <tr>
 <td><a target="_blank" rel="noopener" href="https://github.com/Dr-TSNG/ZygiskNext/">Zygisk Next</a></td>
-<td>闭源，社区最通用</td>
+<td>Zygisk 的闭源实现，社区最通用</td>
 </tr>
 <tr>
 <td>HMA-OSS</td>
@@ -565,7 +578,7 @@
 </tbody></table>
 <p>以上模块建议自行寻找 tg 链接以获取最新版本。</p>
 <h3 id="类原生快充"><a href="#类原生快充" class="headerlink" title="类原生快充"></a>类原生快充</h3><p>米系设备可以安装 FreePPS 以启用公版 PPS 快充。<br>K60P 上测试，结合温控模块可达 40 瓦。</p>
-<h3 id="HMA-OSS-与无障碍兼容问题"><a href="#HMA-OSS-与无障碍兼容问题" class="headerlink" title="HMA-OSS 与无障碍兼容问题"></a>HMA-OSS 与无障碍<em>兼容问题</em></h3><p>在使用 GKD、小星记账这类无障碍软件时，需要给对应软件添加白名单，并关闭无障碍设置隐藏，缺一不可。</p>
+<h3 id="HMA-OSS-与无障碍兼容问题"><a href="#HMA-OSS-与无障碍兼容问题" class="headerlink" title="HMA-OSS 与无障碍兼容问题"></a>HMA-OSS 与无障碍<em>兼容问题</em></h3><p>在使用 GKD、小星记账这类无障碍软件时，需要给对应软件添加白名单，并关闭<strong>无障碍设置</strong>隐藏，缺一不可。</p>
 
                 
               </div>
@@ -1026,7 +1039,7 @@
 
 
   <script type="text/javascript">
-    document.getElementById("g-post-count-id").innerHTML = "小世界总字数 73k";
+    document.getElementById("g-post-count-id").innerHTML = "小世界总字数 77k";
 </script>
 
   <noscript>

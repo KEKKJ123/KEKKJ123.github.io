@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://kekkj123.github.io/posts/Tools/LSPatch-demo/</loc>
+    <loc>https://kekkj123.github.io/posts/Tools/STSS-FORM/</loc>
     
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -12,6 +12,15 @@
   
   <url>
     <loc>https://kekkj123.github.io/posts/Tools/k60pro-devlog/</loc>
+    
+    <lastmod>2026-10-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kekkj123.github.io/posts/Tools/LSPatch-demo/</loc>
     
     <lastmod>2026-09-25</lastmod>
     
@@ -202,7 +211,7 @@
 
   <url>
     <loc>https://kekkj123.github.io/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
