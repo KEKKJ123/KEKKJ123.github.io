@@ -467,6 +467,16 @@
           <article class="post-content mx-auto">
             <h1 id="seo-header">继发性创伤应激（STS）量表自测</h1>
             
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2026-10-22T02:25:01+08:00
+                  
+                  
+
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
@@ -786,9 +796,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/suiyuan/20261104/" title="直抵繁星">
+                      <a href="/posts/suiyuan/20261104/" title="直抵繁星 - P34">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">直抵繁星</span>
+                        <span class="hidden-mobile">直抵繁星 - P34</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -1014,6 +1024,33 @@
 
   
 <script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
+
+
+  
+<script>
   Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
     var toc = jQuery('#toc');
     if (toc.length === 0 || !window.tocbot) { return; }
@@ -1119,7 +1156,7 @@
 
 
   <script type="text/javascript">
-    document.getElementById("g-post-count-id").innerHTML = "小世界总字数 78k";
+    document.getElementById("g-post-count-id").innerHTML = "小世界总字数 79k";
 </script>
 
   <noscript>
